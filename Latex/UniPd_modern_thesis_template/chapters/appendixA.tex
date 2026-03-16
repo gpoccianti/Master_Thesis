@@ -1,0 +1,61 @@
+%!TEX root = ../main.tex
+
+%%%
+\chapter{Numerical Integration}
+Here we analyze the numerical techniques we used to efficiently integrate system \eqref{eq:coupled_FHN}.
+First, we should preface that this system is stiff \cite{hairer1996solving}. In the context of numerical analysis, a system is considered stiff when it exhibits dynamics acting on widely different time scales (such as the fast action potential spikes and the slow recovery phases in electrophysiological models). This property causes standard explicit numerical methods to become unstable unless prohibitively small time steps are used. Therefore, finding an adequate numerical algorithm that scales well with the size of the network is a non-trivial task.
+
+To overcome the stability constraints imposed by the stiff diffusion term while avoiding the computational burden of solving non-linear algebraic systems at each time step, we adopted an Implicit-Explicit (IMEX) integration scheme \cite{ascher1995implicit, hundsdorfer2003numerical}. Specifically, we employed a first-order semi-implicit Euler method, which treats the local non-linear reaction kinetics explicitly and the linear spatial coupling implicitly. 
+
+Let us rewrite the networked system defined in Equation \eqref{eq:coupled_FHN} in a compact vector notation. Let $\mathbf{V}(t) = [V_1(t), \dots, V_{|\mathcal{V}|}(t)]^T$ and $\mathbf{w}(t) = [w_1(t), \dots, w_{|\mathcal{V}|}(t)]^T$ be the state vectors of the network at time $t$. The dynamics can be separated as follows:
+\begin{equation}
+\label{eq:vector_system}
+\begin{aligned}
+\frac{d\mathbf{V}}{dt} &= \mathbf{F}(\mathbf{V}, \mathbf{w}, t) - \sigma \mathbf{L} \mathbf{V} \\
+\frac{d\mathbf{w}}{dt} &= \mathbf{G}(\mathbf{V}, \mathbf{w})
+\end{aligned}
+\end{equation}
+where $\mathbf{F}(\mathbf{V}, \mathbf{w}, t)$ incorporates the non-linear local FitzHugh-Nagumo dynamics and the external applied current, while $\mathbf{G}(\mathbf{V}, \mathbf{w})$ represents the linear dynamics of the recovery variables.
+
+In our IMEX formulation, given a time step $\Delta t = t_{n+1} - t_n$, the temporal update from step $n$ to $n+1$ is performed in two stages. First, we evaluate the explicit forward Euler step \footnote{The use of a Runge-Kutta method would be a more rigorous approach to the problem; however since our main aim was to test the performance of FNO and not to analyze this particular system, we preferred this faster integration technique} for the local reaction terms to compute an intermediate predictor state $\mathbf{V}^*$, alongside the full update for the recovery variables $\mathbf{w}^{n+1}$:
+\begin{equation}
+\label{eq:imex_explicit}
+\begin{aligned}
+\mathbf{V}^* &= \mathbf{V}^n + \Delta t \mathbf{F}(\mathbf{V}^n, \mathbf{w}^n, t_n) \\
+\mathbf{w}^{n+1} &= \mathbf{w}^n + \Delta t \mathbf{G}(\mathbf{V}^n, \mathbf{w}^n)
+\end{aligned}
+\end{equation}
+
+Subsequently, the implicit backward Euler step is applied exclusively to the linear diffusion term. The final potential $\mathbf{V}^{n+1}$ is obtained by solving:
+\begin{equation}
+\label{eq:imex_implicit_1}
+\mathbf{V}^{n+1} = \mathbf{V}^* - \Delta t \sigma \mathbf{L} \mathbf{V}^{n+1}
+\end{equation}
+
+By rearranging Equation \eqref{eq:imex_implicit_1}, we isolate the unknown vector $\mathbf{V}^{n+1}$:
+\begin{equation}
+\label{x}
+\left( \mathbf{I} + \Delta t \sigma \mathbf{L} \right) \mathbf{V}^{n+1} = \mathbf{V}^*
+\end{equation}
+where $\mathbf{I}$ is the $|\mathcal{V}| \times |\mathcal{V}|$ identity matrix. 
+
+A standard fully implicit method would require assembling and inverting a Jacobian matrix at every time step due to the non-linearities. Conversely, in our IMEX splitting, the matrix $\mathbf{M} = \left( \mathbf{I} + \Delta t \sigma \mathbf{L} \right)$ governing the implicit update is completely linear and time-invariant. Consequently, its inverse $\mathbf{M}^{-1}$ \footnote{Since, unlike $\mathbf{M}$, $\mathbf{M}^{-1}$ is a dense matrix, solving system \eqref{eq:imex_implicit_2} in this way is not recommendable for very large graphs (i.e.: $N > 50000$)} can be pre-computed exactly once before the start of the temporal integration loop. The implicit update then reduces to a simple matrix-vector multiplication:
+\begin{equation}
+\label{eq:imex_final}
+\mathbf{V}^{n+1} = \mathbf{M}^{-1} \mathbf{V}^*
+\end{equation}
+
+
+Instead of simulating single trajectories sequentially, this formulation allowed us to process large batches simultaneously, directly leveraging the massive parallelization capabilities of a Graphics Processing Unit (GPU)\footnote{All simulations were run on an NVIDIA Quadro RTX 5000 with 16 GB of VRAM.}.
+
+A fundamental advantage of this semi-implicit formulation resides in its stability properties. If a standard fully explicit forward Euler scheme had been applied to the entire system \eqref{eq:coupled_FHN}, the integration time step $\Delta t$ would have been strictly constrained by the absolute stability region of the diffusion term. Specifically, for a diffusion process governed by a graph Laplacian, the stability condition requires $\Delta t \le \frac{2}{\sigma \lambda_{\text{max}}(\mathbf{L})}$, where $\lambda_{\text{max}}(\mathbf{L})$ is the largest eigenvalue of the Laplacian matrix  \cite{obrien1950study}. Since $\lambda_{\text{max}}(\mathbf{L})$ grows with the maximum degree of the network, an explicit method implies that $\Delta t \propto \mathcal{O}\left( \frac{1}{\sigma d_{\text{max}}} \right)$.
+
+Consequently, without the IMEX approach, analyzing networks with denser connectivity or increasing the global diffusion intensity $\sigma$ would have forced the integration step size to decrease drastically, leading to prohibitively long simulation times. 
+
+In contrast, the implicit backward Euler step applied to the linear diffusion operator is unconditionally stable. By decoupling the spatial coupling from the explicit update, the stability of the diffusion term is no longer a limiting factor. This mathematical property allowed us to safely maintain a fixed, relatively large integration time step of $\Delta t = 0.04$ \footnote{For our configuration of $T=[0,100]$ and a number of samples per function $= 2500$} across all simulations, completely independent of $\sigma$ or the underlying graph topology. The step size becomes constrained solely by the accuracy requirements of the fast local reaction kinetics of the FitzHugh-Nagumo model, guaranteeing both robust convergence and highly efficient dataset generation.
+
+%This mathematical property is crucial for the computational scalability of our dataset generation. By expressing the network's spatial coupling as a dense, pre-computed inverse evolution matrix $\mathbf{M}^{-1}$, we mapped the entire solver onto heavily parallelized tensor operations via PyTorch. Instead of simulating single trajectories sequentially, which can leverage the use of a Graphics Processing Unit (GPU) \foonote{We used an NVIDIA QUADRO RTX 5000 with 16 GB of RAM}. 
+
+
+
+
