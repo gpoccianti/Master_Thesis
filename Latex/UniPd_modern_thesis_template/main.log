@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  22 MAR 2026 12:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  23 MAR 2026 19:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1995,30 +1995,30 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \c@theorem=\count466
 )
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 71.
+(Font)              scaled to size 10.95pt on input line 70.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (./main.aux (./chapters/appendixA.aux) (./chapters/appendixB.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2081,7 +2081,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@mv@tabular=\count473
 \c@mv@boldtabular=\count474
-Package hyperref Info: Link coloring ON on input line 71.
+Package hyperref Info: Link coloring ON on input line 70.
  (./main.out) (./main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
@@ -2131,30 +2131,30 @@ Package caption Info: End \AtBeginDocument code.
 <template/universis.pdf, id=166, 197.73875pt x 89.33376pt>
 File: template/universis.pdf Graphic file (type pdf)
 <use template/universis.pdf>
-Package pdftex.def Info: template/universis.pdf  used on input line 73.
+Package pdftex.def Info: template/universis.pdf  used on input line 72.
 (pdftex.def)             Requested size: 151.158pt x 68.28644pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 73.
+(Font)              scaled to size 10.95pt on input line 72.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 20.74pt on input line 73.
+(Font)              scaled to size 20.74pt on input line 72.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 20.74pt on input line 73.
+(Font)              scaled to size 20.74pt on input line 72.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 73.
+(Font)              scaled to size 12.0pt on input line 72.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 73.
+(Font)              scaled to size 12.0pt on input line 72.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 73.
+(Font)              scaled to size 10.0pt on input line 72.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
-(Font)              scaled to size 10.0pt on input line 73.
+(Font)              scaled to size 10.0pt on input line 72.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 73.
+(Font)              scaled to size 10.0pt on input line 72.
 
 
 <template/unipdbg.pdf, id=167, 153.57375pt x 153.57375pt>
 File: template/unipdbg.pdf Graphic file (type pdf)
 <use template/unipdbg.pdf>
-Package pdftex.def Info: template/unipdbg.pdf  used on input line 73.
+Package pdftex.def Info: template/unipdbg.pdf  used on input line 72.
 (pdftex.def)             Requested size: 597.50528pt x 597.54558pt.
 [1
 
@@ -2180,9 +2180,9 @@ LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}]
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 73.
+(Font)              scaled to size 10.95pt on input line 72.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 73.
+(Font)              scaled to size 24.88pt on input line 72.
  (./main.toc
 
 [3
@@ -2228,7 +2228,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 ] (./chapters/Chapter1.tex) (./chapters/Chapter2.tex)
 
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 85.
+(Font)              scaled to size 9.0pt on input line 84.
 [2]
 
 [3
@@ -2893,26 +2893,23 @@ LaTeX Warning: Reference `sec:FHN_dynamics' on page 41 undefined on input line 9
 
 [41]
 
-LaTeX Warning: Reference `fig:periodicity_order_N=1000_BA' on page 42 undefined on input line 26.
-
-
 LaTeX Warning: Reference `sec:FHN_dynamics' on page 42 undefined on input line 28.
 
-<img/Appendix/Periodicity_Order_BA_N=1000_frequency.png, id=758, 714.7503pt x 426.393pt>
+<img/Appendix/Periodicity_Order_BA_N=1000_frequency.png, id=759, 714.7503pt x 426.393pt>
 File: img/Appendix/Periodicity_Order_BA_N=1000_frequency.png Graphic file (type png)
 <use img/Appendix/Periodicity_Order_BA_N=1000_frequency.png>
 Package pdftex.def Info: img/Appendix/Periodicity_Order_BA_N=1000_frequency.png  used on input line 32.
 (pdftex.def)             Requested size: 383.03122pt x 228.50511pt.
-<img/Appendix/Peridiocity_Order_BA_N=100.png, id=759, 761.7258pt x 455.301pt>
-File: img/Appendix/Peridiocity_Order_BA_N=100.png Graphic file (type png)
-<use img/Appendix/Peridiocity_Order_BA_N=100.png>
-Package pdftex.def Info: img/Appendix/Peridiocity_Order_BA_N=100.png  used on input line 42.
-(pdftex.def)             Requested size: 383.03122pt x 228.94214pt.
+<img/Appendix/Periodicity_Order_BA_N=1000.png, id=760, 763.8939pt x 453.8556pt>
+File: img/Appendix/Periodicity_Order_BA_N=1000.png Graphic file (type png)
+<use img/Appendix/Periodicity_Order_BA_N=1000.png>
+Package pdftex.def Info: img/Appendix/Periodicity_Order_BA_N=1000.png  used on input line 42.
+(pdftex.def)             Requested size: 383.03122pt x 227.57129pt.
 
 
 [42 <./img/Appendix/Periodicity_Order_BA_N=1000_frequency.png>])
 
-[43 <./img/Appendix/Peridiocity_Order_BA_N=100.png>]
+[43 <./img/Appendix/Periodicity_Order_BA_N=1000.png>]
 No file main.gls.
 No file main.acr.
 
@@ -2949,10 +2946,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F21946947631B7FA8D75F6F873455916;4903.
  ) 
 Here is how much of TeX's memory you used:
- 64282 strings out of 473190
- 1364107 string characters out of 5715801
+ 64281 strings out of 473190
+ 1364082 string characters out of 5715801
  1966811 words of memory out of 5000000
- 86281 multiletter control sequences out of 15000+600000
+ 86280 multiletter control sequences out of 15000+600000
  639078 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  123i,14n,131p,2501b,2520s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2996,10 +2993,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (55 pages, 26960182 bytes).
+Output written on main.pdf (55 pages, 26959225 bytes).
 PDF statistics:
- 949 PDF objects out of 1000 (max. 8388607)
- 612 compressed objects within 7 object streams
+ 950 PDF objects out of 1000 (max. 8388607)
+ 613 compressed objects within 7 object streams
  146 named destinations out of 1000 (max. 500000)
  904 words of extra memory for PDF output out of 10000 (max. 10000000)
 
