@@ -39,20 +39,19 @@ Alain Barrat, Marc Barthelemy, and Alessandro Vespignani.
 \newblock \doi{10.1017/CBO9780511791383}.
 \newblock URL \url{https://doi.org/10.1017/CBO9780511791383}.
 
-\bibitem[Romo et~al.(1999)Romo, Brody, Hern{\'a}ndez, and
-  Lemus]{Romo_1999_Nature}
-Ranulfo Romo, Carlos~D Brody, Arturo Hern{\'a}ndez, and Luis Lemus.
-\newblock Neuronal correlates of parametric working memory in the prefrontal
-  cortex.
-\newblock \emph{Nature}, 399\penalty0 (6735):\penalty0 470--473, 1999.
+\bibitem[{NLB Team}(2021)]{neurallatents}
+{NLB Team}.
+\newblock Neural latents benchmark.
+\newblock \url{https://neurallatents.github.io/}, 2021.
 
-\bibitem[Kobak et~al.(2016)Kobak, Brendel, Constantinidis, Feierstein, Kepecs,
-  Mainen, Qi, Romo, Uchida, and Machens]{Kobak_2016_dPCA}
-Dmitry Kobak, Wieland Brendel, Christos Constantinidis, Claudia~E Feierstein,
-  Adam Kepecs, Zachary~F Mainen, Xue-Lian Qi, Ranulfo Romo, Naoshige Uchida,
-  and Christian~K Machens.
-\newblock Demixed principal component analysis of neural population data.
-\newblock \emph{Elife}, 5:\penalty0 e10989, 2016.
+\bibitem[Churchland et~al.(2010)Churchland, Cunningham, Kaufman, Ryu, and
+  Shenoy]{churchland2010cortical}
+Mark~M Churchland, John~P Cunningham, Matthew~T Kaufman, Stephen~I Ryu, and
+  Krishna~V Shenoy.
+\newblock Cortical preparatory activity: representation of movement or first
+  cog in a dynamical machine?
+\newblock \emph{Neuron}, 68\penalty0 (3):\penalty0 387--400, 2010.
+\newblock \doi{10.1016/j.neuron.2010.09.015}.
 
 \bibitem[Hairer and Wanner(1996)]{hairer1996solving}
 Ernst Hairer and Gerhard Wanner.
