@@ -1,0 +1,571 @@
+\chapter{Chapter 4}
+
+\section{Problem definition}
+\subsection{Reaction-Diffusion Dynamics on Complex Networks}
+
+Reaction-Diffusion (RD) systems constitute a cornerstone of mathematical physics, 
+providing a fundamental framework to describe processes where the distribution of substances changes due to two competing mechanisms: 
+local chemical reactions and spatial diffusion. Classically defined on continuous Euclidean domains $\Omega \subset \mathbb{R}^d$, 
+these systems are governed by parabolic partial differential equations of the form:
+\begin{equation}
+    \frac{\partial \mathbf{u}}{\partial t} = \nu \Delta \mathbf{u} + \mathbf{f}(\mathbf{u}),
+\end{equation}
+where $\mathbf{u}(\mathbf{x},t)$ represents the state vector (e.g., chemical concentrations), $\nu$ is the diffusion coefficient, $\Delta = \nabla^2$ is the
+Laplacian operator representing spatial diffusion, and $\mathbf{f}(\mathbf{u})$ describes the non-linear reaction kinetics. 
+These dynamics are renowned for generating complex spatio-temporal patterns, such as Turing patterns, traveling waves, and spirals \cite{turing1952chemical,nakao2010turing}
+
+Recent advances in Operator Learning have focused on learning these dynamics efficiently in continuous domains. Notably, Wang and Hao \cite{wang2025laplacian} proposed 
+a \textit{Laplacian Eigenfunction-Based Neural Operator} (LE-NO). Their approach exploits the spectral decomposition of the continuous 
+Laplacian to efficient approximation of the non-linear reaction terms, demonstrating that spectral information is critical for learning accurate operators in 
+reaction-diffusion problems.
+
+However, many real-world complex systems—such as social networks, connectomes, and power grids—are 
+intrinsically discrete and topologically irregular. On these \textit{Complex Networks}, 
+the notion of continuous space is replaced by a graph topology $\mathcal{G} = (\mathcal{V}, \mathcal{E})$, consisting of $N$ nodes. Consequently, 
+the continuous Laplacian operator is replaced by the \textbf{Graph Laplacian matrix} $\mathbf{L} \in \mathbb{R}^{N \times N}$, defined as:
+\begin{equation}
+    \mathbf{L} = \mathbf{D} - \mathbf{A},
+\end{equation}
+where $\mathbf{A}$ is the adjacency matrix and $\mathbf{D}$ is the diagonal degree matrix. The reaction-diffusion dynamics on the network are then governed by a system of coupled Ordinary Differential Equations (ODEs):
+\begin{equation}
+    \frac{d \mathbf{U}}{dt} = - \nu \mathbf{L} \mathbf{U} + \mathbf{F}(\mathbf{U}),
+    \label{eq:react_diff_on_net}
+\end{equation}
+where $\mathbf{U}(t) \in \mathbb{R}^{N \times d_u}$ is the state of all nodes at time $t$. The term $- \mathbf{L} \mathbf{U}$ captures the diffusion process across the edges of the graph, driving the system towards consensus, while $\mathbf{F}(\mathbf{U})$ applies the non-linear reaction independently at each node.
+
+While the spectral properties of $\mathbf{L}$ are well-studied in network science, the application of Operator Learning to predict these dynamics on complex graphs 
+remains underexplored. Specifically, the challenge lies in whether Neural Operators can effectively learn these dynamics "blindly" from nodal time-series, 
+or if explicitly informing the network with the spectral geometry of $\mathbf{L}$ (via its eigendecomposition) provides a necessary inductive bias for generalization.
+
+% Questo lo lascio alal fine come spunto futuro ?
+Another interesting aspect is the possibility to derive an analytical expression from the learned distribution of $\mathbf{F}(\mathbf{U}$ by the neural network.
+
+\section{Methodology}
+
+\subsection{Problem Formulation}
+We consider a dynamical system defined on a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$, whose state $\mathbf{u}(t) \in \mathbb{R}^N$ evolves
+according to eq (\ref{eq:react_diff_on_net}). 
+Our aim is to predict an approximation of the \textbf{time-stepper operator} $\Psi_{\Delta t}$, which maps the system state from time $t$ to time $t + \Delta t$.
+%on an undirected, connected graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ with $N = |\mathcal{V}|$ nodes. 
+%The state $\mathbf{u}(t) \in \mathbb{R}^N$ evolves according to a semi-linear PDE discretized on the graph:
+
+
+\subsubsection{Experimental Design: Hierarchy of Inductive Bias}
+\label{sec:exp_design}
+To systematically evaluate the impact of physical and topological information on learning performance, we compare three architectures with increasing levels of "inductive bias".
+
+\subsubsection{Level 1: Totally Blind (Black-Box)}
+This baseline represents the purely data-driven approach. The model ignores both the diffusion physics and the graph topology. It attempts to learn the discrete time-stepper operator $\Psi_{\Delta t}$ end-to-end:
+\begin{equation}
+    \mathbf{u}^{n+1} \approx \text{Net}_{\theta}(\mathbf{u}^n)
+\end{equation}
+Here, the network must implicitly learn both the diffusion operator $-\nu \mathbf{L}$ and the reaction operator $\mathbf{F}$ simultaneously from data. This implies that the network must statistically reconstruct the graph structure solely from the propagation of signals, a task that typically requires massive amounts of training data.
+
+\subsubsection{Level 2: Physics-Informed (Hybrid Nodal)}
+In this approach, we inject physical knowledge by using an \textbf{Implicit-Explicit (IMEX)} solver. We assume the linear diffusion term $-\nu \mathbf{L}$ is known, and the network is tasked \textit{only} with approximating the reaction term $\mathbf{F}(\mathbf{u})$.
+
+The update rule enforces the diffusion physics exactly:
+\begin{equation}
+    (\mathbf{I} + \Delta t \nu \mathbf{L}) \mathbf{u}^{n+1} = \mathbf{u}^n + \Delta t \cdot \text{Net}_{\theta}(\mathbf{u}^n)
+    \label{eq:imex_update}
+\end{equation}
+While "Physics-Informed", this model remains \textbf{"Topologically Blind"} regarding the reaction learning: the Network approximates $\mathbf{F}(\mathbf{u})$ node-wise using a 1D normalized coordinate system, ignoring the graph's symmetries and spectral clusters.
+\newline 
+The diffusion coeffient $\nu$ may be known or learned from data \footnote{In the experiments, we learned $\nu$ from data} .
+
+\subsubsection{Level 3: Topology-Informed (Hybrid Spectral)}
+Here the model leverages both physical and topological priors.
+The diffusion operator is enforced exactly via the IMEX scheme as in Level 2.
+However, the neural network now approximates the reaction term in the \textit{graph spectral domain}, utilizing the eigenbasis of the Graph Laplacian $\mathbf{L}$.
+
+\begin{comment}
+One of our proposed methods, the \textbf{Laplacian Eigenfunction Neural Operator (LENO) on Network}, incorporates both physical and topological priors.
+It operates in a \textit{truncated} spectral domain defined by the eigenvectors of the Laplacian.
+Specifically, we select the matrix $\mathbf{\Phi}_p \in \mathbb{R}^{N \times p}$ containing only the eigenvectors corresponding to the $p$ smallest eigenvalues $0 \le \lambda_1 \le \dots \le \lambda_p$ (low-frequency modes), where $p < N$ is a hyperparameter chosen during training.
+
+\begin{enumerate}
+    \item \textbf{Projection:} Inputs are projected to low-dimensional spectral coefficients $\boldsymbol{\beta}^n = \mathbf{\Phi}_p^T \mathbf{u}^n \in \mathbb{R}^p$.
+    \item \textbf{Learning:} A Network predicts the spectral residual of the reaction term: $\hat{\mathbf{R}} = \text{Net}_{\theta}(\boldsymbol{\beta}^n)$.
+    \item \textbf{Update:} The next state is computed via the exact spectral IMEX scheme for the first $p$ modes:
+    \begin{equation}
+        \beta_k^{n+1} = \frac{\beta_k^n + \Delta t \hat{R}_k}{1 + \Delta t \nu \lambda_k}, \quad k=1,\dots,p
+    \end{equation}
+    The physical state is finally reconstructed as $\mathbf{u}^{n+1} \approx \mathbf{\Phi}_p \boldsymbol{\beta}^{n+1}$.
+\end{enumerate}
+%This model is \textbf{"Fully Informed"}: it leverages the exact solver for diffusion and the truncated native eigenbasis of the graph for efficient representation.
+It is important to note that, since we posed the problem in the right coordinates, usually a simple MLP suffices to learn the coupling between modes, 
+without the need for complex architectures (as we will see in the next section).
+\end{comment}
+
+
+\subsection{Training Objective: Composite Loss Strategy}
+For the informed architectures (Levels 2 and 3), the learning task is reframed: instead of predicting the state evolution directly, the networks must approximate the non-linear reaction term $\mathbf{F}(\mathbf{u})$. To ensure both temporal stability and physical consistency, we employ a composite loss function consisting of two terms:
+ a \textbf{Trajectory Loss} and a \textbf{Physics (Residual) Loss}.
+
+
+\subsection{Ground Truth Reaction Extraction}
+Since the dataset contains state snapshots $\mathbf{u}$ but not explicit values for the reaction $\mathbf{F}(\mathbf{u})$, we first extract the "ground truth" reaction target, denoted as $\mathbf{R}_{GT}$, by inverting the numerical scheme used for data generation.
+Given the IMEX structure, the effective reaction responsible for the transition $\mathbf{u}^n \to \mathbf{u}^{n+1}$ is:
+\begin{equation}
+    \mathbf{R}_{GT}^n = \underbrace{\frac{\mathbf{u}^{n+1} - \mathbf{u}^n}{\Delta t}}_{\text{Finite Difference}} + \underbrace{\nu \mathbf{L} \mathbf{u}^{n+1}}_{\text{Implicit Diffusion}}
+\end{equation}
+For Level 3, the target is the approximation $\mathbf{{R}_{GT}}^{n}_{p} = \mathbf{\Phi}_p^T \mathbf{R}_{GT}^n \mathbf{\Phi}_p$, or the projection onto the spectral domain: $\hat{\mathbf{R}}_{GT}^n = \mathbf{\Phi}_p^T \mathbf{R}_{GT}^n$.
+
+\subsubsection{Loss Components}
+The total loss $\mathcal{L}$ is defined as a weighted sum:
+\begin{equation}
+    \mathcal{L} = \mathcal{L}_{traj} + \gamma \mathcal{L}_{phys}
+\end{equation}
+where $\gamma$ is a balancing hyperparameter \footnote{in our experiments, we tune $\gamma$ as an hyperparameter of the model, before training.}
+\footnote{For the blind architectures we used only the trajectory loss.}.
+
+\begin{enumerate}
+    \item \textbf{Physics (Residual) Loss ($\mathcal{L}_{phys}$):} 
+    This term provides instantaneous supervision, forcing the neural network $\text{Net}_\theta$ to learn the local physical law governing the reaction.
+    \begin{equation}
+        \mathcal{L}_{phys} = \frac{1}{N_{batch}} \sum_{i} \| \text{Net}_\theta(\mathbf{x}_i) - \mathbf{R}_{GT, i} \|_2
+    \end{equation}
+    where inputs $\mathbf{x}$ and targets $\mathbf{R}$ can be in nodal space or in spectral space (only for LENO).
+    It is worth noting that this term acts analogously to the PDE residual loss ($\mathcal{L}_{PDE}$) found in classical Physics-Informed Neural Networks (PINNs), as it penalizes deviations from the governing equation.
+    \footnote{However, unlike standard PINNs where the entire PDE is enforced via optimization (soft constraint), our hybrid framework enforces the diffusion
+     operator exactly via the numerical architecture (hard constraint), leaving the loss function responsible solely for the reaction dynamics.}
+
+\item \textbf{Relative Trajectory Loss ($\mathcal{L}_{traj}$):}
+This term measures the relative error of the integrated next-step state. Normalizing by the ground truth magnitude ensures the loss is scale-invariant and prevents the model from biasing towards high-amplitude regions.
+\begin{equation}
+    \mathcal{L}_{traj} = \frac{1}{N_{batch}} \sum_{i} \frac{\| \Psi_{\Delta t}(\mathbf{u}^n_i, \text{Net}_\theta) - \mathbf{u}^{n+1}_{true, i} \|_2}{\| \mathbf{u}^{n+1}_{true, i} \|_2 + \epsilon}
+\end{equation}
+where $\Psi_{\Delta t}$ represents the differentiable IMEX solver layer, and $\epsilon=10^{-6}$ is a small constant for numerical stability.
+
+    For the trajectory term we can considered the relative L2 term for scale-invariance and better interpretability. However, during training, 
+    we found that using the L2 norm for the physics term provided better convergence properties.
+\end{enumerate}
+
+
+
+\subsection{Neural Architectures Implementation}
+
+We instantiate the hierarchy of inductive biases defined in Sec. \ref{sec:exp_design} using the following specific architectures. All models were implemented in PyTorch.
+
+\begin{itemize}
+    \item \textbf{Level 1: Black-Box Baselines.}
+    \begin{itemize}
+        \item \textbf{Blind DeepONet:} Implemented with a \textit{Branch Net} (MLP) taking the full state vector, and a \textit{Trunk Net} (MLP) taking normalized node coordinates $y \in [0,1]$. The output is the dot product of branch and trunk features, treating graph nodes as unrelated coordinates on a 1D line.
+        \item \textbf{Blind FNO:} A standard 1D Fourier Neural Operator relying on the Fast Fourier Transform (FFT).
+         We truncated the frequency modes passed. It assumes a Euclidean periodic topology, ignoring the adjacency matrix $A$.
+    \end{itemize}
+
+
+\item \textbf{Level 2: Physics-Informed (Hybrid)}\\
+This tier decouples physical laws from topological structure. Both architectures leverage the \textbf{exact Graph-Spectral IMEX solver} for time-stepping, ensuring perfect diffusion dynamics via the true Graph Laplacian eigenvalues. However, the neural networks approximating the reaction term $\mathcal{N}(u)$ remain \textbf{topologically blind}, treating the graph signal as a 1D Euclidean sequence.
+\begin{itemize}
+    \item \textbf{PI-DeepONet:} Utilizes the standard Branch/Trunk architecture to map the full state vector to the reaction residual. It acts node-wise without explicit neighborhood information.
+    \item \textbf{PI-FNO:} Uses the 1D FNO backbone to predict the reaction vector. 
+\end{itemize}
+
+    \item \textbf{Level 3: Topology-Informed (Spectral).}
+    \begin{itemize}
+        \item \textbf{Laplacian Eigenfunction Neural Operator (LENO) on Network:} 
+        This method operates in a \textit{truncated} spectral domain defined by the eigenvectors of the Laplacian.
+Specifically, we select the matrix $\mathbf{\Phi}_p \in \mathbb{R}^{N \times p}$ containing only the eigenvectors corresponding to the $p$ smallest eigenvalues $0 \le \lambda_1 \le \dots \le \lambda_p$ (low-frequency modes), where $p < N$ is a hyperparameter chosen during training.
+
+\begin{enumerate}
+    \item \textbf{Projection:} Inputs are projected to low-dimensional spectral coefficients $\boldsymbol{\beta}^n = \mathbf{\Phi}_p^T \mathbf{u}^n \in \mathbb{R}^p$.
+    \item \textbf{Learning:} A Network predicts the spectral residual of the reaction term: $\hat{\mathbf{R}} = \text{Net}_{\theta}(\boldsymbol{\beta}^n)$.
+    \item \textbf{Update:} The next state is computed via the exact spectral IMEX scheme for the first $p$ modes:
+    \begin{equation}
+        \beta_k^{n+1} = \frac{\beta_k^n + \Delta t \hat{R}_k}{1 + \Delta t \nu \lambda_k}, \quad k=1,\dots,p
+    \end{equation}
+    The physical state is finally reconstructed as $\mathbf{u}^{n+1} \approx \mathbf{\Phi}_p \boldsymbol{\beta}^{n+1}$.
+\end{enumerate}
+%This model is \textbf{"Fully Informed"}: it leverages the exact solver for diffusion and the truncated native eigenbasis of the graph for efficient representation.
+It is important to note that, since we posed the problem in the right coordinates, usually a simple MLP suffices to learn the coupling between modes, 
+without the need for complex architectures.
+
+    \item \textbf{Graph (Laplacian)-FNO (Ours):} It operates in a similar way to LENO..
+    However it builds on the standard FNO, so it replaces FFT/IFFT operations with the Graph Fourier Transform (GFT, where the input is projected onto the first $p$ eigenvectors of the Graph Laplacian ($\mathbf{\Phi}_p$)).
+    
+    The main difference wrt LENO is that the reaction, even if it's embedded in the spectral domain, is penalized (by the loss) in the physical domain. 
+    
+        
+        
+%The proposed spectral residual learner. 
+%Unlike deep FNOs, the core reaction approximation is handled by a concise MLP operating directly on the spectral coefficients $\boldsymbol{\beta}$, 
+%leveraging the exact IMEX solver for the diffusion update.
+    \end{itemize}
+\end{itemize}
+
+%\paragraph{Implementation Note.} 
+%A key distinction from classical PINNs lies in constraint enforcement. While PINNs minimize the PDE residual as a soft loss term ($\mathcal{L}_{PDE}$), our Level 3 framework enforces the diffusion operator exactly via the numerical architecture (hard constraint) as shown in Eq. (\ref{eq:imex_update}). This strictly reduces the hypothesis space to physically valid diffusion processes on the graph.
+
+\begin{comment}
+\section{Training Details}
+All the trianing classes have been implemented in PyTorch and trained on an NVIDIA Quadro RTX 5000 GPU.
+In particular, we used the Adam optimizer, where the learning rate was decreased by a factor of $0.5$ every $300$ epochs for a total of $500$ epochs.
+An initial hyperparameter search \footnote{For a more efficient sampling scheme we used the \textit{Optuna} library} was performed to select
+ the best learning rate in the set $\{5\cdot10^{-3}, 10^{-5}\}$ (with a logatmic scale sampling), and,
+for each architecture, the initial value for $\nu$, the best number of layers, nodes per layer and other architectural-specific hyperparameters (e.g., number of Fourier modes for FNO).
+%devo dire i range in cui sono stati scelti gli iperparametri in ogni rete?
+Finally during training, we chose the best model by monitoring the validation loss and saving the weights at the epoch with the lowest validation error.
+\end{comment}
+
+%%%%%%%%%%%
+\subsection{Training Details}
+All models were implemented in PyTorch and trained on an NVIDIA Quadro RTX 5000 GPU. To ensure reproducibility, fixed random seeds were used for all experiments.
+
+The network parameters were optimized using the Adam algorithm with a weight decay of $10^{-4}$ and a gradient clipping threshold of $1.0$ to ensure numerical stability
+\footnote{Only for levels $2\&3$, since the loss can be more prone to stiffness and exploding gradients due to the inclusion of physical constraints and solver dynamics.}.
+% We employed a mini-batch strategy with a batch size of $128$ for the trajectory data.
+
+To select the optimal configuration, we performed an automated hyperparameter search using the \textit{Optuna} framework. To efficiently explore the search space, we utilized a \textit{Median Pruner} to early-stop unpromising trials. The search space included common parameters across all models and architecture-specific ones:
+\begin{itemize}
+    \item Learning rate: $\eta \in [10^{-5}, 5\cdot 10^{-3}]$ (log-uniform sampling);
+    \item Physics penalty weight \footnote{Only for levels $2\&3$\label{fn:levels}}: $\lambda_{\text{phys}} \in [10^{-5}, 10.0]$ (log-uniform sampling);
+    \item Initial guess for square root of the diffusion coefficient ($\nu= \varepsilon^2$)\textsuperscript{\ref{fn:levels}}: $\varepsilon_{\text{init}} \in [0.5, 2.0]$;
+    \item Architecture-specific hyperparameters (e.g., hidden layer width, number of modes, or network depth) were optimized within ranges appropriate for each specific model.
+\end{itemize}
+
+Once the best hyperparameters were identified, the final models were trained for $500$ epochs. The learning rate was scheduled to decrease by a factor of $\gamma = 0.5$ every $300$ epochs. 
+To prevent overfitting, we monitored the error on a validation set and saved the model weights corresponding to the epoch with the lowest validation loss.
+
+\section{Example 1: Allen-Cahn on Graph (Hierarchy of Inductive Bias)}
+
+\subsection{Data Generation}
+To evaluate the proposed methods, we simulate the \textbf{Allen-Cahn equation} on a complex network. 
+%The Allen-Cahn equation is a well-known reaction-diffusion model used in phase-transition problems.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The Allen-Cahn equation describes a reaction-diffusion process governed by the gradient flow of a Ginzburg-Landau free energy functional~\cite{allen1979microscopic}.
+ While its primary application lies in predicting microstructural evolution during phase transitions in materials~\cite{chen2002phase},
+  its ability to drive systems toward stable stationary states makes it a versatile tool. 
+  Applications range from geometrical image segmentation~\cite{benes2004geometrical} to finding minimal cuts in graph theory and analyzing community structures
+   in complex networks~\cite{bertozzi2012diffuse}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Graph Topology}
+We generate a scale-free network using the \textbf{Barabási-Albert (BA)} model to mimic realistic topological features such as hubs and clusters.
+\begin{itemize}
+    \item \textbf{Nodes:} $N = 1000$.
+    \item \textbf{Attachment:} $m = 2$ (each new node attaches to 2 existing nodes).
+\end{itemize}
+
+\subsection{Dynamics: Allen-Cahn on Graphs}
+The specific form of the reaction term for the Allen-Cahn equation is cubic:
+\begin{equation}
+    \mathbf{F}(\mathbf{u}) = \mathbf{u} - \mathbf{u}^3
+\end{equation}
+The system evolves from an initial condition of $50$, randomly selected, active nodes.
+We generate a training dataset of $15000$ trajectories ($10000$ for training, $3000$ for validation and $2000$ for testing) by numerically integrating the system using 
+a spectral IMEX solver (details in Appendix \ref{app:imex}),
+ subsampling the snapshots at time intervals $\Delta=0.05 t$ for 21 time steps to create the input-target pairs.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{img/Allen-Cahn/dynamics_Allen_Cahn.png}
+    \caption{Simulation of Allen-Cahn dynamics on a Barabási-Albert graph with $N=100$ nodes and $m=2$. The figure illustrates the evolution of node states over time, showcasing both the reaction and diffusive processes.}
+    \label{fig:experimental_design}
+\end{figure}
+
+%%%%%%%%%
+
+\subsection{Results and Discussion}
+
+\subsubsection{Quantitative Analysis: Error Distribution}
+We begin our analysis by examining the distribution of the relative $L_2$ errors on the test set (2000 trajectories). 
+Figure \ref{fig:error_matrix} presents a systematic comparison arranged by model family (columns) and inductive bias level (rows).
+
+This visualization highlights the progressive improvement in generalization performance as we move from "Blind" models to "Topology-Informed" architectures.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+    \centering
+    
+    % --- HEADERS (Struttura identica alle righe sotto) ---
+    % 1. Spacer per l'etichetta verticale (0.05)
+    \begin{minipage}{0.05\textwidth} 
+        \hfill 
+    \end{minipage}
+    \hfill % <--- QUESTO MANCAVA! Allinea con lo spazio delle righe sotto
+    % 2. DeepONet Title (0.46)
+    \begin{minipage}{0.46\textwidth} 
+        \centering \textbf{DeepONet Family}
+    \end{minipage}
+    \hfill % Spazio tra le due colonne principali
+    % 3. FNO Title (0.46)
+    \begin{minipage}{0.46\textwidth} 
+        \centering \textbf{FNO Family}
+    \end{minipage}
+    \par\medskip
+
+    % --- ROW 1: LEVEL 1 (BLIND) ---
+    \begin{minipage}[c]{0.05\textwidth}
+        \centering 
+        \rotatebox{90}{\parbox{2.5cm}{\centering \textbf{Level 1} \\ (Blind)}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.46\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.46\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/Allen-Cahn/Histograms/hist_test_set_FNO_blind.png}
+    \end{minipage}
+    \par\bigskip 
+
+    % --- ROW 2: LEVEL 2 (PHYSICS-INFORMED) ---
+    \begin{minipage}[c]{0.05\textwidth}
+        \centering 
+        \rotatebox{90}{\parbox{2.5cm}{\centering \textbf{Level 2} \\ (Physics)}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.46\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/Allen-Cahn/Histograms/hist_test_set_deeponet.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.46\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/Allen-Cahn/Histograms/hist_test_set_FNO.png}
+    \end{minipage}
+    \par\bigskip
+
+    % --- ROW 3: LEVEL 3 (TOPOLOGY-INFORMED) ---
+    \begin{minipage}[c]{0.05\textwidth}
+        \centering 
+        \rotatebox{90}{\parbox{2.5cm}{\centering \textbf{Level 3} \\ (Topology)}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.46\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/Allen-Cahn/Histograms/hist_test_set_leno.png}
+        \subcaption*{LENO}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.46\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/Allen-Cahn/Histograms/hist_test_set_LFNO.png}
+        \subcaption*{LFNO}
+    \end{minipage}
+    
+\caption{Matrix of Relative $L_2$ Error distributions on the test set.
+    \textbf{Columns} distinguish between Nodal architectures (DeepONet family\protect\footnotemark) 
+    and Spectral architectures (FNO family). 
+    \textbf{Rows} represent the hierarchy of inductive bias: Level 1 (Totally Blind), Level 2 (Physics-Informed), and Level 3 (Topology-Informed). 
+    The red dashed line indicates the mean error. Note how the LFNO model (bottom right) achieves the lowest error variance and mean.}
+    \label{fig:error_matrix}
+\end{figure}
+
+%\footnotetext{\cite{wang2025laplacian} states that "our approach can be viewed as a variant of DeepONet, in which the trunk network is replaced by Laplacian eigenfunctions, while the branch network remains a linear functional approximated by a neural network."}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The summary of the quantitative results is reported in Table \ref{tab:error_comparison}.
+
+
+\begin{table}[htbp]
+    \centering
+    \begin{threeparttable} % <--- AGGIUNGI QUESTO WRAPPER
+        \caption{Comparison of Mean Relative $L_2$ Errors on test set across all architectures. 
+        The transition from Level 1 to Level 3 yields a massive error reduction (orders of magnitude). 
+        Spectral methods (FNO family) generally outperform Nodal methods (DeepONet family).}
+        \label{tab:error_comparison}
+
+        \renewcommand{\arraystretch}{1.3}
+        \setlength{\tabcolsep}{12pt}
+        
+        \begin{tabular}{lccc}
+            \toprule
+            \textbf{Inductive Bias} & \textbf{Level} & \textbf{DeepONet Family}\tnote{a} & \textbf{FNO Family} \\ % Usa \tnote{a}
+            \midrule
+            
+            \textbf{Totally Blind} & 1 & $48 \pm 1$ \% & $27 \pm 1$\% \\
+            \arrayrulecolor{black!30}\midrule 
+            
+            \textbf{Physics-Informed} & 2 & $4.3 \pm 0.2$ \% & $0.070 \pm 0.002$ \% \\
+            \arrayrulecolor{black!30}\midrule
+    
+            \textbf{Topology-Informed} & 3 & $2.2 \pm 0.1$ \% \footnotesize{(LENO)} & $\mathbf{0.031 \pm 0.002}$ \textbf{\%} \footnotesize{(LFNO)} \\
+            
+            \arrayrulecolor{black}\bottomrule
+        \end{tabular}
+        
+        % QUI DEFINISCI LA NOTA
+        \begin{tablenotes}
+            \small
+            \item[a] \cite{wang2025laplacian} states that for LENO "our approach can be viewed as a variant of DeepONet, in which the trunk network is replaced by Laplacian eigenfunctions, while the branch network remains a linear functional approximated by a neural network."
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[p] 
+    \centering
+    \setlength{\fboxsep}{0pt}
+    
+    % ==========================================
+    % FAMILY 1: DeepONet
+    % ==========================================
+    
+    % !!! FIX QUI: Titolo allineato alla colonna destra !!!
+    % Usiamo una minipage vuota a sx per "spingere" il titolo al posto giusto
+    \begin{minipage}{0.15\textwidth}
+        \hfill % Vuoto
+    \end{minipage}%
+    \hspace{0.02\textwidth}%
+    \begin{minipage}{0.75\textwidth}
+        \centering
+        \textbf{\large DeepONet Family}
+    \end{minipage}
+    \par\vspace{0.2cm}
+    
+    % --- L1 ---
+    \begin{minipage}{0.15\textwidth}
+        \flushright \small \textbf{Level 1} \\ (Blind)
+    \end{minipage}%
+    \hspace{0.02\textwidth}%
+    \begin{minipage}{0.75\textwidth}
+        \centering
+        \includegraphics[height=0.135\textheight, keepaspectratio]{img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png}
+    \end{minipage}
+    \par\vspace{0.1cm}
+    
+    % --- L2 ---
+    \begin{minipage}{0.15\textwidth}
+        \flushright \small \textbf{Level 2} \\ (Physics)
+    \end{minipage}%
+    \hspace{0.02\textwidth}%
+    \begin{minipage}{0.75\textwidth}
+        \centering
+        \includegraphics[height=0.135\textheight, keepaspectratio]{img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png}
+    \end{minipage}
+    \par\vspace{0.1cm}
+
+    % --- L3 ---
+    \begin{minipage}{0.15\textwidth}
+        \flushright \small \textbf{Level 3} \\ (Topology)
+    \end{minipage}%
+    \hspace{0.02\textwidth}%
+    \begin{minipage}{0.75\textwidth}
+        \centering
+        \includegraphics[height=0.135\textheight, keepaspectratio]{img/Allen-Cahn/Heatmaps/heatmap_leno.png}
+        \\ \small \textit{LENO}
+    \end{minipage}
+    
+    \par\vspace{0.4cm} % Separatore verticale tra le famiglie
+
+    % ==========================================
+    % FAMILY 2: FNO
+    % ==========================================
+
+    % !!! FIX QUI: Titolo allineato alla colonna destra !!!
+    \begin{minipage}{0.15\textwidth}
+        \hfill % Vuoto
+    \end{minipage}%
+    \hspace{0.02\textwidth}%
+    \begin{minipage}{0.75\textwidth}
+        \centering
+        \textbf{\large FNO Family}
+    \end{minipage}
+    \par\vspace{0.2cm}
+
+    % --- L1 ---
+    \begin{minipage}{0.15\textwidth}
+        \flushright \small \textbf{Level 1} \\ (Blind)
+    \end{minipage}%
+    \hspace{0.02\textwidth}%
+    \begin{minipage}{0.75\textwidth}
+        \centering
+        \includegraphics[height=0.135\textheight, keepaspectratio]{img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png}
+    \end{minipage}
+    \par\vspace{0.1cm}
+
+    % --- L2 ---
+    \begin{minipage}{0.15\textwidth}
+        \flushright \small \textbf{Level 2} \\ (Physics)
+    \end{minipage}%
+    \hspace{0.02\textwidth}%
+    \begin{minipage}{0.75\textwidth}
+        \centering
+        \includegraphics[height=0.135\textheight, keepaspectratio]{img/Allen-Cahn/Heatmaps/heatmap_FNO.png}
+    \end{minipage}
+    \par\vspace{0.1cm}
+
+    % --- L3 ---
+    \begin{minipage}{0.15\textwidth}
+        \flushright \small \textbf{Level 3} \\ (Topology)
+    \end{minipage}%
+    \hspace{0.02\textwidth}%
+    \begin{minipage}{0.75\textwidth}
+        \centering
+        \includegraphics[height=0.135\textheight, keepaspectratio]{img/Allen-Cahn/Heatmaps/heatmap_LFNO.png}
+        \\ \small \textit{LFNO}
+    \end{minipage}
+
+    \par\vspace{0.2cm}
+    
+    \caption{Sequential comparison of Error Heatmaps. Top block: DeepONet architectures; Bottom block: FNO architectures.}
+    \label{fig:heatmap_vertical_stack}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.3} 
+    \setlength{\tabcolsep}{14pt} 
+    
+    \begin{tabular}{lcc}
+        \toprule
+        \multirow{2.5}{*}{\textbf{Inductive Bias}} & \multicolumn{2}{c}{\textbf{Learned} $\boldsymbol{\nu}$} \\
+        \cmidrule(lr){2-3} % Linea che copre solo le colonne dei dati
+        & \textbf{DeepONet Family} & \textbf{FNO Family} \\
+        \textit{(Level)}\\
+        \midrule
+        
+        \textbf{Physics-Informed} & \multirow{2}{*}{$3.334$} & \multirow{2}{*}{$4.002$} \\
+        (Level 2) & & \\
+        
+        \arrayrulecolor{black!30}\midrule 
+        
+        \textbf{Topology-Informed} & \multirow{2}{*}{$3.526$} & \multirow{2}{*}{$\mathbf{3.998}$} \\
+        (Level 3) & \small{\textit{(LENO)}} & \small{\textit{(LFNO)}} \\
+        
+        \arrayrulecolor{black}\bottomrule
+    \end{tabular}
+    
+    \caption{System Identification Results. Comparison of the learned diffusion coefficient $\nu$ (Ground Truth $\nu = 4.000$). 
+    Values are rounded to 4 significant figures. 
+    Spectral architectures (FNO family) successfully identify the correct physical parameter with high precision, 
+    whereas Nodal architectures (DeepONet family) tend to underestimate it.}
+    \label{tab:learned_coeffs}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\subsection{Discussion}
+
+The results presented in this chapter clearly demonstrate the significant impact of incorporating inductive biases into neural operator architectures
+ for learning dynamics on complex networks.
+
+ In fact both blind architectures (Level 1) exhibit poor generalization capabilities, with mean relative $L_2$ errors of $48\%$ (DeepONet) and $27\%$ (FNO).
+
+On the other hand, adding physical information (Level 2) drastically reduces the error by orders of magnitude.
+Evidently, embedding the underlying physics of the system into the learning process is crucial for accurate predictions.
+
+It is worth noting that in Level 2, even if we didn't insert topological information in the neural network,
+we still exploited the Laplacian operator in the integration scheme (see Appendix \ref{app:imex}). So, if we don't have access to the topological features 
+we would need another integration method, which probably would lower the perfomances.
+
+Finally it is worth mentioning the FNO architectures outperforms the DeepONet architectures at the point that, FNO outperforms leno.
+This could be due to the fact that the FNO family has access to both the node features (\textit{input/output $\rightarrow$ loss}) and the spectral features (\textit{latent space}),
+whereas the DeepONet family only has access to the node features (level $1 \& 2$) or the spectral features (level $3$).
+
+
+
+\section{The inverse problem}
+
+\section{Example 2: the case of FitzHugh-Nagumo}

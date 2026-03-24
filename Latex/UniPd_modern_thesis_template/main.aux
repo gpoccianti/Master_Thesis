@@ -16,9 +16,9 @@
 \providecommand \oddpage@label [2]{}
 \babel@aux{english}{}
 \savepicturepage{pgfid2}{3}
-\pgfsyspdfmark {pgfid2}{0}{40463552}
+\pgfsyspdfmark {pgfid2}{0}{40352287}
 \savepicturepage{pgfid1}{3}
-\pgfsyspdfmark {pgfid1}{8433566}{38429516}
+\pgfsyspdfmark {pgfid1}{8433566}{38434835}
 \@writefile{toc}{\contentsline {chapter}{Abstract}{v}{section*.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{Sommario}{vii}{section*.5}\protected@file@percent }
 \newlabel{ch:introduction}{{}{1}{Introduction}{chapter*.6}{}}
@@ -106,6 +106,8 @@
 \newlabel{fig:fno_scaling_error}{{1.15}{19}{Summary of the FNO performance across different network sizes ($N$). The plot compares the mean error scaling for both Erd\H {o}s-R\'enyi (ER) and Barab\'asi-Albert (BA) topologies, demonstrating the robustness and scalability of the architecture}{figure.caption.22}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.4.e}C. Elegans connectonome}{19}{subsection.1.4.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1.5}Dependence on the diffusion coefficient $\sigma $}{19}{section.1.5}\protected@file@percent }
+\citation{benjamini2014mixing}
+\citation{mihail2003certain}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces Dynamical transition of the neural network as the diffusion coefficient $\sigma $ varies. For low values of $\sigma $, the signal fails to propagate efficiently, whereas a critical threshold allows for coherent signal transmission.}}{20}{figure.caption.23}\protected@file@percent }
 \newlabel{fig:diffusion_transition}{{1.16}{20}{Dynamical transition of the neural network as the diffusion coefficient $\sigma $ varies. For low values of $\sigma $, the signal fails to propagate efficiently, whereas a critical threshold allows for coherent signal transmission}{figure.caption.23}{}}
 \citation{neurallatents}
@@ -135,42 +137,94 @@
 \newlabel{fig:qual_fno}{{1.23}{29}{\relax }{figure.caption.30}{}}
 \@writefile{toc}{\contentsline {part}{II\hspace  {1em}Finding the Reaction Term in a Reaction-Diffusion System}{31}{part.2}\protected@file@percent }
 \newlabel{prt:Second section}{{II}{31}{Finding the Reaction Term in a Reaction-Diffusion System}{part.2}{}}
-\newlabel{ch:conclusions}{{II}{33}{Conclusions}{chapter*.31}{}}
+\citation{turing1952chemical,nakao2010turing}
+\citation{wang2025laplacian}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Chapter 4}{33}{chapter.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
 \savepicturepage{pgfid8}{33}
 \pgfsyspdfmark {pgfid8}{0}{40463552}
 \savepicturepage{pgfid7}{33}
-\pgfsyspdfmark {pgfid7}{8433566}{37957630}
-\@writefile{toc}{\contentsline {chapter}{Conclusions}{33}{chapter*.31}\protected@file@percent }
-\@input{chapters/appendixA.aux}
-\savepicturepage{pgfid10}{37}
+\pgfsyspdfmark {pgfid7}{8433566}{37899439}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Problem definition}{33}{section.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.a}Reaction-Diffusion Dynamics on Complex Networks}{33}{subsection.2.1.1}\protected@file@percent }
+\newlabel{eq:react_diff_on_net}{{2.3}{34}{Reaction-Diffusion Dynamics on Complex Networks}{equation.2.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Methodology}{34}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.a}Problem Formulation}{34}{subsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Experimental Design: Hierarchy of Inductive Bias}{34}{subsubsection*.31}\protected@file@percent }
+\newlabel{sec:exp_design}{{2.2.a}{34}{Experimental Design: Hierarchy of Inductive Bias}{subsubsection*.31}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Level 1: Totally Blind (Black-Box)}{35}{subsubsection*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Level 2: Physics-Informed (Hybrid Nodal)}{35}{subsubsection*.33}\protected@file@percent }
+\newlabel{eq:imex_update}{{2.5}{35}{Level 2: Physics-Informed (Hybrid Nodal)}{equation.2.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Level 3: Topology-Informed (Hybrid Spectral)}{35}{subsubsection*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.b}Training Objective: Composite Loss Strategy}{35}{subsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.c}Ground Truth Reaction Extraction}{36}{subsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Loss Components}{36}{subsubsection*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.d}Neural Architectures Implementation}{37}{subsection.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.e}Training Details}{38}{subsection.2.2.5}\protected@file@percent }
+\citation{allen1979microscopic}
+\citation{chen2002phase}
+\citation{benes2004geometrical}
+\citation{bertozzi2012diffuse}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Example 1: Allen-Cahn on Graph (Hierarchy of Inductive Bias)}{39}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.a}Data Generation}{39}{subsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.b}Graph Topology}{39}{subsection.2.3.2}\protected@file@percent }
+\newlabel{fn:levels}{{6}{39}{Training Details}{subsection.2.2.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Simulation of Allen-Cahn dynamics on a Barabási-Albert graph with $N=100$ nodes and $m=2$. The figure illustrates the evolution of node states over time, showcasing both the reaction and diffusive processes.}}{40}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:experimental_design}{{2.1}{40}{Simulation of Allen-Cahn dynamics on a Barabási-Albert graph with $N=100$ nodes and $m=2$. The figure illustrates the evolution of node states over time, showcasing both the reaction and diffusive processes}{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.c}Dynamics: Allen-Cahn on Graphs}{40}{subsection.2.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.d}Results and Discussion}{40}{subsection.2.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Quantitative Analysis: Error Distribution}{40}{subsubsection*.37}\protected@file@percent }
+\citation{wang2025laplacian}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Matrix of Relative $L_2$ Error distributions on the test set. \textbf  {Columns} distinguish between Nodal architectures (DeepONet family\footnotemark ) and Spectral architectures (FNO family). \textbf  {Rows} represent the hierarchy of inductive bias: Level 1 (Totally Blind), Level 2 (Physics-Informed), and Level 3 (Topology-Informed). The red dashed line indicates the mean error. Note how the LFNO model (bottom right) achieves the lowest error variance and mean.}}{41}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:error_matrix}{{2.2}{41}{Matrix of Relative $L_2$ Error distributions on the test set. \textbf {Columns} distinguish between Nodal architectures (DeepONet family\protect \footnotemark ) and Spectral architectures (FNO family). \textbf {Rows} represent the hierarchy of inductive bias: Level 1 (Totally Blind), Level 2 (Physics-Informed), and Level 3 (Topology-Informed). The red dashed line indicates the mean error. Note how the LFNO model (bottom right) achieves the lowest error variance and mean}{figure.caption.38}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Comparison of Mean Relative $L_2$ Errors on test set across all architectures. The transition from Level 1 to Level 3 yields a massive error reduction (orders of magnitude). Spectral methods (FNO family) generally outperform Nodal methods (DeepONet family).}}{42}{table.caption.40}\protected@file@percent }
+\newlabel{tab:error_comparison}{{2.1}{42}{Comparison of Mean Relative $L_2$ Errors on test set across all architectures. The transition from Level 1 to Level 3 yields a massive error reduction (orders of magnitude). Spectral methods (FNO family) generally outperform Nodal methods (DeepONet family)}{table.caption.40}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces System Identification Results. Comparison of the learned diffusion coefficient $\nu $ (Ground Truth $\nu = 4.000$). Values are rounded to 4 significant figures. Spectral architectures (FNO family) successfully identify the correct physical parameter with high precision, whereas Nodal architectures (DeepONet family) tend to underestimate it.}}{42}{table.caption.42}\protected@file@percent }
+\newlabel{tab:learned_coeffs}{{2.2}{42}{System Identification Results. Comparison of the learned diffusion coefficient $\nu $ (Ground Truth $\nu = 4.000$). Values are rounded to 4 significant figures. Spectral architectures (FNO family) successfully identify the correct physical parameter with high precision, whereas Nodal architectures (DeepONet family) tend to underestimate it}{table.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Sequential comparison of Error Heatmaps. Top block: DeepONet architectures; Bottom block: FNO architectures.}}{43}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:heatmap_vertical_stack}{{2.3}{43}{Sequential comparison of Error Heatmaps. Top block: DeepONet architectures; Bottom block: FNO architectures}{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.e}Discussion}{44}{subsection.2.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}The inverse problem}{44}{section.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Example 2: the case of FitzHugh-Nagumo}{44}{section.2.5}\protected@file@percent }
+\newlabel{ch:conclusions}{{2.5}{45}{Conclusions}{chapter*.43}{}}
+\savepicturepage{pgfid10}{45}
 \pgfsyspdfmark {pgfid10}{0}{40463552}
-\savepicturepage{pgfid9}{37}
-\pgfsyspdfmark {pgfid9}{8433566}{37787047}
-\@input{chapters/appendixB.aux}
-\savepicturepage{pgfid12}{41}
+\savepicturepage{pgfid9}{45}
+\pgfsyspdfmark {pgfid9}{8433566}{37957630}
+\@writefile{toc}{\contentsline {chapter}{Conclusions}{45}{chapter*.43}\protected@file@percent }
+\@input{chapters/appendixA.aux}
+\savepicturepage{pgfid12}{49}
 \pgfsyspdfmark {pgfid12}{0}{40463552}
-\savepicturepage{pgfid11}{41}
-\pgfsyspdfmark {pgfid11}{8433566}{37935714}
+\savepicturepage{pgfid11}{49}
+\pgfsyspdfmark {pgfid11}{8433566}{37787047}
+\@input{chapters/appendixB.aux}
+\savepicturepage{pgfid14}{53}
+\pgfsyspdfmark {pgfid14}{0}{40463552}
+\savepicturepage{pgfid13}{53}
+\pgfsyspdfmark {pgfid13}{8433566}{37935714}
+\@input{chapters/AppendixC.aux}
+\savepicturepage{pgfid16}{57}
+\pgfsyspdfmark {pgfid16}{0}{40463552}
+\savepicturepage{pgfid15}{57}
+\pgfsyspdfmark {pgfid15}{8433566}{37835545}
 \bibstyle{unsrtnat}
 \bibdata{refs}
-\bibcite{centofanti2024comconf}{{1}{2024}{{Centofanti and Pavarino}}{{}}}
-\bibcite{centofanti2024cma}{{2}{2024}{{Centofanti et~al.}}{{Centofanti, Ghiotto, and Pavarino}}}
-\bibcite{pellegrini2025mlcse}{{3}{2025}{{Pellegrini et~al.}}{{Pellegrini, Ghiotto, Centofanti, and Pavarino}}}
-\bibcite{barrat2008dynamical}{{4}{2008}{{Barrat et~al.}}{{Barrat, Barthelemy, and Vespignani}}}
-\bibcite{neurallatents}{{5}{2021}{{NLB Team}}{{}}}
-\bibcite{churchland2010cortical}{{6}{2010}{{Churchland et~al.}}{{Churchland, Cunningham, Kaufman, Ryu, and Shenoy}}}
-\bibcite{hairer1996solving}{{7}{1996}{{Hairer and Wanner}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{45}{section*.34}\protected@file@percent }
-\savepicturepage{pgfid14}{45}
-\pgfsyspdfmark {pgfid14}{0}{40463552}
-\savepicturepage{pgfid13}{45}
-\pgfsyspdfmark {pgfid13}{8433566}{37908725}
-\bibcite{ascher1995implicit}{{8}{1995}{{Ascher et~al.}}{{Ascher, Ruuth, and Wetton}}}
-\bibcite{hundsdorfer2003numerical}{{9}{2003}{{Hundsdorfer and Verwer}}{{}}}
-\bibcite{obrien1950study}{{10}{1950}{{O'Brien et~al.}}{{O'Brien, Hyman, and Kaplan}}}
-\@writefile{toc}{\contentsline {chapter}{Acknowledgments}{47}{section*.36}\protected@file@percent }
-\savepicturepage{pgfid16}{47}
-\pgfsyspdfmark {pgfid16}{0}{40463552}
-\savepicturepage{pgfid15}{47}
-\pgfsyspdfmark {pgfid15}{8433566}{38003204}
-\gdef \@abspage@last{55}
+\bibcite{turing1952chemical}{{1}{1952}{{Turing}}{{}}}
+\bibcite{nakao2010turing}{{2}{2010}{{Nakao and Mikhailov}}{{}}}
+\bibcite{wang2025laplacian}{{3}{2025}{{Wang and Hao}}{{}}}
+\bibcite{hairer1996solving}{{4}{1996}{{Hairer and Wanner}}{{}}}
+\bibcite{ascher1995implicit}{{5}{1995}{{Ascher et~al.}}{{Ascher, Ruuth, and Wetton}}}
+\bibcite{hundsdorfer2003numerical}{{6}{2003}{{Hundsdorfer and Verwer}}{{}}}
+\bibcite{obrien1950study}{{7}{1950}{{O'Brien et~al.}}{{O'Brien, Hyman, and Kaplan}}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{61}{section*.46}\protected@file@percent }
+\savepicturepage{pgfid18}{61}
+\pgfsyspdfmark {pgfid18}{0}{40463552}
+\savepicturepage{pgfid17}{61}
+\pgfsyspdfmark {pgfid17}{8433566}{37966412}
+\@writefile{toc}{\contentsline {chapter}{Acknowledgments}{63}{section*.48}\protected@file@percent }
+\savepicturepage{pgfid20}{63}
+\pgfsyspdfmark {pgfid20}{0}{40463552}
+\savepicturepage{pgfid19}{63}
+\pgfsyspdfmark {pgfid19}{8433566}{38003204}
+\gdef \@abspage@last{71}

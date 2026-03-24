@@ -785,7 +785,7 @@ A future extension could be to investigate if this good behavior persists even i
 
 \section{Dependence on the diffusion coefficient $\sigma$}
 
-During the experiments presented in the previous sections, it became essential to understand how to appropriately tune the diffusion coefficient $\sigma$ as a function of the hidden network size $N$. In fact, if we maintain $\sigma$ fixed while $N$ increases, the transmitted energy dissipates and the output signal progressively attenuates until it completely dies out (a phenomenon akin to dynamical quenching). An initial numerical investigation suggested that the correct scaling to preserve the macroscopic dynamical regime is $\sigma = \mathcal{O}(N)$.
+During the experiments presented in the previous sections, it became essential to understand how to appropriately tune the diffusion coefficient $\sigma$ as a function of the hidden network size $N$. In fact, if we maintain $\sigma$ fixed while $N$ increases, the transmitted energy dissipates and the output signal progressively attenuates until it completely dies out. An initial numerical investigation suggested that the correct scaling to preserve the macroscopic dynamical regime is $\sigma = \mathcal{O}(N)$.
 
 
 \begin{figure}[htbp]
@@ -797,9 +797,11 @@ During the experiments presented in the previous sections, it became essential t
 
 %Dovrei studiare qual è la critical treshold per cui il segnale passa?
 
-This empirical observation is rigorously supported by the numerical study of the spectral gap of the network's directed Laplacian, specifically the first non-zero real part of the eigenvalues, $\text{Re}(\lambda_2)$. In networked dynamical systems, the global synchronization and the ability of a perturbation to travel across the graph without quenching are governed by the effective macroscopic diffusion rate, which is proportional to the product $\sigma \text{Re}(\lambda_2)$ \cite{barrat2008dynamical}. 
+This empirical observation is supported by the numerical study of the spectral gap of the network's directed Laplacian, specifically the first non-zero real part of the eigenvalues, $\text{Re}(\lambda_2)$. In networked dynamical systems, the global synchronization and the ability of a perturbation to travel across the graph 
+%without quenching
+ are governed by the effective macroscopic diffusion rate, which is proportional to the product $\sigma \text{Re}(\lambda_2)$ \cite{barrat2008dynamical}. 
 
-Although standard Erdős–Rényi (ER) and Barabási-Albert (BA) graphs typically exhibit a spectral gap that decays logarithmically as $\mathcal{O}((\ln N)^{-1})$ due to their small-world properties, the strict structural bottleneck introduced by our specific boundary conditions (forcing the flow through a single input node and a single output node) profoundly alters the transport topology. This boundary constraint effectively forces the energy flow into a quasi-one-dimensional transport regime. As a result, our numerical spectral analysis demonstrates that $\text{Re}(\lambda_2)$ collapses linearly, scaling exactly as $\mathcal{O}(N^{-1})$ for both the ER and BA setups.
+Although the internal spectral gap of isolated complex networks inherently depends on their topology---decaying and bounded above by $\mathcal{O}((\ln N)^{-1})$ in sparse Erd\H{o}s-R\'enyi (ER) graphs \cite{benjamini2014mixing} and remaining strictly lower-bounded by a constant $\mathcal{O}(1)$ in Barab\'asi-Albert (BA) scale-free networks \cite{mihail2003certain}---the strict structural bottleneck introduced by our specific boundary conditions profoundly alters the macroscopic transport dynamics. By grounding the system and forcing the flow through a single input and a single output node, the boundary constraints effectively project the energy flow into a quasi-one-dimensional transport regime. As a result, our numerical spectral analysis demonstrates that the physical spectral gap $\text{Re}(\lambda_2)$ collapses, scaling exactly as $\mathcal{O}(N^{-1})$ for both the ER and BA setups, entirely overriding their intrinsic small-world or expander properties.
 
 \begin{figure}[htbp]
     \centering

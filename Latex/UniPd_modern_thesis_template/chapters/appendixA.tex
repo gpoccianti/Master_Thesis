@@ -2,6 +2,7 @@
 
 %%%
 \chapter{Numerical Integration}
+\label{app:A}
 Here we analyze the numerical techniques we used to efficiently integrate system \eqref{eq:coupled_FHN}.
 First, we should preface that this system is stiff \cite{hairer1996solving}. In the context of numerical analysis, a system is considered stiff when it exhibits dynamics acting on widely different time scales (such as the fast action potential spikes and the slow recovery phases in electrophysiological models). This property causes standard explicit numerical methods to become unstable unless prohibitively small time steps are used. Therefore, finding an adequate numerical algorithm that scales well with the size of the network is a non-trivial task.
 

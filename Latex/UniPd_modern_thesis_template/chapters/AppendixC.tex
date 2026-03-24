@@ -1,0 +1,46 @@
+\chapter{Numerical Integration 2}
+\label{app:C}
+
+\section{IMEX scheme}
+Here we describe an IMEX integration scheme, as in appendix \ref{app:A}, to solve a system that is numerically stiff:
+
+\begin{equation}
+    \frac{d\mathbf{u}}{dt} = -D \mathcal{L} \mathbf{u} + \mathbf{F}(\mathbf{u})
+\end{equation}
+where $\mathbf{u} \in \mathbb{R}^N$ is the state vector, $\mathcal{L}$ is the graph Laplacian, $D=\epsilon^2$ is the diffusion coefficient, and $\mathbf{F}(\mathbf{u}) = \mathbf{u} - \mathbf{u}^3$ is the element-wise cubic reaction term.
+
+
+To balance stability and computational efficiency, we again employ a first-order \textbf{Implicit-Explicit (IMEX) Euler scheme}. We treat the linear diffusive part implicitly and the non-linear reactive part explicitly:
+\begin{equation}
+    \frac{\mathbf{u}_{n+1} - \mathbf{u}_n}{\Delta t} = -D \mathcal{L} \mathbf{u}_{n+1} + \mathbf{F}(\mathbf{u}_n)
+\end{equation}
+Rearranging to isolate the future state $\mathbf{u}_{n+1}$, we obtain a linear system:
+\begin{equation}
+    (\mathbf{I} + \Delta t D \mathcal{L}) \mathbf{u}_{n+1} = \mathbf{u}_n + \Delta t \mathbf{F}(\mathbf{u}_n)
+    \label{eq:imex_linear}
+\end{equation}
+Solving Eq. \eqref{eq:imex_linear} directly would require inverting the matrix $(\mathbf{I} + \Delta t D \mathcal{L})$ at each time step, which scales as $O(N^3)$. To accelerate this, we utilize the spectral decomposition of the Laplacian, $\mathcal{L} = \mathbf{\Phi} \mathbf{\Lambda} \mathbf{\Phi}^T$, where $\mathbf{\Lambda} = \text{diag}(\lambda_1, \dots, \lambda_N)$ contains the eigenvalues and $\mathbf{\Phi}$ the eigenvectors.
+
+The integration step is performed in the spectral domain as follows:
+\begin{enumerate}
+    \item \textbf{Explicit Update:} Compute the intermediate state $\mathbf{u}^*$ based on the current state and reaction term:
+    \begin{equation}
+        \mathbf{u}^* = \mathbf{u}_n + \Delta t \mathbf{F}(\mathbf{u}_n)
+    \end{equation}
+    \item \textbf{Graph Fourier Transform (GFT):} Project $\mathbf{u}^*$ onto the eigenbasis of $\mathcal{L}$:
+    \begin{equation}
+        \hat{\mathbf{u}}^* = \mathbf{\Phi}^T \mathbf{u}^*
+    \end{equation}
+    \item \textbf{Spectral Implicit Solve:} Solve the diagonal system (element-wise division):
+    \begin{equation}
+        \hat{u}_{n+1}^{(k)} = \frac{\hat{u}^{*(k)}}{1 + \Delta t D \lambda_k}, \quad k=1,\dots,N
+    \end{equation}
+    \item \textbf{Inverse GFT:} Reconstruct the physical state:
+    \begin{equation}
+        \mathbf{u}_{n+1} = \mathbf{\Phi} \hat{\mathbf{u}}_{n+1}
+    \end{equation}
+\end{enumerate}
+This spectral approach reduces the complexity of the implicit step to $O(N)$ (once the eigendecomposition is precomputed), ensuring both numerical stability and efficient data generation.
+
+
+%Non c'è una ragione (che mi venga in mente) perché questo mertodo non potesse essere applicato anche nell'appendice A, semplicemente all'epoca non mi era venuto in mente (e forse che L in quel caso non è proprio simmetrica, quindi forse non è diagonalizzabile).
