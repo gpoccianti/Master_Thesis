@@ -1,9 +1,73 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Centofanti and Pavarino(2024)]{centofanti2024comconf}
+Edoardo Centofanti and Luca~F. Pavarino.
+\newblock Operator learning for the fitzhugh-nagumo model.
+\newblock In \emph{2024 International Conference on Computing in Natural
+  Sciences, Biomedicine and Engineering (COMCONF)}, 2024.
+\newblock URL \url{https://doi.org/10.1109/COMCONF63340.2024.00015}.
+
+\bibitem[Centofanti et~al.(2024)Centofanti, Ghiotto, and
+  Pavarino]{centofanti2024cma}
+Edoardo Centofanti, Massimiliano Ghiotto, and Luca~F. Pavarino.
+\newblock Learning the hodgkin–huxley model with operator learning
+  techniques.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering},
+  432:\penalty0 117381, 2024.
+\newblock URL \url{https://doi.org/10.1016/j.cma.2024.117381}.
+
+\bibitem[Pellegrini et~al.(2025)Pellegrini, Ghiotto, Centofanti, and
+  Pavarino]{pellegrini2025mlcse}
+Luca Pellegrini, Massimiliano Ghiotto, Edoardo Centofanti, and Luca~F.
+  Pavarino.
+\newblock Learning high-dimensional ionic model dynamics using fourier neural
+  operators.
+\newblock \emph{Machine Learning for Computational Science and Engineering},
+  1:\penalty0 46, 2025.
+\newblock URL \url{https://doi.org/10.1007/s44379-025-00046-8}.
+
+\bibitem[Barrat et~al.(2008)Barrat, Barthelemy, and
+  Vespignani]{barrat2008dynamical}
+Alain Barrat, Marc Barthelemy, and Alessandro Vespignani.
+\newblock \emph{Dynamical Processes on Complex Networks}.
+\newblock Cambridge University Press, Cambridge, UK, 2008.
+\newblock \doi{10.1017/CBO9780511791383}.
+\newblock URL \url{https://doi.org/10.1017/CBO9780511791383}.
+
+\bibitem[Benjamini et~al.(2014)Benjamini, Kozma, and
+  Wormald]{benjamini2014mixing}
+Itai Benjamini, Gady Kozma, and Nicholas Wormald.
+\newblock The mixing time of the giant component of a random graph.
+\newblock \emph{Random Structures \& Algorithms}, 45\penalty0 (3):\penalty0
+  383--407, 2014.
+\newblock \doi{10.1002/rsa.20521}.
+
+\bibitem[Mihail et~al.(2003)Mihail, Papadimitriou, and
+  Saberi]{mihail2003certain}
+Milena Mihail, Christos Papadimitriou, and Amin Saberi.
+\newblock On certain rigorous mathematical properties of the internet topology.
+\newblock \emph{Journal of Computer and System Sciences}, 67\penalty0
+  (1):\penalty0 213--227, 2003.
+\newblock \doi{10.1016/S0022-0000(03)00043-4}.
+
+\bibitem[{NLB Team}(2021)]{neurallatents}
+{NLB Team}.
+\newblock Neural latents benchmark.
+\newblock \url{https://neurallatents.github.io/}, 2021.
+
+\bibitem[Churchland et~al.(2010)Churchland, Cunningham, Kaufman, Ryu, and
+  Shenoy]{churchland2010cortical}
+Mark~M Churchland, John~P Cunningham, Matthew~T Kaufman, Stephen~I Ryu, and
+  Krishna~V Shenoy.
+\newblock Cortical preparatory activity: representation of movement or first
+  cog in a dynamical machine?
+\newblock \emph{Neuron}, 68\penalty0 (3):\penalty0 387--400, 2010.
+\newblock \doi{10.1016/j.neuron.2010.09.015}.
 
 \bibitem[Turing(1952)]{turing1952chemical}
 Alan~M Turing.
@@ -21,6 +85,32 @@ Jindong Wang and Wenrui Hao.
 \newblock Laplacian eigenfunction-based neural operator for learning nonlinear
   reaction-diffusion dynamics.
 \newblock \emph{arXiv preprint arXiv:2502.05571}, 2025.
+
+\bibitem[Allen and Cahn(1979)]{allen1979microscopic}
+Samuel~M Allen and John~W Cahn.
+\newblock A microscopic theory for antiphase boundary motion and its
+  application to antiphase domain coarsening.
+\newblock \emph{Acta Metallurgica}, 27\penalty0 (6):\penalty0 1085--1095, 1979.
+
+\bibitem[Chen(2002)]{chen2002phase}
+Long-Qing Chen.
+\newblock Phase-field models for microstructure evolution.
+\newblock \emph{Annual review of materials research}, 32\penalty0 (1):\penalty0
+  113--140, 2002.
+
+\bibitem[Bene{\v{s}} et~al.(2004)Bene{\v{s}}, Chalupeck{\`y}, and
+  Mikula]{benes2004geometrical}
+Michal Bene{\v{s}}, Vladim{\'\i}r Chalupeck{\`y}, and Karol Mikula.
+\newblock Geometrical image segmentation by the allen-cahn equation.
+\newblock \emph{Applied Numerical Mathematics}, 51\penalty0 (2-3):\penalty0
+  187--205, 2004.
+
+\bibitem[Bertozzi and Flenner(2012)]{bertozzi2012diffuse}
+Andrea~L Bertozzi and Arjuna Flenner.
+\newblock Diffuse interface models on graphs for classification of high
+  dimensional data.
+\newblock \emph{Multiscale Modeling \& Simulation}, 10\penalty0 (3):\penalty0
+  1090--1118, 2012.
 
 \bibitem[Hairer and Wanner(1996)]{hairer1996solving}
 Ernst Hairer and Gerhard Wanner.
