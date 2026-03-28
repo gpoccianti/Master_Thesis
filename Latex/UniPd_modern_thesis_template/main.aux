@@ -52,7 +52,6 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Numerical and FNO approximations in four tests (one per column): output potential $V$ (top), output recovery variable $w$ (center) and corresponding input current $I_{app}$ (bottom).}}{6}{figure.caption.7}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:centofanti_dynamics}{{1.1}{6}{Numerical and FNO approximations in four tests (one per column): output potential $V$ (top), output recovery variable $w$ (center) and corresponding input current $I_{app}$ (bottom)}{figure.caption.7}{}}
-\citation{centofanti2024comconf}
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}From single neuron to spatially extended systems}{7}{section.1.2}\protected@file@percent }
 \newlabel{fig:fh_output}{{1.2a}{7}{Input $\rightarrow $ Output}{figure.caption.8}{}}
 \newlabel{sub@fig:fh_output}{{a}{7}{Input $\rightarrow $ Output}{figure.caption.8}{}}
@@ -169,44 +168,65 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Example 1: Allen-Cahn on Graph (Hierarchy of Inductive Bias)}{39}{section.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.a}Data Generation}{39}{subsection.2.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.b}Graph Topology}{39}{subsection.2.3.2}\protected@file@percent }
-\newlabel{fn:levels}{{6}{39}{Training Details}{subsection.2.2.5}{}}
+\newlabel{fn:levels}{{7}{39}{Training Details}{subsection.2.2.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Simulation of Allen-Cahn dynamics on a Barabási-Albert graph with $N=100$ nodes and $m=2$. The figure illustrates the evolution of node states over time, showcasing both the reaction and diffusive processes.}}{40}{figure.caption.36}\protected@file@percent }
 \newlabel{fig:experimental_design}{{2.1}{40}{Simulation of Allen-Cahn dynamics on a Barabási-Albert graph with $N=100$ nodes and $m=2$. The figure illustrates the evolution of node states over time, showcasing both the reaction and diffusive processes}{figure.caption.36}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.c}Dynamics: Allen-Cahn on Graphs}{40}{subsection.2.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.d}Results and Discussion}{40}{subsection.2.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Quantitative Analysis: Error Distribution}{40}{subsubsection*.37}\protected@file@percent }
 \citation{wang2025laplacian}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Matrix of Relative $L_2$ Error distributions on the test set. \textbf  {Columns} distinguish between Nodal architectures (DeepONet family\footnotemark ) and Spectral architectures (FNO family). \textbf  {Rows} represent the hierarchy of inductive bias: Level 1 (Totally Blind), Level 2 (Physics-Informed), and Level 3 (Topology-Informed). The red dashed line indicates the mean error. Note how the LFNO model (bottom right) achieves the lowest error variance and mean.}}{41}{figure.caption.38}\protected@file@percent }
-\newlabel{fig:error_matrix}{{2.2}{41}{Matrix of Relative $L_2$ Error distributions on the test set. \textbf {Columns} distinguish between Nodal architectures (DeepONet family\protect \footnotemark ) and Spectral architectures (FNO family). \textbf {Rows} represent the hierarchy of inductive bias: Level 1 (Totally Blind), Level 2 (Physics-Informed), and Level 3 (Topology-Informed). The red dashed line indicates the mean error. Note how the LFNO model (bottom right) achieves the lowest error variance and mean}{figure.caption.38}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Comparison of Mean Relative $L_2$ Errors on test set across all architectures. The transition from Level 1 to Level 3 yields a massive error reduction (orders of magnitude). Spectral methods (FNO family) generally outperform Nodal methods (DeepONet family).}}{42}{table.caption.40}\protected@file@percent }
-\newlabel{tab:error_comparison}{{2.1}{42}{Comparison of Mean Relative $L_2$ Errors on test set across all architectures. The transition from Level 1 to Level 3 yields a massive error reduction (orders of magnitude). Spectral methods (FNO family) generally outperform Nodal methods (DeepONet family)}{table.caption.40}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces System Identification Results. Comparison of the learned diffusion coefficient $\nu $ (Ground Truth $\nu = 4.000$). Values are rounded to 4 significant figures. Spectral architectures (FNO family) successfully identify the correct physical parameter with high precision, whereas Nodal architectures (DeepONet family) tend to underestimate it.}}{42}{table.caption.42}\protected@file@percent }
-\newlabel{tab:learned_coeffs}{{2.2}{42}{System Identification Results. Comparison of the learned diffusion coefficient $\nu $ (Ground Truth $\nu = 4.000$). Values are rounded to 4 significant figures. Spectral architectures (FNO family) successfully identify the correct physical parameter with high precision, whereas Nodal architectures (DeepONet family) tend to underestimate it}{table.caption.42}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.d}Results and Discussion}{41}{subsection.2.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Quantitative Analysis: Error Distribution}{41}{subsubsection*.37}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Comparison of Mean Relative $L_2$ Errors on test set across all architectures. The transition from Level 1 to Level 3 yields a massive error reduction (orders of magnitude). Spectral methods (FNO family) generally outperform Nodal methods (DeepONet family).}}{41}{table.caption.40}\protected@file@percent }
+\newlabel{tab:error_comparison}{{2.1}{41}{Comparison of Mean Relative $L_2$ Errors on test set across all architectures. The transition from Level 1 to Level 3 yields a massive error reduction (orders of magnitude). Spectral methods (FNO family) generally outperform Nodal methods (DeepONet family)}{table.caption.40}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces System Identification Results. Comparison of the learned diffusion coefficient $\nu $ (Ground Truth $\nu = 4.000$). Values are rounded to 4 significant figures. Spectral architectures (FNO family) successfully identify the correct physical parameter with high precision, whereas Nodal architectures (DeepONet family) tend to underestimate it.}}{41}{table.caption.42}\protected@file@percent }
+\newlabel{tab:learned_coeffs}{{2.2}{41}{System Identification Results. Comparison of the learned diffusion coefficient $\nu $ (Ground Truth $\nu = 4.000$). Values are rounded to 4 significant figures. Spectral architectures (FNO family) successfully identify the correct physical parameter with high precision, whereas Nodal architectures (DeepONet family) tend to underestimate it}{table.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Matrix of Relative $L_2$ Error distributions on the test set. \textbf  {Columns} distinguish between Nodal architectures (DeepONet family\footnotemark ) and Spectral architectures (FNO family). \textbf  {Rows} represent the hierarchy of inductive bias: Level 1 (Totally Blind), Level 2 (Physics-Informed), and Level 3 (Topology-Informed). The red dashed line indicates the mean error. Note how the LFNO model (bottom right) achieves the lowest error variance and mean.}}{42}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:error_matrix}{{2.2}{42}{Matrix of Relative $L_2$ Error distributions on the test set. \textbf {Columns} distinguish between Nodal architectures (DeepONet family\protect \footnotemark ) and Spectral architectures (FNO family). \textbf {Rows} represent the hierarchy of inductive bias: Level 1 (Totally Blind), Level 2 (Physics-Informed), and Level 3 (Topology-Informed). The red dashed line indicates the mean error. Note how the LFNO model (bottom right) achieves the lowest error variance and mean}{figure.caption.38}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Sequential comparison of Error Heatmaps. Top block: DeepONet architectures; Bottom block: FNO architectures.}}{43}{figure.caption.41}\protected@file@percent }
 \newlabel{fig:heatmap_vertical_stack}{{2.3}{43}{Sequential comparison of Error Heatmaps. Top block: DeepONet architectures; Bottom block: FNO architectures}{figure.caption.41}{}}
+\citation{centofanti2024comconf}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.e}Discussion}{44}{subsection.2.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}The inverse problem}{44}{section.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Example 2: the case of FitzHugh-Nagumo}{44}{section.2.5}\protected@file@percent }
-\newlabel{ch:conclusions}{{2.5}{45}{Conclusions}{chapter*.43}{}}
-\savepicturepage{pgfid10}{45}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Example 2: the case of FitzHugh-Nagumo}{44}{section.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.a}Motivation}{44}{subsection.2.4.1}\protected@file@percent }
+\newlabel{eq:coupled_FHN2}{{2.12}{44}{Motivation}{equation.2.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.b}Graph Topology}{45}{subsection.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.c}Dynamics: FitzHugh-Nagumo on Graphs}{45}{subsection.2.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Simulation of the coupled FitzHugh-Nagumo dynamics on a Barabási-Albert graph ($N=1000$, $m=2$). The figure illustrates the space-time evolution, individual node trajectories, and network-wide states for both the activator ($V$, top rows) and inhibitor ($w$, bottom rows) variables, highlighting the distinct non-linear coupled behavior over the $7.5$s simulation window.}}{46}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:fhn_dynamics}{{2.4}{46}{Simulation of the coupled FitzHugh-Nagumo dynamics on a Barabási-Albert graph ($N=1000$, $m=2$). The figure illustrates the space-time evolution, individual node trajectories, and network-wide states for both the activator ($V$, top rows) and inhibitor ($w$, bottom rows) variables, highlighting the distinct non-linear coupled behavior over the $7.5$s simulation window}{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.d}Training Details}{47}{subsection.2.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.e}Results}{47}{subsection.2.4.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Training and validation loss curves (MSE). The optimal model weights were extracted at epoch 96 (red marker).}}{48}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:lfno_loss}{{2.5}{48}{Training and validation loss curves (MSE). The optimal model weights were extracted at epoch 96 (red marker)}{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces System identification of the diffusion coefficients. The network accurately discovers both $D_V = 0.01$ (left) and $D_w = 0.0$ (right) in less than 5 epochs.}}{48}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:lfno_diffusion}{{2.6}{48}{System identification of the diffusion coefficients. The network accurately discovers both $D_V = 0.01$ (left) and $D_w = 0.0$ (right) in less than 5 epochs}{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Distribution of the Relative $L_2$ errors evaluated on the unseen test trajectories. The extremely low average error highlights the strong predictive power of the model.}}{49}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:lfno_hist}{{2.7}{49}{Distribution of the Relative $L_2$ errors evaluated on the unseen test trajectories. The extremely low average error highlights the strong predictive power of the model}{figure.caption.46}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Space-time evolution of a typical test trial. The LFNO reconstructions (center) are virtually indistinguishable from the ground truth (left). The absolute error (right) is negligible.}}{50}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:lfno_heatmaps}{{2.8}{50}{Space-time evolution of a typical test trial. The LFNO reconstructions (center) are virtually indistinguishable from the ground truth (left). The absolute error (right) is negligible}{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Continuous temporal dynamics of individual selected nodes. The LFNO predictions perfectly capture the non-linear, coupled evolution of both $V$ and $w$.}}{50}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:lfno_nodes}{{2.9}{50}{Continuous temporal dynamics of individual selected nodes. The LFNO predictions perfectly capture the non-linear, coupled evolution of both $V$ and $w$}{figure.caption.48}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.f}The Inverse Problem}{51}{subsection.2.4.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Analytical vs. Learned reaction functions evaluated on the 2D phase space grid. While the network accurately captures the governing equations in the highly sampled regions, the approximation degrades in the unstable, sparsely sampled domains (e.g., near $V=-1$).}}{52}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:lfno_reactions}{{2.10}{52}{Analytical vs. Learned reaction functions evaluated on the 2D phase space grid. While the network accurately captures the governing equations in the highly sampled regions, the approximation degrades in the unstable, sparsely sampled domains (e.g., near $V=-1$)}{figure.caption.49}{}}
+\newlabel{ch:conclusions}{{2.4.f}{53}{Conclusions}{chapter*.50}{}}
+\savepicturepage{pgfid10}{53}
 \pgfsyspdfmark {pgfid10}{0}{40463552}
-\savepicturepage{pgfid9}{45}
+\savepicturepage{pgfid9}{53}
 \pgfsyspdfmark {pgfid9}{8433566}{37957630}
-\@writefile{toc}{\contentsline {chapter}{Conclusions}{45}{chapter*.43}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Conclusions}{53}{chapter*.50}\protected@file@percent }
 \@input{chapters/appendixA.aux}
-\savepicturepage{pgfid12}{49}
+\savepicturepage{pgfid12}{57}
 \pgfsyspdfmark {pgfid12}{0}{40463552}
-\savepicturepage{pgfid11}{49}
+\savepicturepage{pgfid11}{57}
 \pgfsyspdfmark {pgfid11}{8433566}{37787047}
 \@input{chapters/appendixB.aux}
-\savepicturepage{pgfid14}{53}
+\savepicturepage{pgfid14}{61}
 \pgfsyspdfmark {pgfid14}{0}{40463552}
-\savepicturepage{pgfid13}{53}
+\savepicturepage{pgfid13}{61}
 \pgfsyspdfmark {pgfid13}{8433566}{37935714}
 \@input{chapters/AppendixC.aux}
-\savepicturepage{pgfid16}{57}
+\savepicturepage{pgfid16}{65}
 \pgfsyspdfmark {pgfid16}{0}{40463552}
-\savepicturepage{pgfid15}{57}
+\savepicturepage{pgfid15}{65}
 \pgfsyspdfmark {pgfid15}{8433566}{37835545}
 \bibstyle{unsrtnat}
 \bibdata{refs}
@@ -217,10 +237,10 @@
 \bibcite{benjamini2014mixing}{{5}{2014}{{Benjamini et~al.}}{{Benjamini, Kozma, and Wormald}}}
 \bibcite{mihail2003certain}{{6}{2003}{{Mihail et~al.}}{{Mihail, Papadimitriou, and Saberi}}}
 \bibcite{neurallatents}{{7}{2021}{{NLB Team}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{61}{section*.46}\protected@file@percent }
-\savepicturepage{pgfid18}{61}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{69}{section*.53}\protected@file@percent }
+\savepicturepage{pgfid18}{69}
 \pgfsyspdfmark {pgfid18}{0}{40463552}
-\savepicturepage{pgfid17}{61}
+\savepicturepage{pgfid17}{69}
 \pgfsyspdfmark {pgfid17}{8433566}{37908725}
 \bibcite{churchland2010cortical}{{8}{2010}{{Churchland et~al.}}{{Churchland, Cunningham, Kaufman, Ryu, and Shenoy}}}
 \bibcite{turing1952chemical}{{9}{1952}{{Turing}}{{}}}
@@ -234,9 +254,9 @@
 \bibcite{ascher1995implicit}{{17}{1995}{{Ascher et~al.}}{{Ascher, Ruuth, and Wetton}}}
 \bibcite{hundsdorfer2003numerical}{{18}{2003}{{Hundsdorfer and Verwer}}{{}}}
 \bibcite{obrien1950study}{{19}{1950}{{O'Brien et~al.}}{{O'Brien, Hyman, and Kaplan}}}
-\@writefile{toc}{\contentsline {chapter}{Acknowledgments}{65}{section*.48}\protected@file@percent }
-\savepicturepage{pgfid20}{65}
+\@writefile{toc}{\contentsline {chapter}{Acknowledgments}{73}{section*.55}\protected@file@percent }
+\savepicturepage{pgfid20}{73}
 \pgfsyspdfmark {pgfid20}{0}{40463552}
-\savepicturepage{pgfid19}{65}
+\savepicturepage{pgfid19}{73}
 \pgfsyspdfmark {pgfid19}{8433566}{38003204}
-\gdef \@abspage@last{73}
+\gdef \@abspage@last{81}
