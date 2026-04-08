@@ -106,6 +106,21 @@
 
 
 
+% --- Definizione degli ambienti mancanti ---
+
+% 1. Definiamo il Lemma (con stile corsivo standard). 
+% Usiamo un contatore indipendente basato sui capitoli per evitare conflitti con theorem.
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[chapter]
+
+% 2. Definiamo l'Assunzione (con stile dritto/Roman).
+\theoremstyle{definition}
+\newtheorem{assumption}{Assumption}[chapter]
+
+\newtheorem{definition}{Definition}[chapter]
+
+
+
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \renewcommand{\appendixname}{}%
