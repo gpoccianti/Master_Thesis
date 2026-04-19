@@ -1,1 +1,159 @@
 \chapter{Chapter 1}
+\section{The Hodgkin-Huxley model}
+The Hodgkin-Huxley (HH) model is a system of nonlinear ordinary differential equations that describes the generation and propagation of action potentials in neurons. The model simulates the dynamics of the membrane potential $V(t)$ as a function of the ionic currents crossing the cell membrane: a sodium current ($Na^+$), a potassium current ($K^+$), and a leakage current ($L$).
+
+The system is governed by the following equation for the potential:
+
+\begin{equation}
+    C_{m}\frac{dV}{dt} = -(g_{Na}m^{3}h(V-V_{Na}) + g_{K}n^{4}(V-V_{K}) + g_{L}(V-V_{L})) + I_{app}(t)
+    \label{eq:HH_voltage}
+\end{equation}
+
+where $C_m$ is the membrane capacitance, $g_i$ are the maximum conductances, and $V_i$ are the reversal potentials for the respective ion channels. $I_{app}(t)$ represents the applied external current.
+
+The gating variables $m$, $h$, and $n$ represent the probability for each ionic species to pass through the cellular membrane and they evolve according to the following first-order differential equations:
+
+\begin{equation}
+    \begin{aligned}
+        \frac{dm}{dt} &= \alpha_{m}(V)(1-m) - \beta_{m}(V)m \\
+        \frac{dh}{dt} &= \alpha_{h}(V)(1-h) - \beta_{h}(V)h \\
+        \frac{dn}{dt} &= \alpha_{n}(V)(1-n) - \beta_{n}(V)n
+    \end{aligned}
+    \label{eq:HH_gating}
+\end{equation}
+
+
+The voltage-dependent transition rates $\alpha_i(V)$ and $\beta_i(V)$ are empirically determined functions of the membrane potential, given by the following equations:
+
+\begin{equation}
+    \begin{aligned}
+        \alpha_{m}(V) &= \frac{0.1(V+50)}{1 - \exp\left(-\frac{V+50}{10}\right)} \\[2ex]
+        \alpha_{h}(V) &= 0.07 \exp\left(-\frac{V+75}{20}\right) \\[2ex]
+        \alpha_{n}(V) &= \frac{0.01(V+65)}{1 - \exp\left(-\frac{V+65}{10}\right)}
+    \end{aligned}
+    \qquad\qquad
+    \begin{aligned}
+        \beta_{m}(V) &= 4 \exp\left(-\frac{V+75}{18}\right) \\[2ex]
+        \beta_{h}(V) &= \frac{1}{1 + \exp\left(-\frac{V+45}{10}\right)} \\[2ex]
+        \beta_{n}(V) &= 0.125 \exp\left(-\frac{V+75}{80}\right)
+    \end{aligned}
+    \label{eq:HH_rates}
+\end{equation}
+
+For the numerical simulations, the parameters described in \cite{centofanti2024cma} were adopted: $C_m = 1 \, \mu\text{F/cm}^2$, $V_{Na} = 40 \, \text{mV}$, $V_{K} = -87 \, \text{mV}$, $V_{L} = -64.387 \, \text{mV}$, $g_{Na} = 120 \, \text{mS/cm}^2$, $g_{K} = 36 \, \text{mS/cm}^2$, $g_{L} = 0.3 \, \text{mS/cm}^2$ and the initial conditions: $V_0= -75 \text{mV}$, $n_0=0.317$, $m_0=0.05$, $h_0=0.595$.
+
+\subsection*{Asymptotic behavior}
+The behavior of the HH model in response to a constant applied current $I_{app}$ exhibits distinct phase transitions depending on the stimulus intensity \cite{centofanti2024cma}:
+
+\begin{itemize}
+    \item \textbf{Quiescent regime ($I_{app} \lesssim 2.21 \, \mu\text{A/cm}^2$):}
+    For current values below the critical threshold, the system has a unique stable equilibrium point corresponding to the resting potential. The neuron does not generate repetitive spikes.
+    
+    \item \textbf{Repetitive firing ($2.21 \lesssim I_{app} \lesssim 150 \, \mu\text{A/cm}^2$):}
+    Once the threshold of $2.21 \, \mu\text{A/cm}^2$ is exceeded, the equilibrium point loses stability (Hopf bifurcation) and the system is attracted to a stable limit cycle. In this regime, the neuron discharges continuous trains of action potentials.
+    
+    \item \textbf{Depolarization block ($I_{app} \gtrsim 150 \, \mu\text{A/cm}^2$):}
+    For extremely high currents, the limit cycle disappears and the system stabilizes again at a high-voltage fixed point (stable depolarized state), ceasing to oscillate.
+\end{itemize}
+
+\section{The FitzHugh-Nagumo model}
+The FitzHugh-Nagumo (FHN) model \cite{centofanti2024comconf} is a two-dimensional simplification of the HH model that preserves the essential characteristics of excitability. The dynamical equations for the fast variable $V$ (potential) and the slow variable $w$ (recovery) are:
+
+\begin{equation}
+    \begin{aligned}
+        \frac{dV}{dt} &= bV(V-\beta)(\delta-V) - cw + I_{app} \\
+        \frac{dw}{dt} &= \epsilon(V - \gamma w)
+    \end{aligned}
+    \label{eq:FHN}
+\end{equation}
+
+The parameters used are $b = 5$, $c = 1$, $\beta = 0.1$, $\delta = 1$, $\epsilon = 0.1$, $\gamma = 0.25$ \cite{centofanti2024comconf}.
+
+\subsection*{Asymptotic behavior}
+\label{sec:FHN_dynamics}
+The dynamics of the FHN system depend on the value of $I_{app}$, which vertically translates the cubic nullcline, modifying the position and stability of the fixed point:
+
+\begin{itemize}
+    \item \textbf{Stable equilibrium regime ($I_{app} \lesssim 0.2$):} 
+    The system presents a unique stable fixed point located on the left branch of the cubic nullcline (near the resting state). For small stimuli, the system returns to equilibrium without generating oscillations.
+    
+    \item \textbf{Oscillatory regime ($0.2 \lesssim I_{app} \lesssim 2.1$):} 
+    When the current exceeds the first critical threshold ($I_{th1} \approx 0.21$), the fixed point enters the unstable region of the nullcline (between the two knees of the cubic). The equilibrium loses stability and a stable limit cycle emerges. The system produces sustained periodic oscillations, as highlighted in Figure \ref{fig:fhn_dynamics}.
+    
+    \item \textbf{Saturation regime ($I_{app} \gtrsim 2.1$):} 
+    Increasing the current beyond the second critical threshold ($I_{th2} \approx 2.1$), the intersection of the nullclines shifts to the stable right branch. The limit cycle vanishes, and the system stabilizes at a high-potential equilibrium (permanent excited state).
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.58\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/FH_model/No_Network/limit_cycle.png}
+        \caption{Time evolution of $V$ and $w$ in the oscillatory regime.}
+        \label{fig:fhn_time_series}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.38\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/FH_model/No_Network/limit_cycle_phase_space.png}
+        \caption{Trajectory in the phase plane $(V, w)$.}
+        \label{fig:fhn_phase_space}
+    \end{minipage}
+    \caption{Dynamics of the FitzHugh-Nagumo model with $I_{app} \approx 1.44$. The system exhibits a stable limit cycle.}
+    \label{fig:fhn_dynamics}
+\end{figure}
+
+
+\newpage
+\section{From single neuron to spatially extended systems}
+\label{sec:extended_network}
+The setup considered so far is that of a single node.
+We generalized this approach by analyzing a spatial extended system: a current (in the form of square wave) is given as input to an \textcolor{blue}{\textbf{input node}}, information is transmitted through diffusion (where each node has a local reaction term following FitzHugh-Nagumo, see eq \eqref{eq:coupled_FHN}), and the potential is read/ predicted by the NN for the \textcolor{red}{\textbf{output node}}.
+
+
+\begin{figure}[htbp]
+    \centering
+    % --- Prima immagine (sinistra) ---
+    \begin{subfigure}[b]{0.48 \textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/FH_model/1to2/output0to1.png}
+        \caption{Input $\rightarrow$ Output}
+        \label{fig:fh_output}
+    \end{subfigure}
+    \hfill % <--- Questo inserisce uno spazio elastico tra le due immagini
+    % --- Seconda immagine (destra) ---
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/FH_model/Simple_cycle/dynamics_cycle.png}
+        \caption{Input $\rightarrow$ Network $\rightarrow$ Output}
+        \label{fig:fh_dynamics}
+    \end{subfigure}
+    
+    % Didascalia principale e label per l'intera figura
+    \caption{Examples of our setup}
+    \label{fig:fh_comparison}
+\end{figure}
+
+
+%%%
+
+Our system is described by the following set of equations on a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$:
+\begin{equation}
+\label{eq:coupled_FHN}
+\begin{aligned}
+\frac{dV_i}{dt} &= b V_i (V_i - \beta)(\delta - V_i) - c w_i + I_{app, i}(t) - \sigma \sum_{j=1}^{|\mathcal{V}|} L_{ij} V_j \\
+\frac{dw_i}{dt} &= \epsilon (V_i - \gamma w_i)
+\end{aligned}
+\end{equation}
+
+
+The coupling term is expressed through the elements $L_{ij}$ of the graph Laplacian matrix, defined as $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. Explicitly \footnote{We assume that the graph is unweighted}:
+\begin{equation}
+L_{ij} = 
+\begin{cases} 
+\text{deg}(i) & \text{if } i = j \\
+-1 & \text{if } (i,j) \in \mathcal{E} \\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+The coefficient $\sigma$ modulates the global intensity of diffusion across the network.

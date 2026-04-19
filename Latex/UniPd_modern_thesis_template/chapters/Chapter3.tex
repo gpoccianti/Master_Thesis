@@ -22,58 +22,6 @@ The results across these studies demonstrate that FNOs are highly effective in l
     \label{fig:centofanti_dynamics}
 \end{figure}
 
-\newpage
-\section{From single neuron to spatially extended systems}
-However, the setup considered is that of a single node.
-We generalized this approach by analyzing a spatial extended system: a current (in the form of square wave) is given as input to an \textcolor{blue}{\textbf{input node}}, information is transmitted through diffusion (where each node has a local reaction term following FitzHugh-Nagumo, see eq \eqref{eq:coupled_FHN}), and the potential is read/ predicted by the NN for the \textcolor{red}{\textbf{output node}}.
-
-
-\begin{figure}[htbp]
-    \centering
-    % --- Prima immagine (sinistra) ---
-    \begin{subfigure}[b]{0.48 \textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{img/FH_model/1to2/output0to1.png}
-        \caption{Input $\rightarrow$ Output}
-        \label{fig:fh_output}
-    \end{subfigure}
-    \hfill % <--- Questo inserisce uno spazio elastico tra le due immagini
-    % --- Seconda immagine (destra) ---
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{img/FH_model/Simple_cycle/dynamics_cycle.png}
-        \caption{Input $\rightarrow$ Network $\rightarrow$ Output}
-        \label{fig:fh_dynamics}
-    \end{subfigure}
-    
-    % Didascalia principale e label per l'intera figura
-    \caption{Examples of our setup}
-    \label{fig:fh_comparison}
-\end{figure}
-
-
-%%%
-
-Our system is described by the following set of equations on a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$:
-\begin{equation}
-\label{eq:coupled_FHN}
-\begin{aligned}
-\frac{dV_i}{dt} &= b V_i (V_i - \beta)(\delta - V_i) - c w_i + I_{app, i}(t) - \sigma \sum_{j=1}^{|\mathcal{V}|} L_{ij} V_j \\
-\frac{dw_i}{dt} &= \epsilon (V_i - \gamma w_i)
-\end{aligned}
-\end{equation}
-
-
-The coupling term is expressed through the elements $L_{ij}$ of the graph Laplacian matrix, defined as $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. Explicitly \footnote{We assume that the graph is unweighted}:
-\begin{equation}
-L_{ij} = 
-\begin{cases} 
-\text{deg}(i) & \text{if } i = j \\
--1 & \text{if } (i,j) \in \mathcal{E} \\
-0 & \text{otherwise}
-\end{cases}
-\end{equation}
-The coefficient $\sigma$ modulates the global intensity of diffusion across the network.
 
 \newpage
 
@@ -85,7 +33,7 @@ The coefficient $\sigma$ modulates the global intensity of diffusion across the 
 
 
 \section{Study of different topologies}
-We will now discuss the result across different "hidden" \footnote{The FNO architecture didn't receive any information about them} networks structures.
+We spatially extended this setup by reproducing the structure presented in section \ref{sec:extended_network}. In particular, we generated datasets for each different "hidden" \footnote{The FNO architecture didn't receive any information about them} graph structure and trained/ tested the artificial network on this data.
 
 
 Please note the setup is the following \footnote{Unless otherwise specified}: the \textcolor{blue}{\textbf{input node}} is connected by a direct link to a random node of a network. The hidden network is simple \footnote{Devo spiegare undirected + unweighted ?}. Finally another random node is connected by another direct link to the \textcolor{red}{\textbf{output node}}.

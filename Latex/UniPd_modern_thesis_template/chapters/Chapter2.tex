@@ -1,7 +1,7 @@
 \chapter{Chapter 2}
 \label{Chp:2}
 \section{A brief introduction to Machine Learning}
-Machine Learning (ML) encompasses a broad set of methods that enable algorithms to learn complex patterns and relationships from data. While traditional approaches rely on manually engineering features, ML techniques automatically adjust their internal parameters to improve performance on a specific task. Here we specifically focus here on the application of Deep Learning, characterized by the utilization of Artificial Neural Networks (ANNs).
+Machine Learning (ML) encompasses a broad set of methods that enable algorithms to learn complex patterns and relationships from data. While traditional approaches rely on manually engineering features, ML techniques automatically adjust their internal parameters to improve performance on a specific task. Here we specifically focus on the application of Deep Learning, characterized by the utilization of Artificial Neural Networks (ANNs).
 
 \begin{figure}[htbp]
     \centering
@@ -203,7 +203,13 @@ A defining characteristic of Neural Operators, which distinguishes them from cla
 
 \subsection{Intuition}
 
-An operator learning architecture is said to be discretization-invariant if the model parameters $\theta$ are defined in a continuous function space and can be applied to any discretization of the input and output domains $D, D'$. 
+An operator learning architecture is said to be discretization-invariant if the model parameters $\theta$ are defined in a continuous function space and can be applied to any discretization \footnote{Provided that there are enough points to perform a DFT with $k$ modes} %Controllare la correttezza di questa affermazione.
+%L'idea è che sopra un certo numero di punti posso fare
+%DFT, tengo comunque i primi k coefficienti e quindi
+%la struttura diventa indipendente dalla discretizzazione
+%La parte W_t che agisce nello spazio diretto
+%invece agisce su uno spazio fittizzio (i canali) e non ha alcuna dimensione dipendente dalla discretizzazione!
+ of the input and output domains $D, D'$. 
 
 Following Li et al. \cite{li2020fourier}, let $a \in \mathcal{A}$ be the input function. In a practical setting, we only observe $a$ at a finite set of points $\{x_1, \dots, x_n\} \subset D$. While a standard neural network would learn a mapping $\mathbb{R}^n \to \mathbb{R}^m$, the Neural Operator learns an operator $\mathcal{G}_{\theta}: \mathcal{A} \to \mathcal{U}$. The discretization $a_n$ of the function $a$ is used only to approximate the continuous integral:
 \[ 
@@ -214,8 +220,6 @@ Because the kernel $\kappa$ (or its Fourier representation $R$ in FNOs) is a con
 \subsection{Formal definition}
 
 Since our data $a^{(i)}$ and $u^{(i)}$ are, in general, functions, to work with them numerically, we assume access only to their point-wise evaluations. To illustrate this, we will continue with the example of the preceding paragraph. For simplicity, assume $D = D'$ and suppose that the input and output functions are both real-valued. Let $D_L = \{x_{\ell}\}_{\ell=1}^L \subset D$ be an $L$-point discretization of the domain $D$ and assume we have observations $a^{(i)}|_{D_L}, u^{(i)}|_{D_L} \in \mathbb{R}^L$, for a finite collection of input-output pairs indexed by $i$. 
-
-In the next section, we propose a kernel-inspired graph neural network architecture which, while trained on the discretized data, can produce the solution $u(x)$ for any $x \in D$ given an input $a \sim \mu$. In particular, our discretized architecture maps into the space $\mathcal{U}$ and not into a discretization thereof. Furthermore, our parametric operator class is consistent, in that, given a fixed set of parameters, refinement of the input discretization converges to the true function space operator. We make this notion precise in what follows and refer to architectures that possess it as \textit{function space architectures}, \textit{mesh-invariant architectures}, or \textit{discretization-invariant architectures}.
 
 \begin{definition}[Discrete refinement]
 We call a discrete refinement of the domain $D \subset \mathbb{R}^d$ any sequence of nested sets $D_1 \subset D_2 \subset \dots \subset D$ with $|D_L| = L$ for any $L \in \mathbb{N}$ such that, for any $\epsilon > 0$, there exists a number $L = L(\epsilon) \in \mathbb{N}$ such that
@@ -233,14 +237,14 @@ Since $a : D \subset \mathbb{R}^d \to \mathbb{R}^m$, pointwise evaluation of the
 \begin{definition}[Discretized uniform risk]
 Suppose $\mathcal{A}$ is a Banach space of $\mathbb{R}^m$-valued functions on the domain $D \subset \mathbb{R}^d$. Let $G : \mathcal{A} \to \mathcal{U}$ be an operator, $D_L$ be an $L$-point discretization of $D$, and $\hat{G} : \mathbb{R}^{L \times d} \times \mathbb{R}^{L \times m} \to \mathcal{U}$ some map. For any $K \subset \mathcal{A}$ compact, we define the discretized uniform risk as:
 \[
-R_K(G, \hat{G}, D_L) = \sup_{a \in K} \| \hat{G}(D_L, a|_{D_L}) - G(a) \|_{\mathcal{U}}.
+R_K(G, \hat{G}, D_L) = \sup_{a \in K} \| \hat{\mathcal{G}}(D_L, a|_{D_L}) - \mathcal{G}(a) |_{\mathcal{U}}.
 \]
 \end{definition}
 
 \begin{definition}[Discretization-invariant]
-Let $\Theta \subseteq \mathbb{R}^p$ be a finite dimensional parameter space and $G : \mathcal{A} \times \Theta \to \mathcal{U}$ a map representing a parametric class of operators with parameters $\theta \in \Theta$. Given a discrete refinement $(D_n)_{n=1}^{\infty}$ of the domain $D \subset \mathbb{R}^d$, we say $G$ is discretization-invariant if there exists a sequence of maps $\hat{G}_1, \hat{G}_2, \dots$ where $\hat{G}_L : \mathbb{R}^{L \times d} \times \mathbb{R}^{L \times m} \times \Theta \to \mathcal{U}$ such that, for any $\theta \in \Theta$ and any compact set $K \subset \mathcal{A}$,
+Let $\Theta \subseteq \mathbb{R}^p$ be a finite dimensional parameter space and $G : \mathcal{A} \times \Theta \to \mathcal{U}$ a map representing a parametric class of operators with parameters $\theta \in \Theta$. Given a discrete refinement $(D_n)_{n=1}^{\infty}$ of the domain $D \subset \mathbb{R}^d$, we say $\mathcal{G}$ is \textbf{discretization-invariant} if there exists a sequence of maps $\hat{\mathcal{G}}_1, \hat{\mathcal{G}}_2, \dots$ where $\hat{\mathcal{G}}_L : \mathbb{R}^{L \times d} \times \mathbb{R}^{L \times m} \times \Theta \to \mathcal{U}$ such that, for any $\theta \in \Theta$ and any compact set $K \subset \mathcal{A}$,
 \[
-\lim_{L \to \infty} R_K(G(\cdot, \theta), \hat{G}_L(\cdot, \cdot, \theta), D_L) = 0.
+\lim_{L \to \infty} R_K(\mathcal{G}(\cdot, \theta), \hat{\mathcal{G}}_L(\cdot, \cdot, \theta), D_L) = 0.
 \]
 \end{definition}
 
@@ -251,7 +255,7 @@ Such a property is highly desirable as it allows a transfer of solutions between
 The immediate consequence of discretization invariance is the ability to perform \textit{zero-shot super-resolution}. The neural operator is mesh-invariant, so it can be trained on a lower resolution and evaluated at a
 higher resolution, without seeing any higher resolution data. 
 
-As demonstrated in the numerical experiments for parametric PDEs \cite{li2020fourier}, the error of a discretization-invariant model remains consistent across different resolutions. This is formally expressed by the property that as the discretization becomes finer ($n \to \infty$), the discrete approximation converges to the continuous operator:
+As demonstrated in the numerical experiments for parametric PDEs in article \cite{li2020fourier}, the error of a discretization-invariant model remains consistent across different resolutions. This is formally expressed by the property that as the discretization becomes finer ($n \to \infty$), the discrete approximation converges to the continuous operator:
 \[ 
 \lim_{n \to \infty} \mathcal{G}_{\theta}(a_n) = \mathcal{G}_{\theta}(a) 
 \]
