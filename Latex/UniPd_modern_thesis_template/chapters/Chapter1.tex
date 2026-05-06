@@ -2,14 +2,11 @@
 
 \section{Introduction}
 
-Studying the brain is a very difficult task.
-%Dire perché
-The field of computational neuroscience has emerged as an interdisciplinary science that employs advanced mathematical models and simulation tools to understand the brain’s dynamics. 
- As in many other branches of complex systems a whole system (brain) analysis with single unit (neuron) resolution is impossible at present. This is why we often rely on coarse-grained mathematical descriptions, which may be validated by empirical data.
- %Spiegare che cos'è un modello coarse-grained
- However, single-neuron ionic models are still essential, both for a conceptual understanding of microscopic mechanisms and for the bottom-up derivation of higher-level models. 
- %Spiegare meglio bottom-up derivation
- %Rendere tutto il paragrafo più chiaro.
+Studying the brain is a profoundly complex challenge. With approximately $10^{11}$ neurons, each forming around $10^{3}$ synaptic connections---yielding a staggering total of roughly $10^{14}$ connections---a whole-brain analysis at single-neuron resolution remains computationally intractable\footnote{At least with currently available computational power.}. To navigate this complexity, computational neuroscience has emerged as an interdisciplinary field that relies on advanced mathematical models and simulation tools to decode brain dynamics.
+
+For medium-to large-scale analyses, researchers typically employ coarse-grained models. Rather than resolving the microscopic details of individual cells, these models adopt more complex structures---such as entire neural populations---as their fundamental units. The resulting macroscopic or mesoscopic dynamics can then be validated against empirical data from functional imaging, such as fMRI or EEG.
+
+Despite the necessity of these large-scale abstractions, single-neuron ionic models remain indispensable. A microscopic understanding of neural dynamics is not only of fundamental scientific interest in its own right, but it also serves as the rigorous foundation from which accurate coarse-grained models can be mathematically derived.
 \newline
 We will now analyze two famous ionic models and use one of them on a network setup in order to describe larger spatial areas.
 
