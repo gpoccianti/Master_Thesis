@@ -1,6 +1,24 @@
 \chapter{Chapter 1}
+
+\section{Introduction}
+
+Studying the brain is a very difficult task.
+%Dire perché
+The field of computational neuroscience has emerged as an interdisciplinary science that employs advanced mathematical models and simulation tools to understand the brain’s dynamics. 
+ As in many other branches of complex systems a whole system (brain) analysis with single unit (neuron) resolution is impossible at present. This is why we often rely on coarse-grained mathematical descriptions, which may be validated by empirical data.
+ %Spiegare che cos'è un modello coarse-grained
+ However, single-neuron ionic models are still essential, both for a conceptual understanding of microscopic mechanisms and for the bottom-up derivation of higher-level models. 
+ %Spiegare meglio bottom-up derivation
+ %Rendere tutto il paragrafo più chiaro.
+\newline
+We will now analyze two famous ionic models and use one of them on a network setup in order to describe larger spatial areas.
+
+%Aggiungere un riferimento bibliografico?
+
 \section{The Hodgkin-Huxley model}
-The Hodgkin-Huxley (HH) model is a system of nonlinear ordinary differential equations that describes the generation and propagation of action potentials in neurons. The model simulates the dynamics of the membrane potential $V(t)$ as a function of the ionic currents crossing the cell membrane: a sodium current ($Na^+$), a potassium current ($K^+$), and a leakage current ($L$).
+One of the most notorious ionic model is the Hodgkin-Huxley (HH) model. It was first introduced by Alan Hodgkin and Andrew Huxley in 1952 \cite{hodgkin1952quantitative}, who received the 1963 Nobel Prize in Physiology or Medicine for this work.
+\newline
+It leverages a system of nonlinear ordinary differential equations that describes the generation and propagation of action potentials in neurons. The model simulates the dynamics of the membrane potential $V(t)$ as a function of the ionic currents crossing the cell membrane: a sodium current ($Na^+$), a potassium current ($K^+$), and a leakage current ($L$).
 
 The system is governed by the following equation for the potential:
 
@@ -41,20 +59,23 @@ The voltage-dependent transition rates $\alpha_i(V)$ and $\beta_i(V)$ are empiri
 \end{equation}
 
 For the numerical simulations, the parameters described in \cite{centofanti2024cma} were adopted: $C_m = 1 \, \mu\text{F/cm}^2$, $V_{Na} = 40 \, \text{mV}$, $V_{K} = -87 \, \text{mV}$, $V_{L} = -64.387 \, \text{mV}$, $g_{Na} = 120 \, \text{mS/cm}^2$, $g_{K} = 36 \, \text{mS/cm}^2$, $g_{L} = 0.3 \, \text{mS/cm}^2$ and the initial conditions: $V_0= -75 \text{mV}$, $n_0=0.317$, $m_0=0.05$, $h_0=0.595$.
+Since a single neuron is not isolated it is interesting to analyze its response to external currents.
 
 \subsection*{Asymptotic behavior}
 The behavior of the HH model in response to a constant applied current $I_{app}$ exhibits distinct phase transitions depending on the stimulus intensity \cite{centofanti2024cma}:
 
 \begin{itemize}
-    \item \textbf{Quiescent regime ($I_{app} \lesssim 2.21 \, \mu\text{A/cm}^2$):}
+    \item \textbf{Quiescent regime} ($I_{app} \lesssim 2.21 \, \mu\text{A/cm}^2$):
     For current values below the critical threshold, the system has a unique stable equilibrium point corresponding to the resting potential. The neuron does not generate repetitive spikes.
     
-    \item \textbf{Repetitive firing ($2.21 \lesssim I_{app} \lesssim 150 \, \mu\text{A/cm}^2$):}
+    \item \textbf{Repetitive firing} ($2.21 \lesssim I_{app} \lesssim 150 \, \mu\text{A/cm}^2$):
     Once the threshold of $2.21 \, \mu\text{A/cm}^2$ is exceeded, the equilibrium point loses stability (Hopf bifurcation) and the system is attracted to a stable limit cycle. In this regime, the neuron discharges continuous trains of action potentials.
     
-    \item \textbf{Depolarization block ($I_{app} \gtrsim 150 \, \mu\text{A/cm}^2$):}
+    \item \textbf{Depolarization block} ($I_{app} \gtrsim 150 \, \mu\text{A/cm}^2$):
     For extremely high currents, the limit cycle disappears and the system stabilizes again at a high-voltage fixed point (stable depolarized state), ceasing to oscillate.
 \end{itemize}
+
+This model is realistic, but somewhat convoluted for our objectives. In fact, we want a system that exhibits, like a physical neuron, oscillations for currents that exceed a critical threshold, but it's as simple as possible, so we can easily simulate its behavior on a network. This will be important for our ML emulation analysis, which will be introduced in chapter \ref{Chpt3}.
 
 \section{The FitzHugh-Nagumo model}
 The FitzHugh-Nagumo (FHN) model \cite{centofanti2024comconf} is a two-dimensional simplification of the HH model that preserves the essential characteristics of excitability. The dynamical equations for the fast variable $V$ (potential) and the slow variable $w$ (recovery) are:
@@ -71,14 +92,14 @@ The parameters used are $b = 5$, $c = 1$, $\beta = 0.1$, $\delta = 1$, $\epsilon
 
 \subsection*{Asymptotic behavior}
 \label{sec:FHN_dynamics}
-The dynamics of the FHN system depend on the value of $I_{app}$, which vertically translates the cubic nullcline, modifying the position and stability of the fixed point:
+The dynamics of the FHN system depends on the value of $I_{app}$, which vertically translates the cubic nullcline, modifying the position and stability of the fixed point:
 
 \begin{itemize}
     \item \textbf{Stable equilibrium regime ($I_{app} \lesssim 0.2$):} 
     The system presents a unique stable fixed point located on the left branch of the cubic nullcline (near the resting state). For small stimuli, the system returns to equilibrium without generating oscillations.
     
     \item \textbf{Oscillatory regime ($0.2 \lesssim I_{app} \lesssim 2.1$):} 
-    When the current exceeds the first critical threshold ($I_{th1} \approx 0.21$), the fixed point enters the unstable region of the nullcline (between the two knees of the cubic). The equilibrium loses stability and a stable limit cycle emerges. The system produces sustained periodic oscillations, as highlighted in Figure \ref{fig:fhn_dynamics}.
+    When the current exceeds the first critical threshold ($I_{th1} \approx 0.21$), the fixed point enters the unstable region of the nullcline (between the two knees of the cubic). The equilibrium loses stability and a stable limit cycle emerges. The system produces sustained periodic oscillations, as highlighted in figure \ref{fig:fhn_time_series} - \ref{fig:fhn_phase_space}.
     
     \item \textbf{Saturation regime ($I_{app} \gtrsim 2.1$):} 
     Increasing the current beyond the second critical threshold ($I_{th2} \approx 2.1$), the intersection of the nullclines shifts to the stable right branch. The limit cycle vanishes, and the system stabilizes at a high-potential equilibrium (permanent excited state).
@@ -99,16 +120,45 @@ The dynamics of the FHN system depend on the value of $I_{app}$, which verticall
         \caption{Trajectory in the phase plane $(V, w)$.}
         \label{fig:fhn_phase_space}
     \end{minipage}
-    \caption{Dynamics of the FitzHugh-Nagumo model with $I_{app} \approx 1.44$. The system exhibits a stable limit cycle.}
+    \caption*{Dynamics of the FitzHugh-Nagumo model with $I_{app} \approx 1.44$ (left: space-time, right: phase space). After a transient the system exhibits a stable limit cycle. Note that since the perturbation (bottom left) is a square wave once it goes off the system returns to the only stable equilibrium $(0,0)$.}
     \label{fig:fhn_dynamics}
 \end{figure}
+
+
+In fig \ref{fig:fhn_time_series} we can see a response of the system to a square wave perturbation. In particular, we observe an oscillatory dynamics while the external current is on.
+Since our setup of chapter \ref{Chpt3} operates on functions we considered the square wave perturbation class as, since we already knew the system's response to constant perturbations, it was the easiest to study.
+
+We then wanted to study the spatial extension of the FH model and analyze its response to a square wave perturbation localized also in space (i.e. applied to a single node).
 
 
 \newpage
 \section{From single neuron to spatially extended systems}
 \label{sec:extended_network}
 The setup considered so far is that of a single node.
-We generalized this approach by analyzing a spatial extended system: a current (in the form of square wave) is given as input to an \textcolor{blue}{\textbf{input node}}, information is transmitted through diffusion (where each node has a local reaction term following FitzHugh-Nagumo, see eq \eqref{eq:coupled_FHN}), and the potential is read/ predicted by the NN for the \textcolor{red}{\textbf{output node}}.
+In order to change scale and pass from a microscopic to a mesoscopic neural description, we embedded the FH model within a network setup. In particular, we wanted to determine if the consequently very high-dimensional ODE system could be replaced by a single numerical operator, learned with deep learning techniques, that will be described in chapter \ref{Chp:2}.
+We examined a generalization by analyzing a spatial extended system: a current (in the form of square wave) is given as input to an \textcolor{blue}{\textbf{input node}}, information is transmitted through diffusion (where each node has a local reaction term following FitzHugh-Nagumo, see eq \eqref{eq:coupled_FHN}), and the potential is read for the \textcolor{red}{\textbf{output node}}.
+
+%Spiego già qui la struttura del dataset per la NN ?
+Given a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ we considered a coupling term expressed through the elements $L_{ij}$ of the graph Laplacian matrix, defined as $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. Explicitly \footnote{We assume that the graph is unweighted}:
+\begin{equation}
+L_{ij} = 
+\begin{cases} 
+\text{deg}(i) & \text{if } i = j \\
+-1 & \text{if } (i,j) \in \mathcal{E} \\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+
+Our system is described by the following set of equations:
+\begin{equation}
+\label{eq:coupled_FHN}
+\begin{aligned}
+\frac{dV_i}{dt} &= b V_i (V_i - \beta)(\delta - V_i) - c w_i + I_{app, i}(t) - \sigma \sum_{j=1}^{|\mathcal{V}|} L_{ij} V_j \\
+\frac{dw_i}{dt} &= \epsilon (V_i - \gamma w_i)
+\end{aligned}
+\end{equation}
+
+for each node $i \in \mathcal{V}$
 
 
 \begin{figure}[htbp]
@@ -124,36 +174,19 @@ We generalized this approach by analyzing a spatial extended system: a current (
     % --- Seconda immagine (destra) ---
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{img/FH_model/Simple_cycle/dynamics_cycle.png}
+        \includegraphics[width=\textwidth]{img/FH_model/BA_Network/network_plot_BA_N=100.png}
         \caption{Input $\rightarrow$ Network $\rightarrow$ Output}
         \label{fig:fh_dynamics}
     \end{subfigure}
     
     % Didascalia principale e label per l'intera figura
-    \caption{Examples of our setup}
+    \caption{Examples of our setup. On the right a BA network with $N=100$, $m=2$.}
     \label{fig:fh_comparison}
 \end{figure}
 
 
 %%%
 
-Our system is described by the following set of equations on a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$:
-\begin{equation}
-\label{eq:coupled_FHN}
-\begin{aligned}
-\frac{dV_i}{dt} &= b V_i (V_i - \beta)(\delta - V_i) - c w_i + I_{app, i}(t) - \sigma \sum_{j=1}^{|\mathcal{V}|} L_{ij} V_j \\
-\frac{dw_i}{dt} &= \epsilon (V_i - \gamma w_i)
-\end{aligned}
-\end{equation}
-
-
-The coupling term is expressed through the elements $L_{ij}$ of the graph Laplacian matrix, defined as $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. Explicitly \footnote{We assume that the graph is unweighted}:
-\begin{equation}
-L_{ij} = 
-\begin{cases} 
-\text{deg}(i) & \text{if } i = j \\
--1 & \text{if } (i,j) \in \mathcal{E} \\
-0 & \text{otherwise}
-\end{cases}
-\end{equation}
 The coefficient $\sigma$ modulates the global intensity of diffusion across the network.
+\newline
+We will now present a brief introduction to Scientifc Machine Learning and in particular to the techniques which allowed us to emulate the response of the network (potential curve of the \textcolor{red}{\textbf{output node}}) as a function of the specific perturbation (quare wave current given to the \textcolor{blue}{\textbf{input node}}).
