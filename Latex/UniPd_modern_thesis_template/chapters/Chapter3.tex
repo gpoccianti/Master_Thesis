@@ -734,8 +734,6 @@ A future extension could be to investigate if this good behavior persists even i
 
 %Collegamento con il teorema di Takens?
 
-\subsection{C. Elegans connectonome}
-
 \section{Dependence on the diffusion coefficient $\sigma$}
 
 During the experiments presented in the previous sections, it became essential to understand how to appropriately tune the diffusion coefficient $\sigma$ as a function of the hidden network size $N$. In fact, if we maintain $\sigma$ fixed while $N$ increases, the transmitted energy dissipates and the output signal progressively attenuates until it completely dies out. An initial numerical investigation suggested that the correct scaling to preserve the macroscopic dynamical regime is $\sigma = \mathcal{O}(N)$.
@@ -754,14 +752,14 @@ This empirical observation is supported by the numerical study of the spectral g
 %without quenching
  are governed by the effective macroscopic diffusion rate, which is proportional to the product $\sigma \text{Re}(\lambda_2)$ \cite{barrat2008dynamical}. 
 
-Although the internal spectral gap of isolated complex networks inherently depends on their topology---decaying and bounded above by $\mathcal{O}((\ln N)^{-1})$ in sparse Erd\H{o}s-R\'enyi (ER) graphs \cite{benjamini2014mixing} and remaining strictly lower-bounded by a constant $\mathcal{O}(1)$ in Barab\'asi-Albert (BA) scale-free networks \cite{mihail2003certain}---the strict structural bottleneck introduced by our specific boundary conditions profoundly alters the macroscopic transport dynamics. By grounding the system and forcing the flow through a single input and a single output node, the boundary constraints effectively project the energy flow into a quasi-one-dimensional transport regime. As a result, our numerical spectral analysis demonstrates that the physical spectral gap $\text{Re}(\lambda_2)$ collapses, scaling exactly as $\mathcal{O}(N^{-1})$ for both the ER and BA setups, entirely overriding their intrinsic small-world or expander properties.
+Although the internal spectral gap of isolated complex networks inherently depends on their topology---decaying and bounded above by $\mathcal{O}((\ln N)^{-1})$ in sparse Erd\H{o}s-R\'enyi (ER) graphs \cite{benjamini2014mixing} and remaining strictly lower-bounded by a constant $\mathcal{O}(1)$ in Barab\'asi-Albert (BA) scale-free networks \cite{mihail2003certain}---the strict structural bottleneck introduced by our specific boundary conditions profoundly alters the macroscopic transport dynamics. By grounding the system and forcing the flow through a single input and a single output node, the boundary constraints effectively project the energy flow into a quasi-one-dimensional transport regime. As a result, our numerical spectral analysis demonstrates that the physical spectral gap $\text{Re}(\lambda_2)$ collapses, scaling exactly as $\mathcal{O}(N^{-1})$ for both the ER and BA setups.
 
 \begin{figure}[htbp]
     \centering
     \begin{minipage}{0.49\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/BA_Network/Spectral_gap_BA.png}
-        \caption{Scaling of the spectral gap $\text{Re}(\lambda_2)$ as a function of $N$ for the Barabási-Albert (BA) topology, showing the $\mathcal{O}(N^{-1})$ decay.}
+        \caption{Scaling of the spectral gap $\text{Re}(\lambda_2)$ as a function of $N$ for the Barabási-Albert (BA) topology, showing the $\mathcal{O}(N^{-1})$ decay, both for a standard and a network with preferential attachment of Input/Output to hubs.}
         \label{fig:spectral_gap_ba}
     \end{minipage}\hfill
     \begin{minipage}{0.49\textwidth}
@@ -965,7 +963,7 @@ The evaluation of our Operator Learning framework was conducted on a strictly he
 \toprule
 \textbf{Model} & \textbf{Global $R^2$} & \textbf{X / Y Velocity $R^2$} & \textbf{Mean Rel. $L_2$ Error} & \textbf{Median Rel. $L_2$} & \textbf{Test MSE} \\
 \midrule
-Ridge Regression & 0.65 & 0.70 / 0.60 & 0.59 $\pm$ 0.14 & 0.57 & - \\
+Ridge Regression & 0.65 & 0.70 / 0.60 & 0.59 $\pm$ 0.14 & 0.57 & $\left(3.4 \pm 1.8\right)10^{5}$ \\
 LSTM Baseline & 0.88 & 0.90 / 0.86 & 0.34 $\pm$ 0.13 & 0.31 & $\left(1.1 \pm 0.8\right) 10^{5}$ \\
 \textbf{FNO} & \textbf{0.91} & \textbf{0.93} / \textbf{0.90} & \textbf{0.28 $\pm$ 0.09} & \textbf{0.27} & $\mathbf{\left(  8 \pm 5\right) 10^{4}}$ \\
 \bottomrule
@@ -999,9 +997,9 @@ To further investigate the error distribution across the 230 test trials, we ana
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}{0.65\textwidth}
+    \begin{subfigure}{1.0\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{img/Real_Data/histogram_test_set_ridge_regression.png}
+        \includegraphics[width=\textwidth]{img/Real_Data/histogram_test_set_ridge_regression_V2.png}
         \caption{Ridge Regression}
     \end{subfigure}
     

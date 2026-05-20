@@ -64,21 +64,21 @@ This baseline represents the purely data-driven approach. The model ignores both
 Here, the network must implicitly learn both the diffusion operator $-\nu \mathbf{L}$ and the reaction operator $\mathbf{F}$ simultaneously from data. This implies that the network must statistically reconstruct the graph structure solely from the propagation of signals, a task that typically requires massive amounts of training data.
 
 \subsubsection{Level 2: Physics-Informed (Hybrid Nodal)}
-In this approach, we injected physical knowledge by using an \textbf{Implicit-Explicit (IMEX)} solver \footnote{see Appendix \ref{app:C}}. We assume the linear diffusion term $-\nu \mathbf{L}$ is known, and the network is tasked \textit{only} with approximating the reaction term $\mathbf{F}(\mathbf{u})$.
+In this approach, we injected physical knowledge by using an \textbf{Implicit-Explicit (IMEX)} solver \footnote{see Appendix \ref{app:C}.}. We assume the linear diffusion term $-\nu \mathbf{L}$ is known, and the network is tasked \textit{only} with approximating the reaction term $\mathbf{F}(\mathbf{u})$.
 
 The update rule enforces the diffusion physics exactly:
 \begin{equation}
     (\mathbf{I} + \Delta t \nu \mathbf{L}) \mathbf{u}^{n+1} = \mathbf{u}^n + \Delta t \cdot \text{Net}_{\theta}(\mathbf{u}^n)
     \label{eq:imex_update}
 \end{equation}
-While "Physics-Informed", this model remains \textbf{"Topologically Blind"} regarding the reaction learning: the Network approximates $\mathbf{F}(\mathbf{u})$ node-wise using a 1D normalized coordinate system, ignoring the graph's symmetries and spectral clusters.
+While "Physics-Informed", this model remains \textbf{"Topologically Blind"} regarding the reaction learning: the Network approximates $\mathbf{F}(\mathbf{u})$ node-wise using a normalized coordinate system, ignoring the graph's symmetries and spectral clusters.
 \newline 
-The diffusion coeffient $\nu$ may be known or learned from data \footnote{In the experiments, we learned $\nu$ from data} .
+The diffusion coeffient $\nu$ may be known or learned from data \footnote{In the experiments, we learned $\nu$ from data.} .
 
 \subsubsection{Level 3: Topology-Informed (Hybrid Spectral)}
 Here the model leveraged both physical and topological priors.
 The diffusion operator was enforced exactly via the IMEX scheme as in Level 2.
-However, the neural network approximated the reaction term in the \textit{graph spectral domain}, utilizing the eigenbasis of the Graph Laplacian $\mathbf{L}$.
+However, the neural network approximated the reaction term in the \textit{graph spectral domain}, utilizing the eigenbasis $\mathbf{\Phi}$ of the Graph Laplacian $\mathbf{L}$.
 
 \begin{comment}
 One of our proposed methods, the \textbf{Laplacian Eigenfunction Neural Operator (LENO) on Network}, incorporates both physical and topological priors.
@@ -111,7 +111,7 @@ Given the IMEX structure, the effective reaction responsible for the transition 
 \begin{equation}
     \mathbf{R(u)}_{GT}^n = \underbrace{\frac{\mathbf{u}^{n+1} - \mathbf{u}^n}{\Delta t}}_{\text{Finite Difference}} + \underbrace{\nu \mathbf{L} \mathbf{u}^{n+1}}_{\text{Implicit Diffusion}}
 \end{equation}
-For Level 3, the target was the approximation $\mathbf{{R}_{GT}}^{n}_{p} = \mathbf{\Phi}_p^T \mathbf{R}_{GT}^n \mathbf{\Phi}_p$, or the projection onto the spectral domain: ${\hat{\mathbf{R}}_{GT}}^{n}_{p} = \mathbf{\Phi}_p^T \mathbf{R}_{GT}^n$.
+For Level 3, the target was the approximation $\mathbf{{R}_{GT}}^{n}_{p} = \mathbf{\Phi}_p^T \mathbf{R}_{GT}^n \mathbf{\Phi}_p$, or the projection onto the spectral domain: ${\hat{\mathbf{R}}_{GT}}^{n}_{p} = \mathbf{\Phi}_p^T \mathbf{R}_{GT}^n$, where the matrix $\mathbf{\Phi}_p \in \mathbb{R}^{N \times p}$ contains only the eigenvectors corresponding to the $p$ smallest eigenvalues $0 \le \lambda_1 \le \dots \le \lambda_p$ (low-frequency modes).
 
 \subsubsection{Loss Components}
 The total loss $\mathcal{L}$ was defined as a weighted sum:
@@ -141,7 +141,7 @@ This term measured the relative error of the integrated next-step state. Normali
 where $\Psi_{\Delta t}$ represents the differentiable IMEX solver layer, $\hat{\mathbf{u}}^n_i$ is the predicted state at step $n$ (with $\hat{\mathbf{u}}^0_i = \mathbf{u}^0_{true, i}$), $\epsilon=10^{-6}$ is a small constant for numerical stability, $N_{traj}$ is the batch size for the trajectory, and $N_T$ is the total number of time steps.
 
     For the trajectory term we considered the relative L2 term for scale-invariance and better interpretability. However, during training, 
-    we found that using the L2 norm for the physics term provided better convergence properties \footnote{This particular choice depends on the specific problem. In section \ref{sec:Example 2} we used the relative loss also for the physics loss}.
+    we found that using the absolute L2 norm for the physics term provided better convergence properties \footnote{This particular choice depends on the specific problem. In section \ref{sec:Example 2} we used the relative loss also for the physics term.}.
 \end{enumerate}
 
 
@@ -154,16 +154,16 @@ We instantiated the hierarchy of inductive biases defined in Sec. \ref{sec:exp_d
     \item \textbf{Level 1: Black-Box Baselines.} (see Chapter \ref{Chp:2}) %Devo ancora creare la sezione di introduzione su ML e Neural Operators
     \begin{itemize}
         \item \textbf{Blind DeepONet:} Implemented with a \textit{Branch Net} (MLP) taking the full state vector, and a \textit{Trunk Net} (MLP) taking normalized node coordinates $y \in [0,1]$. The output is the dot product of branch and trunk features, treating graph nodes as unrelated coordinates on a 1D line.
-        \item \textbf{Blind FNO:} A standard 1D Fourier Neural Operator relying on the Fast Fourier Transform (FFT).
+        \item \textbf{Blind FNO:} A standard Fourier Neural Operator relying on the Fast Fourier Transform (FFT).
          We truncated the frequency modes passed. It assumes a Euclidean periodic topology, ignoring the adjacency matrix $A$.
     \end{itemize}
 
 
 \item \textbf{Level 2: Physics-Informed (Hybrid)}\\
-This tier decoupled physical laws from topological structure. Both architectures leveraged the \textbf{exact Graph-Spectral IMEX solver} for time-stepping, ensuring perfect diffusion dynamics via the true Graph Laplacian eigenvalues. However, the neural networks approximating the reaction term $\mathcal{N}(u)$ remained \textbf{topologically blind}, treating the graph signal as a 1D Euclidean sequence.
+This tier decoupled physical laws from topological structure. Both architectures leveraged the \textbf{exact Graph-Spectral IMEX solver} for time-stepping, ensuring perfect diffusion dynamics via the true Graph Laplacian eigenvalues. However, the neural networks approximating the reaction term $\mathcal{N}(u)$ remained \textbf{topologically blind}, treating the graph signal as an Euclidean sequence.
 \begin{itemize}
     \item \textbf{PI-DeepONet:} Utilized the standard Branch/Trunk architecture to map the full state vector to the reaction residual. It acted node-wise without explicit neighborhood information.
-    \item \textbf{PI-FNO:} Used the 1D FNO backbone to predict the reaction vector. 
+    \item \textbf{PI-FNO:} Used the FNO backbone to predict the reaction vector. 
 \end{itemize}
 
     \item \textbf{Level 3: Topology-Informed (Spectral).}
@@ -247,7 +247,7 @@ The specific form of the reaction term for the Allen-Cahn equation is cubic:
 \end{equation}
 The system evolved from an initial condition of $50$, randomly selected, active nodes.
 We generated a training dataset of $15000$ trajectories ($10000$ for training, $3000$ for validation and $2000$ for testing) by numerically integrating the system using 
-a spectral IMEX solver \footnote{details in Appendix \ref{app:C}},
+a spectral IMEX solver \footnote{details in Appendix \ref{app:C}.},
  subsampling the snapshots at time intervals $\Delta=0.05 t$ for 21 time steps to create the input-target pairs.
 
 \begin{figure}
