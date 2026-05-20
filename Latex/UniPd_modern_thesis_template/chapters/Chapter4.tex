@@ -569,7 +569,6 @@ In particular this last problem is part of the \textbf{PDE Discovery}, mentioned
 In this section we considered again our neural system, described by eq. \eqref{eq:coupled_FHN}.
 
 However we changed the setup by \textbf{removing the input current} and setting a randomly uniform state $\left( V_i\left( 0 \right), w_i\left( 0 \right) \right) \in \left[-1, 1  \right]^2$ for each node $i$.
-%Al momento la VM non funziona. Devo ricordarmi di inserire i dettagli sull'inizializzazione quando posso rivederli
 
 Then, given a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$:
 \begin{equation}
@@ -695,7 +694,6 @@ However, the metrics reported above are calculated on a grid spanning the specif
 \newline
  This limitation is physically grounded: as previously observed in the spatio-temporal dynamics, the $V=-1$ region represents a highly unstable region of the FitzHugh-Nagumo phase portrait. Consequently, the training trajectories rapidly transition away from these states, leaving the neural network with a severe lack of data support in that specific region \footnote{We suppose this doesn't happen around the $V=1$ region both because of the specific initialization and because the gradient is less steep. Morover, increasing the temporal resolution of the simulation may solve this problem. This theory will be subject of future investigations.}. Without sufficient observations, the model cannot accurately extrapolate the cubic curvature of $F_V$, highlighting a fundamental limitation of data-driven inverse modeling in strictly transient or unstable regimes.
 
-%Si potrebbe provare a rifare la simulazione con un dt più piccolo...
 
 \begin{figure}[htbp]
     \centering
