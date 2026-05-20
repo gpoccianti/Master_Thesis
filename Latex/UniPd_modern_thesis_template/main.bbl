@@ -1,9 +1,32 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Hodgkin and Huxley(1952)]{hodgkin1952quantitative}
+Alan~L Hodgkin and Andrew~F Huxley.
+\newblock A quantitative description of membrane current and its application to
+  conduction and excitation in nerve.
+\newblock \emph{The Journal of Physiology}, 117\penalty0 (4):\penalty0
+  500--544, 1952.
+
+\bibitem[Centofanti et~al.(2024)Centofanti, Ghiotto, and
+  Pavarino]{centofanti2024cma}
+Edoardo Centofanti, Massimiliano Ghiotto, and Luca~F. Pavarino.
+\newblock Learning the hodgkin–huxley model with operator learning
+  techniques.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering},
+  432:\penalty0 117381, 2024.
+\newblock URL \url{https://doi.org/10.1016/j.cma.2024.117381}.
+
+\bibitem[Centofanti and Pavarino(2024)]{centofanti2024comconf}
+Edoardo Centofanti and Luca~F. Pavarino.
+\newblock Operator learning for the fitzhugh-nagumo model.
+\newblock In \emph{2024 International Conference on Computing in Natural
+  Sciences, Biomedicine and Engineering (COMCONF)}, 2024.
+\newblock URL \url{https://doi.org/10.1109/COMCONF63340.2024.00015}.
 
 \bibitem[Cybenko(1989)]{cybenko1989approximation}
 George Cybenko.
@@ -70,22 +93,6 @@ Tianping Chen and Hong Chen.
   with arbitrary activation functions and its application to dynamical systems.
 \newblock \emph{IEEE Transactions on Neural Networks}, 6\penalty0 (4):\penalty0
   911--917, 1995.
-
-\bibitem[Centofanti and Pavarino(2024)]{centofanti2024comconf}
-Edoardo Centofanti and Luca~F. Pavarino.
-\newblock Operator learning for the fitzhugh-nagumo model.
-\newblock In \emph{2024 International Conference on Computing in Natural
-  Sciences, Biomedicine and Engineering (COMCONF)}, 2024.
-\newblock URL \url{https://doi.org/10.1109/COMCONF63340.2024.00015}.
-
-\bibitem[Centofanti et~al.(2024)Centofanti, Ghiotto, and
-  Pavarino]{centofanti2024cma}
-Edoardo Centofanti, Massimiliano Ghiotto, and Luca~F. Pavarino.
-\newblock Learning the hodgkin–huxley model with operator learning
-  techniques.
-\newblock \emph{Computer Methods in Applied Mechanics and Engineering},
-  432:\penalty0 117381, 2024.
-\newblock URL \url{https://doi.org/10.1016/j.cma.2024.117381}.
 
 \bibitem[Pellegrini et~al.(2025)Pellegrini, Ghiotto, Centofanti, and
   Pavarino]{pellegrini2025mlcse}

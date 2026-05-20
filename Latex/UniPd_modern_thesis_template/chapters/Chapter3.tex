@@ -3,12 +3,12 @@
 
 \section{Problem definition}
 \label{chpt: Problem definition}
-In this work we expand on the results presented in \cite{centofanti2024comconf}, and developed in \cite{centofanti2024cma} and \cite{pellegrini2025mlcse}. In these articles an operator learning architecture (with a particular focus on FNO \footnote{see section ...}) has been used to learn the dynamics of a neuronal system, described by a ionic model (the FitzHugh-Nagumo or Hudgin-Huxely model \footnote{see section ...}). 
+In this work we expand on the results presented in \cite{centofanti2024comconf}, and developed in \cite{centofanti2024cma} and \cite{pellegrini2025mlcse}. In these articles an operator learning architecture (with a particular focus on Fourier Neural Operator (FNO) \footnote{See chapter \ref{Chp:2}.}) has been used to learn the dynamics of a neuronal system, described by a ionic model (the FitzHugh-Nagumo or Hudgin-Huxely model \footnote{See chapter \ref{Chp:1}.}). 
 First of all the reaction has been simulated numerically by solving the underlying stiff systems of ordinary differential equations (ODEs). In the earlier works \cite{centofanti2024comconf, centofanti2024cma}, the MATLAB routine \texttt{ode15s} was utilized to integrate the equations over a fixed timespan (e.g., 100 ms) and the solutions were sampled on a uniform equispaced grid of 500 points. In the most recent development \cite{pellegrini2025mlcse}, which extends the study to higher-dimensional systems like the O'Hara-Rudy model, a Runge-Kutta method was employed. In all cases, the systems were perturbed using time-dependent applied currents, typically in the form of square pulses with varying intensities and durations, to explore the threshold-dependent dynamics and complex oscillatory behaviors of the cells.
 
 The numerical solutions were then collected to construct the datasets for the operator learning task. Specifically, in the initial studies on the FitzHugh-Nagumo and Hodgkin-Huxley models, the authors generated a total of 2000 trajectories, split into 1600 samples for the training set and 400 for the test set \cite{centofanti2024comconf, centofanti2024cma}. Subsequently, to handle the increased complexity and ensure comprehensive coverage of the dynamical behaviors in higher-dimensional spaces, the dataset size was expanded to a total of 3750 trajectories, comprising 3000 training examples, 375 for validation, and 375 for testing \cite{pellegrini2025mlcse}.
 
-Using these datasets, a Fourier Neural Operator (FNO) was trained to learn the non-linear mapping from the applied input current to the system's state variables (i.e., transmembrane potential, recovery, and gating variables). By leveraging the Fast Fourier Transform (FFT) on the uniform discretization grid, the FNO architecture computes the integral kernel operator directly in the frequency domain. This approach proved highly effective in capturing the global dependencies and multiscale temporal behaviors of the stiff ionic models, maintaining stable training and achieving very low relative $L^2$ errors across all the investigated dimensionalities.
+Using these datasets, a FNO was trained to learn the non-linear mapping from the applied input current to the system's state variables (i.e., transmembrane potential, recovery, and gating variables). By leveraging the Fast Fourier Transform (FFT) on the uniform discretization grid, the FNO architecture computes the integral kernel operator directly in the frequency domain. This approach proved highly effective in capturing the global dependencies and multiscale temporal behaviors of the stiff ionic models, maintaining stable training and achieving very low relative $L^2$ errors across all the investigated dimensionalities.
 
 The results across these studies demonstrate that FNOs are highly effective in learning the dynamics of stiff ionic models, consistently achieving low relative $L^2$ errors. Specifically, the optimized FNO architectures attained test errors of approximately 2.0\% for the FitzHugh-Nagumo model \cite{centofanti2024comconf}, 1.4\% for the Hodgkin-Huxley model \cite{centofanti2024cma}, and around 2.0\% even for the highly complex 41-variable O'Hara-Rudy model \cite{pellegrini2025mlcse}. Furthermore, the most recent findings emphasize the remarkable scalability of this approach: despite the substantial increase in system dimensionality, properly tuned FNOs maintain bounded training and test errors, with memory usage and training time scaling only linearly \cite{pellegrini2025mlcse}. This confirms the capability of FNOs to accurately and efficiently capture complex multiscale electrophysiological dynamics, gracefully overcoming the curse of dimensionality that typically affects artificial neural networks in high-dimensional settings.
 
@@ -28,16 +28,21 @@ The results across these studies demonstrate that FNOs are highly effective in l
 
 %%%%
 %Ci vuole un capitolo di spiegazione tecnica di come ho trainato FNO in questo setup?
+
+%\section{Training procedure}
 %%%
 
-\section{Training procedure}
+
 
 
 \section{Study of different topologies}
 We spatially extended this setup by reproducing the structure presented in section \ref{sec:extended_network}. In particular, we generated datasets for each different "hidden" \footnote{The FNO architecture didn't receive any information about them} graph structure and trained/ tested the artificial network on this data.
 
 
-Please note the setup is the following \footnote{Unless otherwise specified}: the \textcolor{blue}{\textbf{input node}} is connected by a direct link to a random node of a network. The hidden network is simple \footnote{Devo spiegare undirected + unweighted ?}. Finally another random node is connected by another direct link to the \textcolor{red}{\textbf{output node}}.
+Please note the setup is the following \footnote{Unless otherwise specified}: the \textcolor{blue}{\textbf{input node}} is connected by a direct link to a random node of a network. The hidden network is simple.
+%Devo spiegare undirected + unweighted ?
+Finally another random node is connected by another direct link to the \textcolor{red}{\textbf{output node}}.
+%Questa sezione l'ho scritta prima dei capitoli introduttivi in cui spiego la stessa cosa. La tengo in quanto un recap può essere utile a chi legge solo questa sezione?
 
 
 
@@ -229,7 +234,7 @@ To systematically evaluate the threshold dynamics across all network dimensions,
 % ==========================================
 % GRIGLIA 1: MSE HISTOGRAMS
 
-%Devo rifarli ? alcune cifre sull'asse x si sovrappongono e forse dovrei usare la notazione scientifica per Mean=. ???
+%Vanno bene ? alcune cifre sull'asse x si sovrappongono e forse avrei dovuto usare la notazione scientifica per Mean=. ???
 % ==========================================
 
 \begin{figure}[htbp]

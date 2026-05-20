@@ -1,4 +1,5 @@
 \chapter{Chapter 1}
+\label{Chp:1}
 
 \section{Introduction}
 
@@ -131,12 +132,12 @@ We then wanted to study the spatial extension of the FH model and analyze its re
 \newpage
 \section{From single neuron to spatially extended systems}
 \label{sec:extended_network}
-The setup considered so far is that of a single node.
-In order to change scale and pass from a microscopic to a mesoscopic neural description, we embedded the FH model within a network setup. In particular, we wanted to determine if the consequently very high-dimensional ODE system could be replaced by a single numerical operator, learned with deep learning techniques, that will be described in chapter \ref{Chp:2}.
-We examined a generalization by analyzing a spatial extended system: a current (in the form of square wave) is given as input to an \textcolor{blue}{\textbf{input node}}, information is transmitted through diffusion (where each node has a local reaction term following FitzHugh-Nagumo, see eq \eqref{eq:coupled_FHN}), and the potential is read for the \textcolor{red}{\textbf{output node}}.
+The framework discussed thus far has focused on the dynamics of an isolated single node. In order to transition from a microscopic to a mesoscopic description of neural dynamics, we embed the FitzHugh-Nagumo (FHN) model within a network topology. Our primary objective is to investigate whether the resulting high-dimensional system of ordinary differential equations (ODEs) can be effectively approximated by a single neural operator trained via deep learning techniques, which will be detailed in Chapter \ref{Chp:2}.
 
-%Spiego già qui la struttura del dataset per la NN ?
-Given a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ we considered a coupling term expressed through the elements $L_{ij}$ of the graph Laplacian matrix, defined as $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. Explicitly \footnote{We assume that the graph is unweighted}:
+To this end, we formulate a spatially extended system characterized by a specific input-output mapping. An external stimulus, modeled as a square-wave current, is injected into a designated \textcolor{blue}{\textbf{input node}}. The signal then propagates through the network via diffusive coupling, while each node undergoes local reaction dynamics governed by the FHN equations. Finally, the response of the system is recorded by extracting the membrane potential of a designated \textcolor{red}{\textbf{output node}}.
+
+
+Formally, let $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ be an unweighted graph representing the neural network topology. The diffusive coupling between neurons is modeled using the elements $L_{ij}$ of the graph Laplacian matrix $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. The elements of the Laplacian are explicitly defined as:
 \begin{equation}
 L_{ij} = 
 \begin{cases} 
@@ -146,7 +147,7 @@ L_{ij} =
 \end{cases}
 \end{equation}
 
-Our system is described by the following set of equations:
+The dynamics of the coupled system are therefore governed by the following set of equations for each node $i \in \mathcal{V}$:
 \begin{equation}
 \label{eq:coupled_FHN}
 \begin{aligned}
@@ -154,9 +155,7 @@ Our system is described by the following set of equations:
 \frac{dw_i}{dt} &= \epsilon (V_i - \gamma w_i)
 \end{aligned}
 \end{equation}
-
-for each node $i \in \mathcal{V}$
-
+where the coefficient $\sigma$ modulates the global coupling strength (i.e., the intensity of diffusion) across the network.
 
 \begin{figure}[htbp]
     \centering
@@ -164,26 +163,20 @@ for each node $i \in \mathcal{V}$
     \begin{subfigure}[b]{0.48 \textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/1to2/output0to1.png}
-        \caption{Input $\rightarrow$ Output}
+        \caption{Minimal setup: Input $\rightarrow$ Output}
         \label{fig:fh_output}
     \end{subfigure}
-    \hfill % <--- Questo inserisce uno spazio elastico tra le due immagini
+    \hfill
     % --- Seconda immagine (destra) ---
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/BA_Network/network_plot_BA_N=100.png}
-        \caption{Input $\rightarrow$ Network $\rightarrow$ Output}
+        \caption{Extended topology: Input $\rightarrow$ Network $\rightarrow$ Output}
         \label{fig:fh_dynamics}
     \end{subfigure}
     
-    % Didascalia principale e label per l'intera figura
-    \caption{Examples of our setup. On the right a BA network with $N=100$, $m=2$.}
+    \caption{Schematic representation of the network setup. (a) A minimal configuration illustrating the direct signal transmission from an input to an output node. (b) A more complex topology utilizing a Barabási-Albert (BA) scale-free network ($N=100$, $m=2$), demonstrating how the input stimulus propagates through a mesoscopic structure before reaching the output node.}
     \label{fig:fh_comparison}
 \end{figure}
 
-
-%%%
-
-The coefficient $\sigma$ modulates the global intensity of diffusion across the network.
-\newline
-We will now present a brief introduction to Scientifc Machine Learning and in particular to the techniques which allowed us to emulate the response of the network (potential curve of the \textcolor{red}{\textbf{output node}}) as a function of the specific perturbation (quare wave current given to the \textcolor{blue}{\textbf{input node}}).
+Having established the mathematical formulation of the coupled system, in the next chapter we will introduce the principles of Scientific Machine Learning (SciML). Specifically, we will focus on the operator learning techniques employed to emulate the input-output mapping of the spatially extended system—that is, predicting the continuous temporal evolution of the \textcolor{red}{\textbf{output node}}'s potential as a direct consequence of a specific perturbation applied to the \textcolor{blue}{\textbf{input node}}.

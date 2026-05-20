@@ -12,33 +12,32 @@
 \contentsline {section}{\numberline {2.2}Operator Learning}{13}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.a}Neural Architectures}{14}{subsection.2.2.1}%
 \contentsline {subsubsection}{Deep Operator Network (DeepONet)}{14}{subsubsection*.11}%
-\contentsline {subsubsection}{Fourier Neural Operator (FNO)}{15}{subsubsection*.13}%
-\contentsline {section}{\numberline {2.3}Approximation theorems}{17}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.a}Universal approximation of functions}{17}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.b}Universal approximation of operators}{18}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.c}Universal approximation of operators II}{19}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.d}Function Space Assumptions}{19}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Discretization invariance and resolution independence}{21}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.a}Intuition}{21}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.b}Formal definition}{21}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.c}Zero-Shot Super-Resolution}{22}{subsection.2.4.3}%
+\contentsline {subsubsection}{Fourier Neural Operator (FNO)}{16}{subsubsection*.13}%
+\contentsline {section}{\numberline {2.3}Approximation theorems}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.a}Universal approximation of functions}{18}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.b}Universal approximation of operators}{19}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.c}Universal approximation of operators II}{20}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.d}Function Space Assumptions}{20}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Discretization invariance and resolution independence}{22}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.a}Intuition}{22}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.b}Formal definition}{22}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.c}Zero-Shot Super-Resolution}{23}{subsection.2.4.3}%
 \contentsline {part}{I\hspace {1em}Emulation of a Neuronal System}{25}{part.1}%
 \contentsline {chapter}{\numberline {3}Chapter 3}{27}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Problem definition}{27}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Training procedure}{29}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Study of different topologies}{29}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.a}No network}{29}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.b}Toy network}{29}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.c}ER network}{32}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.d}BA network}{36}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.2}Study of different topologies}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.a}No network}{29}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.b}Toy network}{29}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.c}ER network}{32}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.d}BA network}{36}{subsection.3.2.4}%
 \contentsline {subsubsection}{Performance across different sizes of the hidden network: Conclusion}{40}{subsubsection*.28}%
-\contentsline {subsection}{\numberline {3.3.e}C. Elegans connectonome}{40}{subsection.3.3.5}%
-\contentsline {section}{\numberline {3.4}Dependence on the diffusion coefficient $\sigma $}{40}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Real data}{42}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.a}The dataset}{42}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.b}Preprocessing}{43}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.c}Training}{44}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.d}Results}{45}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.2.e}C. Elegans connectonome}{40}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}Dependence on the diffusion coefficient $\sigma $}{40}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Real data}{42}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.a}The dataset}{42}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.b}Preprocessing}{43}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.c}Training}{44}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.d}Results}{45}{subsection.3.4.4}%
 \contentsline {part}{II\hspace {1em}Finding the Reaction Term in a Reaction-Diffusion System}{51}{part.2}%
 \contentsline {chapter}{\numberline {4}Chapter 4}{53}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Problem definition}{53}{section.4.1}%

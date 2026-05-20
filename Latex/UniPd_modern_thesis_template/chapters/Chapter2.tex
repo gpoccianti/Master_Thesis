@@ -12,7 +12,7 @@ Machine Learning (ML) encompasses a broad set of methods that enable algorithms 
 
 ANNs are computational models inspired by the structure and function of biological neural systems, which communicate via vast networks of neurons (fig.~\ref{fig:ann_overview}a). The fundamental computational unit is the artificial neuron (Fig.~\ref{fig:ann_overview}b). A single neuron computes a linear combination of its inputs $\mathbf{x}$ using a set of learnable weights $\mathbf{w}$ and a bias term $b$. This sum is then transformed by a non-linear activation function, $f(\cdot)$, which is essential for capturing complex, non-linear mappings.
 
-By stacking these fundamental units into multiple layered structures, we create Deep Neural Networks (DNNs) (Fig.~\ref{fig:ann_overview}c). These architectures have proven highly effective in mapping high-dimensional function spaces and solving problems in diverse fields like computer vision, natural language processing, and physical modeling. A key theoretical foundation of ANNs is the \textit{Universal Approximation Theorem}. This theorem states that a feedforward network with a single hidden layer and a non-linear activation function can, in principle, approximate any continuous function on a compact set, given a sufficient number of neurons. First proven by Cybenko~\cite{cybenko1989approximation} and Hornik~\cite{hornik1989multilayer} in 1989, this principle highlights the fundamental expressive power of neural network architectures. Modern deep networks extend this concept by composing multiple non-linear transformations across numerous layers.
+By stacking these fundamental units into multiple layered structures, we create Deep Neural Networks (DNNs) (Fig.~\ref{fig:ann_overview}c). These architectures have proven highly effective in mapping high-dimensional function spaces and solving problems in diverse fields like computer vision, natural language processing, and physical modeling. A key theoretical foundation of ANNs is the \textit{Universal Approximation Theorem}. This theorem states that a feedforward network with at least a single hidden layer and a non-linear activation function can, in principle, approximate any continuous function on a compact set, given a sufficient number of neurons. First proven by Cybenko~\cite{cybenko1989approximation} and Hornik~\cite{hornik1989multilayer} in 1989, this principle highlights the fundamental expressive power of neural network architectures. Modern deep networks extend this concept by composing multiple non-linear transformations across numerous layers.
 
 
 \section{Operator Learning}
@@ -72,6 +72,7 @@ The output of the approximated operator is obtained through the dot product of t
     \label{fig:deeponet_schema}
 \end{figure}
 
+\newpage
 \subsubsection{Fourier Neural Operator (FNO)}
 The Fourier Neural Operator (FNO), proposed by Li et al. \cite{li2020fourier}, tackles the approximation problem by parameterizing the integral operator directly in the frequency domain. Unlike standard networks, FNO learns a mapping between infinite-dimensional function spaces, guaranteeing discretization independence (\textit{resolution-invariance}).
 
@@ -87,7 +88,7 @@ As shown in Figure \ref{fig:fno_schema}, the architecture follows three main pha
     $\mathcal{G}(a)(x) = Q(v_T(x)) = \sigma_3(W_{\text{out}} v_T(x) + b_{\text{out}}), \quad x \in D'.$
 \end{enumerate}
 
-In the specific case of the Fourier Neural Operator (FNO) \cite{li2020fourier}, the integral kernel is parameterized directly in the frequency domain. By leveraging the convolution theorem, the continuous integral operation is efficiently resolved by computing the Fourier transform of the input, performing a pointwise multiplication with a learnable complex-valued weight tensor over a truncated set of low-frequency modes,
+In the specific case of the Fourier Neural Operator (FNO) \cite{li2020fourier}, the integral kernel is parameterized directly in the frequency domain \footnote{Other choices for the kernel are valid and lead to different architectures.}. By leveraging the convolution theorem, the continuous integral operation is efficiently resolved by computing the Fourier transform of the input, performing a pointwise multiplication with a learnable complex-valued weight tensor over a truncated set of low-frequency modes,
 %Devo parlare della relazione che deve intercorrere tra le frequenze considerate $k_max$ ed il numero di campioni $N$ (Teorema di Nysquist-Shannon?)
  and finally applying the inverse Fourier transform. Mathematically, the integral term in the iterative update is replaced by:
 \[ 
@@ -203,7 +204,7 @@ A defining characteristic of Neural Operators, which distinguishes them from cla
 
 \subsection{Intuition}
 
-An operator learning architecture is said to be discretization-invariant if the model parameters $\theta$ are defined in a continuous function space and can be applied to any discretization \footnote{Provided that there are enough points to perform a DFT with $k$ modes} %Controllare la correttezza di questa affermazione.
+An operator learning architecture is said to be discretization-invariant if the model parameters $\theta$ are defined in a continuous function space and can be applied to any discretization \footnote{Provided that there are enough sample points to perform a DFT with $k$ modes} %Controllare la correttezza di questa affermazione.
 %L'idea è che sopra un certo numero di punti posso fare
 %DFT, tengo comunque i primi k coefficienti e quindi
 %la struttura diventa indipendente dalla discretizzazione
