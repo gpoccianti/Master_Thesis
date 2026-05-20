@@ -1,0 +1,78 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{vii}{section*.4}%
+\contentsline {section}{Sommario}{ix}{section*.5}%
+\contentsline {chapter}{Introduction}{1}{chapter*.6}%
+\contentsline {chapter}{\numberline {1}Chapter 1}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}The Hodgkin-Huxley model}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}The FitzHugh-Nagumo model}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}From single neuron to spatially extended systems}{8}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Chapter 2}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}A brief introduction to Machine Learning}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Operator Learning}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.a}Neural Architectures}{14}{subsection.2.2.1}%
+\contentsline {subsubsection}{Deep Operator Network (DeepONet)}{14}{subsubsection*.11}%
+\contentsline {subsubsection}{Fourier Neural Operator (FNO)}{16}{subsubsection*.13}%
+\contentsline {section}{\numberline {2.3}Approximation theorems}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.a}Universal approximation of functions}{18}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.b}Universal approximation of operators}{19}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.c}Universal approximation of operators II}{20}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.d}Function Space Assumptions}{20}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Discretization invariance and resolution independence}{22}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.a}Intuition}{22}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.b}Formal definition}{22}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.c}Zero-Shot Super-Resolution}{23}{subsection.2.4.3}%
+\contentsline {part}{I\hspace {1em}Emulation of a Neuronal System}{25}{part.1}%
+\contentsline {chapter}{\numberline {3}Chapter 3}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Problem definition}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Study of different topologies}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.a}No network}{29}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.b}Toy network}{29}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.c}ER network}{32}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.d}BA network}{36}{subsection.3.2.4}%
+\contentsline {subsubsection}{Performance across different sizes of the hidden network: Conclusion}{40}{subsubsection*.28}%
+\contentsline {section}{\numberline {3.3}Dependence on the diffusion coefficient $\sigma $}{40}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Real data}{42}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.a}The dataset}{42}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.b}Preprocessing}{43}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.c}Training}{44}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.d}Results}{45}{subsection.3.4.4}%
+\contentsline {part}{II\hspace {1em}Finding the Reaction Term in a Reaction-Diffusion System}{53}{part.2}%
+\contentsline {chapter}{\numberline {4}Chapter 4}{55}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Problem definition}{55}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.a}Reaction-Diffusion Dynamics on Complex Networks}{55}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Methodology}{56}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.a}Problem Formulation}{56}{subsection.4.2.1}%
+\contentsline {subsubsection}{Experimental Design: Hierarchy of Inductive Bias}{56}{subsubsection*.38}%
+\contentsline {subsubsection}{Level 1: Totally Blind (Black-Box)}{57}{subsubsection*.39}%
+\contentsline {subsubsection}{Level 2: Physics-Informed (Hybrid Nodal)}{57}{subsubsection*.40}%
+\contentsline {subsubsection}{Level 3: Topology-Informed (Hybrid Spectral)}{57}{subsubsection*.41}%
+\contentsline {subsection}{\numberline {4.2.b}Training Objective: Composite Loss Strategy}{57}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.c}Ground Truth Reaction Extraction}{58}{subsection.4.2.3}%
+\contentsline {subsubsection}{Loss Components}{58}{subsubsection*.42}%
+\contentsline {subsection}{\numberline {4.2.d}Neural Architectures Implementation}{59}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.e}Training Details}{61}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Example 1: Allen-Cahn on Graph (Hierarchy of Inductive Bias)}{61}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.a}Data Generation}{61}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.b}Graph Topology}{62}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.c}Dynamics: Allen-Cahn on Graphs}{62}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.d}Results and Discussion}{62}{subsection.4.3.4}%
+\contentsline {subsubsection}{Quantitative Analysis: Error Distribution}{62}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {4.3.e}Discussion}{66}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Example 2: the case of FitzHugh-Nagumo}{67}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.a}Motivation}{67}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.b}Graph Topology}{67}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.c}Dynamics: FitzHugh-Nagumo on Graphs}{67}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.d}Training Details}{70}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.e}Results}{70}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.f}The Inverse Problem}{74}{subsection.4.4.6}%
+\contentsline {chapter}{Conclusions}{77}{chapter*.58}%
+\contentsline {chapter}{\numberline {A}Numerical Integration}{81}{appendix.1.A}%
+\contentsline {chapter}{\numberline {B}Analysis of the dynamics of FH on a BA network}{85}{appendix.1.B}%
+\contentsline {section}{\numberline {B.1}Introduction}{85}{section.1.B.1}%
+\contentsline {section}{\numberline {B.2}Single Neuron Behavior}{85}{section.1.B.2}%
+\contentsline {section}{\numberline {B.3}BA Network}{85}{section.1.B.3}%
+\contentsline {chapter}{\numberline {C}Numerical Integration 2}{89}{appendix.1.C}%
+\contentsline {section}{\numberline {C.1}IMEX scheme}{89}{section.1.C.1}%
+\contentsline {chapter}{Bibliography}{93}{section*.61}%
+\contentsline {chapter}{Acknowledgments}{97}{section*.63}%

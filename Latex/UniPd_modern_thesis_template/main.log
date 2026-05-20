@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  20 MAY 2026 16:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  20 MAY 2026 16:52
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/gabrielepoccianti/Documents/Tesi magistrale/Codice/Latex/Master_Thesis (Final)/UniPd_modern_thesis_template/main"
-(/Users/gabrielepoccianti/Documents/Tesi magistrale/Codice/Latex/Master_Thesis (Final)/UniPd_modern_thesis_template/main.tex
+**main.tex
+(./main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (./unipd-thesis-modern.cls
@@ -26,14 +25,18 @@ File: bk11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count271
@@ -48,22 +51,34 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen148
 \Gm@layoutvoffset=\dimen149
 \Gm@dimlist=\toks18
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrextend.sty
-Package: scrextend 2024/10/24 v3.43 KOMA-Script package (extend other classes with features of KOMA-Script classes)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrlfile.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrextend.sty
+Package: scrextend 2024/10/24 v3.43 KOMA-Script package (extend other classes w
+ith features of KOMA-Script classes)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2024/10/24 v3.43 KOMA-Script package (file load hooks)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
 Package: scrlfile-hook 2024/10/24 v3.43 KOMA-Script package (using LaTeX hooks)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrlogo.sty
+
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrlogo.sty
 Package: scrlogo 2024/10/24 v3.43 KOMA-Script package (logo)
 )))
 Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line 370.
-))) (/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 370.
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box52
 \beforetitleunit=\skip51
@@ -74,19 +89,28 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen152
 \titlewidthlast=\dimen153
 \titlewidthfirst=\dimen154
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/newpxtext.sty
-Package: newpxtext 2025/02/10 v1.541(Michael Sharpe) latex and unicode latex support for TeXGyrePagellaX
- `newpxtext' v1.541, 2025/02/10 Text macros taking advantage of TeXGyre Pagella and its extensions (msharpe) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/newpxtext.sty
+Package: newpxtext 2025/02/10 v1.541(Michael Sharpe) latex and unicode latex su
+pport for TeXGyrePagellaX
+
+`newpxtext' v1.541, 2025/02/10 Text macros taking advantage of TeXGyre Pagella 
+and its extensions (msharpe)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -96,9 +120,11 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
 Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \col@sep=\dimen155
 \ar@mcellbox=\box53
@@ -111,43 +137,57 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \everycr=\toks21
 \minrowclearance=\skip55
 \rownum=\count274
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xpatch/xpatch.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2025-01-18 L3 programming layer (loader) 
- (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box55
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
- (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-08-16 L3 Experimental document command parser
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count276
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks22
 \XKV@tempa@toks=\toks23
 )
 \XKV@depth=\count277
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/xstring/xstring.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count278
 \xs_countb=\count279
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 LaTeX Font Info:    Setting zplLF sub-encoding to TS1/0 on input line 40.
 LaTeX Font Info:    Setting zplTLF sub-encoding to TS1/0 on input line 40.
 LaTeX Font Info:    Setting zplOsF sub-encoding to TS1/0 on input line 40.
 LaTeX Font Info:    Setting zplTOsF sub-encoding to TS1/0 on input line 40.
 \zpl@cnt=\count280
- (/usr/local/texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty
 Package: fontaxes 2020/07/21 v1.0e Font selection axes
 LaTeX Info: Redefining \upshape on input line 29.
 LaTeX Info: Redefining \itshape on input line 31.
@@ -175,30 +215,42 @@ LaTeX Info: Redefining \textulc on input line 49.
 \zpl@dimBB=\dimen169
 \zpl@dimC=\dimen170
 LaTeX Info: Redefining \oldstylenums on input line 807.
-LaTeX Font Info:    Trying to load font information for T1+zplLF on input line 815.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1zpllf.fd
+LaTeX Font Info:    Trying to load font information for T1+zplLF on input line 
+815.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1zpllf.fd
 File: t1zplllf.fd 2021/05/25 v1.0 font definition file for T1/zpl/lf
 )
-LaTeX Font Info:    Trying to load font information for T1+zplTLF on input line 816.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1zpltlf.fd
+LaTeX Font Info:    Trying to load font information for T1+zplTLF on input line
+ 816.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1zpltlf.fd
 File: t1zpltlf.fd 2021/05/25 v1.0 font definition file for T1/zpl/tlf
 )
-LaTeX Font Info:    Trying to load font information for T1+zplOsF on input line 817.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1zplosf.fd
+LaTeX Font Info:    Trying to load font information for T1+zplOsF on input line
+ 817.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1zplosf.fd
 File: t1zplosf.fd 2021/05/25 v1.0 font definition file for T1/zpl/osf
 )
-LaTeX Font Info:    Trying to load font information for T1+zplTOsF on input line 818.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1zpltosf.fd
+LaTeX Font Info:    Trying to load font information for T1+zplTOsF on input lin
+e 818.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1zpltosf.fd
 File: t1zpltosf.fd 2021/05/25 v1.0 font definition file for T1/zpl/tosf
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+minzpl on input line 116.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1minzpl.fd
+LaTeX Font Info:    Trying to load font information for T1+minzpl on input line
+ 116.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1minzpl.fd
 File: t1minzpl.fd 2021/05/25 v1.0 font definition file for T1/minzpl/TLF
 )
 LaTeX Font Info:    Font shape `T1/minzpl/m/n' will be
 (Font)              scaled to size 10.95pt on input line 116.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks24
 \symAMSa=\mathgroup4
@@ -206,15 +258,19 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaT
+eX and XeLaTeX
 \babel@savecnt=\count281
 \U@D=\dimen171
 \l@unhyphenated=\language90
- (/usr/local/texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count282
- (/usr/local/texlive/2025/texmf-dist/tex/generic/babel-english/english.ldf
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -222,84 +278,120 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language22). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language22). Reported on input line 108.
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
-Package: colorprofiles 2018/11/01 v1.0.1 color profiles for PDF/X and PDF/A support
- (/usr/local/texlive/2025/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/pdfx.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
+Package: colorprofiles 2018/11/01 v1.0.1 color profiles for PDF/X and PDF/A sup
+port
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/pdfx.sty
 Package: pdfx 2024/06/24 v1.6.5f PDF/X and PDF/A support (CVR/HTH/RRM/PS)
 \pdfx@minorversion=\count283
 \pdfx@majorversion=\count284
- (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifxetex.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/everyshi/everyshi.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/everyshi/everyshi.sty
 Package: everyshi 2020/11/18 v4.00 EveryShipout Package
-){/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map} (/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+){/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks25
 \inpenc@posthook=\toks26
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/l8u-penc.def
-File: l8u-penc.def 2017/06/23 v0.8 Custom LaTeX file, for UTF8 encoded letters and symbols
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/l8u-penc.def
+File: l8u-penc.def 2017/06/23 v0.8 Custom LaTeX file, for UTF8 encoded letters 
+and symbols
 LaTeX Info: Composite with undeclared \b in encoding L8U on input line 278.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/l8ugrk-penc.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/l8ugrk-penc.def
 File: l8ugrk-penc.def 2018/11/28 v0.6 Greek support for UTF8 in XMP metadata
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/l8umath-penc.def
-File: l8umath-penc.def 2017/06/23 v0.6 Custom LaTeX file, for UTF8 encoded math symbols
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/l8umath-penc.def
+File: l8umath-penc.def 2017/06/23 v0.6 Custom LaTeX file, for UTF8 encoded math
+ symbols
 ))
 \pdfxsafeforxmp@toks=\toks27
 \pdfx@tmptoks=\toks28
- (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
- (/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
- (/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count285
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
 )
 \@linkdim=\dimen172
 \Hy@linkcounter=\count286
 \Hy@pagecounter=\count287
- (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count288
- (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/greek-fontenc/puenc-greek.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/greek-fontenc/puenc-greek.def
 File: puenc-greek.def 2023-09-12 2.5 Greek LICRs for PDF strings
- (/usr/local/texlive/2025/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def
 File: greek-fontenc.def 2023-09-12 2.5 Common Greek font encoding definitions
 )))
 Package hyperref Info: Option `pdfa' set `true' on input line 4040.
@@ -318,10 +410,13 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen173
- (/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count290
 \Field@Width=\dimen174
@@ -333,7 +428,8 @@ Package hyperref Info: backreferencing OFF on input line 6057.
 Package hyperref Info: Link coloring OFF on input line 6062.
 Package hyperref Info: Link coloring with OCG OFF on input line 6067.
 Package hyperref Info: PDF/A mode ON on input line 6070.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -342,35 +438,48 @@ package with kernel methods
 \c@Hfootnote=\count293
 )
 Package hyperref Info: Driver: hpdftex.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
- (/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
 \Fld@listcount=\count294
 \c@bookmark@seq@number=\count295
- (/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
 )
 \Hy@SectionHShift=\skip56
 )
 Package hyperref Info: Option `psdextra' set `true' on input line 1535.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/psdextra.def
 File: psdextra.def 2024-11-05 v7.01l Hyperref: Additions to PDF string support
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/8bit.def
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/8bit.def
 File: 8bit.def 2008/03/30 v1.1d Input encoding file
 )
 ** pdfx: No file main.xmpdata . Metadata will be incomplete!
 <<sRGB.icc>> (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/8bit.def
 File: 8bit.def 2008/03/30 v1.1d Input encoding file
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pdftex/glyphtounicode.tex) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex) (/usr/local/texlive/2025/texmf-dist/tex/latex/xmpincl/xmpincl.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xmpincl/xmpincl.sty
 Package: xmpincl 2021/09/22 v2.4 Include XMP data in pdflatex
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/8bit.def
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfx/8bit.def
 File: 8bit.def 2008/03/30 v1.1d Input encoding file
 )
 Using XMP template file: pdfa.xmp
@@ -389,7 +498,8 @@ Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
- (/usr/local/texlive/2025/texmf-dist/tex/latex/base/omsenc.dfu
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -400,7 +510,8 @@ File: omsenc.dfu 2022/06/07 v1.3c UTF-8 support
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
- (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ot1enc.dfu
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -448,7 +559,8 @@ File: ot1enc.dfu 2022/06/07 v1.3c UTF-8 support
 )
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
- (/usr/local/texlive/2025/texmf-dist/tex/latex/base/t1enc.dfu
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -727,7 +839,8 @@ File: t1enc.dfu 2022/06/07 v1.3c UTF-8 support
 )
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
- (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ts1enc.dfu
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ts1enc.dfu
 File: ts1enc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -837,32 +950,39 @@ cannot change to rgb  on input line 65.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
 \Gin@req@height=\dimen176
 \Gin@req@width=\dimen177
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2024/11/05 v2.17t AMS math features
 \@mathmargin=\skip57
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks29
 \ex@=\dimen178
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen179
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count296
@@ -912,39 +1032,61 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks33
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/braket/braket.sty) (/usr/local/texlive/2025/texmf-dist/tex/latex/cancel/cancel.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/braket/braket.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/bigints/bigints.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/bigints/bigints.sty
 Package: bigints 2010/02/15 Writing big integrals
 Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/makecell/makecell.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen187
 \c@nlinenum=\count308
 \TeXr@lab=\toks34
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/mathalpha/mathalfa.sty) (/usr/local/texlive/2025/texmf-dist/tex/latex/mathalpha/mathalpha.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathalpha/mathalfa.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathalpha/mathalpha.sty
 Package: mathalpha 2025/01/17 - 1.145mathalpha (License LPPL) Michael Sharpe
- `mathalpha' v1.145, 2025/01/17, a renaming of mathalfa (msharpe)
+
+`mathalpha' v1.145, 2025/01/17, a renaming of mathalfa (msharpe)
 LaTeX Font Info:    Overwriting math alphabet `\mathbb' in version `bold'
-(Font)                  U/BOONDOX-ds/m/n --> U/BOONDOX-ds/b/n on input line 209.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/doublestroke/dsfont.sty
+(Font)                  U/BOONDOX-ds/m/n --> U/BOONDOX-ds/b/n on input line 209
+.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/witharrows/witharrows.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/witharrows/witharrows.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
 \pgfutil@everybye=\toks35
 \pgfutil@tempdima=\dimen188
 \pgfutil@tempdimb=\dimen189
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box58
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks36
 \pgfkeys@temptoks=\toks37
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
 \pgfkeys@tmptoks=\toks38
 ))
 \pgf@x=\dimen190
@@ -967,32 +1109,66 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \t@pgf@tokb=\toks40
 \t@pgf@tokc=\toks41
 \pgf@sys@id@count=\count313
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfsyssoftpath@smallbuffer@items=\count314
 \pgfsyssoftpath@bigbuffer@items=\count315
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen256
 \pgfmath@count=\count316
 \pgfmath@box=\box59
 \pgfmath@toks=\toks42
 \pgfmath@stack@operand=\toks43
 \pgfmath@stack@operation=\toks44
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count317
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen257
 \pgf@picmaxx=\dimen258
@@ -1008,75 +1184,125 @@ File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@yy=\dimen268
 \pgf@zx=\dimen269
 \pgf@zy=\dimen270
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@path@lastx=\dimen271
 \pgf@path@lasty=\dimen272
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@shorten@end@additional=\dimen273
 \pgf@shorten@start@additional=\dimen274
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box60
 \pgf@hbox=\box61
 \pgf@layerbox@main=\box62
 \pgf@picture@serial@count=\count318
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflinewidth=\dimen275
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@pt@x=\dimen276
 \pgf@pt@y=\dimen277
 \pgf@pt@temp=\dimen278
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
 File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowsep=\dimen279
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen280
 \pgf@sys@shading@range@num=\count319
 \pgf@shadingcount=\count320
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfexternal@startupbox=\box63
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
 File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
 File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodeparttextbox=\box64
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepstart=\dimen281
 \pgf@nodesepend=\dimen282
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen283
 \pgffor@skip=\dimen284
 \pgffor@stack=\toks45
 \pgffor@toks=\toks46
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@plot@mark@count=\count321
 \pgfplotmarksize=\dimen285
@@ -1097,27 +1323,39 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikznumberofchildren=\count323
 \tikznumberofcurrentchild=\count324
 \tikz@fig@count=\count325
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfmatrixcurrentrow=\count326
 \pgfmatrixcurrentcolumn=\count327
 \pgf@matrix@numberofcolumns=\count328
 )
 \tikz@expandcount=\count329
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowinset=\dimen294
 \pgfarrowlength=\dimen295
 \pgfarrowwidth=\dimen296
 \pgfarrowlinewidth=\dimen297
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.co
+de.tex
 File: pgfmodulebending.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineart
+ransformations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgftransformnonlinearflatness=\dimen298
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvili
+near.code.tex
 File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@curvilinear@time@a=\dimen299
 \pgf@curvilinear@length@a=\dimen300
@@ -1126,11 +1364,13 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@curvilinear@length@d=\dimen303
 )
 \pgf@arrows@the@rigidity=\dimen304
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
 )
 Package: witharrows 2024/10/19 v2.9a Draws arrows for explanations on the right
- (/usr/local/texlive/2025/texmf-dist/tex/latex/varwidth/varwidth.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box69
 \sift@deathcycles=\count330
@@ -1156,7 +1396,8 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \l__witharrows_start_adjust_dim=\dimen314
 \l__witharrows_end_adjust_dim=\dimen315
 \l__witharrows_mathindent_skip=\skip61
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks47
 \thm@bodyfont=\toks48
@@ -1167,22 +1408,27 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip63
 \thm@headsep=\skip64
 \dth@everypar=\toks52
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 \c@lemma=\count339
 \c@assumption=\count340
 \c@definition=\count341
- (/usr/local/texlive/2025/texmf-dist/tex/latex/appendix/appendix.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count342
 \c@@ppsavesec=\count343
 \c@@ppsaveapp=\count344
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen316
 \captionmargin=\dimen317
@@ -1200,17 +1446,20 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: scrextend package is loaded.
 \caption@addmargin@hsize=\dimen324
 \caption@addmargin@linewidth=\dimen325
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count347
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count348
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/mdwtools/footnote.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box70
 \fn@width=\dimen326
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/footmisc/footmisc.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2024/12/24 v6.0g a miscellany of footnote facilities
 \FN@temptoken=\toks53
 \footnotemargin=\dimen327
@@ -1219,15 +1468,23 @@ Package footmisc Info: Declaring symbol style bringhurst on input line 699.
 Package footmisc Info: Declaring symbol style chicago on input line 707.
 Package footmisc Info: Declaring symbol style wiley on input line 716.
 Package footmisc Info: Declaring symbol style lamport-robust on input line 727.
+
 Package footmisc Info: Declaring symbol style lamport* on input line 747.
-Package footmisc Info: Declaring symbol style lamport*-robust on input line 768.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/ncctools/watermark.sty
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 768
+.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ncctools/watermark.sty
 Package: watermark 2004/12/09 v1.1 Watermarks (NCC)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
 \csq@reset=\count349
 \csq@gtype=\count350
@@ -1236,16 +1493,19 @@ Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
 \csq@maxlvl=\count353
 \csq@tshold=\count354
 \csq@ltx@everypar=\toks54
- (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
 )
 Package csquotes Info: Enabling multilingual quotes.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@col@width=\dimen329
 \TX@old@table=\dimen330
@@ -1254,14 +1514,17 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@delta=\dimen333
 \TX@cols=\count355
 \TX@ftn=\toks55
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip65
 \multirow@cntb=\count356
 \multirow@dima=\skip66
 \bigstrutjot=\dimen334
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip67
 \f@nch@offset@elh=\skip68
 \f@nch@offset@erh=\skip69
@@ -1280,23 +1543,34 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 )
 \c@ttlp@side=\count357
 \ttlp@side=\count358
- (./docs/glossary.tex (/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+
+(./docs/glossary.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2025/03/03 v4.56 (NLCT)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2022/10/14 v2.08 (NLCT)
 \@glsmfirst=\toks57
 \@glsmrest=\toks58
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/xfor/xfor.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xfor/xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/tracklang/tracklang.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tracklang/tracklang.sty
 Package: tracklang 2025/03/04 v1.6.5 (NLCT) Track Languages
- (/usr/local/texlive/2025/texmf-dist/tex/generic/tracklang/tracklang.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/translator/translator.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/tracklang/tracklang.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries-english/glossaries-english.ldf
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries-english/glossaries-eng
+lish.ldf
 File: glossaries-english.ldf 2014/11/23 v1.0
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/datatool/datatool-base.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/datatool/datatool-base.sty
 Package: datatool-base 2025/03/05 v3.0.1 (NLCT)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/datatool/datatool-l3fp.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/datatool/datatool-l3fp.def
 File: datatool-l3fp.def 2025/03/05 v3.0.1 (NLCT)
 )
 \@dtl@toks=\toks59
@@ -1304,7 +1578,8 @@ File: datatool-l3fp.def 2025/03/05 v3.0.1 (NLCT)
 \dtl@tmplength=\skip81
 \l__datatool_measure_box=\box71
 \dtl@sortresult=\count360
- (/usr/local/texlive/2025/texmf-dist/tex/latex/datatool/datatool-utf8.ldf
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/datatool/datatool-utf8.ldf
 File: datatool-utf8.ldf 2025/03/05 v3.0.1 (NLCT)
 )
 \@dtl@datatype=\count361
@@ -1330,9 +1605,13 @@ File: datatool-utf8.ldf 2025/03/05 v3.0.1 (NLCT)
 \l__datatool_prefix_int=\count379
 \l__datatool_suffix_int=\count380
 \@dtl@foreach@level=\count381
- (/usr/local/texlive/2025/texmf-dist/tex/latex/datatool-english/datatool-english.ldf
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/datatool-english/datatool-english
+.ldf
 File: datatool-english.ldf 2025/03/01 v1.0 (NLCT)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/datatool-english/datatool-english-utf8.ldf
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/datatool-english/datatool-english
+-utf8.ldf
 File: datatool-english-utf8.ldf 2025/03/01 v1.0 (NLCT)
 ))
 \dtl@codeA=\count382
@@ -1345,12 +1624,18 @@ File: datatool-english-utf8.ldf 2025/03/01 v1.0 (NLCT)
 \glslabeltok=\toks62
 \glsshorttok=\toks63
 \glslongtok=\toks64
- (/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-hypern
+av.sty
 Package: glossary-hypernav 2025/03/03 v4.56 (NLCT)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-list.s
+ty
 Package: glossary-list 2025/03/03 v4.56 (NLCT)
 \glslistdottedwidth=\skip83
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-long.s
+ty
 Package: glossary-long 2025/03/03 v4.56 (NLCT)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
@@ -1373,7 +1658,9 @@ Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 )
 \glsdescwidth=\skip88
 \glspagelistwidth=\skip89
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-super.
+sty
 Package: glossary-super 2025/03/03 v4.56 (NLCT)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2024/07/20 v4.2c the supertabular environment
@@ -1392,7 +1679,9 @@ Package: supertabular 2024/07/20 v4.2c the supertabular environment
 \ST@toadd=\dimen346
 \ST@dimen=\dimen347
 \ST@pbox=\box77
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-tree.s
+ty
 Package: glossary-tree 2025/03/03 v4.56 (NLCT)
 \glstreeindent=\skip93
 ))
@@ -1405,7 +1694,8 @@ Package glossaries Info: Writing glossary file main.glo on input line 3.
 \openout7 = `main.acn'.
 
 Package glossaries Info: Writing glossary file main.acn on input line 3.
-) (./template/extras.tex (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
+) (./template/extras.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count391
 \lst@gtempboxa=\box78
 \lst@token=\toks66
@@ -1418,21 +1708,26 @@ Package glossaries Info: Writing glossary file main.acn on input line 3.
 \lst@newlines=\count395
 \lst@lineno=\count396
 \lst@maxwidth=\dimen351
- (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 \c@lstnumber=\count397
 \lst@skipnumbers=\count398
 \lst@framebox=\box79
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
- (/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count399
 \float@exts=\toks67
@@ -1442,7 +1737,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 \@float@every@algorithm=\toks69
 \c@algorithm=\count400
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithmic.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@unique=\count401
 \c@ALC@line=\count402
@@ -1450,15 +1746,20 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@depth=\count404
 \ALC@tlm=\skip94
 \algorithmicindent=\skip95
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/mdframed/mdframed.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mdframed/mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
- (/usr/local/texlive/2025/texmf-dist/tex/latex/zref/zref-abspage.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/zref/zref-base.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/zref/zref-base.sty
 Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/auxhook/auxhook.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 Package zref Info: New property list: main on input line 767.
@@ -1467,7 +1768,8 @@ Package zref Info: New property: page on input line 769.
 )
 \c@abspage=\count405
 Package zref Info: New property: abspage on input line 67.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/needspace/needspace.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip96
@@ -1511,7 +1813,8 @@ Package: needspace 2010/09/12 v1.3d reserve vertical space
 \mdf@subsubtitlebelowskip@length=\skip133
 \mdf@subsubtitleinneraboveskip@length=\skip134
 \mdf@subsubtitleinnerbelowskip@length=\skip135
- (/usr/local/texlive/2025/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 )
 \mdf@frametitlebox=\box82
@@ -1557,20 +1860,29 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \c@mdf@env@ii=\count410
 \c@mdf@zref@counter=\count411
 Package zref Info: New property: mdf@pagevalue on input line 895.
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
 Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
- (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-helper.sty
-Package: fontawesome5-generic-helper 2022/05/02 v5.15.4 non-uTeX helper for fontawesome5
- (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def))) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic
+-helper.sty
+Package: fontawesome5-generic-helper 2022/05/02 v5.15.4 non-uTeX helper for fon
+tawesome5
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping
+.def))) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2024/10/22 version 6.4.1 text color boxes
- (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks70
 \verbatim@line=\toks71
 \verbatim@in@stream=\read5
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/environ/environ.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
- (/usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \tcb@titlebox=\box87
@@ -1586,7 +1898,8 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box93
 \tcb@temp=\box94
 \tcb@temp=\box95
- (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.4.1'
 \c@tcbrastercolumn=\count415
 \c@tcbrasterrow=\count416
@@ -1596,14 +1909,19 @@ Library (tcolorbox): 'tcbraster.code.tex' version '6.4.1'
 Library (tcolorbox): 'tcbskins.code.tex' version '6.4.1'
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
- (/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
 Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.co
+de.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
 \l__tikzfill_img_box=\box96
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.4.1'
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '6.4.1'
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfcol/pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
@@ -1612,7 +1930,8 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 \tcb@testbox=\box97
 \tcb@totalupperbox=\box98
 \tcb@totallowerbox=\box99
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '6.4.1'
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.4.1'
@@ -1622,11 +1941,15 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '6.4.1'
 \tcb@lowerfitdim=\dimen354
 \tcb@upperfitdim=\dimen355
 \tcb@cur@hbadness=\count419
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.te
+x
 Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.4.1'
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.4.1'
-(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.te
+x
 Library (tcolorbox): 'tcblistingscore.code.tex' version '6.4.1'
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.4.1'
@@ -1640,11 +1963,16 @@ Library (tcolorbox): 'tcbexternal.code.tex' version '6.4.1'
 Library (tcolorbox): 'tcbmagazine.code.tex' version '6.4.1'
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
 Library (tcolorbox): 'tcbvignette.code.tex' version '6.4.1'
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfadings.code.tex
 File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings
+.code.tex
 File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.4.1'
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/accents/accents.sty
 Package: accents 2006/05/12 v1.4 Math Accent Tools
@@ -1653,16 +1981,21 @@ Package: accents 2006/05/12 v1.4 Math Accent Tools
 \cc@code=\count421
 \cc@group=\count422
 \cc@skewchar=\count423
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/quantikz/quantikz.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/quantikz/quantikz.sty
 Package: quantikz 2023/05/24 typeset quantum circuit diagrams
- (/usr/local/texlive/2025/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz2.code.tex (/usr/local/texlive/2025/texmf-dist/tex/latex/xargs/xargs.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz2.cod
+e.tex (/usr/local/texlive/2025/texmf-dist/tex/latex/xargs/xargs.sty
 Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
 \xargs@max=\count424
 \xargs@toksa=\toks72
 \xargs@toksb=\toks73
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
- (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count425
 \calc@Bcount=\count426
@@ -1674,7 +2007,8 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count427
 \calc@Cskip=\skip165
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 \g_MT_multlinerow_int=\count428
@@ -1688,11 +2022,22 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen366
 \xmathstrut@box=\box100
 \xmathstrut@dim=\dimen367
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
 File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryquotes.code.tex
 File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
 \pgfdecoratedcompleteddistance=\dimen368
 \pgfdecoratedremainingdistance=\dimen369
 \pgfdecoratedinputsegmentcompleteddistance=\dimen370
@@ -1703,21 +2048,51 @@ File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfdecorationsegmentlength=\dimen374
 )
 \tikz@lib@dec@box=\box101
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.symbols.code.tex
 File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.symbols.code.tex
 File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
 File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
 File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymath.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.markings.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.markings.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymath.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfpu.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex))
 \tikz@math@for@depth=\count430
 \tikz@math@dimen=\dimen375
 \tikz@math@toks=\toks74
@@ -1731,33 +2106,59 @@ File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \myh=\skip168
 \myd=\skip169
 \c@aaa=\count432
-LaTeX Font Info:    Trying to load font information for U+msa on input line 1044.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 104
+4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 1044.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Trying to load font information for U+msb on input line 104
+4.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c@wirenumberpermute=\count433
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/annotate-equations/annotate-equations.sty
-Package: annotate-equations 2023/05/06 v0.2.2 easily annotate equations using TikZ
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/annotate-equations/annotate-equat
+ions.sty
+Package: annotate-equations 2023/05/06 v0.2.2 easily annotate equations using T
+ikZ
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \arrowsize=\dimen376
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.arrows.code.tex
 File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.arrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.callouts.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.callouts.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodepartlowerbox=\box106
 \pgfnodeparttwobox=\box107
@@ -1779,8 +2180,11 @@ File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodepartsevenbox=\box123
 \pgfnodepartsixbox=\box124
 \pgfnodepartfivebox=\box125
-))) (/usr/local/texlive/2025/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
-File: tikzlibrarytikzmark.code.tex 2022/08/24 v1.15 TikZ library for marking positions in a document
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code
+.tex
+File: tikzlibrarytikzmark.code.tex 2022/08/24 v1.15 TikZ library for marking po
+sitions in a document
 \l__sn_x_dim=\dimen377
 \l__sn_y_dim=\dimen378
 \l__sn_xa_dim=\dimen379
@@ -1882,13 +2286,18 @@ Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
 \AP@output=\toks75
 \AP@partial=\box150
 \AP@footins=\box151
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/trimclip.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
- (/usr/local/texlive/2025/texmf-dist/tex/latex/collectbox/collectbox.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box152
 )
@@ -1897,7 +2306,8 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@urx=\dimen425
 \tc@ury=\dimen426
 Package trimclip Info: Using driver 'tc-pdftex.def'.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen427
@@ -1908,16 +2318,19 @@ File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 \adjbox@pheight=\dimen432
 \adjbox@pdepth=\dimen433
 \adjbox@ptotalheight=\dimen434
- (/usr/local/texlive/2025/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count457
-))) (/usr/local/texlive/2025/texmf-dist/tex/latex/leftindex/leftindex.sty
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/leftindex/leftindex.sty
 Package: leftindex 2024/01/31 v0.2beta 
 \l__leftindex_phantom_height_dim=\dimen435
 \l__leftindex_slanting_phantom_with_subscript_box=\box153
 \l__leftindex_slanting_phantom_with_subscript_dim=\dimen436
 \l__leftindex_slanting_phantom_with_subscript_without_indentation_box=\box154
 \l__leftindex_slanting_phantom_with_subscript_without_indentation_dim=\dimen437
+
 \l__leftindex_indentation_of_slanting_phantom_subscript=\dimen438
 \l__leftindex_superscript_temp_box=\box155
 \l__leftindex_width_of_superscript_dim=\dimen439
@@ -1925,7 +2338,8 @@ Package: leftindex 2024/01/31 v0.2beta
 \l__leftindex_width_of_subscript_dim=\dimen440
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 641.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen441
 \lightrulewidth=\dimen442
@@ -1944,7 +2358,8 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count460
 \@lastruleclass=\count461
 \@thisrulewidth=\dimen453
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box157
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.sty
@@ -1952,13 +2367,16 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count462
 \l__lipsum_a_int=\count463
 \l__lipsum_b_int=\count464
- (/usr/local/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip170
 \bibsep=\skip171
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count465
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/tocloft/tocloft.sty
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip172
@@ -1997,7 +2415,8 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforetabskip=\skip259
 \cfttabindent=\skip260
 \cfttabnumwidth=\skip261
-) (./custom-symbols.tex
+)
+(./custom-symbols.tex
 \c@prop=\count468
 \c@theorem=\count469
 )
@@ -2009,7 +2428,8 @@ Package csquotes Info: ... found 'babel' package.
 
 LaTeX Warning: Label `fig:fhn_dynamics' multiply defined.
 
-(./chapters/appendixA.aux) (./chapters/appendixB.aux) (./chapters/AppendixC.aux))
+(./chapters/appendixA.aux) (./chapters/appendixB.aux) (./chapters/AppendixC.aux
+))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
@@ -2080,20 +2500,26 @@ LaTeX Font Info:    ... okay on input line 68.
 \everyMPtoPDFconversion=\toks77
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (/usr/local/texlive/2025/texmf-dist/tex/latex/grfext/grfext.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 \c@mv@tabular=\count476
 \c@mv@boldtabular=\count477
 Package hyperref Info: Link coloring ON on input line 68.
- (./main.out) (./main.out)
+
+(./main.out) (./main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
 
@@ -2101,7 +2527,8 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
@@ -2173,14 +2600,22 @@ Package pdftex.def Info: template/unipdbg.pdf  used on input line 70.
 \openout5 = `main.ist'.
 
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./template/unipdbg.pdf> <./template/universis.pdf>] (./docs/secondcover.tex
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{/u
+sr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./templ
+ate/unipdbg.pdf> <./template/universis.pdf>] (./docs/secondcover.tex
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 7.0pt on input line 9.
-LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on input line 19.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
-LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <12> not available
-(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead on input line 19.
-LaTeX Font Info:    Trying to load font information for T1+npxtt on input line 19.
+LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
+ input line 19.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.
+fd)
+LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <12> not 
+available
+(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
+n input line 19.
+LaTeX Font Info:    Trying to load font information for T1+npxtt on input line 
+19.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/t1npxtt.fd
 File: t1npxtt.fd 2000/12/14 v1.0
 )
@@ -2190,7 +2625,8 @@ LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
 
 [2
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}]
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc
+}]
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 70.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
@@ -2256,7 +2692,8 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 6.0pt on input line 6.
 
 Overfull \hbox (9.00565pt too wide) in paragraph at lines 8--9
-[]\T1/zpltlf/m/n/10.95 For medium-to large-scale anal-y-ses, re-searchers typ-i-cally em-ploy coarse-grained
+[]\T1/zpltlf/m/n/10.95 For medium-to large-scale anal-y-ses, re-searchers typ-i
+-cally em-ploy coarse-grained
  []
 
 
@@ -2267,7 +2704,8 @@ Overfull \hbox (9.00565pt too wide) in paragraph at lines 8--9
 ]
 
 [4]
-LaTeX Font Info:    Trying to load font information for TS1+zpltlf on input line 66.
+LaTeX Font Info:    Trying to load font information for TS1+zpltlf on input lin
+e 66.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
 File: ts1zpltlf.fd 2021/11/24 v1.0 fd file for TS1/zpltlf
 )
@@ -2279,12 +2717,16 @@ LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
 <img/FH_model/No_Network/limit_cycle.png, id=551, 708.9687pt x 715.473pt>
 File: img/FH_model/No_Network/limit_cycle.png Graphic file (type png)
 <use img/FH_model/No_Network/limit_cycle.png>
-Package pdftex.def Info: img/FH_model/No_Network/limit_cycle.png  used on input line 110.
+Package pdftex.def Info: img/FH_model/No_Network/limit_cycle.png  used on input
+ line 110.
 (pdftex.def)             Requested size: 222.1588pt x 224.19612pt.
-<img/FH_model/No_Network/limit_cycle_phase_space.png, id=553, 426.393pt x 426.393pt>
-File: img/FH_model/No_Network/limit_cycle_phase_space.png Graphic file (type png)
+<img/FH_model/No_Network/limit_cycle_phase_space.png, id=553, 426.393pt x 426.3
+93pt>
+File: img/FH_model/No_Network/limit_cycle_phase_space.png Graphic file (type pn
+g)
 <use img/FH_model/No_Network/limit_cycle_phase_space.png>
-Package pdftex.def Info: img/FH_model/No_Network/limit_cycle_phase_space.png  used on input line 117.
+Package pdftex.def Info: img/FH_model/No_Network/limit_cycle_phase_space.png  u
+sed on input line 117.
 (pdftex.def)             Requested size: 145.55373pt x 145.55075pt.
 
 Underfull \hbox (badness 1264) in paragraph at lines 118--118
@@ -2293,26 +2735,32 @@ Underfull \hbox (badness 1264) in paragraph at lines 118--118
 
 
 
-[6 <./img/FH_model/No_Network/limit_cycle.png> <./img/FH_model/No_Network/limit_cycle_phase_space.png>]
+[6 <./img/FH_model/No_Network/limit_cycle.png> <./img/FH_model/No_Network/limit
+_cycle_phase_space.png>]
 
 [7]
 <img/FH_model/1to2/output0to1.png, id=569, 1110.0672pt x 553.5882pt>
 File: img/FH_model/1to2/output0to1.png Graphic file (type png)
 <use img/FH_model/1to2/output0to1.png>
-Package pdftex.def Info: img/FH_model/1to2/output0to1.png  used on input line 165.
+Package pdftex.def Info: img/FH_model/1to2/output0to1.png  used on input line 1
+65.
 (pdftex.def)             Requested size: 183.85335pt x 91.68443pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 9.0pt on input line 166.
-<img/FH_model/BA_Network/network_plot_BA_N=100.png, id=570, 1110.0672pt x 553.5882pt>
+<img/FH_model/BA_Network/network_plot_BA_N=100.png, id=570, 1110.0672pt x 553.5
+882pt>
 File: img/FH_model/BA_Network/network_plot_BA_N=100.png Graphic file (type png)
+
 <use img/FH_model/BA_Network/network_plot_BA_N=100.png>
-Package pdftex.def Info: img/FH_model/BA_Network/network_plot_BA_N=100.png  used on input line 173.
+Package pdftex.def Info: img/FH_model/BA_Network/network_plot_BA_N=100.png  use
+d on input line 173.
 (pdftex.def)             Requested size: 183.85335pt x 91.68443pt.
 ) (./chapters/Chapter2.tex
 
 [8]
 
-[9 <./img/FH_model/1to2/output0to1.png> <./img/FH_model/BA_Network/network_plot_BA_N=100.png>]
+[9 <./img/FH_model/1to2/output0to1.png> <./img/FH_model/BA_Network/network_plot
+_BA_N=100.png>]
 
 [10
 
@@ -2370,7 +2818,8 @@ LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
 (Font)              scaled to size 6.0pt on input line 111.
 
 Overfull \hbox (13.66072pt too wide) in paragraph at lines 115--116
-\T1/zpltlf/m/n/10.95 squash-ing func-tion if it is \T1/zpltlf/m/it/10.95 non-decreasing\T1/zpltlf/m/n/10.95 , $[]$, and $[]$. 
+\T1/zpltlf/m/n/10.95 squash-ing func-tion if it is \T1/zpltlf/m/it/10.95 non-de
+creasing\T1/zpltlf/m/n/10.95 , $[]$, and $[]$. 
  []
 
 
@@ -2379,7 +2828,10 @@ Overfull \hbox (13.66072pt too wide) in paragraph at lines 115--116
 
 [19]
 Overfull \hbox (35.87323pt too wide) in paragraph at lines 189--190
-[]\T1/zpltlf/m/n/10.95 The the-o-ret-i-cal ar-chi-tec-ture of the Neu-ral Op-er-a-tor, de-noted as $\OML/cmm/m/it/10.95 NO[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^[[]; ^^[[]; ^^[[]\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 D; D[]\OT1/cmr/m/n/10.95 )$\T1/zpltlf/m/n/10.95 ,
+[]\T1/zpltlf/m/n/10.95 The the-o-ret-i-cal ar-chi-tec-ture of the Neu-ral Op-er
+-a-tor, de-noted as $\OML/cmm/m/it/10.95 NO[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/
+10.95 ^^[[]; ^^[[]; ^^[[]\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 D; D[]\OT1/cm
+r/m/n/10.95 )$\T1/zpltlf/m/n/10.95 ,
  []
 
 
@@ -2388,7 +2840,8 @@ Overfull \hbox (35.87323pt too wide) in paragraph at lines 189--190
 
 [21]
 Overfull \hbox (3.96802pt too wide) in paragraph at lines 201--201
-|[]\T1/zpltlf/b/n/14.4 Discretization in-vari-ance and res-o-lu-tion in-de-pen-dence| 
+|[]\T1/zpltlf/b/n/14.4 Discretization in-vari-ance and res-o-lu-tion in-de-pen-
+dence| 
  []
 
 LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
@@ -2422,10 +2875,13 @@ LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
 
 
 ]
-<img/FH_model/No_Network/Centofanti_article_figure.png, id=769, 766.36313pt x 655.44875pt>
-File: img/FH_model/No_Network/Centofanti_article_figure.png Graphic file (type png)
+<img/FH_model/No_Network/Centofanti_article_figure.png, id=769, 766.36313pt x 6
+55.44875pt>
+File: img/FH_model/No_Network/Centofanti_article_figure.png Graphic file (type 
+png)
 <use img/FH_model/No_Network/Centofanti_article_figure.png>
-Package pdftex.def Info: img/FH_model/No_Network/Centofanti_article_figure.png  used on input line 21.
+Package pdftex.def Info: img/FH_model/No_Network/Centofanti_article_figure.png 
+ used on input line 21.
 (pdftex.def)             Requested size: 210.66833pt x 180.17395pt.
 LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
 (Font)              scaled to size 10.0pt on input line 22.
@@ -2442,194 +2898,1384 @@ Package pdftex.def Info: img/FH_model/1to2/HHpeaks.png  used on input line 61.
 <img/FH_model/1to2/loss_plot_fixed.png, id=788, 722.7pt x 578.16pt>
 File: img/FH_model/1to2/loss_plot_fixed.png Graphic file (type png)
 <use img/FH_model/1to2/loss_plot_fixed.png>
-Package pdftex.def Info: img/FH_model/1to2/loss_plot_fixed.png  used on input line 71.
+Package pdftex.def Info: img/FH_model/1to2/loss_plot_fixed.png  used on input l
+ine 71.
 (pdftex.def)             Requested size: 183.85335pt x 147.08037pt.
 <img/FH_model/1to2/L2histoFNO.png, id=789, 614.295pt x 614.295pt>
 File: img/FH_model/1to2/L2histoFNO.png Graphic file (type png)
 <use img/FH_model/1to2/L2histoFNO.png>
-Package pdftex.def Info: img/FH_model/1to2/L2histoFNO.png  used on input line 78.
+Package pdftex.def Info: img/FH_model/1to2/L2histoFNO.png  used on input line 7
+8.
 (pdftex.def)             Requested size: 183.85335pt x 183.84937pt.
 
 
 [29]
 
-[30 <./img/FH_model/1to2/HHpeaks.png> <./img/FH_model/1to2/loss_plot_fixed.png> <./img/FH_model/1to2/L2histoFNO.png>]
+[30 <./img/FH_model/1to2/HHpeaks.png> <./img/FH_model/1to2/loss_plot_fixed.png>
+ <./img/FH_model/1to2/L2histoFNO.png>]
 <img/FH_model/Simple_cycle/HHpeaks.png, id=812, 1156.32pt x 578.16pt>
 File: img/FH_model/Simple_cycle/HHpeaks.png Graphic file (type png)
 <use img/FH_model/Simple_cycle/HHpeaks.png>
-Package pdftex.def Info: img/FH_model/Simple_cycle/HHpeaks.png  used on input line 97.
+Package pdftex.def Info: img/FH_model/Simple_cycle/HHpeaks.png  used on input l
+ine 97.
 (pdftex.def)             Requested size: 268.12068pt x 134.0591pt.
 <img/FH_model/Simple_cycle/loss_plot_fixed.png, id=813, 722.7pt x 578.16pt>
 File: img/FH_model/Simple_cycle/loss_plot_fixed.png Graphic file (type png)
 <use img/FH_model/Simple_cycle/loss_plot_fixed.png>
-Package pdftex.def Info: img/FH_model/Simple_cycle/loss_plot_fixed.png  used on input line 107.
+Package pdftex.def Info: img/FH_model/Simple_cycle/loss_plot_fixed.png  used on
+ input line 107.
 (pdftex.def)             Requested size: 183.85335pt x 147.08037pt.
 <img/FH_model/Simple_cycle/L2histoFNO.png, id=814, 614.295pt x 614.295pt>
 File: img/FH_model/Simple_cycle/L2histoFNO.png Graphic file (type png)
 <use img/FH_model/Simple_cycle/L2histoFNO.png>
-Package pdftex.def Info: img/FH_model/Simple_cycle/L2histoFNO.png  used on input line 114.
+Package pdftex.def Info: img/FH_model/Simple_cycle/L2histoFNO.png  used on inpu
+t line 114.
 (pdftex.def)             Requested size: 183.85335pt x 183.84937pt.
 
 
-[31 <./img/FH_model/Simple_cycle/HHpeaks.png> <./img/FH_model/Simple_cycle/loss_plot_fixed.png> <./img/FH_model/Simple_cycle/L2histoFNO.png>]
+[31 <./img/FH_model/Simple_cycle/HHpeaks.png> <./img/FH_model/Simple_cycle/loss
+_plot_fixed.png> <./img/FH_model/Simple_cycle/L2histoFNO.png>]
 Overfull \hbox (3.35654pt too wide) in paragraph at lines 126--129
-\T1/zpltlf/m/n/10.95 size of the ER net-work $\OML/cmm/m/it/10.95 N \OT1/cmr/m/n/10.95 = 10\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 100\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 200\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 300\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 400\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 500\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 600\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 700\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 800\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 900\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1000\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2000$
+\T1/zpltlf/m/n/10.95 size of the ER net-work $\OML/cmm/m/it/10.95 N \OT1/cmr/m/
+n/10.95 = 10\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 100\OML/cmm/m/it/10.95 ; \
+OT1/cmr/m/n/10.95 200\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 300\OML/cmm/m/it/
+10.95 ; \OT1/cmr/m/n/10.95 400\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 500\OML/
+cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 600\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95
+ 700\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 800\OML/cmm/m/it/10.95 ; \OT1/cmr/
+m/n/10.95 900\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1000\OML/cmm/m/it/10.95 ;
+ \OT1/cmr/m/n/10.95 2000$
  []
 
-<img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42.png, id=824, 1110.0672pt x 553.5882pt>
-File: img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42.png Graphic file (type png)
+<img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42.png, id=824, 1110.06
+72pt x 553.5882pt>
+File: img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42.png Graphic fil
+e (type png)
 <use img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42.png>
-Package pdftex.def Info: img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42.png  used on input line 136.
+Package pdftex.def Info: img/FH_model/ER_Network/dynamics_network_ER_N=100_seed
+=42.png  used on input line 136.
 (pdftex.def)             Requested size: 383.03122pt x 191.01347pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=10.png, id=826, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=10.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=10.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=10.png  used on input line 149.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=10.png  used on 
+input line 149.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=100.png, id=827, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=100.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=100.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=100.png  used on input line 155.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=100.png  used on
+ input line 155.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=200.png, id=828, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=200.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=200.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=200.png  used on input line 161.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=200.png  used on
+ input line 161.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=300.png, id=829, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=300.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=300.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=300.png  used on input line 170.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=300.png  used on
+ input line 170.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=400.png, id=830, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=400.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=400.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=400.png  used on input line 176.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=400.png  used on
+ input line 176.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=500.png, id=831, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=500.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=500.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=500.png  used on input line 182.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=500.png  used on
+ input line 182.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=600.png, id=832, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=600.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=600.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=600.png  used on input line 191.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=600.png  used on
+ input line 191.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=700.png, id=833, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=700.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=700.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=700.png  used on input line 197.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=700.png  used on
+ input line 197.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=800.png, id=834, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=800.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=800.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=800.png  used on input line 203.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=800.png  used on
+ input line 203.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=900.png, id=835, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=900.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=900.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=900.png  used on input line 212.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=900.png  used on
+ input line 212.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png, id=836, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png  used on input line 218.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png  used o
+n input line 218.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
 <img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png, id=837, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png  used on input line 224.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png  used o
+n input line 224.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png, id=838, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png, id=838, 614.295pt x 614.295pt
+>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png  used on input line 245.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png  used 
+on input line 245.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png, id=839, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png, id=839, 614.295pt x 614.295p
+t>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png  used on input line 251.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png  used
+ on input line 251.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png, id=840, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png, id=840, 614.295pt x 614.295p
+t>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png  used on input line 257.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png  used
+ on input line 257.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png, id=841, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png, id=841, 614.295pt x 614.295p
+t>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png  used on input line 266.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png  used
+ on input line 266.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png, id=842, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png, id=842, 614.295pt x 614.295p
+t>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png  used on input line 272.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png  used
+ on input line 272.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png, id=843, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png, id=843, 614.295pt x 614.295p
+t>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png  used on input line 278.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png  used
+ on input line 278.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png, id=844, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png, id=844, 614.295pt x 614.295p
+t>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png  used on input line 287.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png  used
+ on input line 287.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png, id=845, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png, id=845, 614.295pt x 614.295p
+t>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png  used on input line 293.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png  used
+ on input line 293.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png, id=846, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png, id=846, 614.295pt x 614.295p
+t>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png  used on input line 299.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png  used
+ on input line 299.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png, id=847, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png, id=847, 614.295pt x 614.295p
+t>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png  used on input line 308.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png  used
+ on input line 308.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png, id=848, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png, id=848, 614.295pt x 614.295
+pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png Graphic file (type png)
+
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png  used on input line 314.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png  use
+d on input line 314.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png, id=849, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png, id=849, 614.295pt x 614.295
+pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png Graphic file (type png)
+
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png  used on input line 320.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png  use
+d on input line 320.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
 
 LaTeX Warning: Float too large for page by 37.76216pt on input line 326.
 
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png, id=850, 722.7pt x 578.16pt>
-File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png Graphic file (type png)
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png, id=850, 722.7pt x 578.16
+pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png Graphic file (type p
+ng)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png  used on input line 336.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png  
+used on input line 336.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png, id=851, 722.7pt x 578.16pt>
-File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png Graphic file (type png)
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png, id=851, 722.7pt x 578.1
+6pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png Graphic file (type 
+png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png  used on input line 342.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png 
+ used on input line 342.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png, id=852, 722.7pt x 578.16pt>
-File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png Graphic file (type png)
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png, id=852, 722.7pt x 578.1
+6pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png Graphic file (type 
+png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png  used on input line 348.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png 
+ used on input line 348.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png, id=853, 722.7pt x 578.16pt>
-File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png Graphic file (type png)
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png, id=853, 722.7pt x 578.1
+6pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png Graphic file (type 
+png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png  used on input line 357.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png 
+ used on input line 357.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png, id=854, 722.7pt x 578.16pt>
-File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png Graphic file (type png)
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png, id=854, 722.7pt x 578.1
+6pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png Graphic file (type 
+png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png  used on input line 363.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png 
+ used on input line 363.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png, id=855, 722.7pt x 578.16pt>
-File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png Graphic file (type png)
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png, id=855, 722.7pt x 578.1
+6pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png Graphic file (type 
+png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png  use
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png 
+ used on input line 369.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png, id=856, 722.7pt x 578.1
+6pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png Graphic file (type 
+png)
+<use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png>
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png 
+ used on input line 378.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png, id=857, 722.7pt x 578.1
+6pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png Graphic file (type 
+png)
+<use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png>
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png 
+ used on input line 384.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png, id=858, 722.7pt x 578.1
+6pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png Graphic file (type 
+png)
+<use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png>
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png 
+ used on input line 390.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png, id=859, 722.7pt x 578.1
+6pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png Graphic file (type 
+png)
+<use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png>
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png 
+ used on input line 399.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png, id=860, 722.7pt x 578.
+16pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png Graphic file (type
+ png)
+<use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png>
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png
+  used on input line 405.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png, id=861, 722.7pt x 578.
+16pt>
+File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png Graphic file (type
+ png)
+<use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png>
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png
+  used on input line 411.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[32 <./img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42.png>]
+
+[33 <./img/FH_model/ER_Network/FNO/HHpeaks_N=10.png> <./img/FH_model/ER_Network
+/FNO/HHpeaks_N=100.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=200.png> <./im
+g/FH_model/ER_Network/FNO/HHpeaks_N=300.png> <./img/FH_model/ER_Network/FNO/HHp
+eaks_N=400.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=500.png> <./img/FH_mod
+el/ER_Network/FNO/HHpeaks_N=600.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=7
+00.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=800.png> <./img/FH_model/ER_Ne
+twork/FNO/HHpeaks_N=900.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png>
+ <./img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png>]
+
+[34 <./img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png> <./img/FH_model/ER_Netw
+ork/FNO/L2histoFNO_N=100.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=200.p
+ng> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png> <./img/FH_model/ER_Net
+work/FNO/L2histoFNO_N=400.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=500.
+png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png> <./img/FH_model/ER_Ne
+twork/FNO/L2histoFNO_N=700.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=800
+.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png> <./img/FH_model/ER_N
+etwork/FNO/L2histoFNO_N=1000.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=2
+000.png>]
+
+[35 <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png> <./img/FH_model/ER
+_Network/FNO/loss_plot_fixed_N=100.png> <./img/FH_model/ER_Network/FNO/loss_plo
+t_fixed_N=200.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png> <.
+/img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png> <./img/FH_model/ER_Netw
+ork/FNO/loss_plot_fixed_N=500.png> <./img/FH_model/ER_Network/FNO/loss_plot_fix
+ed_N=600.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png> <./img/
+FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png> <./img/FH_model/ER_Network/F
+NO/loss_plot_fixed_N=900.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=
+1000.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png>]
+File: img/FH_model/BA_Network/network_plot_BA_N=100.png Graphic file (type png)
+
+<use img/FH_model/BA_Network/network_plot_BA_N=100.png>
+Package pdftex.def Info: img/FH_model/BA_Network/network_plot_BA_N=100.png  use
+d on input line 434.
+(pdftex.def)             Requested size: 383.03122pt x 191.01347pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png, id=921, 1156.32pt x 578.16p
+t>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png Graphic file (type png)
+
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png  use
+d on input line 450.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png, id=922, 1156.32pt x 578.16
+pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png Graphic file (type png
+)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png  us
+ed on input line 456.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png, id=923, 1156.32pt x 578.16
+pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png Graphic file (type png
+)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png  us
+ed on input line 462.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png, id=924, 1156.32pt x 578.16
+pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png Graphic file (type png
+)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png  us
+ed on input line 471.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png, id=925, 1156.32pt x 578.16
+pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png Graphic file (type png
+)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png  us
+ed on input line 477.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png, id=926, 1156.32pt x 578.16
+pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png Graphic file (type png
+)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png  us
+ed on input line 483.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png, id=927, 1156.32pt x 578.16
+pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png Graphic file (type png
+)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png  us
+ed on input line 492.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png, id=928, 1156.32pt x 578.16
+pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png Graphic file (type png
+)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png  us
+ed on input line 498.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png, id=929, 1156.32pt x 578.16
+pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png Graphic file (type png
+)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png  us
+ed on input line 504.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png, id=930, 1156.32pt x 578.16
+pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png Graphic file (type png
+)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png  us
+ed on input line 513.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png, id=931, 1156.32pt x 578.1
+6pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png Graphic file (type pn
+g)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png  u
+sed on input line 519.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png, id=932, 1156.32pt x 578.1
+6pt>
+File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png Graphic file (type pn
+g)
+<use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png  u
+sed on input line 525.
+(pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png, id=933, 614.295pt x 614.
+295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png Graphic file (type p
+ng)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png  
+used on input line 543.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png, id=934, 614.295pt x 614
+.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png Graphic file (type 
+png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png 
+ used on input line 549.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png, id=935, 614.295pt x 614
+.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png Graphic file (type 
+png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png 
+ used on input line 555.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png, id=936, 614.295pt x 614
+.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png Graphic file (type 
+png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png 
+ used on input line 564.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png, id=937, 614.295pt x 614
+.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png Graphic file (type 
+png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png 
+ used on input line 570.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png, id=938, 614.295pt x 614
+.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png Graphic file (type 
+png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png 
+ used on input line 576.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png, id=939, 614.295pt x 614
+.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png Graphic file (type 
+png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png 
+ used on input line 585.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png, id=940, 614.295pt x 614
+.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png Graphic file (type 
+png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png 
+ used on input line 591.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png, id=941, 614.295pt x 614
+.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png Graphic file (type 
+png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png 
+ used on input line 597.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png, id=942, 614.295pt x 614
+.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png Graphic file (type 
+png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png 
+ used on input line 606.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png, id=943, 614.295pt x 61
+4.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png Graphic file (type
+ png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png
+  used on input line 612.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png, id=944, 614.295pt x 61
+4.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png Graphic file (type
+ png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png
+  used on input line 618.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+
+
+LaTeX Warning: Float too large for page by 37.76216pt on input line 624.
+
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png, id=945, 722.7pt x 5
+78.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png Graphic file (t
+ype png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.
+png  used on input line 634.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png, id=946, 722.7pt x 
+578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png Graphic file (
+type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100
+.png  used on input line 640.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png, id=947, 722.7pt x 
+578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png Graphic file (
+type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200
+.png  used on input line 646.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png, id=948, 722.7pt x 
+578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png Graphic file (
+type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300
+.png  used on input line 655.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png, id=949, 722.7pt x 
+578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png Graphic file (
+type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400
+.png  used on input line 661.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png, id=950, 722.7pt x 
+578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png Graphic file (
+type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500
+.png  used on input line 667.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png, id=951, 722.7pt x 
+578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png Graphic file (
+type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600
+.png  used on input line 676.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png, id=952, 722.7pt x 
+578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png Graphic file (
+type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700
+.png  used on input line 682.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png, id=953, 722.7pt x 
+578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png Graphic file (
+type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800
+.png  used on input line 688.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png, id=954, 722.7pt x 
+578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png Graphic file (
+type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900
+.png  used on input line 697.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png, id=955, 722.7pt x
+ 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png Graphic file 
+(type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100
+0.png  used on input line 703.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png, id=956, 722.7pt x
+ 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png Graphic file 
+(type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200
+0.png  used on input line 709.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+
+Underfull \vbox (badness 8019) has occurred while \output is active []
+
+
+
+[36]
+
+[37 <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png> <./img/FH_model/BA_Ne
+twork/FNO/HHpeaks_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N
+=200.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png> <./img/FH_mode
+l/BA_Network/FNO/HHpeaks_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/HHpeaks
+_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png> <./img/
+FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/
+HHpeaks_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png> 
+<./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png> <./img/FH_model/BA_Netw
+ork/FNO/HHpeaks_S=42_N=2000.png>]
+
+[38 <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png> <./img/FH_model/BA
+_Network/FNO/L2histoFNO_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/L2histoF
+NO_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png> <.
+/img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png> <./img/FH_model/BA_Netw
+ork/FNO/L2histoFNO_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=
+42_N=600.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png> <./img/
+FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png> <./img/FH_model/BA_Network/F
+NO/L2histoFNO_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=
+1000.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png>]
+
+[39 <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png> <./img/FH_mod
+el/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png> <./img/FH_model/BA_Network/FN
+O/loss_plot_fixed_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixe
+d_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png
+> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png> <./img/FH_mode
+l/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png> <./img/FH_model/BA_Network/FNO
+/loss_plot_fixed_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed
+_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png>
+ <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png> <./img/FH_mode
+l/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png>]
+<img/FH_model/error_FNO_scalingN.png, id=1015, 714.7503pt x 426.393pt>
+File: img/FH_model/error_FNO_scalingN.png Graphic file (type png)
+<use img/FH_model/error_FNO_scalingN.png>
+Package pdftex.def Info: img/FH_model/error_FNO_scalingN.png  used on input lin
+e 728.
+(pdftex.def)             Requested size: 306.42613pt x 182.80539pt.
+LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
+(Font)              scaled to size 14.4pt on input line 737.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 737.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 737.
+
+<img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png, id=1016, 859.2903pt x 49
+8.663pt>
+File: img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png Graphic file (type p
+ng)
+<use img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png>
+Package pdftex.def Info: img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png  
+used on input line 744.
+(pdftex.def)             Requested size: 306.42613pt x 177.82173pt.
+
+
+[40 <./img/FH_model/error_FNO_scalingN.png>]
+<img/FH_model/BA_Network/Spectral_gap_BA.png, id=1028, 715.473pt x 498.663pt>
+File: img/FH_model/BA_Network/Spectral_gap_BA.png Graphic file (type png)
+<use img/FH_model/BA_Network/Spectral_gap_BA.png>
+Package pdftex.def Info: img/FH_model/BA_Network/Spectral_gap_BA.png  used on i
+nput line 761.
+(pdftex.def)             Requested size: 187.6874pt x 130.80588pt.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
+(Font)              scaled to size 5.0pt on input line 762.
+<img/FH_model/ER_Network/Spectral_gap_ER.png, id=1029, 715.473pt x 498.663pt>
+File: img/FH_model/ER_Network/Spectral_gap_ER.png Graphic file (type png)
+<use img/FH_model/ER_Network/Spectral_gap_ER.png>
+Package pdftex.def Info: img/FH_model/ER_Network/Spectral_gap_ER.png  used on i
+nput line 767.
+(pdftex.def)             Requested size: 187.6874pt x 130.80588pt.
+
+Underfull \hbox (badness 2582) in paragraph at lines 768--768
+[]\T1/zpltlf/b/n/10 Figure 3.17: |\T1/zpltlf/m/n/10 Scal-ing of the spec-tral
+ []
+
+
+
+[41 <./img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png>]
+
+[42 <./img/FH_model/BA_Network/Spectral_gap_BA.png> <./img/FH_model/ER_Network/
+Spectral_gap_ER.png>]
+
+[43]
+
+[44]
+LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
+(Font)              scaled to size 10.0pt on input line 972.
+<img/Real_Data/loss_LSTM.png, id=1065, 570.933pt x 426.393pt>
+File: img/Real_Data/loss_LSTM.png Graphic file (type png)
+<use img/Real_Data/loss_LSTM.png>
+Package pdftex.def Info: img/Real_Data/loss_LSTM.png  used on input line 984.
+(pdftex.def)             Requested size: 183.85335pt x 137.30736pt.
+<img/Real_Data/loss_FNO.png, id=1066, 570.933pt x 426.393pt>
+File: img/Real_Data/loss_FNO.png Graphic file (type png)
+<use img/Real_Data/loss_FNO.png>
+Package pdftex.def Info: img/Real_Data/loss_FNO.png  used on input line 989.
+(pdftex.def)             Requested size: 183.85335pt x 137.30736pt.
+
+
+[45]
+<img/Real_Data/histogram_test_set_ridge_regression_V2.png, id=1076, 1149.093pt 
+x 428.5611pt>
+File: img/Real_Data/histogram_test_set_ridge_regression_V2.png Graphic file (ty
+pe png)
+<use img/Real_Data/histogram_test_set_ridge_regression_V2.png>
+Package pdftex.def Info: img/Real_Data/histogram_test_set_ridge_regression_V2.p
+ng  used on input line 1002.
+(pdftex.def)             Requested size: 383.03122pt x 142.85117pt.
+<img/Real_Data/histogram_test_set_LSTM.png, id=1077, 1148.3703pt x 428.5611pt>
+File: img/Real_Data/histogram_test_set_LSTM.png Graphic file (type png)
+<use img/Real_Data/histogram_test_set_LSTM.png>
+Package pdftex.def Info: img/Real_Data/histogram_test_set_LSTM.png  used on inp
+ut line 1009.
+(pdftex.def)             Requested size: 383.03122pt x 142.9427pt.
+<img/Real_Data/histogram_test_set_FNO.png, id=1078, 1148.3703pt x 428.5611pt>
+File: img/Real_Data/histogram_test_set_FNO.png Graphic file (type png)
+<use img/Real_Data/histogram_test_set_FNO.png>
+Package pdftex.def Info: img/Real_Data/histogram_test_set_FNO.png  used on inpu
+t line 1016.
+(pdftex.def)             Requested size: 383.03122pt x 142.9427pt.
+<img/Real_Data/Results_ridge_regression.png, id=1082, 719.8092pt x 1255.3299pt>
+
+File: img/Real_Data/Results_ridge_regression.png Graphic file (type png)
+<use img/Real_Data/Results_ridge_regression.png>
+Package pdftex.def Info: img/Real_Data/Results_ridge_regression.png  used on in
+put line 1027.
+(pdftex.def)             Requested size: 383.03122pt x 668.00336pt.
+
+
+LaTeX Warning: Float too large for page by 98.3578pt on input line 1030.
+
+
+
+[46 <./img/Real_Data/loss_LSTM.png> <./img/Real_Data/loss_FNO.png>]
+
+[47 <./img/Real_Data/histogram_test_set_ridge_regression_V2.png> <./img/Real_Da
+ta/histogram_test_set_LSTM.png> <./img/Real_Data/histogram_test_set_FNO.png>]
+<img/Real_Data/Results_LSTM.png, id=1101, 719.8092pt x 1255.3299pt>
+File: img/Real_Data/Results_LSTM.png Graphic file (type png)
+<use img/Real_Data/Results_LSTM.png>
+Package pdftex.def Info: img/Real_Data/Results_LSTM.png  used on input line 103
+4.
+(pdftex.def)             Requested size: 383.03122pt x 668.00336pt.
+
+
+LaTeX Warning: Float too large for page by 98.3578pt on input line 1037.
+
+<img/Real_Data/Results_FNO.png, id=1102, 719.8092pt x 1255.3299pt>
+File: img/Real_Data/Results_FNO.png Graphic file (type png)
+<use img/Real_Data/Results_FNO.png>
+Package pdftex.def Info: img/Real_Data/Results_FNO.png  used on input line 1041
+.
+(pdftex.def)             Requested size: 383.03122pt x 668.00336pt.
+
+LaTeX Warning: Float too large for page by 98.3578pt on input line 1044.
+
+)
+
+[48]
+
+[49 <./img/Real_Data/Results_ridge_regression.png>]
+
+[50 <./img/Real_Data/Results_LSTM.png>]
+
+[51 <./img/Real_Data/Results_FNO.png>]
+
+[52
+
+
+]
+
+[53]
+
+[54] (./chapters/Chapter4.tex
+Chapter 4.
+
+Overfull \hbox (6.21703pt too wide) in paragraph at lines 6--10
+\T1/zpltlf/m/n/10.95 Reaction-Diffusion (RD) sys-tems con-sti-tute a cor-ner-st
+one of math-e-mat-i-cal physics,
+ []
+
+
+
+[55
+
+
+]
+Underfull \vbox (badness 1173) has occurred while \output is active []
+
+
+
+[56]
+
+[57]
+
+[58]
+Overfull \hbox (6.88588pt too wide) in paragraph at lines 143--145
+[]\T1/zpltlf/m/n/10.95 For the tra-jec-tory term we con-sid-ered the rel-a-tive
+ L2 term for scale-invariance
+ []
+
+
+
+[59]
+
+[60]
+
+[61]
+<img/Allen-Cahn/dynamics_Allen_Cahn.png, id=1216, 1055.8647pt x 586.8324pt>
+File: img/Allen-Cahn/dynamics_Allen_Cahn.png Graphic file (type png)
+<use img/Allen-Cahn/dynamics_Allen_Cahn.png>
+Package pdftex.def Info: img/Allen-Cahn/dynamics_Allen_Cahn.png  used on input 
+line 255.
+(pdftex.def)             Requested size: 383.03122pt x 212.88023pt.
+
+Overfull \hbox (4.61435pt too wide) in paragraph at lines 294--295
+ [][] 
+ []
+
+<img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind.png, id=1218, 701.7417p
+t x 413.3844pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind.png Graphic file (
+type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind
+.png  used on input line 299.
+(pdftex.def)             Requested size: 176.19693pt x 103.79369pt.
+<img/Allen-Cahn/Histograms/hist_test_set_FNO_blind.png, id=1219, 715.473pt x 42
+6.393pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_FNO_blind.png Graphic file (type 
+png)
+<use img/Allen-Cahn/Histograms/hist_test_set_FNO_blind.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_FNO_blind.png 
+ used on input line 304.
+(pdftex.def)             Requested size: 176.19693pt x 105.00395pt.
+
+Overfull \hbox (5.3261pt too wide) in paragraph at lines 311--312
+ [][] 
+ []
+
+<img/Allen-Cahn/Histograms/hist_test_set_deeponet.png, id=1220, 714.0276pt x 42
+6.393pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_deeponet.png Graphic file (type p
+ng)
+<use img/Allen-Cahn/Histograms/hist_test_set_deeponet.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_deeponet.png  
+used on input line 316.
+(pdftex.def)             Requested size: 176.19693pt x 105.21866pt.
+<img/Allen-Cahn/Histograms/hist_test_set_FNO.png, id=1221, 715.473pt x 426.393p
+t>
+File: img/Allen-Cahn/Histograms/hist_test_set_FNO.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_FNO.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_FNO.png  used 
+on input line 321.
+(pdftex.def)             Requested size: 176.19693pt x 105.00395pt.
+
+Overfull \hbox (5.3261pt too wide) in paragraph at lines 328--329
+ [][] 
+ []
+
+<img/Allen-Cahn/Histograms/hist_test_set_leno.png, id=1222, 697.4055pt x 409.04
+82pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_leno.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_leno.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_leno.png  used
+ on input line 333.
+(pdftex.def)             Requested size: 176.19693pt x 103.34158pt.
+<img/Allen-Cahn/Histograms/hist_test_set_LFNO.png, id=1223, 714.7503pt x 426.39
+3pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_LFNO.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_LFNO.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_LFNO.png  used
+ on input line 339.
+(pdftex.def)             Requested size: 176.19693pt x 105.10805pt.
+
+Overfull \hbox (44.86063pt too wide) in paragraph at lines 360--390
+ [] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png, id=1226, 1846.4985pt x 484
+.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png Graphic file (type png
+)
+<use img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png  us
+ed on input line 421.
+(pdftex.def)             Requested size: 304.0956pt x 79.8689pt.
+
+Overfull \hbox (16.82219pt too wide) in paragraph at lines 421--422
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png, id=1227, 1847.2212pt x 484.9317p
+t>
+File: img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png  used on 
+input line 432.
+(pdftex.def)             Requested size: 304.21461pt x 79.8689pt.
+
+Overfull \hbox (16.94121pt too wide) in paragraph at lines 432--433
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_leno.png, id=1228, 1847.2212pt x 484.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_leno.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_leno.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_leno.png  used on inpu
+t line 443.
+(pdftex.def)             Requested size: 304.21461pt x 79.8689pt.
+
+Overfull \hbox (16.94121pt too wide) in paragraph at lines 443--444
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png, id=1229, 1846.4985pt x 484.9317
+pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png  used on
+ input line 471.
+(pdftex.def)             Requested size: 304.0956pt x 79.8689pt.
+
+Overfull \hbox (16.82219pt too wide) in paragraph at lines 471--472
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_FNO.png, id=1230, 1847.2212pt x 484.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_FNO.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_FNO.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_FNO.png  used on input
+ line 482.
+(pdftex.def)             Requested size: 304.21461pt x 79.8689pt.
+
+Overfull \hbox (16.94121pt too wide) in paragraph at lines 482--483
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_LFNO.png, id=1231, 1847.2212pt x 484.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_LFNO.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_LFNO.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_LFNO.png  used on inpu
+t line 493.
+(pdftex.def)             Requested size: 304.21461pt x 79.8689pt.
+
+Overfull \hbox (16.94121pt too wide) in paragraph at lines 493--494
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 16.28185pt on input line 501.
+
+
+
+[62]
+
+[63 <./img/Allen-Cahn/dynamics_Allen_Cahn.png>]
+
+[64 <./img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind.png> <./img/Allen
+-Cahn/Histograms/hist_test_set_FNO_blind.png> <./img/Allen-Cahn/Histograms/hist
+_test_set_deeponet.png> <./img/Allen-Cahn/Histograms/hist_test_set_FNO.png> <./
+img/Allen-Cahn/Histograms/hist_test_set_leno.png> <./img/Allen-Cahn/Histograms/
+hist_test_set_LFNO.png>]
+
+[65 <./img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png> <./img/Allen-Cahn/He
+atmaps/heatmap_DeepONet.png> <./img/Allen-Cahn/Heatmaps/heatmap_leno.png> <./im
+g/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png> <./img/Allen-Cahn/Heatmaps/heatmap
+_FNO.png> <./img/Allen-Cahn/Heatmaps/heatmap_LFNO.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[66]
+
+[67]
+<img/LFNO_FH/dynamics.png, id=1287, 1083.3273pt x 1149.8157pt>
+File: img/LFNO_FH/dynamics.png Graphic file (type png)
+<use img/LFNO_FH/dynamics.png>
+Package pdftex.def Info: img/LFNO_FH/dynamics.png  used on input line 609.
+(pdftex.def)             Requested size: 383.03122pt x 406.52945pt.
+
+
+[68]
+
+[69 <./img/LFNO_FH/dynamics.png>]
+
+[70]
+<img/LFNO_FH/loss.png, id=1308, 714.7503pt x 354.123pt>
+File: img/LFNO_FH/loss.png Graphic file (type png)
+<use img/LFNO_FH/loss.png>
+Package pdftex.def Info: img/LFNO_FH/loss.png  used on input line 642.
+(pdftex.def)             Requested size: 325.57887pt x 161.30992pt.
+<img/LFNO_FH/Diffusion_coefficient_V.png, id=1309, 714.7503pt x 426.393pt>
+File: img/LFNO_FH/Diffusion_coefficient_V.png Graphic file (type png)
+<use img/LFNO_FH/Diffusion_coefficient_V.png>
+Package pdftex.def Info: img/LFNO_FH/Diffusion_coefficient_V.png  used on input
+ line 651.
+(pdftex.def)             Requested size: 183.85335pt x 109.68193pt.
+<img/LFNO_FH/Diffusion_coefficient_w.png, id=1310, 714.7503pt x 426.393pt>
+File: img/LFNO_FH/Diffusion_coefficient_w.png Graphic file (type png)
+<use img/LFNO_FH/Diffusion_coefficient_w.png>
+Package pdftex.def Info: img/LFNO_FH/Diffusion_coefficient_w.png  used on input
+ line 655.
+(pdftex.def)             Requested size: 183.85335pt x 109.68193pt.
+
+
+[71 <./img/LFNO_FH/loss.png> <./img/LFNO_FH/Diffusion_coefficient_V.png> <./img
+/LFNO_FH/Diffusion_coefficient_w.png>]
+<img/LFNO_FH/Hist_test_set.png, id=1320, 714.7503pt x 426.393pt>
+File: img/LFNO_FH/Hist_test_set.png Graphic file (type png)
+<use img/LFNO_FH/Hist_test_set.png>
+Package pdftex.def Info: img/LFNO_FH/Hist_test_set.png  used on input line 665.
+
+(pdftex.def)             Requested size: 287.2734pt x 171.38046pt.
+<img/LFNO_FH/Results_test_set.png, id=1323, 1848.6666pt x 991.5444pt>
+File: img/LFNO_FH/Results_test_set.png Graphic file (type png)
+<use img/LFNO_FH/Results_test_set.png>
+Package pdftex.def Info: img/LFNO_FH/Results_test_set.png  used on input line 6
+74.
+(pdftex.def)             Requested size: 383.03122pt x 205.43146pt.
+<img/LFNO_FH/Results_single_nodes_test_set.png, id=1324, 1135.3617pt x 701.7417
+pt>
+File: img/LFNO_FH/Results_single_nodes_test_set.png Graphic file (type png)
+<use img/LFNO_FH/Results_single_nodes_test_set.png>
+Package pdftex.def Info: img/LFNO_FH/Results_single_nodes_test_set.png  used on
+ input line 681.
+(pdftex.def)             Requested size: 344.72575pt x 213.06186pt.
+
+
+[72 <./img/LFNO_FH/Hist_test_set.png>]
+
+[73 <./img/LFNO_FH/Results_test_set.png> <./img/LFNO_FH/Results_single_nodes_te
+st_set.png>]
+<img/LFNO_FH/Reactions_fit.png, id=1342, 1309.5324pt x 701.7417pt>
+File: img/LFNO_FH/Reactions_fit.png Graphic file (type png)
+<use img/LFNO_FH/Reactions_fit.png>
+Package pdftex.def Info: img/LFNO_FH/Reactions_fit.png  used on input line 700.
+
+(pdftex.def)             Requested size: 383.03122pt x 205.25594pt.
+<img/LFNO_FH/Reactions_fit_[-1,1].png, id=1343, 1317.4821pt x 701.7417pt>
+File: img/LFNO_FH/Reactions_fit_[-1,1].png Graphic file (type png)
+<use img/LFNO_FH/Reactions_fit_[-1,1].png>
+Package pdftex.def Info: img/LFNO_FH/Reactions_fit_[-1,1].png  used on input li
+ne 707.
+(pdftex.def)             Requested size: 383.03122pt x 204.01385pt.
+) (./chapters/conclusions.tex
+
+[74]
+
+[75 <./img/LFNO_FH/Reactions_fit.png> <./img/LFNO_FH/Reactions_fit_[-1,1].png>]
+
+
+[76
+
+
+])
+
+[77]
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+
+
+[78]
+
+[79]
+\openout2 = `chapters/appendixA.aux'.
+
+ (./chapters/appendixA.tex
+
+[80
+
+
+
+]
+Appendix A.
+
+
+[81]
+
+[82])
+
+[83]
+\openout2 = `chapters/appendixB.aux'.
+
+ (./chapters/appendixB.tex
+
+[84
+
+
+
+
+
+]
+Appendix B.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+[]\T1/zpltlf/b/n/24.88 Analysis of the dy-nam-ics of FH
+ []
+
+
+
+[85]
+<img/Appendix/Periodicity_Order_BA_N=1000_frequency.png, id=1432, 714.7503pt x 
+426.393pt>
+File: img/Appendix/Periodicity_Order_BA_N=1000_frequency.png Graphic file (type
+ png)
+<use img/Appendix/Periodicity_Order_BA_N=1000_frequency.png>
+Package pdftex.def Info: img/Appendix/Periodicity_Order_BA_N=1000_frequency.png
+  used on input line 32.
+(pdftex.def)             Requested size: 383.03122pt x 228.50511pt.
+<img/Appendix/Periodicity_Order_BA_N=1000.png, id=1433, 763.8939pt x 453.8556pt
+>
+File: img/Appendix/Periodicity_Order_BA_N=1000.png Graphic file (type png)
+<use img/Appendix/Periodicity_Order_BA_N=1000.png>
+Package pdftex.def Info: img/Appendix/Periodicity_Order_BA_N=1000.png  used on 
+input line 42.
+(pdftex.def)             Requested size: 383.03122pt x 227.57129pt.
+
+
+[86 <./img/Appendix/Periodicity_Order_BA_N=1000_frequency.png>])
+
+[87 <./img/Appendix/Periodicity_Order_BA_N=1000.png>]
+\openout2 = `chapters/AppendixC.aux'.
+
+ (./chapters/AppendixC.tex
+
+[88
+
+
+
+
+
+]
+Appendix C.
+
+
+[89])
+
+[90]
+No file main.gls.
+No file main.acr.
+
+
+[91
+
+
+]
+
+[92
+
+
+] (./main.bbl
+
+[93
+
+
+]
+
+[94]
+
+[95])
+
+[96] (./docs/acknowledgments.tex)
+
+[97
+
+
+
+
+] (./main.aux (./chapters/appendixA.aux) (./chapters/appendixB.aux)
+(./chapters/AppendixC.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2020/03/25>
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: BE10659338B8B49F588B3FB2DF1F6109;14161.
+ ) 
+Here is how much of TeX's memory you used:
+ 65049 strings out of 473190
+ 1382513 string characters out of 5715801
+ 1976829 words of memory out of 5000000
+ 86817 multiletter control sequences out of 15000+600000
+ 650435 words of font info for 164 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 123i,16n,131p,2388b,2520s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.25} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.24} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.23} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome
+5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
+ive/2025/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/20
+25/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2025/texmf-dist/font
+s/type1/public/newpx/zplri.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
+public/boondox/zxxrl8a.pfb>
+Output written on main.pdf (107 pages, 30467266 bytes).
+PDF statistics:
+ 1727 PDF objects out of 1728 (max. 8388607)
+ 1266 compressed objects within 13 object streams
+ 350 named destinations out of 1000 (max. 500000)
+ 1415 words of extra memory for PDF output out of 10000 (max. 10000000)
+
