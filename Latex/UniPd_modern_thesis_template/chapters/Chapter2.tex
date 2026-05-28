@@ -27,7 +27,8 @@ According to recent categorizations \cite{boulle2023mathematical}, the SciML lan
     \item \textbf{Operator Learning}, the most recent development, aimed at learning mappings between infinite-dimensional function spaces.
 \end{enumerate}
 
-The second area is related to direct problems and has proven effective in accelerating traditional solvers.
+The second area is related to direct problems and has proven effective in accelerating traditional solvers. Figure \ref{fig:sciml_landscape} summarizes differences between these branches of SciML. 
+\newline
 A revolution in this field was marked by the introduction of Physics-Informed Neural Networks (PINNs) and their variants \cite{raissi2019physics}. 
 These architectures privilege a physics-oriented approach, embedding physical laws directly into the optimization process, rather than relying solely on data.
 However, PINNs are typically trained to solve a \textit{single} problem instance efficiently. Since the solution depends on specific input parameters
@@ -50,7 +51,7 @@ have demonstrated remarkable capabilities in learning non-linear operators on re
     \label{fig:sciml_landscape}
 \end{figure}
 
-\newpage
+%\clearpage
 
 \subsection{Neural Architectures}
 \subsubsection{Deep Operator Network (DeepONet)}
@@ -65,14 +66,14 @@ The output of the approximated operator is obtained through the dot product of t
     \hat{G}_{\theta}(f)(y) = \sum_{k=1}^{p} \underbrace{b_k(f(x_1), \dots, f(x_m))}_{\text{Branch Net}} \cdot \underbrace{t_k(y)}_{\text{Trunk Net}}
 \end{equation}
 
-\begin{figure}[H]
-    \centering
+\begin{figure}[htbp]
+    \centering %0.8
     \includegraphics[width=0.8\textwidth]{img/FH_model/DeepONet.png}
     \caption{Schematic of the DeepONet architecture. The \textit{branch net} processes the discretized input function, while the \textit{trunk net} processes the domain coordinates. Their outputs are combined via a dot product. Adapted from \cite{lu2021learning}.}
     \label{fig:deeponet_schema}
 \end{figure}
 
-\newpage
+\clearpage
 \subsubsection{Fourier Neural Operator (FNO)}
 The Fourier Neural Operator (FNO), proposed by Li et al. \cite{li2020fourier}, tackles the approximation problem by parameterizing the integral operator directly in the frequency domain. Unlike standard networks, FNO learns a mapping between infinite-dimensional function spaces, guaranteeing discretization independence (\textit{resolution-invariance}).
 
@@ -262,4 +263,5 @@ As demonstrated in the numerical experiments for parametric PDEs in article \cit
 \]
 This feature is particularly valuable in neuroscience and complex systems modeling, where neural field dynamics or networked ODEs may be simulated at different spatial scales. A Neural Operator trained on a low-resolution brain atlas or a small neural network can, in principle, generalize its learned dynamics to higher-resolution representations or larger networks without requiring new training data.
 
-
+\vfill
+We are now ready to apply neural operators for the emulation of high-dimensional ionic dynamics, as anticipated in chapter \ref{Chp:1}. 

@@ -248,12 +248,12 @@ The specific form of the reaction term for the Allen-Cahn equation is cubic:
 The system evolved from an initial condition of $50$, randomly selected, active nodes.
 We generated a training dataset of $15000$ trajectories ($10000$ for training, $3000$ for validation and $2000$ for testing) by numerically integrating the system using 
 a spectral IMEX solver \footnote{details in Appendix \ref{app:C}.},
- subsampling the snapshots at time intervals $\Delta=0.05 t$ for 21 time steps to create the input-target pairs.
+ subsampling the snapshots at time intervals $\Delta=0.05 t$ for 21 time steps to create the input-target pairs. In figure \ref{fig:experimental_design} we can observe the evolution of the node dynamics.
 
 \begin{figure}
     \centering
     \includegraphics[width=1.0\textwidth]{img/Allen-Cahn/dynamics_Allen_Cahn.png}
-    \caption{Simulation of Allen-Cahn dynamics on a Barabási-Albert graph with $N=100$ nodes and $m=2$. The figure illustrates the evolution of node states over time, showcasing both the reaction and diffusive processes.}
+    \caption{Simulation of Allen-Cahn dynamics on a Barabási-Albert graph with $N=100$ nodes and $m=2$. The figure illustrates the evolution of all node states (top left, bottom) over time, and a focus on some representative nodes (top right), showcasing both the reaction and diffusive processes.}
     \label{fig:experimental_design}
 \end{figure}
 
@@ -263,7 +263,8 @@ a spectral IMEX solver \footnote{details in Appendix \ref{app:C}.},
 
 \subsubsection{Quantitative Analysis: Error Distribution}
 We begin our analysis by examining the distribution of the relative $L_2$ errors on the test set (2000 trajectories). 
-Figure \ref{fig:error_matrix} presents a systematic comparison arranged by model family (columns) and inductive bias level (rows).
+Figure \ref{fig:error_matrix} presents a systematic comparison of the test errors arranged by model family (columns) and inductive bias level (rows).
+On the other hand figure \ref{fig:heatmap_vertical_stack} shows an absolute error comparison between the same models, however it rearranges the two columns representing the families of architectures on the same page.
 
 This visualization highlights the progressive improvement in generalization performance as we move from "Blind" models to "Topology-Informed" architectures.
 
@@ -603,6 +604,7 @@ The reaction kinetics for the two-variable FHN model, consisting of an activator
 Diffusion was applied solely to the activator variable ($D_V = 0.01$), while the inhibitor remained strictly localized ($D_w = 0$).
 
 The system evolved from random initial conditions, with both $V$ and $w$ independently sampled from a uniform distribution $\mathcal{U}(-1, 1)$ across all nodes. We generated a large-scale dataset of $15000$ trajectories ($10000$ for training, $2000$ for validation, $1000$ for hyperparameter tuning, and $2000$ for testing). The system was numerically integrated over $150$ time steps with a temporal resolution of $\Delta t = 0.05$ (yielding a total simulation time of $T=7.5$s) to create the input-target pairs.
+In figure \ref{fig:fhn_dynamics} we can observe the evolution of the system. Note that for both variables $V$ and $w$ the system creates spatial patters of zones at different equilibria.
 
 \begin{figure}[htbp]
     \centering
@@ -635,7 +637,7 @@ To prevent overfitting, we continuously monitored the relative error on the vali
 
 The training dynamics of the two-variable LFNO model demonstrate stable and robust convergence. As depicted in the learning curves (Figure \ref{fig:lfno_loss}), both the training and validation losses decrease monotonically on a logarithmic scale. The validation-based checkpointing successfully prevented overfitting, identifying epoch $96$ as the optimal state of the network with the lowest validation error. Since this value is close to the total number of epochs $100$, it is probable that the model could find an even better optimum with a higher number of iterations.
 
-In addition to accurate trajectory prediction, the proposed Operator Learning framework naturally supports \textit{System Identification}. Because the physical diffusion operator is explicitly embedded within the spectral layers, the diffusion coefficients ($\varepsilon_V$ and $\varepsilon_w$) can be simply treated as learnable parameters rather than fixed constants. As illustrated in Figure \ref{fig:lfno_diffusion}, these parameters rapidly converge to their true physical values (accurate to four decimal places) within the very first epochs. The network correctly identifies that the activator $V$ diffuses with $D_V = 0.01$, while accurately recognizing that the inhibitor $w$ is strictly localized ($D_w = 0.00$).
+In addition to accurate trajectory prediction, the proposed Operator Learning framework naturally supports \textit{System Identification}. Because the physical diffusion operator is explicitly embedded within the spectral layers, the diffusion coefficients ($\varepsilon_V$ and $\varepsilon_w$) can be simply treated as learnable parameters rather than fixed constants. As illustrated in figure \ref{fig:lfno_diffusion}, these parameters rapidly converge to their true physical values (accurate to four decimal places) within the very first epochs. The network correctly identifies that the activator $V$ diffuses with $D_V = 0.01$, while accurately recognizing that the inhibitor $w$ is strictly localized ($D_w = 0.00$).
 
 \begin{figure}[htbp]
     \centering
@@ -658,7 +660,7 @@ In addition to accurate trajectory prediction, the proposed Operator Learning fr
     \label{fig:lfno_diffusion}
 \end{figure}
 
-To quantitatively assess the generalization capabilities of the trained model, we evaluated it on a strictly held-out test set. The histogram of the relative $L_2$ errors (Figure \ref{fig:lfno_hist}) exhibits a very low mean and variance. The model achieves an outstanding average relative $L_2$ error of just $(0.8 \pm 0.4)\%$, confirming that the LFNO has successfully learned the continuous operator mapping rather than merely memorizing the training trajectories.
+To quantitatively assess the generalization capabilities of the trained model, we evaluated it on a strictly held-out test set. The histogram of the relative $L_2$ errors (figure \ref{fig:lfno_hist}) exhibits a very low mean and variance. The model achieves an outstanding average relative $L_2$ error of just $(0.8 \pm 0.4)\%$, confirming that the LFNO has successfully learned the continuous operator mapping rather than merely memorizing the training trajectories.
 
 \begin{figure}[htbp]
     \centering
@@ -667,7 +669,7 @@ To quantitatively assess the generalization capabilities of the trained model, w
     \label{fig:lfno_hist}
 \end{figure}
 
-Finally, qualitative assessments further validate the numerical results. The space-time heatmaps (Figure \ref{fig:lfno_heatmaps}) show a near-perfect visual overlap between the ground truth and the LFNO predictions for both the activator and the inhibitor variables across the entire network. The absolute error maps remain orders of magnitude lower than the signal amplitude (Mean Absolute Error of $1.09 \times 10^{-3}$ for $V$ and $4.85 \times 10^{-4}$ for $w$). This high fidelity is also evident when zooming in on the continuous dynamics of individual nodes (Figure \ref{fig:lfno_nodes}), where the predicted trajectories (dashed lines) seamlessly track the non-linear physiological behavior of the exact simulated system without any phase shifts or amplitude degradation.
+Finally, qualitative assessments further validate the numerical results. The space-time heatmaps (figure \ref{fig:lfno_heatmaps}) show a near-perfect visual overlap between the ground truth and the LFNO predictions for both the activator and the inhibitor variables across the entire network. The absolute error maps remain orders of magnitude lower than the signal amplitude (Mean Absolute Error of $1.09 \times 10^{-3}$ for $V$ and $4.85 \times 10^{-4}$ for $w$). This high fidelity is also evident when zooming in on the continuous dynamics of individual nodes (figure \ref{fig:lfno_nodes}), where the predicted trajectories (dashed lines) seamlessly track the non-linear physiological behavior of the exact simulated system without any phase shifts or amplitude degradation.
 
 \begin{figure}[htbp]
     \centering
@@ -688,9 +690,9 @@ Finally, qualitative assessments further validate the numerical results. The spa
 
 Beyond forward trajectory prediction and system identification of scalar parameters, the proposed architecture allows us to inspect the learned continuous operators. Specifically, we can isolate the non-linear reaction terms learned by the network and evaluate them on a discrete 2D grid of $(V, w)$ phase space, comparing them directly against the exact analytical functions $F_V(V, w)$ and $F_w(V, w)$. 
 
-As shown in Figure \ref{fig:lfno_reactions}, the network successfully reconstructs the reaction surfaces. On the naturally explored phase space, the model achieves a relative $L_2$ error of $3.89\%$ for the activator kinetics $F_V(V,w)$ and $1.08\%$ for the inhibitor kinetics $F_w(V,w)$. These low error margins demonstrate that the network is genuinely solving the inverse problem by discovering the underlying governing equations.
+As shown in figure \ref{fig:lfno_reactions}, the network successfully reconstructs the reaction surfaces. On the naturally explored phase space, the model achieves a relative $L_2$ error of $3.89\%$ for the activator kinetics $F_V(V,w)$ and $1.08\%$ for the inhibitor kinetics $F_w(V,w)$. These low error margins demonstrate that the network is genuinely solving the inverse problem by discovering the underlying governing equations.
 
-However, the metrics reported above are calculated on a grid spanning the specific domain of states predominantly visited during the simulated time horizon, which is not symmetrically distributed. If the learned reaction function $F_V(V,w)$ is evaluated uniformly over the entire $[-1, 1] \times [-1, 1]$ domain, its performance degrades significantly in the negative extreme. In fact if we look at Figure \ref{fig:lfno_reactions2} we can note that the error increases to $23.94\%$ for $F_V(V,w)$, while it remains at $3.45\%$ for $F_w(V,w)$.
+However, the metrics reported above are calculated on a grid spanning the specific domain of states predominantly visited during the simulated time horizon, which is not symmetrically distributed. If the learned reaction function $F_V(V,w)$ is evaluated uniformly over the entire $[-1, 1] \times [-1, 1]$ domain, its performance degrades significantly in the negative extreme. In fact if we look at figure \ref{fig:lfno_reactions2} we can note that the error increases to $23.94\%$ for $F_V(V,w)$, while it remains at $3.45\%$ for $F_w(V,w)$.
 \newline
  This limitation is physically grounded: as previously observed in the spatio-temporal dynamics, the $V=-1$ region represents a highly unstable region of the FitzHugh-Nagumo phase portrait. Consequently, the training trajectories rapidly transition away from these states, leaving the neural network with a severe lack of data support in that specific region \footnote{We suppose this doesn't happen around the $V=1$ region both because of the specific initialization and because the gradient is less steep. Morover, increasing the temporal resolution of the simulation may solve this problem. This theory will be subject of future investigations.}. Without sufficient observations, the model cannot accurately extrapolate the cubic curvature of $F_V$, highlighting a fundamental limitation of data-driven inverse modeling in strictly transient or unstable regimes.
 

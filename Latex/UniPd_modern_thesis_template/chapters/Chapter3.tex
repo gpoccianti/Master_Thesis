@@ -8,7 +8,7 @@ First of all the reaction has been simulated numerically by solving the underlyi
 
 The numerical solutions were then collected to construct the datasets for the operator learning task. Specifically, in the initial studies on the FitzHugh-Nagumo and Hodgkin-Huxley models, the authors generated a total of 2000 trajectories, split into 1600 samples for the training set and 400 for the test set \cite{centofanti2024comconf, centofanti2024cma}. Subsequently, to handle the increased complexity and ensure comprehensive coverage of the dynamical behaviors in higher-dimensional spaces, the dataset size was expanded to a total of 3750 trajectories, comprising 3000 training examples, 375 for validation, and 375 for testing \cite{pellegrini2025mlcse}.
 
-Using these datasets, a FNO was trained to learn the non-linear mapping from the applied input current to the system's state variables (i.e., transmembrane potential, recovery, and gating variables). By leveraging the Fast Fourier Transform (FFT) on the uniform discretization grid, the FNO architecture computes the integral kernel operator directly in the frequency domain. This approach proved highly effective in capturing the global dependencies and multiscale temporal behaviors of the stiff ionic models, maintaining stable training and achieving very low relative $L^2$ errors across all the investigated dimensionalities.
+Using these datasets, a FNO was trained to learn the non-linear mapping from the applied input current to the system's state variables (i.e., transmembrane potential, recovery, and gating variables). By leveraging the Fast Fourier Transform (FFT) on the uniform discretization grid, the FNO architecture computes the integral kernel operator directly in the frequency domain. This approach proved highly effective in capturing the global dependencies and multiscale temporal behaviors of the stiff ionic models, maintaining stable training and achieving very low relative $L^2$ errors across all the investigated dimensionalities. In figure \ref{fig:centofanti_dynamics} are reported four instances of the test set. We can see that there is an almost perfect superposition between the blue simulated output and the red dotted FNO prediction.
 
 The results across these studies demonstrate that FNOs are highly effective in learning the dynamics of stiff ionic models, consistently achieving low relative $L^2$ errors. Specifically, the optimized FNO architectures attained test errors of approximately 2.0\% for the FitzHugh-Nagumo model \cite{centofanti2024comconf}, 1.4\% for the Hodgkin-Huxley model \cite{centofanti2024cma}, and around 2.0\% even for the highly complex 41-variable O'Hara-Rudy model \cite{pellegrini2025mlcse}. Furthermore, the most recent findings emphasize the remarkable scalability of this approach: despite the substantial increase in system dimensionality, properly tuned FNOs maintain bounded training and test errors, with memory usage and training time scaling only linearly \cite{pellegrini2025mlcse}. This confirms the capability of FNOs to accurately and efficiently capture complex multiscale electrophysiological dynamics, gracefully overcoming the curse of dimensionality that typically affects artificial neural networks in high-dimensional settings.
 
@@ -139,7 +139,7 @@ As a representative example of the system's behavior, Figure \ref{fig:er_setup_1
 \end{figure}
 
 %%%
-To systematically evaluate the threshold dynamics across all network dimensions, Figure \ref{fig:er_peaks_grid} reports the error distribution regarding the predicted number of action potential peaks for each size $N$. As we can observe from this comprehensive grid, the FNO robustly maintains its high accuracy: the vast majority of test instances exhibit zero error in the spike count, regardless of the significant increase in the network dimensionality. This confirms that the model's ability to capture the exact spiking behavior is not compromised by the growing scale of the spatial diffusion.
+To systematically evaluate the threshold dynamics across all network dimensions, Figure \ref{fig:er_peaks_grid} reports the error distribution regarding the predicted number of action potential peaks for each size $N$. As we can observe from this comprehensive grid, the FNO robustly maintains its high accuracy: the vast majority of test instances exhibit zero error in the spike count, regardless of the significant increase in the network dimensionality. This is supported by looking at the error distributions in figure \ref{fig:er_histo_grid} and loss curves in figure \ref{fig:er_loss_grid}, where we can observe respectively a consistent small MSE and a good convergence behavior. Moreover this confirms that the model's ability to capture the exact spiking behavior is not compromised by the growing scale of the spatial diffusion.
 
 \begin{figure}[htbp]
     \centering
@@ -416,6 +416,7 @@ To systematically evaluate the threshold dynamics across all network dimensions,
     \label{fig:er_loss_grid}
 \end{figure}
 
+\clearpage
 \subsection{BA network}
 
 Before detailing the results, it is worth briefly recalling that a Barab\'asi-Albert (BA) network is a widely used model for generating random scale-free networks. It relies on a preferential attachment mechanism, meaning that new nodes are more likely to establish connections with existing nodes that already have a high degree.
@@ -436,6 +437,7 @@ As a representative example of the system's setup, Figure \ref{fig:ba_setup_100}
     \label{fig:ba_setup_100}
 \end{figure}
 
+By looking at figures \ref{fig:ba_peaks_grid}, \ref{fig:ba_histo_grid} and \ref{fig:ba_loss_grid} we can state, as for the case of ER network, that the performances of the FNO don't seem to degradate with the growing network size $N$ and that there is a good general tendency in capturing spiking behavior and model's response to external stimuli. 
 
 %%%
 %%%
@@ -734,9 +736,10 @@ A future extension could be to investigate if this good behavior persists even i
 
 %Collegamento con il teorema di Takens?
 
+\clearpage
 \section{Dependence on the diffusion coefficient $\sigma$}
 
-During the experiments presented in the previous sections, it became essential to understand how to appropriately tune the diffusion coefficient $\sigma$ as a function of the hidden network size $N$. In fact, if we maintain $\sigma$ fixed while $N$ increases, the transmitted energy dissipates and the output signal progressively attenuates until it completely dies out. An initial numerical investigation suggested that the correct scaling to preserve the macroscopic dynamical regime is $\sigma = \mathcal{O}(N)$.
+During the experiments presented in the previous sections, it became essential to understand how to appropriately tune the diffusion coefficient $\sigma$ as a function of the hidden network size $N$. In fact, if we maintain $\sigma$ fixed while $N$ increases, the transmitted energy dissipates and the output signal progressively attenuates until it completely dies out. An initial numerical investigation suggested that the correct scaling to preserve the macroscopic dynamical regime is $\sigma = \mathcal{O}(N)$. In figure \ref{fig:diffusion_transition} we can see that for $\sigma$ of an order of magnitude inferior wrt $N=100$ the signal doesn't seem to be trasmitted trhough the network.
 
 
 \begin{figure}[htbp]
@@ -752,7 +755,7 @@ This empirical observation is supported by the numerical study of the spectral g
 %without quenching
  are governed by the effective macroscopic diffusion rate, which is proportional to the product $\sigma \text{Re}(\lambda_2)$ \cite{barrat2008dynamical}. 
 
-Although the internal spectral gap of isolated complex networks inherently depends on their topology---decaying and bounded above by $\mathcal{O}((\ln N)^{-1})$ in sparse Erd\H{o}s-R\'enyi (ER) graphs \cite{benjamini2014mixing} and remaining strictly lower-bounded by a constant $\mathcal{O}(1)$ in Barab\'asi-Albert (BA) scale-free networks \cite{mihail2003certain}---the strict structural bottleneck introduced by our specific boundary conditions profoundly alters the macroscopic transport dynamics. By grounding the system and forcing the flow through a single input and a single output node, the boundary constraints effectively project the energy flow into a quasi-one-dimensional transport regime. As a result, our numerical spectral analysis demonstrates that the physical spectral gap $\text{Re}(\lambda_2)$ collapses, scaling exactly as $\mathcal{O}(N^{-1})$ for both the ER and BA setups.
+Although the internal spectral gap of isolated complex networks inherently depends on their topology---decaying and bounded above by $\mathcal{O}((\ln N)^{-1})$ in sparse Erd\H{o}s-R\'enyi (ER) graphs \cite{benjamini2014mixing} and remaining strictly lower-bounded by a constant $\mathcal{O}(1)$ in Barab\'asi-Albert (BA) scale-free networks \cite{mihail2003certain}---the strict structural bottleneck introduced by our specific boundary conditions profoundly alters the macroscopic transport dynamics. By grounding the system and forcing the flow through a single input and a single output node, the boundary constraints effectively project the energy flow into a quasi-one-dimensional transport regime. As a result, our numerical spectral analysis demonstrates that the physical spectral gap $\text{Re}(\lambda_2)$ collapses, scaling exactly as $\mathcal{O}(N^{-1})$ for both the ER and BA setups, as it can be seen in figure \ref{fig:spectral_gap_ba}-\ref{fig:spectral_gap_er}.
 
 \begin{figure}[htbp]
     \centering
@@ -948,6 +951,7 @@ The training loop was executed for a total of $1000$ epochs. To mitigate the ris
 To rigorously evaluate the performance of our framework, we additionally trained two baseline models: a recurrent neural network and a standard linear model. 
 
 For the non-linear recurrent baseline, we implemented a Long Short-Term Memory (LSTM) network. The architecture consisted of two stacked LSTM layers with a hidden dimension of $64$, followed by a fully connected linear readout layer to map the recurrent hidden states to the 2D kinematic outputs. To mitigate overfitting, a dropout rate of $0.2$ was applied between the LSTM layers. The network was trained using the identical optimization scheme as the FNO: an Adam optimizer with a learning rate of $1 \times 10^{-3}$ and a weight decay of $1 \times 10^{-4}$, minimizing the Mean Squared Error (MSE) over $1000$ epochs. Furthermore, the same validation-based checkpointing strategy was employed, saving the model weights only when the validation loss reached a new minimum.
+In figure \ref{fig:loss_curves} we can see the training and validation curves for both types of architectures with the relative best epoch. We observe that the FNO converges faster than LSTM to an optimal solution. 
 
 As a standard linear baseline, we implemented a Ridge Regression model. %Because traditional linear regressors do not natively process 3D spatiotemporal tensors, the training data was reshaped. The trial and time dimensions were flattened into a 2D matrix, effectively treating each 5 ms time bin as an independent observation. 
 To ensure optimal generalization, the $L_2$ regularization hyperparameter ($\alpha$) was selected via an exhaustive grid search combined with 5-fold cross-validation executed strictly on the training set. The grid search evaluated five logarithmically spaced candidate values ranging from $10^{-4}$ to $10^{0}$, automatically selecting the most robust linear mapping between the neural firing rates and the macaque's hand velocity \footnote{The selected $\alpha=1.0$}.
