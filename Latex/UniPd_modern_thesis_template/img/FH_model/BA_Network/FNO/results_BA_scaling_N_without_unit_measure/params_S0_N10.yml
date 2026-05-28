@@ -1,0 +1,27 @@
+arc: "FNO"
+dataset_train: "/home/fis00gabripocc/code/FitzHugh-Nagumo/DON_HH/dataset/dataset_on_network/dataset_fhn/datasetFHN_on_network_BA_seed=0_N=10_train_v.mat"
+dataset_test: "/home/fis00gabripocc/code/FitzHugh-Nagumo/DON_HH/dataset/dataset_on_network/dataset_fhn/datasetFHN_on_network_BA_seed=0_N=10_test_v.mat"
+labels: False
+full_v_data: True
+batch_size: 100
+scaling: "None" 
+scheduler: "reduceonplateau"
+Loss: "mse" 
+epochs: 2000
+lr: 0.001
+d_a: 2
+d_v: 32
+d_u: 1
+L: 3
+modes: 16
+act_fun: "ReLu"
+initialization: "Kaiming"
+scalar: "Complex"
+padding: True
+arc_fno: "Zongyi"
+x_padding: 10
+RNN: False
+show_every: 1
+ep_step: 20
+idx: [7, 42, 93, 158] 
+plotting: False

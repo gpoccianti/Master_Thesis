@@ -1,0 +1,1 @@
+NetworkType	Seed	N	Mean_Error	Stdev_Error
