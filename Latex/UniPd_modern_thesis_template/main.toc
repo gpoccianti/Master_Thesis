@@ -9,19 +9,19 @@
 \contentsline {section}{\numberline {1.4}From single neuron to spatially extended systems}{9}{section.1.4}%
 \contentsline {chapter}{\numberline {2}Chapter 2}{11}{chapter.2}%
 \contentsline {section}{\numberline {2.1}A brief introduction to Machine Learning}{11}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Operator Learning}{13}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.a}Neural Architectures}{14}{subsection.2.2.1}%
-\contentsline {subsubsection}{Deep Operator Network (DeepONet)}{14}{subsubsection*.12}%
-\contentsline {subsubsection}{Fourier Neural Operator (FNO)}{16}{subsubsection*.14}%
-\contentsline {section}{\numberline {2.3}Approximation theorems}{18}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.a}Universal approximation of functions}{18}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.b}Universal approximation of operators}{19}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.c}Universal approximation of operators II}{20}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.d}Function Space Assumptions}{20}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Discretization invariance and resolution independence}{22}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.a}Intuition}{22}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.b}Formal definition}{22}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.c}Zero-Shot Super-Resolution}{23}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.2}Approximation theorems}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.a}Universal approximation of functions}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.b}Universal approximation of operators}{14}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.c}Universal approximation of operators II}{15}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.d}Function Space Assumptions}{15}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Discretization invariance and resolution independence}{17}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.a}Intuition}{17}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.b}Formal definition}{17}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.c}Zero-Shot Super-Resolution}{18}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Operator Learning}{20}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.a}Neural Architectures}{21}{subsection.2.4.1}%
+\contentsline {subsubsection}{Deep Operator Network (DeepONet)}{21}{subsubsection*.12}%
+\contentsline {subsubsection}{Fourier Neural Operator (FNO)}{23}{subsubsection*.14}%
 \contentsline {part}{I\hspace {1em}Emulation of a Neuronal System}{25}{part.1}%
 \contentsline {chapter}{\numberline {3}Chapter 3}{27}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Problem definition}{27}{section.3.1}%

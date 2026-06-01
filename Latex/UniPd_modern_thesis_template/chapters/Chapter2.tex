@@ -1,7 +1,11 @@
 \chapter{Chapter 2}
 \label{Chp:2}
+
+In this chapter we will first give a brief intoduction to Machine Learning, then we will describe the main approximation theorems for neural networks, with a special focus on operator learning.
+With this knowledge we will then delve into the different branches of Scientific Machine Learning and describe the most relevant neural operators architectures.
+
 \section{A brief introduction to Machine Learning}
-Machine Learning (ML) encompasses a broad set of methods that enable algorithms to learn complex patterns and relationships from data. While traditional approaches rely on manually engineering features, ML techniques automatically adjust their internal parameters to improve performance on a specific task. Here we specifically focus on the application of Deep Learning, characterized by the utilization of Artificial Neural Networks (ANNs).
+Machine Learning (ML) encompasses a broad set of methods that enable algorithms to learn complex patterns and relationships from data. While traditional approaches for data analysis rely on manually engineering features, ML techniques automatically adjust their internal parameters to improve performance on a specific task. Here we specifically focus on the application of Deep Learning, characterized by the utilization of Artificial Neural Networks (ANNs).
 
 \begin{figure}[htbp]
     \centering
@@ -14,97 +18,6 @@ ANNs are computational models inspired by the structure and function of biologic
 
 By stacking these fundamental units into multiple layered structures, we create Deep Neural Networks (DNNs) (Fig.~\ref{fig:ann_overview}c). These architectures have proven highly effective in mapping high-dimensional function spaces and solving problems in diverse fields like computer vision, natural language processing, and physical modeling. A key theoretical foundation of ANNs is the \textit{Universal Approximation Theorem}. This theorem states that a feedforward network with at least a single hidden layer and a non-linear activation function can, in principle, approximate any continuous function on a compact set, given a sufficient number of neurons. First proven by Cybenko~\cite{cybenko1989approximation} and Hornik~\cite{hornik1989multilayer} in 1989, this principle highlights the fundamental expressive power of neural network architectures. Modern deep networks extend this concept by composing multiple non-linear transformations across numerous layers.
 
-
-\section{Operator Learning}
-
-Scientific Machine Learning (SciML) has emerged as a rapidly developing field that bridges the versatility of data-driven techniques—designed 
-to recognize complex patterns from observations—with the rigor of traditional modeling based on partial differential equations (PDEs).
-
-According to recent categorizations \cite{boulle2023mathematical}, the SciML landscape can be broadly divided into three main areas:
-\begin{enumerate}
-    \item \textbf{PDE Discovery}, which focuses on inverse problems to uncover governing equations from data;
-    \item \textbf{Neural PDE Solvers}, which leverage neural networks to approximate the solution of specific PDE instances;
-    \item \textbf{Operator Learning}, the most recent development, aimed at learning mappings between infinite-dimensional function spaces.
-\end{enumerate}
-
-The second area is related to direct problems and has proven effective in accelerating traditional solvers. Figure \ref{fig:sciml_landscape} summarizes differences between these branches of SciML. 
-\newline
-A revolution in this field was marked by the introduction of Physics-Informed Neural Networks (PINNs) and their variants \cite{raissi2019physics}. 
-These architectures privilege a physics-oriented approach, embedding physical laws directly into the optimization process, rather than relying solely on data.
-However, PINNs are typically trained to solve a \textit{single} problem instance efficiently. Since the solution depends on specific input parameters
-or boundary conditions, changing these inputs often requires retraining the network, limiting their applicability in many-query scenarios.
-
-To address this limitation, the third branch—\textbf{Operator Learning}—has been developed over the last few years \cite{lu2021learning, li2020fourier}.
- Unlike traditional solvers, operator learning algorithms aim to approximate the underlying operator itself, 
- mapping an entire class of input functions to their corresponding solutions. This approach has been successfully applied to complex PDE systems 
- involving parametric dependencies and forcing terms, as well as in industrial applications \cite{osorio2022forecasting}.
-
-Among the emerging approaches, two architectures stand out: the Deep Operator Network (DeepONet) \cite{lu2021learning}, 
-based on the universal approximation theorem for operators, and Neural Operators \cite{kovachki2023neural}. Specifically, 
-integral kernel-based methods such as the Fourier Neural Operator (FNO) \cite{li2020fourier}
-have demonstrated remarkable capabilities in learning non-linear operators on regular or equispaced domains.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.75\textwidth]{img/Operator_learning.png}
-    \caption{Visual representation of the Scientific Machine Learning (SciML) landscape.}
-    \label{fig:sciml_landscape}
-\end{figure}
-
-%\clearpage
-
-\subsection{Neural Architectures}
-\subsubsection{Deep Operator Network (DeepONet)}
-The DeepONet, introduced by Lu et al. \cite{lu2021learning}, was the first architecture explicitly designed as a concrete realization of the universal approximation theorem for operators by Chen and Chen \cite{Chen_Chen_1995}.
-The architecture, schematized in Figure \ref{fig:deeponet_schema}, is composed of two distinct neural subnetworks working in parallel:
-\begin{itemize}
-    \item \textbf{Branch Network:} encodes the input function $f$ evaluated at a finite number of sensor points $x_1, \dots, x_m$.
-    \item \textbf{Trunk Network:} encodes the domain coordinates $y$ where the solution is to be evaluated.
-\end{itemize}
-The output of the approximated operator is obtained through the dot product of the outputs of these two networks, allowing the solution to generalize across the entire continuous domain \cite{lu2021learning}:
-\begin{equation}
-    \hat{G}_{\theta}(f)(y) = \sum_{k=1}^{p} \underbrace{b_k(f(x_1), \dots, f(x_m))}_{\text{Branch Net}} \cdot \underbrace{t_k(y)}_{\text{Trunk Net}}
-\end{equation}
-
-\begin{figure}[htbp]
-    \centering %0.8
-    \includegraphics[width=0.8\textwidth]{img/FH_model/DeepONet.png}
-    \caption{Schematic of the DeepONet architecture. The \textit{branch net} processes the discretized input function, while the \textit{trunk net} processes the domain coordinates. Their outputs are combined via a dot product. Adapted from \cite{lu2021learning}.}
-    \label{fig:deeponet_schema}
-\end{figure}
-
-\clearpage
-\subsubsection{Fourier Neural Operator (FNO)}
-The Fourier Neural Operator (FNO), proposed by Li et al. \cite{li2020fourier}, tackles the approximation problem by parameterizing the integral operator directly in the frequency domain. Unlike standard networks, FNO learns a mapping between infinite-dimensional function spaces, guaranteeing discretization independence (\textit{resolution-invariance}).
-
-As shown in Figure \ref{fig:fno_schema}, the architecture follows three main phases:
-\begin{enumerate}
-    \item \textbf{Lifting:} The input $a(x)$ is lifted to a higher-dimensional hidden representation $v_0(x)$ via a local transformation $P$ (typically a shallow fully connected network with activation $\sigma_1$): \\
-    $v_0(x) = P(a(x)) = \sigma_1(W_{\text{in}} a(x) + b_{\text{in}}), \quad x \in D.$
-    
-    \item \textbf{Iterative Kernel Updates:} For $t = 0, \dots, T-1$, the hidden representation is updated using a pointwise linear operator $W_t$, an integral kernel operator with parameterized kernel $\kappa_t$, and the non-linear activation function $\sigma_2$: \\
-    $\displaystyle v_{t+1}(x) = \sigma_2 \left( W_t v_t(x) + \int_{D} \kappa_t(x,y) v_t(y) \, dy + b_t \right).$
-    
-    \item \textbf{Projection:} The final hidden representation $v_T$ is projected back to the target space defined on $D'$ using another local transformation $Q$ (with activation $\sigma_3$): \\
-    $\mathcal{G}(a)(x) = Q(v_T(x)) = \sigma_3(W_{\text{out}} v_T(x) + b_{\text{out}}), \quad x \in D'.$
-\end{enumerate}
-
-In the specific case of the Fourier Neural Operator (FNO) \cite{li2020fourier}, the integral kernel is parameterized directly in the frequency domain \footnote{Other choices for the kernel are valid and lead to different architectures.}. By leveraging the convolution theorem, the continuous integral operation is efficiently resolved by computing the Fourier transform of the input, performing a pointwise multiplication with a learnable complex-valued weight tensor over a truncated set of low-frequency modes,
-%Devo parlare della relazione che deve intercorrere tra le frequenze considerate $k_max$ ed il numero di campioni $N$ (Teorema di Nysquist-Shannon?)
- and finally applying the inverse Fourier transform. Mathematically, the integral term in the iterative update is replaced by:
-\[ 
-\int_{D} \kappa_t(x,y) v_t(y) \, dy = \mathcal{F}^{-1} \left( R_t \cdot \mathcal{F}(v_t) \right)(x) 
-\]
-where $\mathcal{F}$ and $\mathcal{F}^{-1}$ denote the forward and inverse Fourier transforms, respectively, and $R_t$ is the learnable complex tensor acting as the Fourier kernel at layer $t$. The truncation of higher frequencies acts as a low-pass filter, ensuring both discretization invariance and high computational efficiency.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{img/FH_model/FNO.png}
-    \caption{Schematic of the FNO architecture. (a) General structure with lifting ($P$), iterative layers ($T$), and projection ($Q$). (b) Detail of a single Fourier layer. Adapted from \cite{li2020fourier}.}
-    \label{fig:fno_schema}
-\end{figure}
-
-\newpage
 \section{Approximation theorems}
 \subsection{Universal approximation of functions}
 To fully understand the universal approximation capabilities of Artificial Neural Networks, we first need to introduce the formal mathematical framework and notation established by Hornik, Stinchcombe, and White \cite{hornik1989multilayer}. 
@@ -144,7 +57,7 @@ For every squashing function $\Psi$, every $r$, and every probability measure $\
 
 The universal approximation theorem by Hornik et al. guarantees that standard neural networks can approximate any continuous function between finite-dimensional spaces. However, many physical systems and partial differential equations (PDEs) require mapping an infinite-dimensional space to another infinite-dimensional space (e.g., mapping a parametric initialization or a boundary condition to a complete solution field over time). To address this, the operator learning paradigm extends the concept of universal approximation to operators.
 
-The foundational theoretical work for operator approximation was established by Chen and Chen \cite{Chen_Chen_1995}, who demonstrated that a neural network with a specific architecture can approximate any continuous nonlinear operator. This theorem directly inspired the DeepONet architecture \cite{lu2021learning}.
+The foundational theoretical work for operator approximation was established by Chen and Chen \cite{Chen_Chen_1995}, who demonstrated that a neural network with a specific architecture can approximate any continuous nonlinear operator. This theorem directly inspired the DeepONet architecture \cite{lu2021learning} (see section \ref{DeepONet section}).
 
 Let $K_1 \subset \mathbb{R}^{d_1}$ and $K_2 \subset \mathbb{R}^{d_2}$ be compact sets. Let $V$ be a compact set in the space of continuous functions $C(K_1)$. We define a continuous nonlinear operator $\mathcal{G} : V \to C(K_2)$. 
 
@@ -172,9 +85,9 @@ The theory relies on the input and output spaces possessing the \textit{Banach S
 \begin{assumption}[Input Space $\mathcal{A}$]
 Let $D \subset \mathbb{R}^d$ be a Lipschitz domain. The input Banach space $\mathcal{A}$ satisfies one of the following:
 \begin{enumerate}
-    \item $\mathcal{A} = L^{p_1}(D)$ for some $1 \le p_1 < \infty$;
-    \item $\mathcal{A} = W^{m_1,p_1}(D)$ for some $1 \le p_1 < \infty$ and $m_1 \in \mathbb{N}$;
-    \item $\mathcal{A} = C(\overline{D})$.
+    \item $\mathcal{A} = L^{p_1}(D) = \left\{ f: D \to \mathbb{R} \text{ measurable } \mathrel{\Big|} \int_D |f(x)|^{p_1} \, dx < \infty \right\}$ for some $1 \le p_1 < \infty$;
+    \item $\mathcal{A} = W^{m_1,p_1}(D) = \left\{ f \in L^{p_1}(D) \mathrel{\Big|} D^\alpha f \in L^{p_1}(D) \text{ for all multi-indices } \alpha \text{ with } |\alpha| \le m_1 \right\}$ for some $1 \le p_1 < \infty$ and $m_1 \in \mathbb{N}$, where $D^\alpha f$ denotes the weak partial derivative;
+    \item $\mathcal{A} = C(\overline{D}) = \left\{ f: \overline{D} \to \mathbb{R} \mathrel{\Big|} f \text{ is continuous on the closure of } D \right\}$.
 \end{enumerate}
 \end{assumption}
 
@@ -187,11 +100,11 @@ Let $D' \subset \mathbb{R}^{d'}$ be a Lipschitz domain. The output Banach space 
 \end{enumerate}
 \end{assumption}
 
-The theoretical architecture of the Neural Operator, denoted as $NO_N(\sigma_1, \sigma_2, \sigma_3; D, D')$, represents the class of neural operators where $N \in \mathbb{N}$ is the number of integral layers (the depth of the network), $\sigma_1, \sigma_2, \sigma_3$ are the non-linear activation functions used respectively for the initial lifting mapping, the iterative kernel layers, and the final projection mapping, while $D$ and $D'$ are the input and output spatial domains. This architecture is specifically constructed so that its continuous layers can seamlessly approximate infinite-dimensional mappings with arbitrary precision. Note that for FNO $D=D'$.
+The theoretical architecture of the Neural Operator, denoted as $NO_T(\sigma_1, \sigma_2, \sigma_3; D, D')$, represents the class of neural operators where $T \in \mathbb{N}$ is the number of integral layers (the depth of the network), $\sigma_1, \sigma_2, \sigma_3$ are the non-linear activation functions used respectively for the initial lifting mapping, the iterative kernel layers, and the final projection mapping, while $D$ and $D'$ are the input and output spatial domains. This architecture is specifically constructed so that its continuous layers can seamlessly approximate infinite-dimensional mappings with arbitrary precision. Note that for Fourier Neural Operator (see section \ref{DeepONet section}) $D=D'$.
 
 \begin{theorem}[Uniform Universal Approximation, Kovachki et al. \cite{kovachki2023neural}]
 Suppose the spaces $\mathcal{A}$ and $\mathcal{U}$ satisfy the aforementioned Assumptions and let $\mathcal{G}^{\dagger} : \mathcal{A} \to \mathcal{U}$ be a continuous operator. Let $\sigma_1, \sigma_2, \sigma_3$ be suitable non-polynomial continuous activation functions. 
-Then, for any compact set $K \subset \mathcal{A}$ and any $\epsilon > 0$, there exists an integer $N \in \mathbb{N}$ and a Neural Operator $\mathcal{G} \in NO_N(\sigma_1, \sigma_2, \sigma_3; D, D')$ such that:
+Then, for any compact set $K \subset \mathcal{A}$ and any $\epsilon > 0$, there exists an integer $T \in \mathbb{N}$ and a Neural Operator $\mathcal{G} \in NO_T(\sigma_1, \sigma_2, \sigma_3; D, D')$ such that:
 \[ 
 \sup_{a \in K} \left\| \mathcal{G}^{\dagger}(a) - \mathcal{G}(a) \right\|_{\mathcal{U}} \le \epsilon 
 \]
@@ -205,7 +118,7 @@ A defining characteristic of Neural Operators, which distinguishes them from cla
 
 \subsection{Intuition}
 
-An operator learning architecture is said to be discretization-invariant if the model parameters $\theta$ are defined in a continuous function space and can be applied to any discretization \footnote{Provided that there are enough sample points to perform a DFT with $k$ modes} %Controllare la correttezza di questa affermazione.
+An operator learning architecture is said to be discretization-invariant if the model parameters $\theta$ are defined in a continuous function space and can be applied to any discretization \footnote{Provided that there are enough sample points to perform a DFT with $k$ modes.} %Controllare la correttezza di questa affermazione.
 %L'idea è che sopra un certo numero di punti posso fare
 %DFT, tengo comunque i primi k coefficienti e quindi
 %la struttura diventa indipendente dalla discretizzazione
@@ -239,7 +152,7 @@ Since $a : D \subset \mathbb{R}^d \to \mathbb{R}^m$, pointwise evaluation of the
 \begin{definition}[Discretized uniform risk]
 Suppose $\mathcal{A}$ is a Banach space of $\mathbb{R}^m$-valued functions on the domain $D \subset \mathbb{R}^d$. Let $G : \mathcal{A} \to \mathcal{U}$ be an operator, $D_L$ be an $L$-point discretization of $D$, and $\hat{G} : \mathbb{R}^{L \times d} \times \mathbb{R}^{L \times m} \to \mathcal{U}$ some map. For any $K \subset \mathcal{A}$ compact, we define the discretized uniform risk as:
 \[
-R_K(G, \hat{G}, D_L) = \sup_{a \in K} \| \hat{\mathcal{G}}(D_L, a|_{D_L}) - \mathcal{G}(a) |_{\mathcal{U}}.
+R_K(G, \hat{G}, D_L) = \sup_{a \in K} \| \hat{\mathcal{G}}(D_L, a|_{D_L}) - \mathcal{G}(a) \|_{\mathcal{U}}.
 \]
 \end{definition}
 
@@ -250,18 +163,111 @@ Let $\Theta \subseteq \mathbb{R}^p$ be a finite dimensional parameter space and 
 \]
 \end{definition}
 
-Such a property is highly desirable as it allows a transfer of solutions between different grid geometries and discretization sizes with a single architecture that has a fixed number of parameters. From the construction of neural operators, when the input and output functions are evaluated on fixed grids, the architecture of neural operators on these fixed grids coincide with the class of neural networks.
+Such a property is highly desirable as it allows a transfer of solutions between different grid geometries and discretization sizes with a single architecture that has a fixed number of parameters. From the construction of neural operators, when the input and output functions are evaluated on fixed grids, the architecture of neural operators on these fixed grids coincides with the class of neural networks.
 
 \subsection{Zero-Shot Super-Resolution}
 
 The immediate consequence of discretization invariance is the ability to perform \textit{zero-shot super-resolution}. The neural operator is mesh-invariant, so it can be trained on a lower resolution and evaluated at a
 higher resolution, without seeing any higher resolution data. 
 
-As demonstrated in the numerical experiments for parametric PDEs in article \cite{li2020fourier}, the error of a discretization-invariant model remains consistent across different resolutions. This is formally expressed by the property that as the discretization becomes finer ($n \to \infty$), the discrete approximation converges to the continuous operator:
+As demonstrated in the numerical experiments for parametric PDEs in article \cite{li2020fourier}, the relative error of a discretization-invariant model remains consistent across different resolutions. This is formally expressed by the property that as the discretization becomes finer ($n \to \infty$), the discrete approximation converges to the continuous operator:
 \[ 
 \lim_{n \to \infty} \mathcal{G}_{\theta}(a_n) = \mathcal{G}_{\theta}(a) 
 \]
 This feature is particularly valuable in neuroscience and complex systems modeling, where neural field dynamics or networked ODEs may be simulated at different spatial scales. A Neural Operator trained on a low-resolution brain atlas or a small neural network can, in principle, generalize its learned dynamics to higher-resolution representations or larger networks without requiring new training data.
+
+\newpage
+\section{Operator Learning}
+
+Scientific Machine Learning (SciML) has emerged as a rapidly developing field that bridges the versatility of data-driven techniques—designed 
+to recognize complex patterns from observations—with the rigor of traditional modeling based on partial differential equations (PDEs).
+
+According to recent categorizations \cite{boulle2023mathematical}, the SciML landscape can be broadly divided into three main areas:
+\begin{enumerate}
+    \item \textbf{PDE Discovery}, which focuses on inverse problems to uncover governing equations from data;
+    \item \textbf{Neural PDE Solvers}, which leverage neural networks to approximate the solution of specific PDE instances;
+    \item \textbf{Operator Learning}, the most recent development, aimed at learning mappings between infinite-dimensional function spaces.
+\end{enumerate}
+
+Figure \ref{fig:sciml_landscape} summarizes differences between these branches of SciML. The second area is related to direct problems and has proven effective in accelerating traditional solvers. 
+\newline
+A revolution in this field was marked by the introduction of Physics-Informed Neural Networks (PINNs) and their variants \cite{raissi2019physics}. 
+These architectures privilege a physics-oriented approach, embedding physical laws directly into the optimization process, rather than relying solely on data.
+However, PINNs are typically trained to solve a \textit{single} problem instance efficiently. Since the solution depends on specific input parameters
+or boundary conditions, changing these inputs often requires retraining the network, limiting their applicability in many-query scenarios.
+
+To address this limitation, the third branch—\textbf{Operator Learning}—has been developed over the last few years \cite{lu2021learning, li2020fourier}.
+ Unlike traditional solvers, operator learning algorithms aim to approximate the underlying operator itself, 
+ mapping an entire class of input functions to their corresponding solutions. This approach has been successfully applied to complex PDE systems 
+ involving parametric dependencies and forcing terms, as well as in industrial applications \cite{osorio2022forecasting}.
+
+Among the emerging approaches, two architectures, based on different universal approximation theorems for operators, stand out: the Deep Operator Network (DeepONet) \cite{lu2021learning} and Neural Operators \cite{kovachki2023neural}. Within the last class, in particular, integral kernel-based methods such as the Fourier Neural Operator (FNO) \cite{li2020fourier} have demonstrated remarkable capabilities in learning non-linear operators on regular or equispaced domains.
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{img/Operator_learning.png}
+    \caption{Visual representation of the Scientific Machine Learning (SciML) landscape.}
+    \label{fig:sciml_landscape}
+\end{figure}
+
+%\clearpage
+
+\subsection{Neural Architectures}
+\subsubsection{Deep Operator Network (DeepONet)}
+\label{DeepONet section}
+The DeepONet, introduced by Lu et al. \cite{lu2021learning}, was the first architecture explicitly designed as a concrete realization of the universal approximation theorem for operators by Chen and Chen \cite{Chen_Chen_1995}.
+The architecture, schematized in Figure \ref{fig:deeponet_schema}, is composed of two distinct neural subnetworks working in parallel:
+\begin{itemize}
+    \item \textbf{Branch Network:} encodes the input function $f$ evaluated at a finite number of sensor points $x_1, \dots, x_m$.
+    \item \textbf{Trunk Network:} encodes the domain coordinates $y$ where the solution is to be evaluated.
+\end{itemize}
+The output of the approximated operator is obtained through the dot product of the outputs of these two networks, allowing the solution to be evaluated at any desired point $y$ of the domain \cite{lu2021learning}:
+\begin{equation}
+    \hat{G}_{\theta}(u)(y) = \sum_{k=1}^{p} \underbrace{b_k(u(x_1), \dots, u(x_m))}_{\text{Branch Net}} \cdot \underbrace{t_k(y)}_{\text{Trunk Net}}
+\end{equation}
+
+\begin{figure}[htbp]
+    \centering %0.8
+    \includegraphics[width=0.8\textwidth]{img/FH_model/DeepONet2.png}
+    \caption{(a) Example of a training dataset, formed by sets of input functions $u$ sampled on a fixed domain grid $x_1,x_2,...,x_m$ and corresponding desired outputs $G(u)$, sampled at any desired point $y$ of the codomain. 
+    \newline
+    (b) Schematic of the DeepONet architecture. The \textit{branch net} processes the discretized input function, while the \textit{trunk net} processes the domain coordinates. Their outputs are combined via a dot product. Adapted from \cite{lu2021learning}.}
+    \label{fig:deeponet_schema}
+\end{figure}
+
+\clearpage
+\subsubsection{Fourier Neural Operator (FNO)}
+The Fourier Neural Operator (FNO), proposed by Li et al. \cite{li2020fourier}, tackles the approximation problem by parameterizing the integral operator directly in the frequency domain. Unlike standard networks, FNO learns a mapping between infinite-dimensional function spaces, guaranteeing discretization independence (\textit{resolution-invariance}).
+
+As shown in Figure \ref{fig:fno_schema}, the architecture follows three main phases:
+\begin{enumerate}
+    \item \textbf{Lifting:} The input function $a(x)$ is lifted to a higher-dimensional hidden representation $v_0(x)$ via a local transformation $P$ (typically a shallow fully connected network with activation $\sigma_1$): \\
+    $v_0(x) = P(a(x)) = \sigma_1(W_{\text{in}} a(x) + b_{\text{in}}), \quad x \in D.$
+    
+    \item \textbf{Iterative Kernel Updates:} For $t = 0, \dots, T-1$, the hidden representation is updated using a pointwise linear operator $W_t$, an integral kernel operator with parameterized kernel $\kappa_t$, and the non-linear activation function $\sigma_2$: \\
+    $\displaystyle v_{t+1}(x) = \sigma_2 \left( W_t v_t(x) + \int_{D} \kappa_t(x,y) v_t(y) \, dy + b_t \right).$
+    
+    \item \textbf{Projection:} The final hidden representation $v_T$ is projected back to the target space defined on $D'$ using another local transformation $Q$ (with activation $\sigma_3$): \\
+    $\mathcal{G}(a)(x) = Q(v_T(x)) = \sigma_3(W_{\text{out}} v_T(x) + b_{\text{out}}), \quad x \in D.$
+\end{enumerate}
+
+In the specific case of the Fourier Neural Operator (FNO) \cite{li2020fourier}, the integral kernel is parameterized directly in the frequency domain \footnote{Other choices for the kernel are valid and lead to different architectures.}. By leveraging the convolution theorem, the continuous integral operation is efficiently resolved by computing the Fourier transform of the input, performing a pointwise multiplication with a learnable complex-valued weight tensor over a truncated set of low-frequency modes,
+%Devo parlare della relazione che deve intercorrere tra le frequenze considerate $k_max$ ed il numero di campioni $N$ (Teorema di Nysquist-Shannon?)
+ and finally applying the inverse Fourier transform. Mathematically, the integral term in the iterative update is replaced by:
+\[ 
+\int_{D} \kappa_t(x,y) v_t(y) \, dy = \mathcal{F}^{-1} \left( R_t \cdot \mathcal{F}(v_t) \right)(x) 
+\]
+where $\mathcal{F}$ and $\mathcal{F}^{-1}$ denote the forward and inverse Fourier transforms, respectively, and $R_t$ is the learnable complex tensor acting as the Fourier kernel at layer $t$. The truncation of higher frequencies acts as a low-pass filter, ensuring both discretization invariance and high computational efficiency.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/FH_model/FNO.png}
+    \caption{Schematic of the FNO architecture. (a) General structure with lifting ($P$), iterative layers ($T$), and projection ($Q$). (b) Detail of a single Fourier layer. Adapted from \cite{li2020fourier}.}
+    \label{fig:fno_schema}
+\end{figure}
+
+
 
 \vfill
 We are now ready to apply neural operators for the emulation of high-dimensional ionic dynamics, as anticipated in chapter \ref{Chp:1}. 

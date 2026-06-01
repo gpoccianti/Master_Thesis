@@ -14,7 +14,7 @@ We will now analyze two famous ionic models and use one of them on a network set
 %Aggiungere un riferimento bibliografico?
 
 \section{The Hodgkin-Huxley model}
-One of the most notorious ionic model is the Hodgkin-Huxley (HH) model. It was first introduced by Alan Hodgkin and Andrew Huxley in 1952 \cite{hodgkin1952quantitative}, who received the 1963 Nobel Prize in Physiology or Medicine for this work.
+One of the most notorious ionic models is the Hodgkin-Huxley (HH) model. It was first introduced by Alan Hodgkin and Andrew Huxley in 1952 \cite{hodgkin1952quantitative}, who received the 1963 Nobel Prize in Physiology or Medicine for this work.
 \newline
 It leverages a system of nonlinear ordinary differential equations that describes the generation and propagation of action potentials in neurons. The model simulates the dynamics of the membrane potential $V(t)$ as a function of the ionic currents crossing the cell membrane: a sodium current ($Na^+$), a potassium current ($K^+$), and a leakage current ($L$).
 
@@ -73,7 +73,7 @@ The behavior of the HH model in response to a constant applied current $I_{app}$
     For extremely high currents, the limit cycle disappears and the system stabilizes again at a high-voltage fixed point (stable depolarized state), ceasing to oscillate.
 \end{itemize}
 
-This model is realistic, but somewhat convoluted for our objectives. In fact, we want a system that exhibits, like a physical neuron, oscillations for currents that exceed a critical threshold, but it's as simple as possible, so we can easily simulate its behavior on a network. This will be important for our ML emulation analysis, which will be introduced in chapter \ref{Chpt3}.
+This model is realistic, but somewhat convoluted for our objectives. In fact, our primary aim (as discussed by subsequent chapters) is being able to simulate a network of neurons and emulate it through ML. To this end, we need a system that is as simple as possible, while exhibits, like a physically realistic neuron, oscillations for currents that exceed a critical threshold
 
 \begin{figure}[htbp]
     \centering
@@ -132,9 +132,9 @@ The dynamics of the FHN system depends on the value of $I_{app}$, which vertical
 
 
 In fig \ref{fig:fhn_time_series} we can see a response of the system to a square wave perturbation. In particular, we observe an oscillatory dynamics while the external current is on.
-Since our setup of chapter \ref{Chpt3} operates on functions we considered the square wave perturbation class as it was the easiest to study.
+Since our ML analysis (chapter \ref{Chpt3}) is based on mapping  functions (perturbations) to functions (responses), we considered the square wave perturbation class as it provides an easy-to-study function basis
 
-Starting from these premises, we will turn to study the spatial extension of the FH model and analyze its response to a square wave perturbation localized also in space (i.e. applied to a single node).
+Starting from these premises, we will turn to study the spatial extension of the FH model and analyze its response to a square wave perturbation localized in space (i.e. applied to a single node).
 
 
 \newpage
@@ -142,7 +142,7 @@ Starting from these premises, we will turn to study the spatial extension of the
 \label{sec:extended_network}
 The framework discussed thus far has focused on the dynamics of an isolated single node. In order to transition from a microscopic to a mesoscopic description of neural dynamics, we embed the FitzHugh-Nagumo (FHN) model within a network topology. Our primary objective is to investigate whether the resulting high-dimensional system of ordinary differential equations (ODEs) can be effectively approximated by a single neural operator trained via deep learning techniques, which will be detailed in Chapter \ref{Chp:2}.
 
-To this end, we formulate a spatially extended system characterized by a specific input-output mapping. An external stimulus, modeled as a square-wave current, is injected into a designated \textcolor{blue}{\textbf{input node}}. The signal then propagates through the network via diffusive coupling, while each node undergoes local reaction dynamics governed by the FHN equations. Finally, the response of the system is recorded by extracting the membrane potential of a designated \textcolor{red}{\textbf{output node}}. This setup is illustrated by two examples in figure \ref{fig:fh_comparison}.
+To this end, we consider a spatially extended system characterized by a specific input-output mapping. An external stimulus, modeled as a square-wave current, is injected into a designated \textcolor{blue}{\textbf{input node}}. The signal then propagates through the network via diffusive coupling, while each node undergoes local reaction dynamics governed by the FHN equations. Finally, the response of the system is recorded by extracting the membrane potential of a designated \textcolor{red}{\textbf{output node}}. This setup is illustrated by two examples in figure \ref{fig:fh_comparison}.
 
 
 Formally, let $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ be an unweighted graph representing the neural network topology. The diffusive coupling between neurons is modeled using the elements $L_{ij}$ of the graph Laplacian matrix $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. The elements of the Laplacian are explicitly defined as:
@@ -178,7 +178,7 @@ where the coefficient $\sigma$ modulates the global coupling strength (i.e., the
     % --- Seconda immagine (destra) ---
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{img/FH_model/BA_Network/network_plot_BA_N=100.png}
+        \includegraphics[width=\textwidth]{img/FH_model/BA_Network/network_plot_BA_N=100_v2.png}
         \caption{Extended topology: Input $\rightarrow$ Network $\rightarrow$ Output}
         \label{fig:fh_dynamics}
     \end{subfigure}
