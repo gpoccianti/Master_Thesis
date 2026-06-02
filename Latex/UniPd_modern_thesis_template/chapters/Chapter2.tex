@@ -87,7 +87,7 @@ Let $D \subset \mathbb{R}^d$ be a Lipschitz domain. The input Banach space $\mat
 \begin{enumerate}
     \item $\mathcal{A} = L^{p_1}(D) = \left\{ f: D \to \mathbb{R} \text{ measurable } \mathrel{\Big|} \int_D |f(x)|^{p_1} \, dx < \infty \right\}$ for some $1 \le p_1 < \infty$;
     \item $\mathcal{A} = W^{m_1,p_1}(D) = \left\{ f \in L^{p_1}(D) \mathrel{\Big|} D^\alpha f \in L^{p_1}(D) \text{ for all multi-indices } \alpha \text{ with } |\alpha| \le m_1 \right\}$ for some $1 \le p_1 < \infty$ and $m_1 \in \mathbb{N}$, where $D^\alpha f$ denotes the weak partial derivative;
-    \item $\mathcal{A} = C(\overline{D}) = \left\{ f: \overline{D} \to \mathbb{R} \mathrel{\Big|} f \text{ is continuous on the closure of } D \right\}$.
+    \item $\mathcal{A} = C(\overline{D}) = \left\{ f: \overline{D} \to \mathbb{R} \mathrel{\Big|} f \text{ is continuous on the closure of } \overline{D} \right\}$, where $\overline{D}$ represents the closure of D.
 \end{enumerate}
 \end{assumption}
 
@@ -130,7 +130,7 @@ Following Li et al. \cite{li2020fourier}, let $a \in \mathcal{A}$ be the input f
 \[ 
 \int_{D} \kappa(x,y) v(y) \, dy \approx \sum_{j=1}^{n} \kappa(x, y_j) v(y_j) \Delta y_j 
 \]
-Because the kernel $\kappa$ (or its Fourier representation $R$ in FNOs) is a continuous object, the same parameters $\theta$ can be evaluated on a different set of points $\{x'_1, \dots, x'_k\}$ without retraining.
+Because the kernel $\kappa$ (or its Fourier representation $R$ in Fourier Neural Operators) is a continuous object, the same parameters $\theta$ can be evaluated on a different set of points $\{x'_1, \dots, x'_k\}$ without retraining.
 
 \subsection{Formal definition}
 
@@ -163,7 +163,9 @@ Let $\Theta \subseteq \mathbb{R}^p$ be a finite dimensional parameter space and 
 \]
 \end{definition}
 
-Such a property is highly desirable as it allows a transfer of solutions between different grid geometries and discretization sizes with a single architecture that has a fixed number of parameters. From the construction of neural operators, when the input and output functions are evaluated on fixed grids, the architecture of neural operators on these fixed grids coincides with the class of neural networks.
+Such a property is highly desirable as it allows a transfer of solutions between different grid geometries and discretization sizes with a single architecture that has a fixed number of parameters. 
+In the context of the Fourier Neural Operator (FNO, see section \ref{DeepONet section}) architecture, this discretization invariance stems from two structural choices. First, the learnable integral kernel $R$ is evaluated in the Fourier space where only a truncated, fixed number of low-frequency modes are preserved. When evaluating the model on a denser grid, the higher-frequency modes computed by the discrete Fourier transform are simply bypassed, keeping the size of $R$ constant. Second, the residual weight matrix $W$ operates strictly pointwise on the latent state's scalar components (channels), making it entirely independent of the spatial domain's dimensionality. Together, these properties ensure that the network's weights are perfectly agnostic to the underlying spatial discretization.
+%From the construction of neural operators, when the input and output functions are evaluated on fixed grids, the architecture of neural operators on these fixed grids coincides with the class of neural networks.
 
 \subsection{Zero-Shot Super-Resolution}
 
@@ -268,6 +270,4 @@ where $\mathcal{F}$ and $\mathcal{F}^{-1}$ denote the forward and inverse Fourie
 \end{figure}
 
 
-
-\vfill
 We are now ready to apply neural operators for the emulation of high-dimensional ionic dynamics, as anticipated in chapter \ref{Chp:1}. 

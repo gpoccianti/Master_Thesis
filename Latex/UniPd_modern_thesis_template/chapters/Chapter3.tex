@@ -3,14 +3,14 @@
 
 \section{Problem definition}
 \label{chpt: Problem definition}
-In this work we expand on the results presented in \cite{centofanti2024comconf}, and developed in \cite{centofanti2024cma} and \cite{pellegrini2025mlcse}. In these articles an operator learning architecture (with a particular focus on Fourier Neural Operator (FNO) \footnote{See chapter \ref{Chp:2}.}) has been used to learn the dynamics of a neuronal system, described by a ionic model (the FitzHugh-Nagumo or Hudgin-Huxely model \footnote{See chapter \ref{Chp:1}.}). 
+In this work we expand on the results presented in \cite{centofanti2024comconf}, and developed in \cite{centofanti2024cma} and \cite{pellegrini2025mlcse}. In these articles an operator learning architecture (with a particular focus on Fourier Neural Operator (FNO) \footnote{See chapter \ref{Chp:2}.}) has been used to learn the dynamics of a neuronal system, described by a ionic model (the FitzHugh-Nagumo or Hodgkin-Huxley model \footnote{See chapter \ref{Chp:1}.}). 
 First of all the reaction has been simulated numerically by solving the underlying stiff systems of ordinary differential equations (ODEs). In the earlier works \cite{centofanti2024comconf, centofanti2024cma}, the MATLAB routine \texttt{ode15s} was utilized to integrate the equations over a fixed timespan (e.g., 100 ms) and the solutions were sampled on a uniform equispaced grid of 500 points. In the most recent development \cite{pellegrini2025mlcse}, which extends the study to higher-dimensional systems like the O'Hara-Rudy model, a Runge-Kutta method was employed. In all cases, the systems were perturbed using time-dependent applied currents, typically in the form of square pulses with varying intensities and durations, to explore the threshold-dependent dynamics and complex oscillatory behaviors of the cells.
 
 The numerical solutions were then collected to construct the datasets for the operator learning task. Specifically, in the initial studies on the FitzHugh-Nagumo and Hodgkin-Huxley models, the authors generated a total of 2000 trajectories, split into 1600 samples for the training set and 400 for the test set \cite{centofanti2024comconf, centofanti2024cma}. Subsequently, to handle the increased complexity and ensure comprehensive coverage of the dynamical behaviors in higher-dimensional spaces, the dataset size was expanded to a total of 3750 trajectories, comprising 3000 training examples, 375 for validation, and 375 for testing \cite{pellegrini2025mlcse}.
 
 Using these datasets, a FNO was trained to learn the non-linear mapping from the applied input current to the system's state variables (i.e., transmembrane potential, recovery, and gating variables). By leveraging the Fast Fourier Transform (FFT) on the uniform discretization grid, the FNO architecture computes the integral kernel operator directly in the frequency domain. This approach proved highly effective in capturing the global dependencies and multiscale temporal behaviors of the stiff ionic models, maintaining stable training and achieving very low relative $L^2$ errors across all the investigated dimensionalities. In figure \ref{fig:centofanti_dynamics} are reported four instances of the test set. We can see that there is an almost perfect superposition between the blue simulated output and the red dotted FNO prediction.
 
-The results across these studies demonstrate that FNOs are highly effective in learning the dynamics of stiff ionic models, consistently achieving low relative $L^2$ errors. Specifically, the optimized FNO architectures attained test errors of approximately 2.0\% for the FitzHugh-Nagumo model \cite{centofanti2024comconf}, 1.4\% for the Hodgkin-Huxley model \cite{centofanti2024cma}, and around 2.0\% even for the highly complex 41-variable O'Hara-Rudy model \cite{pellegrini2025mlcse}. Furthermore, the most recent findings emphasize the remarkable scalability of this approach: despite the substantial increase in system dimensionality, properly tuned FNOs maintain bounded training and test errors, with memory usage and training time scaling only linearly \cite{pellegrini2025mlcse}. This confirms the capability of FNOs to accurately and efficiently capture complex multiscale electrophysiological dynamics, gracefully overcoming the curse of dimensionality that typically affects artificial neural networks in high-dimensional settings.
+The results across these studies demonstrate that FNOs are highly effective in learning the dynamics of stiff ionic models, consistently achieving low relative $L^2$ errors. Specifically, the optimized FNO architectures attained test errors of approximately 2.0\% for the FitzHugh-Nagumo model \cite{centofanti2024comconf}, 1.4\% for the Hodgkin-Huxley model \cite{centofanti2024cma}, and around 2.0\% even for the highly complex 41-variable O'Hara-Rudy model \cite{pellegrini2025mlcse}. Furthermore, the most recent findings emphasize the remarkable scalability of this approach: despite the substantial increase in system dimensionality, properly tuned FNOs maintain bounded training and test errors, with memory usage and training time scaling only linearly \cite{pellegrini2025mlcse}. This confirms the capability of FNOs to accurately and efficiently capture complex electrophysiological dynamics, gracefully overcoming the curse of dimensionality that typically affects artificial neural networks in high-dimensional settings.
 
 % Versione senza "curse of dimensionality"
 %This confirms the capability of FNOs to accurately and efficiently capture complex multiscale electrophysiological dynamics, exhibiting a linear scaling of memory and training time with respect to the system's dimensionality, while maintaining bounded parameters and relative errors \cite{pellegrini2025mlcse}.
@@ -51,7 +51,7 @@ Finally another random node is connected by another direct link to the \textcolo
 \subsection{No network}
 This is the first step for spatial extension of the setup of section \ref{chpt: Problem definition} (see fig. \ref{fig:fh_output}). 
 
-To evaluate the performance of our Fourier Neural Operator in this extended configuration, we analyzed both the global error metrics (MSE\footnote{even if the authors of \cite{centofanti2024comconf} used relative $L^2$ errors, we preferred to use an absolute metric to avoid exploding gradients when the solution approaches the equilibrium point at $0$}) and (qualitatively) the network's ability to accurately capture the threshold dynamics. Figure \ref{fig:1to2_peaks} illustrates some instances of the test set. We can clearly see that the network was able to correctly predict the action potential peaks for the vast majority of the test samples, which is a crucial requirement for excitable models.
+To evaluate the performance of our Fourier Neural Operator in this extended configuration, we analyzed both the global error metrics (MSE\footnote{even if the authors of \cite{centofanti2024comconf} used relative $L^2$ errors, we preferred to use an absolute metric to avoid exploding gradients when the solution approaches the equilibrium point at $0$}) and (qualitatively) the network's ability to accurately capture the spiking behavior of the potential, typically present when the input current exceeds a certain threshold. Figure \ref{fig:1to2_peaks} illustrates some instances of the test set. We can clearly see that the network was able to correctly predict the action potential peaks for the vast majority of the test samples, which is a crucial requirement for excitable models.
 
 Furthermore, the training process exhibits stable convergence without signs of overfitting, as depicted by the training and test loss curves in Figure \ref{fig:1to2_performance}a. Finally, Figure \ref{fig:1to2_performance}b reports the distribution of the MSE error evaluated across the test set. The histogram confirms that the network maintains a highly concentrated and low error profile, proving that the operator learning approach remains robust and reliable even in this first spatial extension step.
 
@@ -76,7 +76,7 @@ Furthermore, the training process exhibits stable convergence without signs of o
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/1to2/L2histoFNO.png}
-        \caption{MSE error distribution}
+        \caption{MSE error distribution. As descriptors, we reported the median, 10th and 90th percentile}
         \label{fig:1to2_l2histo}
     \end{subfigure}
     
@@ -85,17 +85,35 @@ Furthermore, the training process exhibits stable convergence without signs of o
 \end{figure}
 
 \subsection{Toy network}
-Following the same approach, we evaluated the FNO performance on a more complex spatial configuration, introducing a simple cycle topology (see fig. \ref{fig:fh_dynamics}). 
+Following the same approach, we evaluated the FNO performance on a more complex spatial configuration, introducing a simple cycle topology (see fig. \ref{fig:cycle_setup}). 
 
 Consistent with the findings of the previous section, the network proves to be highly capable of capturing the underlying threshold dynamics. Figure \ref{fig:cycle_peaks} illustrates some instances of the test set for this new configuration. As we can see, the predicted dynamics strictly follow the numerical simulations, successfully reproducing the spiking behavior and the delay introduced by the diffusion over the cycle.
 
 The global error metrics exhibit a behavior analogous to the "no network" scenario. As shown in Figure \ref{fig:cycle_performance}a, the training and test loss converge smoothly without any signs of overfitting. Furthermore, the MSE distribution across the test set (Figure \ref{fig:cycle_performance}b) remains tightly concentrated at very low values. This confirms that the operator learning approach is robust and its accuracy does not degrade when dealing with a small ($4$ nodes) network diffusion.
 
 % --- Figura singola (Picchi Ciclo) ---
+
+% Ricordati di includere \usepackage{subcaption} nel preambolo se non l'hai già fatto
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{img/FH_model/Simple_cycle/HHpeaks.png}
-    \caption{Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the dotted red line indicates the output of the NN.}
+    % Prima sottofigura: Schema della rete (ora a sinistra)
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/FH_model/Simple_cycle/dynamics_cycle.png}
+        \caption{Network schematic setup.}
+        \label{fig:cycle_setup}
+    \end{subfigure}
+    \hfill
+    % Seconda sottofigura: Grafico dei picchi (ora a destra)
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/FH_model/Simple_cycle/HHpeaks.png}
+        \caption{Test set instances.}
+        \label{fig:cycle_instances}
+    \end{subfigure}
+    
+    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the dotted red line indicates the output of the NN.}
     \label{fig:cycle_peaks}
 \end{figure}
 
@@ -719,16 +737,17 @@ By looking at figures \ref{fig:ba_peaks_grid}, \ref{fig:ba_histo_grid} and \ref{
 
 %% Il caso N=100 mi sembra un po' diverso dagli altri. Devo commentarlo? Forse c'è un path più breve tra input ed output.
 
+\clearpage
 \subsubsection{Performance across different sizes of the hidden network: Conclusion}
 
-As we could see in the previous graphs, and in the summary Figure \ref{fig:fno_scaling_error} below, we can deduce that (at least for the sizes considered) the FNO generalizes well the deterministic dynamics. This remarkable scalability may also be due to the discretization-invariant nature of this architecture.
+As we could see in the previous graphs, and in the summary figure \ref{fig:fno_scaling_error} below, we can deduce that (at least for the sizes considered) the FNO generalizes well the deterministic dynamics. In fact, as the network size $N$ increases, we don't observe a significant error distribution spread toward higher values. This remarkable scalability may also be due to the discretization-invariant nature of this architecture, since, as we saw in chapter \ref{Chp:2}, the learned architecture parameters do not depend on the specific number of nodes of the network.
 % In fact we performed some test where we trained on a dataset with hidden network size $N_1$ and tested on another $N_2$ and we still got good results.
 A future extension could be to investigate if this good behavior persists even if noise is introduced into the system.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/FH_model/error_FNO_scalingN.png}
-    \caption{Summary of the FNO performance across different network sizes ($N$). The plot compares the mean error scaling for both Erd\H{o}s-R\'enyi (ER) and Barab\'asi-Albert (BA) topologies, demonstrating the robustness and scalability of the architecture.}
+    \includegraphics[width=0.8\textwidth]{img/FH_model/error_FNO_scalingN_v2.png}
+    \caption{Violin plots of the FNO error distribution across different network sizes ($N$). The dotted lines represent (respectively, from bottom to top) the first quartile, median and third quartile of each distribution. The plot compares the error scaling for both Erd\H{o}s-R\'enyi (ER) and Barab\'asi-Albert (BA) topologies, demonstrating the robustness and scalability of the architecture.}
     \label{fig:fno_scaling_error}
 \end{figure}
 
@@ -755,7 +774,10 @@ This empirical observation is supported by the numerical study of the spectral g
 %without quenching
  are governed by the effective macroscopic diffusion rate, which is proportional to the product $\sigma \text{Re}(\lambda_2)$ \cite{barrat2008dynamical}. 
 
-Although the internal spectral gap of isolated complex networks inherently depends on their topology---decaying and bounded above by $\mathcal{O}((\ln N)^{-1})$ in sparse Erd\H{o}s-R\'enyi (ER) graphs \cite{benjamini2014mixing} and remaining strictly lower-bounded by a constant $\mathcal{O}(1)$ in Barab\'asi-Albert (BA) scale-free networks \cite{mihail2003certain}---the strict structural bottleneck introduced by our specific boundary conditions profoundly alters the macroscopic transport dynamics. By grounding the system and forcing the flow through a single input and a single output node, the boundary constraints effectively project the energy flow into a quasi-one-dimensional transport regime. As a result, our numerical spectral analysis demonstrates that the physical spectral gap $\text{Re}(\lambda_2)$ collapses, scaling exactly as $\mathcal{O}(N^{-1})$ for both the ER and BA setups, as it can be seen in figure \ref{fig:spectral_gap_ba}-\ref{fig:spectral_gap_er}.
+Although the internal spectral gap of isolated complex networks inherently depends on their topology---decaying and bounded above by $\mathcal{O}((\ln N)^{-1})$ in sparse Erd\H{o}s-R\'enyi (ER) graphs \cite{benjamini2014mixing} and remaining strictly lower-bounded by a constant $\mathcal{O}(1)$ in Barab\'asi-Albert (BA) scale-free networks \cite{mihail2003certain}---the strict structural bottleneck introduced by our specific boundary conditions profoundly alters the macroscopic transport dynamics. 
+In fact, within the INPUT->network-> OUTPUT setup, not all path are equals, since the system will relax only when the signal will propagate to the OUTPUT node. This means that the shortest path from INPUT to OUTPUT becomes the most relevant for the behavior of spectral gap and it this alter its behavior.
+%By grounding the system and forcing the flow through a single input and a single output node, the boundary constraints effectively project the energy flow into a quasi-one-dimensional transport regime. 
+As a result, our numerical spectral analysis demonstrates that the physical spectral gap $\text{Re}(\lambda_2)$ collapses, scaling exactly as $\mathcal{O}(N^{-1})$ for both the ER and BA setups, as it can be seen in figure \ref{fig:spectral_gap_ba}-\ref{fig:spectral_gap_er}.
 
 \begin{figure}[htbp]
     \centering

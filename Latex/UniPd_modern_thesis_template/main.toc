@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {2.3}Discretization invariance and resolution independence}{17}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.a}Intuition}{17}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.b}Formal definition}{17}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.c}Zero-Shot Super-Resolution}{18}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.c}Zero-Shot Super-Resolution}{19}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Operator Learning}{20}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.a}Neural Architectures}{21}{subsection.2.4.1}%
 \contentsline {subsubsection}{Deep Operator Network (DeepONet)}{21}{subsubsection*.12}%
@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {3.2.b}Toy network}{31}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.c}ER network}{32}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.d}BA network}{37}{subsection.3.2.4}%
-\contentsline {subsubsection}{Performance across different sizes of the hidden network: Conclusion}{38}{subsubsection*.29}%
+\contentsline {subsubsection}{Performance across different sizes of the hidden network: Conclusion}{41}{subsubsection*.29}%
 \contentsline {section}{\numberline {3.3}Dependence on the diffusion coefficient $\sigma $}{42}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Real data}{44}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.a}The dataset}{44}{subsection.3.4.1}%
