@@ -59,7 +59,7 @@ Furthermore, the training process exhibits stable convergence without signs of o
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{img/FH_model/1to2/HHpeaks.png}
-    \caption{Four instances of the test set. For each column we can see the Input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the dotted red line indicates the output of the NN}
+    \caption{Four instances of the test set. For each column we can see the Input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the red dots indicate some outputs of the NN}
     \label{fig:1to2_peaks}
 \end{figure}
 
@@ -87,7 +87,7 @@ Furthermore, the training process exhibits stable convergence without signs of o
 \subsection{Toy network}
 Following the same approach, we evaluated the FNO performance on a more complex spatial configuration, introducing a simple cycle topology (see fig. \ref{fig:cycle_setup}). 
 
-Consistent with the findings of the previous section, the network proves to be highly capable of capturing the underlying threshold dynamics. Figure \ref{fig:cycle_peaks} illustrates some instances of the test set for this new configuration. As we can see, the predicted dynamics strictly follow the numerical simulations, successfully reproducing the spiking behavior and the delay introduced by the diffusion over the cycle.
+Consistent with the findings of the previous section, the network proves to be highly capable of capturing the underlying threshold dynamics. Figure \ref{fig:cycle_peaks} illustrates some instances of the test set for this new configuration. As we can see, the predicted dynamics strictly follows the numerical simulations, successfully reproducing the spiking behavior and the delay introduced by the diffusion over the cycle.
 
 The global error metrics exhibit a behavior analogous to the "no network" scenario. As shown in Figure \ref{fig:cycle_performance}a, the training and test loss converge smoothly without any signs of overfitting. Furthermore, the MSE distribution across the test set (Figure \ref{fig:cycle_performance}b) remains tightly concentrated at very low values. This confirms that the operator learning approach is robust and its accuracy does not degrade when dealing with a small ($4$ nodes) network diffusion.
 
@@ -113,7 +113,7 @@ The global error metrics exhibit a behavior analogous to the "no network" scenar
         \label{fig:cycle_instances}
     \end{subfigure}
     
-    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the dotted red line indicates the output of the NN.}
+    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the red dots indicate samples from the trained NN.}
     \label{fig:cycle_peaks}
 \end{figure}
 
@@ -145,7 +145,7 @@ We proceeded with the study of larger networks. In particular, we wanted to obse
 To conduct this experiment we performed our analysis for different size of the ER network $N= 10,100,200,300,400,500,600,700,800,900,1000,2000$ (with connection probability $p = \frac{3}{N}$).
 Since the connection node for the input and output node are randomly chosen we repeated each experiments with different seeds $=0,42,100$ to distinguish if some effects are only due to chance of the particular topology/ sample of input/ output.
 
-Here we reported only figures for the seed$=0$.
+Here we reported only figures for the seed $S=42$.
 
 As a representative example of the system's behavior, Figure \ref{fig:er_setup_100} reports the potential dynamics for a network of size $N=100$ generated with seed $100$.
 
@@ -243,7 +243,7 @@ To systematically evaluate the threshold dynamics across all network dimensions,
         \caption{$N=2000$}
     \end{subfigure}
     
-    \caption{Some instances of the test set for different Erd\H{o}s-R\'enyi network sizes ($N$).  For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the dotted red line indicates the output of the NN.}
+    \caption{Some instances of the test set for different Erd\H{o}s-R\'enyi network sizes ($N$).  For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the red dots indicate the output of the NN.}
     \label{fig:er_peaks_grid}
 \end{figure}
 
@@ -450,7 +450,7 @@ As a representative example of the system's setup, Figure \ref{fig:ba_setup_100}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{img/FH_model/BA_Network/network_plot_BA_N=100.png}
+    \includegraphics[width=\textwidth]{img/FH_model/BA_Network/network_plot_BA_N=100_v2.png}
     \caption{Our setup for a Barab\'asi-Albert network of size $N=100$.}
     \label{fig:ba_setup_100}
 \end{figure}
@@ -546,7 +546,7 @@ By looking at figures \ref{fig:ba_peaks_grid}, \ref{fig:ba_histo_grid} and \ref{
         \caption{$N=2000$}
     \end{subfigure}
     
-    \caption{Some instances of the test set for different Barab\'asi-Albert network sizes ($N$). For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the dotted red line indicates the output of the NN.}
+    \caption{Some instances of the test set for different Barab\'asi-Albert network sizes ($N$). For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the red dots indicate the output of the NN.}
     \label{fig:ba_peaks_grid}
 \end{figure}
 
@@ -740,7 +740,10 @@ By looking at figures \ref{fig:ba_peaks_grid}, \ref{fig:ba_histo_grid} and \ref{
 \clearpage
 \subsubsection{Performance across different sizes of the hidden network: Conclusion}
 
-As we could see in the previous graphs, and in the summary figure \ref{fig:fno_scaling_error} below, we can deduce that (at least for the sizes considered) the FNO generalizes well the deterministic dynamics. In fact, as the network size $N$ increases, we don't observe a significant error distribution spread toward higher values. This remarkable scalability may also be due to the discretization-invariant nature of this architecture, since, as we saw in chapter \ref{Chp:2}, the learned architecture parameters do not depend on the specific number of nodes of the network.
+As we could see in the previous graphs (at least for the sizes considered) the FNO generalizes well the deterministic dynamics. 
+These results are strengthened and summarized in the violin plots figure \ref{fig:fno_scaling_error}, for the distribution of $\log(MSE)$, as network size and type vary. To gain statistical relevance we aggregated data for the three different seed employed ($S=0,42,100$).
+\newline
+As the network size $N$ increases, we don't observe a significant error distribution spread toward higher values. This remarkable scalability may also be due to the discretization-invariant nature of the FNO architecture, since, as we saw in chapter \ref{Chp:2}, the learned architecture parameters do not depend on the specific number of nodes of the network.
 % In fact we performed some test where we trained on a dataset with hidden network size $N_1$ and tested on another $N_2$ and we still got good results.
 A future extension could be to investigate if this good behavior persists even if noise is introduced into the system.
 
@@ -775,7 +778,7 @@ This empirical observation is supported by the numerical study of the spectral g
  are governed by the effective macroscopic diffusion rate, which is proportional to the product $\sigma \text{Re}(\lambda_2)$ \cite{barrat2008dynamical}. 
 
 Although the internal spectral gap of isolated complex networks inherently depends on their topology---decaying and bounded above by $\mathcal{O}((\ln N)^{-1})$ in sparse Erd\H{o}s-R\'enyi (ER) graphs \cite{benjamini2014mixing} and remaining strictly lower-bounded by a constant $\mathcal{O}(1)$ in Barab\'asi-Albert (BA) scale-free networks \cite{mihail2003certain}---the strict structural bottleneck introduced by our specific boundary conditions profoundly alters the macroscopic transport dynamics. 
-In fact, within the INPUT->network-> OUTPUT setup, not all path are equals, since the system will relax only when the signal will propagate to the OUTPUT node. This means that the shortest path from INPUT to OUTPUT becomes the most relevant for the behavior of spectral gap and it this alter its behavior.
+In fact, within the INPUT->network-> OUTPUT setup, not all path are of equal relevance, since the system will relax only when the signal will propagate to the OUTPUT node. This means that the shortest path from INPUT to OUTPUT becomes the most relevant for the behavior of spectral gap and this alter its behavior.
 %By grounding the system and forcing the flow through a single input and a single output node, the boundary constraints effectively project the energy flow into a quasi-one-dimensional transport regime. 
 As a result, our numerical spectral analysis demonstrates that the physical spectral gap $\text{Re}(\lambda_2)$ collapses, scaling exactly as $\mathcal{O}(N^{-1})$ for both the ER and BA setups, as it can be seen in figure \ref{fig:spectral_gap_ba}-\ref{fig:spectral_gap_er}.
 
