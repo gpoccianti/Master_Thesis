@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  4 JUN 2026 17:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  4 JUN 2026 17:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2887,4 +2887,532 @@ Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
 
 
-[38 <./img/FH_model/BA_Network/FNO/HHpeaks_S=
+[38 <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png>]
+
+[39 <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png>]
+
+[40 <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png>]
+<img/FH_model/error_FNO_scalingN_v2.png, id=1018, 1144.7568pt x 494.3268pt>
+File: img/FH_model/error_FNO_scalingN_v2.png Graphic file (type png)
+<use img/FH_model/error_FNO_scalingN_v2.png>
+Package pdftex.def Info: img/FH_model/error_FNO_scalingN_v2.png  used on input line 753.
+(pdftex.def)             Requested size: 306.42613pt x 132.31596pt.
+
+
+[41
+
+ <./img/FH_model/error_FNO_scalingN_v2.png>]
+LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
+(Font)              scaled to size 14.4pt on input line 763.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 763.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 763.
+
+<img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png, id=1026, 859.2903pt x 498.663pt>
+File: img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png Graphic file (type png)
+<use img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png>
+Package pdftex.def Info: img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png  used on input line 770.
+(pdftex.def)             Requested size: 306.42613pt x 177.82173pt.
+
+
+[42
+
+ <./img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png>]
+<img/FH_model/BA_Network/Spectral_gap_BA.png, id=1042, 715.473pt x 498.663pt>
+File: img/FH_model/BA_Network/Spectral_gap_BA.png Graphic file (type png)
+<use img/FH_model/BA_Network/Spectral_gap_BA.png>
+Package pdftex.def Info: img/FH_model/BA_Network/Spectral_gap_BA.png  used on input line 790.
+(pdftex.def)             Requested size: 187.6874pt x 130.80588pt.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
+(Font)              scaled to size 5.0pt on input line 791.
+<img/FH_model/ER_Network/Spectral_gap_ER.png, id=1043, 715.473pt x 498.663pt>
+File: img/FH_model/ER_Network/Spectral_gap_ER.png Graphic file (type png)
+<use img/FH_model/ER_Network/Spectral_gap_ER.png>
+Package pdftex.def Info: img/FH_model/ER_Network/Spectral_gap_ER.png  used on input line 796.
+(pdftex.def)             Requested size: 187.6874pt x 130.80588pt.
+
+Underfull \hbox (badness 2582) in paragraph at lines 797--797
+[]\T1/zpltlf/b/n/10 Figure 3.17: |\T1/zpltlf/m/n/10 Scal-ing of the spec-tral
+ []
+
+
+
+[43 <./img/FH_model/BA_Network/Spectral_gap_BA.png> <./img/FH_model/ER_Network/Spectral_gap_ER.png>]
+
+[44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[45]
+
+[46]
+LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
+(Font)              scaled to size 10.0pt on input line 1002.
+<img/Real_Data/loss_LSTM.png, id=1077, 570.933pt x 426.393pt>
+File: img/Real_Data/loss_LSTM.png Graphic file (type png)
+<use img/Real_Data/loss_LSTM.png>
+Package pdftex.def Info: img/Real_Data/loss_LSTM.png  used on input line 1014.
+(pdftex.def)             Requested size: 183.85335pt x 137.30736pt.
+<img/Real_Data/loss_FNO.png, id=1078, 570.933pt x 426.393pt>
+File: img/Real_Data/loss_FNO.png Graphic file (type png)
+<use img/Real_Data/loss_FNO.png>
+Package pdftex.def Info: img/Real_Data/loss_FNO.png  used on input line 1019.
+(pdftex.def)             Requested size: 183.85335pt x 137.30736pt.
+<img/Real_Data/histogram_test_set_ridge_regression_V2.png, id=1080, 1149.093pt x 428.5611pt>
+File: img/Real_Data/histogram_test_set_ridge_regression_V2.png Graphic file (type png)
+<use img/Real_Data/histogram_test_set_ridge_regression_V2.png>
+Package pdftex.def Info: img/Real_Data/histogram_test_set_ridge_regression_V2.png  used on input line 1032.
+(pdftex.def)             Requested size: 383.03122pt x 142.85117pt.
+<img/Real_Data/histogram_test_set_LSTM.png, id=1081, 1148.3703pt x 428.5611pt>
+File: img/Real_Data/histogram_test_set_LSTM.png Graphic file (type png)
+<use img/Real_Data/histogram_test_set_LSTM.png>
+Package pdftex.def Info: img/Real_Data/histogram_test_set_LSTM.png  used on input line 1039.
+(pdftex.def)             Requested size: 383.03122pt x 142.9427pt.
+<img/Real_Data/histogram_test_set_FNO.png, id=1082, 1148.3703pt x 428.5611pt>
+File: img/Real_Data/histogram_test_set_FNO.png Graphic file (type png)
+<use img/Real_Data/histogram_test_set_FNO.png>
+Package pdftex.def Info: img/Real_Data/histogram_test_set_FNO.png  used on input line 1046.
+(pdftex.def)             Requested size: 383.03122pt x 142.9427pt.
+
+
+[47]
+<img/Real_Data/Results_ridge_regression.png, id=1097, 719.8092pt x 1255.3299pt>
+File: img/Real_Data/Results_ridge_regression.png Graphic file (type png)
+<use img/Real_Data/Results_ridge_regression.png>
+Package pdftex.def Info: img/Real_Data/Results_ridge_regression.png  used on input line 1057.
+(pdftex.def)             Requested size: 383.03122pt x 668.00336pt.
+
+
+LaTeX Warning: Float too large for page by 98.3578pt on input line 1060.
+
+<img/Real_Data/Results_LSTM.png, id=1098, 719.8092pt x 1255.3299pt>
+File: img/Real_Data/Results_LSTM.png Graphic file (type png)
+<use img/Real_Data/Results_LSTM.png>
+Package pdftex.def Info: img/Real_Data/Results_LSTM.png  used on input line 1064.
+(pdftex.def)             Requested size: 383.03122pt x 668.00336pt.
+
+LaTeX Warning: Float too large for page by 98.3578pt on input line 1067.
+
+<img/Real_Data/Results_FNO.png, id=1099, 719.8092pt x 1255.3299pt>
+File: img/Real_Data/Results_FNO.png Graphic file (type png)
+<use img/Real_Data/Results_FNO.png>
+Package pdftex.def Info: img/Real_Data/Results_FNO.png  used on input line 1071.
+(pdftex.def)             Requested size: 383.03122pt x 668.00336pt.
+
+LaTeX Warning: Float too large for page by 98.3578pt on input line 1074.
+
+)
+
+[48 <./img/Real_Data/loss_LSTM.png> <./img/Real_Data/loss_FNO.png>]
+
+[49 <./img/Real_Data/histogram_test_set_ridge_regression_V2.png> <./img/Real_Data/histogram_test_set_LSTM.png> <./img/Real_Data/histogram_test_set_FNO.png>]
+
+[50 <./img/Real_Data/Results_ridge_regression.png>]
+
+[51 <./img/Real_Data/Results_LSTM.png>]
+
+[52 <./img/Real_Data/Results_FNO.png>]
+
+[53
+
+
+]
+
+[54] (./chapters/Chapter4.tex
+Chapter 4.
+
+Overfull \hbox (6.21703pt too wide) in paragraph at lines 8--12
+\T1/zpltlf/m/n/10.95 Reaction-Diffusion (RD) sys-tems con-sti-tute a cor-ner-stone of math-e-mat-i-cal physics,
+ []
+
+
+
+[55
+
+
+]
+
+[56]
+
+[57]
+
+[58]
+
+[59]
+Overfull \hbox (6.88588pt too wide) in paragraph at lines 152--154
+[]\T1/zpltlf/m/n/10.95 For the tra-jec-tory term we con-sid-ered the rel-a-tive L2 term for scale-invariance
+ []
+
+
+
+[60]
+Overfull \hbox (5.11258pt too wide) in paragraph at lines 175--177
+[]\T1/zpltlf/b/n/10.95 PI-DeepONet: \T1/zpltlf/m/n/10.95 Uti-lized the stan-dard Branch/Trunk ar-chi-tec-ture (same
+ []
+
+
+
+[61]
+
+[62]
+<img/Allen-Cahn/dynamics_Allen_Cahn_v2.png, id=1221, 1076.823pt x 589.7232pt>
+File: img/Allen-Cahn/dynamics_Allen_Cahn_v2.png Graphic file (type png)
+<use img/Allen-Cahn/dynamics_Allen_Cahn_v2.png>
+Package pdftex.def Info: img/Allen-Cahn/dynamics_Allen_Cahn_v2.png  used on input line 266.
+(pdftex.def)             Requested size: 383.03122pt x 209.76262pt.
+
+
+[63]
+<img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png, id=1236, 701.7417pt x 413.3844pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png  used on input line 356.
+(pdftex.def)             Requested size: 246.67462pt x 145.31116pt.
+<img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png, id=1237, 715.473pt x 426.393pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png  used on input line 356.
+(pdftex.def)             Requested size: 246.67462pt x 147.00815pt.
+<img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png, id=1238, 712.5822pt x 426.393pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png  used on input line 356.
+(pdftex.def)             Requested size: 246.67462pt x 147.6002pt.
+<img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png, id=1239, 702.4644pt x 413.3844pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png  used on input line 356.
+(pdftex.def)             Requested size: 246.67462pt x 145.15977pt.
+<img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png, id=1240, 697.4055pt x 409.0482pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png  used on input line 356.
+(pdftex.def)             Requested size: 246.67462pt x 144.67946pt.
+<img/Allen-Cahn/Histograms/hist_test_set_LFNO.png, id=1241, 714.7503pt x 426.393pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_LFNO.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_LFNO.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_LFNO.png  used on input line 356.
+(pdftex.def)             Requested size: 246.67462pt x 147.15779pt.
+
+Overfull \hbox (44.86063pt too wide) in paragraph at lines 458--488
+ [] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png, id=1244, 1846.4985pt x 484.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png  used on input line 519.
+(pdftex.def)             Requested size: 304.0956pt x 79.8689pt.
+
+Overfull \hbox (16.82219pt too wide) in paragraph at lines 519--520
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png, id=1245, 1847.2212pt x 484.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png  used on input line 530.
+(pdftex.def)             Requested size: 304.21461pt x 79.8689pt.
+
+Overfull \hbox (16.94121pt too wide) in paragraph at lines 530--531
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_leno.png, id=1246, 1847.2212pt x 484.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_leno.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_leno.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_leno.png  used on input line 541.
+(pdftex.def)             Requested size: 304.21461pt x 79.8689pt.
+
+Overfull \hbox (16.94121pt too wide) in paragraph at lines 541--542
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png, id=1247, 1846.4985pt x 484.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png  used on input line 569.
+(pdftex.def)             Requested size: 304.0956pt x 79.8689pt.
+
+Overfull \hbox (16.82219pt too wide) in paragraph at lines 569--570
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_FNO.png, id=1248, 1847.2212pt x 484.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_FNO.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_FNO.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_FNO.png  used on input line 580.
+(pdftex.def)             Requested size: 304.21461pt x 79.8689pt.
+
+Overfull \hbox (16.94121pt too wide) in paragraph at lines 580--581
+ [][] 
+ []
+
+<img/Allen-Cahn/Heatmaps/heatmap_LFNO.png, id=1249, 1847.2212pt x 484.9317pt>
+File: img/Allen-Cahn/Heatmaps/heatmap_LFNO.png Graphic file (type png)
+<use img/Allen-Cahn/Heatmaps/heatmap_LFNO.png>
+Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_LFNO.png  used on input line 591.
+(pdftex.def)             Requested size: 304.21461pt x 79.8689pt.
+
+Overfull \hbox (16.94121pt too wide) in paragraph at lines 591--592
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 16.28185pt on input line 599.
+
+
+
+[64 <./img/Allen-Cahn/dynamics_Allen_Cahn_v2.png>]
+
+[65 <./img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_LFNO.png>]
+
+[66]
+
+[67 <./img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png> <./img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png> <./img/Allen-Cahn/Heatmaps/heatmap_leno.png> <./img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png> <./img/Allen-Cahn/Heatmaps/heatmap_FNO.png> <./img/Allen-Cahn/Heatmaps/heatmap_LFNO.png>]
+
+[68]
+<img/LFNO_FH/dynamics.png, id=1293, 1083.3273pt x 1149.8157pt>
+File: img/LFNO_FH/dynamics.png Graphic file (type png)
+<use img/LFNO_FH/dynamics.png>
+Package pdftex.def Info: img/LFNO_FH/dynamics.png  used on input line 705.
+(pdftex.def)             Requested size: 383.03122pt x 406.52945pt.
+
+
+[69]
+
+[70 <./img/LFNO_FH/dynamics.png>]
+
+[71]
+<img/LFNO_FH/loss.png, id=1316, 714.7503pt x 354.123pt>
+File: img/LFNO_FH/loss.png Graphic file (type png)
+<use img/LFNO_FH/loss.png>
+Package pdftex.def Info: img/LFNO_FH/loss.png  used on input line 738.
+(pdftex.def)             Requested size: 325.57887pt x 161.30992pt.
+<img/LFNO_FH/Diffusion_coefficient_V.png, id=1317, 714.7503pt x 426.393pt>
+File: img/LFNO_FH/Diffusion_coefficient_V.png Graphic file (type png)
+<use img/LFNO_FH/Diffusion_coefficient_V.png>
+Package pdftex.def Info: img/LFNO_FH/Diffusion_coefficient_V.png  used on input line 747.
+(pdftex.def)             Requested size: 183.85335pt x 109.68193pt.
+<img/LFNO_FH/Diffusion_coefficient_w.png, id=1318, 714.7503pt x 426.393pt>
+File: img/LFNO_FH/Diffusion_coefficient_w.png Graphic file (type png)
+<use img/LFNO_FH/Diffusion_coefficient_w.png>
+Package pdftex.def Info: img/LFNO_FH/Diffusion_coefficient_w.png  used on input line 751.
+(pdftex.def)             Requested size: 183.85335pt x 109.68193pt.
+
+
+[72 <./img/LFNO_FH/loss.png> <./img/LFNO_FH/Diffusion_coefficient_V.png> <./img/LFNO_FH/Diffusion_coefficient_w.png>]
+<img/LFNO_FH/Hist_test_set.png, id=1328, 714.7503pt x 426.393pt>
+File: img/LFNO_FH/Hist_test_set.png Graphic file (type png)
+<use img/LFNO_FH/Hist_test_set.png>
+Package pdftex.def Info: img/LFNO_FH/Hist_test_set.png  used on input line 761.
+(pdftex.def)             Requested size: 287.2734pt x 171.38046pt.
+<img/LFNO_FH/Results_test_set.png, id=1331, 1848.6666pt x 991.5444pt>
+File: img/LFNO_FH/Results_test_set.png Graphic file (type png)
+<use img/LFNO_FH/Results_test_set.png>
+Package pdftex.def Info: img/LFNO_FH/Results_test_set.png  used on input line 770.
+(pdftex.def)             Requested size: 383.03122pt x 205.43146pt.
+<img/LFNO_FH/Results_single_nodes_test_set_v2.png, id=1332, 1136.0844pt x 701.7417pt>
+File: img/LFNO_FH/Results_single_nodes_test_set_v2.png Graphic file (type png)
+<use img/LFNO_FH/Results_single_nodes_test_set_v2.png>
+Package pdftex.def Info: img/LFNO_FH/Results_single_nodes_test_set_v2.png  used on input line 777.
+(pdftex.def)             Requested size: 344.72575pt x 212.93336pt.
+
+
+[73 <./img/LFNO_FH/Hist_test_set.png>]
+
+[74 <./img/LFNO_FH/Results_test_set.png> <./img/LFNO_FH/Results_single_nodes_test_set_v2.png>]
+<img/LFNO_FH/Reactions_fit.png, id=1351, 1309.5324pt x 701.7417pt>
+File: img/LFNO_FH/Reactions_fit.png Graphic file (type png)
+<use img/LFNO_FH/Reactions_fit.png>
+Package pdftex.def Info: img/LFNO_FH/Reactions_fit.png  used on input line 798.
+(pdftex.def)             Requested size: 383.03122pt x 205.25594pt.
+<img/LFNO_FH/Reactions_fit_[-1,1].png, id=1352, 1317.4821pt x 701.7417pt>
+File: img/LFNO_FH/Reactions_fit_[-1,1].png Graphic file (type png)
+<use img/LFNO_FH/Reactions_fit_[-1,1].png>
+Package pdftex.def Info: img/LFNO_FH/Reactions_fit_[-1,1].png  used on input line 805.
+(pdftex.def)             Requested size: 383.03122pt x 204.01385pt.
+) (./chapters/conclusions.tex
+
+[75]
+
+[76 <./img/LFNO_FH/Reactions_fit.png> <./img/LFNO_FH/Reactions_fit_[-1,1].png>])
+
+[77
+
+
+]
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+
+
+[78]
+
+[79]
+\openout2 = `chapters/appendixA.aux'.
+
+ (./chapters/appendixA.tex
+
+[80
+
+
+
+]
+Appendix A.
+
+
+[81]
+
+[82])
+
+[83]
+\openout2 = `chapters/AppendixC.aux'.
+
+ (./chapters/AppendixC.tex
+
+[84
+
+
+
+
+
+]
+Appendix B.
+
+
+[85])
+
+[86]
+No file main.gls.
+No file main.acr.
+
+
+[87
+
+
+]
+
+[88
+
+
+] (./main.bbl
+
+[89
+
+
+]
+
+[90]
+
+[91])
+
+[92] (./docs/acknowledgments.tex)
+
+[93
+
+
+
+
+] (./main.aux (./chapters/appendixA.aux) (./chapters/AppendixC.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2020/03/25>
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 78DEBF152062E8363D82F99F55FAA2CA;13442.
+ ) 
+Here is how much of TeX's memory you used:
+ 65008 strings out of 473190
+ 1381828 string characters out of 5715801
+ 1978623 words of memory out of 5000000
+ 86793 multiletter control sequences out of 15000+600000
+ 650435 words of font info for 164 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 123i,16n,131p,2501b,2520s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.23} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/boondox/zxxrl8a.pfb>
+Output written on main.pdf (103 pages, 34228178 bytes).
+PDF statistics:
+ 1701 PDF objects out of 1728 (max. 8388607)
+ 1244 compressed objects within 13 object streams
+ 339 named destinations out of 1000 (max. 500000)
+ 1383 words of extra memory for PDF output out of 10000 (max. 10000000)
+
