@@ -73,7 +73,7 @@ The behavior of the HH model in response to a constant applied current $I_{app}$
     For extremely high currents, the limit cycle disappears and the system stabilizes again at a high-voltage fixed point (stable depolarized state), ceasing to oscillate.
 \end{itemize}
 
-This model is realistic, but somewhat convoluted for our objectives. In fact, our primary aim (as discussed by subsequent chapters) is being able to simulate a network of neurons and emulate it through ML. To this end, we need a system that is as simple as possible, while exhibits, like a physically realistic neuron, oscillations for currents that exceed a critical threshold
+This model is realistic, but somewhat convoluted for our objectives. In fact, our primary aim (as discussed by subsequent chapters) is to simulate a network of neurons and emulate it through Machine Learning (ML). To this end, we need a system that is as simple as possible, while it exhibits, like a physically realistic neuron, oscillations for currents that exceed a critical threshold
 
 \begin{figure}[htbp]
     \centering
@@ -94,7 +94,7 @@ The FitzHugh-Nagumo (FHN) model \cite{centofanti2024comconf} is a two-dimensiona
     \label{eq:FHN}
 \end{equation}
 
-The parameters used are $b = 5$, $c = 1$, $\beta = 0.1$, $\delta = 1$, $\epsilon = 0.1$, $\gamma = 0.25$ \cite{centofanti2024comconf}.
+The parameters used in all the FH simulations through this thesis are $b = 5$, $c = 1$, $\beta = 0.1$, $\delta = 1$, $\epsilon = 0.1$, $\gamma = 0.25$ \cite{centofanti2024comconf}.
 
 \subsection*{Asymptotic behavior}
 \label{sec:FHN_dynamics}
@@ -164,19 +164,20 @@ The dynamics of the coupled system are therefore governed by the following set o
 \end{aligned}
 \end{equation}
 where the coefficient $\sigma$ modulates the global coupling strength (i.e., the intensity of diffusion) across the network.
-
 \begin{figure}[htbp]
     \centering
-    % --- Prima immagine (sinistra) ---
-    \begin{subfigure}[b]{0.48 \textwidth}
+    % --- Prima immagine (sopra) ---
+    \begin{subfigure}[b]{1.0\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/1to2/output0to1.png}
         \caption{Minimal setup: Input $\rightarrow$ Output}
         \label{fig:fh_output}
     \end{subfigure}
-    \hfill
-    % --- Seconda immagine (destra) ---
-    \begin{subfigure}[b]{0.48\textwidth}
+    
+    \vspace{0.5cm} % Spazio verticale tra le due figure
+    
+    % --- Seconda immagine (sotto) ---
+    \begin{subfigure}[b]{1.0\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/BA_Network/network_plot_BA_N=100_v2.png}
         \caption{Extended topology: Input $\rightarrow$ Network $\rightarrow$ Output}

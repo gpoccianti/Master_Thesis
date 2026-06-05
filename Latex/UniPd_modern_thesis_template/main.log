@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  4 JUN 2026 17:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  5 JUN 2026 10:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2007,6 +2007,9 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (./main.aux
 
+LaTeX Warning: Label `fig:cycle_peaks' multiply defined.
+
+
 LaTeX Warning: Label `fig:fhn_dynamics' multiply defined.
 
 (./chapters/appendixA.aux) (./chapters/AppendixC.aux))
@@ -2309,34 +2312,38 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <img/FH_model/1to2/output0to1.png, id=557, 1110.0672pt x 553.5882pt>
 File: img/FH_model/1to2/output0to1.png Graphic file (type png)
 <use img/FH_model/1to2/output0to1.png>
-Package pdftex.def Info: img/FH_model/1to2/output0to1.png  used on input line 173.
-(pdftex.def)             Requested size: 183.85335pt x 91.68443pt.
+Package pdftex.def Info: img/FH_model/1to2/output0to1.png  used on input line 172.
+(pdftex.def)             Requested size: 383.03122pt x 191.01347pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 9.0pt on input line 174.
+(Font)              scaled to size 9.0pt on input line 173.
 <img/FH_model/BA_Network/network_plot_BA_N=100_v2.png, id=558, 1106.4537pt x 553.5882pt>
 File: img/FH_model/BA_Network/network_plot_BA_N=100_v2.png Graphic file (type png)
 <use img/FH_model/BA_Network/network_plot_BA_N=100_v2.png>
-Package pdftex.def Info: img/FH_model/BA_Network/network_plot_BA_N=100_v2.png  used on input line 181.
-(pdftex.def)             Requested size: 183.85335pt x 91.98009pt.
+Package pdftex.def Info: img/FH_model/BA_Network/network_plot_BA_N=100_v2.png  used on input line 182.
+(pdftex.def)             Requested size: 383.03122pt x 191.63855pt.
 ) (./chapters/Chapter2.tex
 
 [9]
 
 [10 <./img/FH_model/1to2/output0to1.png> <./img/FH_model/BA_Network/network_plot_BA_N=100_v2.png>]
+
+[11]
+
+[12
+
+
+]
 Chapter 2.
-<img/ANN.png, id=576, 687.56876pt x 464.73625pt>
+<img/ANN.png, id=584, 687.56876pt x 464.73625pt>
 File: img/ANN.png Graphic file (type png)
 <use img/ANN.png>
 Package pdftex.def Info: img/ANN.png  used on input line 12.
 (pdftex.def)             Requested size: 363.87848pt x 245.94737pt.
 
 
-[11
+[13]
 
-
-]
-
-[12 <./img/ANN.png>]
+[14 <./img/ANN.png>]
 LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
 (Font)              scaled to size 10.95pt on input line 25.
 LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
@@ -2350,23 +2357,23 @@ Overfull \hbox (13.66072pt too wide) in paragraph at lines 29--30
 
 
 
-[13]
+[15]
 
-[14]
+[16]
 Overfull \hbox (60.77284pt too wide) in paragraph at lines 89--90
 []$\OMS/cmsy/m/n/10.95 A \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 W[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 D\OT1/cmr/m/n/10.95 ) = []$
  []
 
 
 
-[15]
+[17]
 Overfull \hbox (34.4038pt too wide) in paragraph at lines 103--104
 []\T1/zpltlf/m/n/10.95 The the-o-ret-i-cal ar-chi-tec-ture of the Neu-ral Op-er-a-tor, de-noted as $\OML/cmm/m/it/10.95 NO[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^[[]; ^^[[]; ^^[[]\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 D; D[]\OT1/cmr/m/n/10.95 )$\T1/zpltlf/m/n/10.95 ,
  []
 
 
 
-[16]
+[18]
 Overfull \hbox (3.96802pt too wide) in paragraph at lines 115--115
 |[]\T1/zpltlf/b/n/14.4 Discretization in-vari-ance and res-o-lu-tion in-de-pen-dence| 
  []
@@ -2377,20 +2384,20 @@ LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
 (Font)              scaled to size 5.0pt on input line 121.
 
 
-[17]
-
-[18]
-
 [19]
-<img/Operator_learning.png, id=672, 841.1425pt x 501.875pt>
+
+[20]
+
+[21]
+<img/Operator_learning.png, id=681, 841.1425pt x 501.875pt>
 File: img/Operator_learning.png Graphic file (type png)
 <use img/Operator_learning.png>
 Package pdftex.def Info: img/Operator_learning.png  used on input line 211.
 (pdftex.def)             Requested size: 287.2734pt x 171.40103pt.
 
 
-[20]
-<img/FH_model/DeepONet2.png, id=688, 397.485pt x 513.92pt>
+[22]
+<img/FH_model/DeepONet2.png, id=697, 397.485pt x 513.92pt>
 File: img/FH_model/DeepONet2.png Graphic file (type png)
 <use img/FH_model/DeepONet2.png>
 Package pdftex.def Info: img/FH_model/DeepONet2.png  used on input line 234.
@@ -2403,28 +2410,28 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 237.
 
 
-[21 <./img/Operator_learning.png>]
+[23 <./img/Operator_learning.png>]
 
-[22 <./img/FH_model/DeepONet2.png>]
-<img/FH_model/FNO.png, id=708, 821.0675pt x 316.18124pt>
+[24 <./img/FH_model/DeepONet2.png>]
+<img/FH_model/FNO.png, id=716, 821.0675pt x 316.18124pt>
 File: img/FH_model/FNO.png Graphic file (type png)
 <use img/FH_model/FNO.png>
 Package pdftex.def Info: img/FH_model/FNO.png  used on input line 267.
 (pdftex.def)             Requested size: 383.03122pt x 147.49556pt.
 
 
-[23
+[25
 
 ])
 
-[24 <./img/FH_model/FNO.png>]
+[26 <./img/FH_model/FNO.png>]
 
-[25
+[27
 
 
 ]
 
-[26] (./chapters/Chapter3.tex
+[28] (./chapters/Chapter3.tex
 Chapter 3.
 LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
 (Font)              scaled to size 24.88pt on input line 1.
@@ -2434,597 +2441,611 @@ LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
 (Font)              scaled to size 17.28pt on input line 1.
 
 
-[27
+[29
 
 
 ]
-<img/FH_model/No_Network/Centofanti_article_figure.png, id=760, 766.36313pt x 655.44875pt>
+<img/FH_model/No_Network/Centofanti_article_figure.png, id=768, 766.36313pt x 655.44875pt>
 File: img/FH_model/No_Network/Centofanti_article_figure.png Graphic file (type png)
 <use img/FH_model/No_Network/Centofanti_article_figure.png>
 Package pdftex.def Info: img/FH_model/No_Network/Centofanti_article_figure.png  used on input line 22.
-(pdftex.def)             Requested size: 210.66833pt x 180.17395pt.
+(pdftex.def)             Requested size: 383.03122pt x 327.59355pt.
 
 
-[28]
+[30]
 
-[29 <./img/FH_model/No_Network/Centofanti_article_figure.png>]
-<img/FH_model/1to2/HHpeaks.png, id=787, 1156.32pt x 578.16pt>
+[31 <./img/FH_model/No_Network/Centofanti_article_figure.png>]
+<img/FH_model/1to2/HHpeaks.png, id=790, 1156.32pt x 578.16pt>
 File: img/FH_model/1to2/HHpeaks.png Graphic file (type png)
 <use img/FH_model/1to2/HHpeaks.png>
 Package pdftex.def Info: img/FH_model/1to2/HHpeaks.png  used on input line 62.
 (pdftex.def)             Requested size: 268.12068pt x 134.0591pt.
-<img/FH_model/1to2/loss_plot_fixed.png, id=788, 722.7pt x 578.16pt>
+<img/FH_model/1to2/loss_plot_fixed.png, id=791, 722.7pt x 578.16pt>
 File: img/FH_model/1to2/loss_plot_fixed.png Graphic file (type png)
 <use img/FH_model/1to2/loss_plot_fixed.png>
 Package pdftex.def Info: img/FH_model/1to2/loss_plot_fixed.png  used on input line 72.
 (pdftex.def)             Requested size: 183.85335pt x 147.08037pt.
-<img/FH_model/1to2/L2histoFNO.png, id=789, 614.295pt x 614.295pt>
+<img/FH_model/1to2/L2histoFNO.png, id=792, 614.295pt x 614.295pt>
 File: img/FH_model/1to2/L2histoFNO.png Graphic file (type png)
 <use img/FH_model/1to2/L2histoFNO.png>
 Package pdftex.def Info: img/FH_model/1to2/L2histoFNO.png  used on input line 79.
 (pdftex.def)             Requested size: 183.85335pt x 183.84937pt.
 
 
-[30 <./img/FH_model/1to2/HHpeaks.png> <./img/FH_model/1to2/loss_plot_fixed.png> <./img/FH_model/1to2/L2histoFNO.png>]
-<img/FH_model/Simple_cycle/dynamics_cycle.png, id=802, 1106.4537pt x 553.5882pt>
+[32]
+
+[33 <./img/FH_model/1to2/HHpeaks.png> <./img/FH_model/1to2/loss_plot_fixed.png> <./img/FH_model/1to2/L2histoFNO.png>]
+<img/FH_model/Simple_cycle/dynamics_cycle.png, id=816, 1106.4537pt x 553.5882pt>
 File: img/FH_model/Simple_cycle/dynamics_cycle.png Graphic file (type png)
 <use img/FH_model/Simple_cycle/dynamics_cycle.png>
 Package pdftex.def Info: img/FH_model/Simple_cycle/dynamics_cycle.png  used on input line 104.
-(pdftex.def)             Requested size: 183.85335pt x 91.98009pt.
-<img/FH_model/Simple_cycle/HHpeaks.png, id=803, 1156.32pt x 578.16pt>
+(pdftex.def)             Requested size: 306.42613pt x 153.31422pt.
+<img/FH_model/Simple_cycle/HHpeaks.png, id=817, 1156.32pt x 578.16pt>
 File: img/FH_model/Simple_cycle/HHpeaks.png Graphic file (type png)
 <use img/FH_model/Simple_cycle/HHpeaks.png>
-Package pdftex.def Info: img/FH_model/Simple_cycle/HHpeaks.png  used on input line 112.
-(pdftex.def)             Requested size: 183.85335pt x 91.92523pt.
-<img/FH_model/Simple_cycle/loss_plot_fixed.png, id=804, 722.7pt x 578.16pt>
+Package pdftex.def Info: img/FH_model/Simple_cycle/HHpeaks.png  used on input line 114.
+(pdftex.def)             Requested size: 306.42613pt x 153.21167pt.
+<img/FH_model/Simple_cycle/loss_plot_fixed.png, id=818, 722.7pt x 578.16pt>
 File: img/FH_model/Simple_cycle/loss_plot_fixed.png Graphic file (type png)
 <use img/FH_model/Simple_cycle/loss_plot_fixed.png>
-Package pdftex.def Info: img/FH_model/Simple_cycle/loss_plot_fixed.png  used on input line 126.
+Package pdftex.def Info: img/FH_model/Simple_cycle/loss_plot_fixed.png  used on input line 131.
 (pdftex.def)             Requested size: 183.85335pt x 147.08037pt.
-<img/FH_model/Simple_cycle/L2histoFNO.png, id=805, 614.295pt x 614.295pt>
+<img/FH_model/Simple_cycle/L2histoFNO.png, id=819, 614.295pt x 614.295pt>
 File: img/FH_model/Simple_cycle/L2histoFNO.png Graphic file (type png)
 <use img/FH_model/Simple_cycle/L2histoFNO.png>
-Package pdftex.def Info: img/FH_model/Simple_cycle/L2histoFNO.png  used on input line 133.
+Package pdftex.def Info: img/FH_model/Simple_cycle/L2histoFNO.png  used on input line 138.
 (pdftex.def)             Requested size: 183.85335pt x 183.84937pt.
 
 
-[31 <./img/FH_model/Simple_cycle/dynamics_cycle.png> <./img/FH_model/Simple_cycle/HHpeaks.png>]
-Overfull \hbox (3.35654pt too wide) in paragraph at lines 145--148
+[34]
+
+[35 <./img/FH_model/Simple_cycle/dynamics_cycle.png> <./img/FH_model/Simple_cycle/HHpeaks.png>]
+Overfull \hbox (3.35654pt too wide) in paragraph at lines 150--155
 \T1/zpltlf/m/n/10.95 size of the ER net-work $\OML/cmm/m/it/10.95 N \OT1/cmr/m/n/10.95 = 10\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 100\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 200\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 300\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 400\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 500\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 600\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 700\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 800\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 900\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1000\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2000$
  []
 
-<img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42_v2.png, id=815, 1106.4537pt x 553.5882pt>
+<img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42_v2.png, id=832, 1106.4537pt x 553.5882pt>
 File: img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42_v2.png Graphic file (type png)
 <use img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42_v2.png>
-Package pdftex.def Info: img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42_v2.png  used on input line 155.
+Package pdftex.def Info: img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42_v2.png  used on input line 162.
 (pdftex.def)             Requested size: 383.03122pt x 191.63855pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=10.png, id=819, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=10.png, id=836, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=10.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=10.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=10.png  used on input line 168.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=10.png  used on input line 175.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=100.png, id=820, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=100.png, id=837, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=100.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=100.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=100.png  used on input line 174.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=100.png  used on input line 181.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=200.png, id=821, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=200.png, id=838, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=200.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=200.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=200.png  used on input line 180.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=200.png  used on input line 187.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=300.png, id=822, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=300.png, id=839, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=300.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=300.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=300.png  used on input line 189.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=300.png  used on input line 196.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=400.png, id=823, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=400.png, id=840, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=400.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=400.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=400.png  used on input line 195.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=400.png  used on input line 202.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=500.png, id=824, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=500.png, id=841, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=500.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=500.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=500.png  used on input line 201.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=500.png  used on input line 208.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=600.png, id=825, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=600.png, id=842, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=600.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=600.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=600.png  used on input line 210.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=600.png  used on input line 217.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=700.png, id=826, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=700.png, id=843, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=700.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=700.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=700.png  used on input line 216.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=700.png  used on input line 223.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=800.png, id=827, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=800.png, id=844, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=800.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=800.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=800.png  used on input line 222.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=800.png  used on input line 229.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=900.png, id=828, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=900.png, id=845, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=900.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=900.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=900.png  used on input line 231.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=900.png  used on input line 238.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png, id=829, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png, id=846, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png  used on input line 237.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png  used on input line 244.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png, id=830, 1156.32pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png, id=847, 1156.32pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png  used on input line 243.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png  used on input line 250.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png, id=831, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png, id=848, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png  used on input line 264.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png  used on input line 271.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png, id=832, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png, id=849, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png  used on input line 270.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png  used on input line 277.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png, id=833, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png, id=850, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png  used on input line 276.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png  used on input line 283.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png, id=834, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png, id=851, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png  used on input line 285.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png  used on input line 292.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png, id=835, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png, id=852, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png  used on input line 291.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png  used on input line 298.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png, id=836, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png, id=853, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png  used on input line 297.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png  used on input line 304.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png, id=837, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png, id=854, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png  used on input line 306.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png  used on input line 313.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png, id=838, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png, id=855, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png  used on input line 312.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png  used on input line 319.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png, id=839, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png, id=856, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png  used on input line 318.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png  used on input line 325.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png, id=840, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png, id=857, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png  used on input line 327.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png  used on input line 334.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png, id=841, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png, id=858, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png  used on input line 333.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png  used on input line 340.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png, id=842, 614.295pt x 614.295pt>
+<img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png, id=859, 614.295pt x 614.295pt>
 File: img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png  used on input line 339.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png  used on input line 346.
 (pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
 
-LaTeX Warning: Float too large for page by 37.76216pt on input line 345.
+LaTeX Warning: Float too large for page by 37.76216pt on input line 352.
 
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png, id=843, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png, id=860, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png  used on input line 355.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png  used on input line 362.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png, id=844, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png, id=861, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png  used on input line 361.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png  used on input line 368.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png, id=845, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png, id=862, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png  used on input line 367.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png  used on input line 374.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png, id=846, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png, id=863, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png  used on input line 376.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png  used on input line 383.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png, id=847, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png, id=864, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png  used on input line 382.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png  used on input line 389.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png, id=848, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png, id=865, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png  used on input line 388.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png  used on input line 395.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png, id=849, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png, id=866, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png  used on input line 397.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png  used on input line 404.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png, id=850, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png, id=867, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png  used on input line 403.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png  used on input line 410.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png, id=851, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png, id=868, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png  used on input line 409.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png  used on input line 416.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png, id=852, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png, id=869, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png  used on input line 418.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png  used on input line 425.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png, id=853, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png, id=870, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png  used on input line 424.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png  used on input line 431.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png, id=854, 722.7pt x 578.16pt>
+<img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png, id=871, 722.7pt x 578.16pt>
 File: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png Graphic file (type png)
 <use img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png>
-Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png  used on input line 430.
+Package pdftex.def Info: img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png  used on input line 437.
 (pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
 
 
-[32 <./img/FH_model/Simple_cycle/loss_plot_fixed.png> <./img/FH_model/Simple_cycle/L2histoFNO.png>]
+[36 <./img/FH_model/Simple_cycle/loss_plot_fixed.png> <./img/FH_model/Simple_cycle/L2histoFNO.png>]
 
-[33 <./img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42_v2.png>]
+[37 <./img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42_v2.png>]
 
-[34 <./img/FH_model/ER_Network/FNO/HHpeaks_N=10.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=100.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=200.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=300.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=400.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=500.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=600.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=700.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=800.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=900.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png>]
+[38 <./img/FH_model/ER_Network/FNO/HHpeaks_N=10.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=100.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=200.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=300.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=400.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=500.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=600.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=700.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=800.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=900.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=1000.png> <./img/FH_model/ER_Network/FNO/HHpeaks_N=2000.png>]
 
-[35 <./img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png>]
+[39 <./img/FH_model/ER_Network/FNO/L2histoFNO_N=10.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=100.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=200.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=300.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=400.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=500.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=600.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=700.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=800.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=900.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=1000.png> <./img/FH_model/ER_Network/FNO/L2histoFNO_N=2000.png>]
 
-[36 <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png>]
+[40 <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=10.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=100.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=200.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=300.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=400.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=500.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=600.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=700.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=800.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=900.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=1000.png> <./img/FH_model/ER_Network/FNO/loss_plot_fixed_N=2000.png>]
 File: img/FH_model/BA_Network/network_plot_BA_N=100_v2.png Graphic file (type png)
 <use img/FH_model/BA_Network/network_plot_BA_N=100_v2.png>
-Package pdftex.def Info: img/FH_model/BA_Network/network_plot_BA_N=100_v2.png  used on input line 454.
+Package pdftex.def Info: img/FH_model/BA_Network/network_plot_BA_N=100_v2.png  used on input line 463.
 (pdftex.def)             Requested size: 383.03122pt x 191.63855pt.
-
-
-[37
-
-]
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png, id=931, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png, id=940, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png  used on input line 471.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png  used on input line 480.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png, id=932, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png, id=941, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png  used on input line 477.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png  used on input line 486.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png, id=933, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png, id=942, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png  used on input line 483.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png  used on input line 492.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png, id=934, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png, id=943, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png  used on input line 492.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png  used on input line 501.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png, id=935, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png, id=944, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png  used on input line 498.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png  used on input line 507.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png, id=936, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png, id=945, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png  used on input line 504.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png  used on input line 513.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png, id=937, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png, id=946, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png  used on input line 513.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png  used on input line 522.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png, id=938, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png, id=947, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png  used on input line 519.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png  used on input line 528.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png, id=939, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png, id=948, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png  used on input line 525.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png  used on input line 534.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png, id=940, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png, id=949, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png  used on input line 534.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png  used on input line 543.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png, id=941, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png, id=950, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png  used on input line 540.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png  used on input line 549.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png, id=942, 1156.32pt x 578.16pt>
+<img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png, id=951, 1156.32pt x 578.16pt>
 File: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png Graphic file (type png)
 <use img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png  used on input line 546.
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png  used on input line 555.
 (pdftex.def)             Requested size: 122.57278pt x 61.28642pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png, id=943, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png  used on input line 564.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png, id=944, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png  used on input line 570.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png, id=945, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png  used on input line 576.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png, id=946, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png  used on input line 585.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png, id=947, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png  used on input line 591.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png, id=948, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png  used on input line 597.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png, id=949, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png  used on input line 606.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png, id=950, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png  used on input line 612.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png, id=951, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png  used on input line 618.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png, id=952, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png  used on input line 627.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png, id=953, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png  used on input line 633.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png, id=954, 614.295pt x 614.295pt>
-File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png  used on input line 639.
-(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
-
-
-LaTeX Warning: Float too large for page by 37.76216pt on input line 645.
-
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png, id=955, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png  used on input line 655.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png, id=956, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png  used on input line 661.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png, id=957, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png  used on input line 667.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png, id=958, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png  used on input line 676.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png, id=959, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png  used on input line 682.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png, id=960, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png  used on input line 688.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png, id=961, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png  used on input line 697.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png, id=962, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png  used on input line 703.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png, id=963, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png  used on input line 709.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png, id=964, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png  used on input line 718.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png, id=965, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png  used on input line 724.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png, id=966, 722.7pt x 578.16pt>
-File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png Graphic file (type png)
-<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png>
-Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png  used on input line 730.
-(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
-
-
-[38 <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png>]
-
-[39 <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png>]
-
-[40 <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png>]
-<img/FH_model/error_FNO_scalingN_v2.png, id=1018, 1144.7568pt x 494.3268pt>
-File: img/FH_model/error_FNO_scalingN_v2.png Graphic file (type png)
-<use img/FH_model/error_FNO_scalingN_v2.png>
-Package pdftex.def Info: img/FH_model/error_FNO_scalingN_v2.png  used on input line 753.
-(pdftex.def)             Requested size: 306.42613pt x 132.31596pt.
 
 
 [41
 
+]
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png, id=960, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png  used on input line 573.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png, id=961, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png  used on input line 579.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png, id=962, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png  used on input line 585.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png, id=963, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png  used on input line 594.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png, id=964, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png  used on input line 600.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png, id=965, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png  used on input line 606.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png, id=966, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png  used on input line 615.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png, id=967, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png  used on input line 621.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png, id=968, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png  used on input line 627.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png, id=969, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png  used on input line 636.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png, id=970, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png  used on input line 642.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+<img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png, id=971, 614.295pt x 614.295pt>
+File: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png  used on input line 648.
+(pdftex.def)             Requested size: 122.57278pt x 122.56624pt.
+
+
+LaTeX Warning: Float too large for page by 37.76216pt on input line 654.
+
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png, id=972, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png  used on input line 664.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png, id=973, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png  used on input line 670.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png, id=974, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png  used on input line 676.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png, id=975, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png  used on input line 685.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png, id=976, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png  used on input line 691.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png, id=977, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png  used on input line 697.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png, id=978, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png  used on input line 706.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png, id=979, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png  used on input line 712.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png, id=980, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png  used on input line 718.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png, id=981, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png  used on input line 727.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png, id=982, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png  used on input line 733.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+<img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png, id=983, 722.7pt x 578.16pt>
+File: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png Graphic file (type png)
+<use img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png>
+Package pdftex.def Info: img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png  used on input line 739.
+(pdftex.def)             Requested size: 122.57278pt x 98.05652pt.
+
+
+[42 <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=10.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=600.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=1000.png> <./img/FH_model/BA_Network/FNO/HHpeaks_S=42_N=2000.png>]
+
+[43 <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=10.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=600.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=1000.png> <./img/FH_model/BA_Network/FNO/L2histoFNO_S=42_N=2000.png>]
+
+[44 <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=10.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=100.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=200.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=300.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=400.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=500.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=600.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=700.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=800.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=900.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=1000.png> <./img/FH_model/BA_Network/FNO/loss_plot_fixed_S=42_N=2000.png>]
+<img/FH_model/error_FNO_scalingN_v2.png, id=1034, 1144.7568pt x 494.3268pt>
+File: img/FH_model/error_FNO_scalingN_v2.png Graphic file (type png)
+<use img/FH_model/error_FNO_scalingN_v2.png>
+Package pdftex.def Info: img/FH_model/error_FNO_scalingN_v2.png  used on input line 763.
+(pdftex.def)             Requested size: 383.03122pt x 165.39873pt.
+
+
+[45
+
  <./img/FH_model/error_FNO_scalingN_v2.png>]
 LaTeX Font Info:    Font shape `U/BOONDOX-ds/m/n' will be
-(Font)              scaled to size 14.4pt on input line 763.
+(Font)              scaled to size 14.4pt on input line 773.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 763.
+(hyperref)                removing `math shift' on input line 773.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 763.
+(hyperref)                removing `math shift' on input line 773.
 
-<img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png, id=1026, 859.2903pt x 498.663pt>
+<img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png, id=1043, 859.2903pt x 498.663pt>
 File: img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png Graphic file (type png)
 <use img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png>
-Package pdftex.def Info: img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png  used on input line 770.
+Package pdftex.def Info: img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png  used on input line 780.
 (pdftex.def)             Requested size: 306.42613pt x 177.82173pt.
 
 
-[42
+[46
 
  <./img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png>]
-<img/FH_model/BA_Network/Spectral_gap_BA.png, id=1042, 715.473pt x 498.663pt>
+<img/FH_model/BA_Network/Spectral_gap_BA.png, id=1060, 715.473pt x 498.663pt>
 File: img/FH_model/BA_Network/Spectral_gap_BA.png Graphic file (type png)
 <use img/FH_model/BA_Network/Spectral_gap_BA.png>
-Package pdftex.def Info: img/FH_model/BA_Network/Spectral_gap_BA.png  used on input line 790.
+Package pdftex.def Info: img/FH_model/BA_Network/Spectral_gap_BA.png  used on input line 800.
 (pdftex.def)             Requested size: 187.6874pt x 130.80588pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 791.
-<img/FH_model/ER_Network/Spectral_gap_ER.png, id=1043, 715.473pt x 498.663pt>
+(Font)              scaled to size 5.0pt on input line 801.
+<img/FH_model/ER_Network/Spectral_gap_ER.png, id=1061, 715.473pt x 498.663pt>
 File: img/FH_model/ER_Network/Spectral_gap_ER.png Graphic file (type png)
 <use img/FH_model/ER_Network/Spectral_gap_ER.png>
-Package pdftex.def Info: img/FH_model/ER_Network/Spectral_gap_ER.png  used on input line 796.
+Package pdftex.def Info: img/FH_model/ER_Network/Spectral_gap_ER.png  used on input line 806.
 (pdftex.def)             Requested size: 187.6874pt x 130.80588pt.
 
-Underfull \hbox (badness 2582) in paragraph at lines 797--797
-[]\T1/zpltlf/b/n/10 Figure 3.17: |\T1/zpltlf/m/n/10 Scal-ing of the spec-tral
+Underfull \hbox (badness 2582) in paragraph at lines 807--807
+[]\T1/zpltlf/b/n/10 Figure 3.18: |\T1/zpltlf/m/n/10 Scal-ing of the spec-tral
  []
 
 
 
-[43 <./img/FH_model/BA_Network/Spectral_gap_BA.png> <./img/FH_model/ER_Network/Spectral_gap_ER.png>]
+[47 <./img/FH_model/BA_Network/Spectral_gap_BA.png> <./img/FH_model/ER_Network/Spectral_gap_ER.png>]
 
-[44]
+[48]
+<img/Real_Data/maze_dataset.png, id=1081, 233.87375pt x 284.56313pt>
+File: img/Real_Data/maze_dataset.png Graphic file (type png)
+<use img/Real_Data/maze_dataset.png>
+Package pdftex.def Info: img/Real_Data/maze_dataset.png  used on input line 977.
+(pdftex.def)             Requested size: 306.42613pt x 372.88463pt.
+LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
+(Font)              scaled to size 10.0pt on input line 978.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[45]
+[49]
 
-[46]
-LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 1002.
-<img/Real_Data/loss_LSTM.png, id=1077, 570.933pt x 426.393pt>
+[50 <./img/Real_Data/maze_dataset.png>]
+
+[51]
+<img/Real_Data/loss_LSTM.png, id=1101, 570.933pt x 426.393pt>
 File: img/Real_Data/loss_LSTM.png Graphic file (type png)
 <use img/Real_Data/loss_LSTM.png>
-Package pdftex.def Info: img/Real_Data/loss_LSTM.png  used on input line 1014.
+Package pdftex.def Info: img/Real_Data/loss_LSTM.png  used on input line 1032.
 (pdftex.def)             Requested size: 183.85335pt x 137.30736pt.
-<img/Real_Data/loss_FNO.png, id=1078, 570.933pt x 426.393pt>
+<img/Real_Data/loss_FNO.png, id=1102, 570.933pt x 426.393pt>
 File: img/Real_Data/loss_FNO.png Graphic file (type png)
 <use img/Real_Data/loss_FNO.png>
-Package pdftex.def Info: img/Real_Data/loss_FNO.png  used on input line 1019.
+Package pdftex.def Info: img/Real_Data/loss_FNO.png  used on input line 1037.
 (pdftex.def)             Requested size: 183.85335pt x 137.30736pt.
-<img/Real_Data/histogram_test_set_ridge_regression_V2.png, id=1080, 1149.093pt x 428.5611pt>
+<img/Real_Data/histogram_test_set_ridge_regression_V2.png, id=1104, 1149.093pt x 428.5611pt>
 File: img/Real_Data/histogram_test_set_ridge_regression_V2.png Graphic file (type png)
 <use img/Real_Data/histogram_test_set_ridge_regression_V2.png>
-Package pdftex.def Info: img/Real_Data/histogram_test_set_ridge_regression_V2.png  used on input line 1032.
+Package pdftex.def Info: img/Real_Data/histogram_test_set_ridge_regression_V2.png  used on input line 1050.
 (pdftex.def)             Requested size: 383.03122pt x 142.85117pt.
-<img/Real_Data/histogram_test_set_LSTM.png, id=1081, 1148.3703pt x 428.5611pt>
+<img/Real_Data/histogram_test_set_LSTM.png, id=1105, 1148.3703pt x 428.5611pt>
 File: img/Real_Data/histogram_test_set_LSTM.png Graphic file (type png)
 <use img/Real_Data/histogram_test_set_LSTM.png>
-Package pdftex.def Info: img/Real_Data/histogram_test_set_LSTM.png  used on input line 1039.
+Package pdftex.def Info: img/Real_Data/histogram_test_set_LSTM.png  used on input line 1057.
 (pdftex.def)             Requested size: 383.03122pt x 142.9427pt.
-<img/Real_Data/histogram_test_set_FNO.png, id=1082, 1148.3703pt x 428.5611pt>
+<img/Real_Data/histogram_test_set_FNO.png, id=1106, 1148.3703pt x 428.5611pt>
 File: img/Real_Data/histogram_test_set_FNO.png Graphic file (type png)
 <use img/Real_Data/histogram_test_set_FNO.png>
-Package pdftex.def Info: img/Real_Data/histogram_test_set_FNO.png  used on input line 1046.
+Package pdftex.def Info: img/Real_Data/histogram_test_set_FNO.png  used on input line 1064.
 (pdftex.def)             Requested size: 383.03122pt x 142.9427pt.
 
 
-[47]
-<img/Real_Data/Results_ridge_regression.png, id=1097, 719.8092pt x 1255.3299pt>
+[52]
+<img/Real_Data/Results_ridge_regression.png, id=1121, 719.8092pt x 1255.3299pt>
 File: img/Real_Data/Results_ridge_regression.png Graphic file (type png)
 <use img/Real_Data/Results_ridge_regression.png>
-Package pdftex.def Info: img/Real_Data/Results_ridge_regression.png  used on input line 1057.
+Package pdftex.def Info: img/Real_Data/Results_ridge_regression.png  used on input line 1075.
 (pdftex.def)             Requested size: 383.03122pt x 668.00336pt.
 
 
-LaTeX Warning: Float too large for page by 98.3578pt on input line 1060.
+LaTeX Warning: Float too large for page by 98.3578pt on input line 1078.
 
-<img/Real_Data/Results_LSTM.png, id=1098, 719.8092pt x 1255.3299pt>
+<img/Real_Data/Results_LSTM.png, id=1122, 719.8092pt x 1255.3299pt>
 File: img/Real_Data/Results_LSTM.png Graphic file (type png)
 <use img/Real_Data/Results_LSTM.png>
-Package pdftex.def Info: img/Real_Data/Results_LSTM.png  used on input line 1064.
+Package pdftex.def Info: img/Real_Data/Results_LSTM.png  used on input line 1082.
 (pdftex.def)             Requested size: 383.03122pt x 668.00336pt.
 
-LaTeX Warning: Float too large for page by 98.3578pt on input line 1067.
+LaTeX Warning: Float too large for page by 98.3578pt on input line 1085.
 
-<img/Real_Data/Results_FNO.png, id=1099, 719.8092pt x 1255.3299pt>
+<img/Real_Data/Results_FNO.png, id=1123, 719.8092pt x 1255.3299pt>
 File: img/Real_Data/Results_FNO.png Graphic file (type png)
 <use img/Real_Data/Results_FNO.png>
-Package pdftex.def Info: img/Real_Data/Results_FNO.png  used on input line 1071.
+Package pdftex.def Info: img/Real_Data/Results_FNO.png  used on input line 1089.
 (pdftex.def)             Requested size: 383.03122pt x 668.00336pt.
 
-LaTeX Warning: Float too large for page by 98.3578pt on input line 1074.
+LaTeX Warning: Float too large for page by 98.3578pt on input line 1092.
 
 )
 
-[48 <./img/Real_Data/loss_LSTM.png> <./img/Real_Data/loss_FNO.png>]
+[53 <./img/Real_Data/loss_LSTM.png> <./img/Real_Data/loss_FNO.png>]
 
-[49 <./img/Real_Data/histogram_test_set_ridge_regression_V2.png> <./img/Real_Data/histogram_test_set_LSTM.png> <./img/Real_Data/histogram_test_set_FNO.png>]
+[54 <./img/Real_Data/histogram_test_set_ridge_regression_V2.png> <./img/Real_Data/histogram_test_set_LSTM.png> <./img/Real_Data/histogram_test_set_FNO.png>]
 
-[50 <./img/Real_Data/Results_ridge_regression.png>]
+[55 <./img/Real_Data/Results_ridge_regression.png>]
 
-[51 <./img/Real_Data/Results_LSTM.png>]
+[56 <./img/Real_Data/Results_LSTM.png>]
 
-[52 <./img/Real_Data/Results_FNO.png>]
+[57 <./img/Real_Data/Results_FNO.png>]
 
-[53
+[58
 
 
 ]
 
-[54] (./chapters/Chapter4.tex
+[59]
+
+[60] (./chapters/Chapter4.tex
 Chapter 4.
 
 Overfull \hbox (6.21703pt too wide) in paragraph at lines 8--12
@@ -3033,78 +3054,78 @@ Overfull \hbox (6.21703pt too wide) in paragraph at lines 8--12
 
 
 
-[55
+[61
 
 
 ]
 
-[56]
+[62]
 
-[57]
+[63]
 
-[58]
+[64]
 
-[59]
+[65]
 Overfull \hbox (6.88588pt too wide) in paragraph at lines 152--154
 []\T1/zpltlf/m/n/10.95 For the tra-jec-tory term we con-sid-ered the rel-a-tive L2 term for scale-invariance
  []
 
 
 
-[60]
+[66]
 Overfull \hbox (5.11258pt too wide) in paragraph at lines 175--177
 []\T1/zpltlf/b/n/10.95 PI-DeepONet: \T1/zpltlf/m/n/10.95 Uti-lized the stan-dard Branch/Trunk ar-chi-tec-ture (same
  []
 
 
 
-[61]
+[67]
 
-[62]
-<img/Allen-Cahn/dynamics_Allen_Cahn_v2.png, id=1221, 1076.823pt x 589.7232pt>
+[68]
+<img/Allen-Cahn/dynamics_Allen_Cahn_v2.png, id=1249, 1076.823pt x 589.7232pt>
 File: img/Allen-Cahn/dynamics_Allen_Cahn_v2.png Graphic file (type png)
 <use img/Allen-Cahn/dynamics_Allen_Cahn_v2.png>
 Package pdftex.def Info: img/Allen-Cahn/dynamics_Allen_Cahn_v2.png  used on input line 266.
 (pdftex.def)             Requested size: 383.03122pt x 209.76262pt.
 
 
-[63]
-<img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png, id=1236, 701.7417pt x 413.3844pt>
+[69]
+<img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png, id=1264, 701.7417pt x 413.3844pt>
 File: img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png Graphic file (type png)
 <use img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png>
 Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png  used on input line 356.
 (pdftex.def)             Requested size: 246.67462pt x 145.31116pt.
-<img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png, id=1237, 715.473pt x 426.393pt>
+<img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png, id=1265, 715.473pt x 426.393pt>
 File: img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png Graphic file (type png)
 <use img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png>
 Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png  used on input line 356.
 (pdftex.def)             Requested size: 246.67462pt x 147.00815pt.
-<img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png, id=1238, 712.5822pt x 426.393pt>
+<img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png, id=1266, 712.5822pt x 426.393pt>
 File: img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png Graphic file (type png)
 <use img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png>
 Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png  used on input line 356.
 (pdftex.def)             Requested size: 246.67462pt x 147.6002pt.
-<img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png, id=1239, 702.4644pt x 413.3844pt>
+<img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png, id=1267, 702.4644pt x 413.3844pt>
 File: img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png Graphic file (type png)
 <use img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png>
 Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png  used on input line 356.
 (pdftex.def)             Requested size: 246.67462pt x 145.15977pt.
-<img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png, id=1240, 697.4055pt x 409.0482pt>
+<img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png, id=1268, 697.4055pt x 409.0482pt>
 File: img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png Graphic file (type png)
 <use img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png>
 Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png  used on input line 356.
 (pdftex.def)             Requested size: 246.67462pt x 144.67946pt.
-<img/Allen-Cahn/Histograms/hist_test_set_LFNO.png, id=1241, 714.7503pt x 426.393pt>
-File: img/Allen-Cahn/Histograms/hist_test_set_LFNO.png Graphic file (type png)
-<use img/Allen-Cahn/Histograms/hist_test_set_LFNO.png>
-Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_LFNO.png  used on input line 356.
+<img/Allen-Cahn/Histograms/hist_test_set_LFNO_v2.png, id=1269, 714.7503pt x 426.393pt>
+File: img/Allen-Cahn/Histograms/hist_test_set_LFNO_v2.png Graphic file (type png)
+<use img/Allen-Cahn/Histograms/hist_test_set_LFNO_v2.png>
+Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_LFNO_v2.png  used on input line 356.
 (pdftex.def)             Requested size: 246.67462pt x 147.15779pt.
 
 Overfull \hbox (44.86063pt too wide) in paragraph at lines 458--488
  [] 
  []
 
-<img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png, id=1244, 1846.4985pt x 484.9317pt>
+<img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png, id=1272, 1846.4985pt x 484.9317pt>
 File: img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png Graphic file (type png)
 <use img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png>
 Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png  used on input line 519.
@@ -3114,7 +3135,7 @@ Overfull \hbox (16.82219pt too wide) in paragraph at lines 519--520
  [][] 
  []
 
-<img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png, id=1245, 1847.2212pt x 484.9317pt>
+<img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png, id=1273, 1847.2212pt x 484.9317pt>
 File: img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png Graphic file (type png)
 <use img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png>
 Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png  used on input line 530.
@@ -3124,7 +3145,7 @@ Overfull \hbox (16.94121pt too wide) in paragraph at lines 530--531
  [][] 
  []
 
-<img/Allen-Cahn/Heatmaps/heatmap_leno.png, id=1246, 1847.2212pt x 484.9317pt>
+<img/Allen-Cahn/Heatmaps/heatmap_leno.png, id=1274, 1847.2212pt x 484.9317pt>
 File: img/Allen-Cahn/Heatmaps/heatmap_leno.png Graphic file (type png)
 <use img/Allen-Cahn/Heatmaps/heatmap_leno.png>
 Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_leno.png  used on input line 541.
@@ -3134,7 +3155,7 @@ Overfull \hbox (16.94121pt too wide) in paragraph at lines 541--542
  [][] 
  []
 
-<img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png, id=1247, 1846.4985pt x 484.9317pt>
+<img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png, id=1275, 1846.4985pt x 484.9317pt>
 File: img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png Graphic file (type png)
 <use img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png>
 Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png  used on input line 569.
@@ -3144,7 +3165,7 @@ Overfull \hbox (16.82219pt too wide) in paragraph at lines 569--570
  [][] 
  []
 
-<img/Allen-Cahn/Heatmaps/heatmap_FNO.png, id=1248, 1847.2212pt x 484.9317pt>
+<img/Allen-Cahn/Heatmaps/heatmap_FNO.png, id=1276, 1847.2212pt x 484.9317pt>
 File: img/Allen-Cahn/Heatmaps/heatmap_FNO.png Graphic file (type png)
 <use img/Allen-Cahn/Heatmaps/heatmap_FNO.png>
 Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_FNO.png  used on input line 580.
@@ -3154,7 +3175,7 @@ Overfull \hbox (16.94121pt too wide) in paragraph at lines 580--581
  [][] 
  []
 
-<img/Allen-Cahn/Heatmaps/heatmap_LFNO.png, id=1249, 1847.2212pt x 484.9317pt>
+<img/Allen-Cahn/Heatmaps/heatmap_LFNO.png, id=1277, 1847.2212pt x 484.9317pt>
 File: img/Allen-Cahn/Heatmaps/heatmap_LFNO.png Graphic file (type png)
 <use img/Allen-Cahn/Heatmaps/heatmap_LFNO.png>
 Package pdftex.def Info: img/Allen-Cahn/Heatmaps/heatmap_LFNO.png  used on input line 591.
@@ -3169,82 +3190,82 @@ LaTeX Warning: Float too large for page by 16.28185pt on input line 599.
 
 
 
-[64 <./img/Allen-Cahn/dynamics_Allen_Cahn_v2.png>]
+[70 <./img/Allen-Cahn/dynamics_Allen_Cahn_v2.png>]
 
-[65 <./img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_LFNO.png>]
+[71 <./img/Allen-Cahn/Histograms/hist_test_set_deeponet_blind_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_FNO_blind_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_deeponet_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_FNO_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_leno_v2.png> <./img/Allen-Cahn/Histograms/hist_test_set_LFNO_v2.png>]
 
-[66]
+[72]
 
-[67 <./img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png> <./img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png> <./img/Allen-Cahn/Heatmaps/heatmap_leno.png> <./img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png> <./img/Allen-Cahn/Heatmaps/heatmap_FNO.png> <./img/Allen-Cahn/Heatmaps/heatmap_LFNO.png>]
+[73 <./img/Allen-Cahn/Heatmaps/heatmap_DeepONet_Blind.png> <./img/Allen-Cahn/Heatmaps/heatmap_DeepONet.png> <./img/Allen-Cahn/Heatmaps/heatmap_leno.png> <./img/Allen-Cahn/Heatmaps/heatmap_FNO_blind.png> <./img/Allen-Cahn/Heatmaps/heatmap_FNO.png> <./img/Allen-Cahn/Heatmaps/heatmap_LFNO.png>]
 
-[68]
-<img/LFNO_FH/dynamics.png, id=1293, 1083.3273pt x 1149.8157pt>
+[74]
+<img/LFNO_FH/dynamics.png, id=1321, 1083.3273pt x 1149.8157pt>
 File: img/LFNO_FH/dynamics.png Graphic file (type png)
 <use img/LFNO_FH/dynamics.png>
 Package pdftex.def Info: img/LFNO_FH/dynamics.png  used on input line 705.
 (pdftex.def)             Requested size: 383.03122pt x 406.52945pt.
 
 
-[69]
+[75]
 
-[70 <./img/LFNO_FH/dynamics.png>]
+[76 <./img/LFNO_FH/dynamics.png>]
 
-[71]
-<img/LFNO_FH/loss.png, id=1316, 714.7503pt x 354.123pt>
+[77]
+<img/LFNO_FH/loss.png, id=1345, 714.7503pt x 354.123pt>
 File: img/LFNO_FH/loss.png Graphic file (type png)
 <use img/LFNO_FH/loss.png>
 Package pdftex.def Info: img/LFNO_FH/loss.png  used on input line 738.
 (pdftex.def)             Requested size: 325.57887pt x 161.30992pt.
-<img/LFNO_FH/Diffusion_coefficient_V.png, id=1317, 714.7503pt x 426.393pt>
+<img/LFNO_FH/Diffusion_coefficient_V.png, id=1346, 714.7503pt x 426.393pt>
 File: img/LFNO_FH/Diffusion_coefficient_V.png Graphic file (type png)
 <use img/LFNO_FH/Diffusion_coefficient_V.png>
 Package pdftex.def Info: img/LFNO_FH/Diffusion_coefficient_V.png  used on input line 747.
 (pdftex.def)             Requested size: 183.85335pt x 109.68193pt.
-<img/LFNO_FH/Diffusion_coefficient_w.png, id=1318, 714.7503pt x 426.393pt>
+<img/LFNO_FH/Diffusion_coefficient_w.png, id=1347, 714.7503pt x 426.393pt>
 File: img/LFNO_FH/Diffusion_coefficient_w.png Graphic file (type png)
 <use img/LFNO_FH/Diffusion_coefficient_w.png>
 Package pdftex.def Info: img/LFNO_FH/Diffusion_coefficient_w.png  used on input line 751.
 (pdftex.def)             Requested size: 183.85335pt x 109.68193pt.
 
 
-[72 <./img/LFNO_FH/loss.png> <./img/LFNO_FH/Diffusion_coefficient_V.png> <./img/LFNO_FH/Diffusion_coefficient_w.png>]
-<img/LFNO_FH/Hist_test_set.png, id=1328, 714.7503pt x 426.393pt>
+[78 <./img/LFNO_FH/loss.png> <./img/LFNO_FH/Diffusion_coefficient_V.png> <./img/LFNO_FH/Diffusion_coefficient_w.png>]
+<img/LFNO_FH/Hist_test_set.png, id=1357, 714.7503pt x 426.393pt>
 File: img/LFNO_FH/Hist_test_set.png Graphic file (type png)
 <use img/LFNO_FH/Hist_test_set.png>
 Package pdftex.def Info: img/LFNO_FH/Hist_test_set.png  used on input line 761.
 (pdftex.def)             Requested size: 287.2734pt x 171.38046pt.
-<img/LFNO_FH/Results_test_set.png, id=1331, 1848.6666pt x 991.5444pt>
+<img/LFNO_FH/Results_test_set.png, id=1360, 1848.6666pt x 991.5444pt>
 File: img/LFNO_FH/Results_test_set.png Graphic file (type png)
 <use img/LFNO_FH/Results_test_set.png>
 Package pdftex.def Info: img/LFNO_FH/Results_test_set.png  used on input line 770.
 (pdftex.def)             Requested size: 383.03122pt x 205.43146pt.
-<img/LFNO_FH/Results_single_nodes_test_set_v2.png, id=1332, 1136.0844pt x 701.7417pt>
+<img/LFNO_FH/Results_single_nodes_test_set_v2.png, id=1361, 1136.0844pt x 701.7417pt>
 File: img/LFNO_FH/Results_single_nodes_test_set_v2.png Graphic file (type png)
 <use img/LFNO_FH/Results_single_nodes_test_set_v2.png>
 Package pdftex.def Info: img/LFNO_FH/Results_single_nodes_test_set_v2.png  used on input line 777.
 (pdftex.def)             Requested size: 344.72575pt x 212.93336pt.
 
 
-[73 <./img/LFNO_FH/Hist_test_set.png>]
+[79 <./img/LFNO_FH/Hist_test_set.png>]
 
-[74 <./img/LFNO_FH/Results_test_set.png> <./img/LFNO_FH/Results_single_nodes_test_set_v2.png>]
-<img/LFNO_FH/Reactions_fit.png, id=1351, 1309.5324pt x 701.7417pt>
+[80 <./img/LFNO_FH/Results_test_set.png> <./img/LFNO_FH/Results_single_nodes_test_set_v2.png>]
+<img/LFNO_FH/Reactions_fit.png, id=1379, 1309.5324pt x 701.7417pt>
 File: img/LFNO_FH/Reactions_fit.png Graphic file (type png)
 <use img/LFNO_FH/Reactions_fit.png>
 Package pdftex.def Info: img/LFNO_FH/Reactions_fit.png  used on input line 798.
 (pdftex.def)             Requested size: 383.03122pt x 205.25594pt.
-<img/LFNO_FH/Reactions_fit_[-1,1].png, id=1352, 1317.4821pt x 701.7417pt>
+<img/LFNO_FH/Reactions_fit_[-1,1].png, id=1380, 1317.4821pt x 701.7417pt>
 File: img/LFNO_FH/Reactions_fit_[-1,1].png Graphic file (type png)
 <use img/LFNO_FH/Reactions_fit_[-1,1].png>
 Package pdftex.def Info: img/LFNO_FH/Reactions_fit_[-1,1].png  used on input line 805.
 (pdftex.def)             Requested size: 383.03122pt x 204.01385pt.
 ) (./chapters/conclusions.tex
 
-[75]
+[81]
 
-[76 <./img/LFNO_FH/Reactions_fit.png> <./img/LFNO_FH/Reactions_fit_[-1,1].png>])
+[82 <./img/LFNO_FH/Reactions_fit.png> <./img/LFNO_FH/Reactions_fit_[-1,1].png>])
 
-[77
+[83
 
 
 ]
@@ -3252,14 +3273,14 @@ Underfull \vbox (badness 1436) has occurred while \output is active []
 
 
 
-[78]
+[84]
 
-[79]
+[85]
 \openout2 = `chapters/appendixA.aux'.
 
  (./chapters/appendixA.tex
 
-[80
+[86
 
 
 
@@ -3267,16 +3288,16 @@ Underfull \vbox (badness 1436) has occurred while \output is active []
 Appendix A.
 
 
-[81]
+[87]
 
-[82])
+[88])
 
-[83]
+[89]
 \openout2 = `chapters/AppendixC.aux'.
 
  (./chapters/AppendixC.tex
 
-[84
+[90
 
 
 
@@ -3286,35 +3307,35 @@ Appendix A.
 Appendix B.
 
 
-[85])
+[91])
 
-[86]
+[92]
 No file main.gls.
 No file main.acr.
 
 
-[87
+[93
 
 
 ]
 
-[88
+[94
 
 
 ] (./main.bbl
 
-[89
+[95
 
 
 ]
 
-[90]
+[96]
 
-[91])
+[97])
 
-[92] (./docs/acknowledgments.tex)
+[98] (./docs/acknowledgments.tex)
 
-[93
+[99
 
 
 
@@ -3329,13 +3350,13 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 78DEBF152062E8363D82F99F55FAA2CA;13442.
+(rerunfilecheck)             Checksum: 9FC5C14F3ED8FB0120A9074F4A2569D4;13442.
  ) 
 Here is how much of TeX's memory you used:
- 65008 strings out of 473190
- 1381828 string characters out of 5715801
- 1978623 words of memory out of 5000000
- 86793 multiletter control sequences out of 15000+600000
+ 65023 strings out of 473190
+ 1382187 string characters out of 5715801
+ 1979066 words of memory out of 5000000
+ 86801 multiletter control sequences out of 15000+600000
  650435 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  123i,16n,131p,2501b,2520s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3409,10 +3430,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/boondox/zxxrl8a.pfb>
-Output written on main.pdf (103 pages, 34228178 bytes).
+Output written on main.pdf (109 pages, 34343731 bytes).
 PDF statistics:
- 1701 PDF objects out of 1728 (max. 8388607)
- 1244 compressed objects within 13 object streams
- 339 named destinations out of 1000 (max. 500000)
- 1383 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1731 PDF objects out of 2073 (max. 8388607)
+ 1266 compressed objects within 13 object streams
+ 346 named destinations out of 1000 (max. 500000)
+ 1388 words of extra memory for PDF output out of 10000 (max. 10000000)
 
