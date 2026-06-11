@@ -37,7 +37,7 @@ where $\mathbf{U}(t) \in \mathbb{R}^{N \times d_u}$ is the state of all nodes at
 
 While the spectral properties of $\mathbf{L}$ are well-studied in network science, the application of Operator Learning to predict these dynamics on complex graphs 
 remains underexplored. 
-% Questa era la questione nel progetto di Deep Learning. In questa tesi questa frase la tolgo?
+The shift from the continuous paradigm to the discrete domain has diverse implications. For instance the advantage of Operator architectures becomes less clear, since we don't have anymore a continuous domain on which we can exploit the discretization-invariance property. However, we believe that this feature could be still useful when analyzing networks of varying sizes.
 Specifically, the challenge lies in whether Neural Operators can effectively learn these dynamics "blindly" from nodal time-series, 
 or if explicitly informing the network with the spectral geometry of $\mathbf{L}$ (via its eigendecomposition) provides a necessary inductive bias for generalization.
 
@@ -65,7 +65,7 @@ This baseline represents the purely data-driven approach. The model ignores both
 \end{equation}
 Here, the network must implicitly learn both the diffusion operator $-\nu \mathbf{L}$ and the reaction operator $\mathbf{F}$ simultaneously from data. This implies that the network must statistically reconstruct the graph structure solely from the propagation of signals, a task that typically requires massive amounts of training data. Moreover, we decided, to compare the same families of architectures and further analyze the importance of using topological information for the prediction, to use continuous operator network, which required us to embed the graphs in a continuous spatial domains. This first level is the only approach which does not require topological information.
 
-\subsubsection{Level 2: Physics-Informed (Hybrid Nodal)}
+\subsubsection[Level 2: Physics-Informed (Hybrid Nodal)]{Level 2: Physics-Informed\footnote{We chose this name given the strong connection with the Physics Informed Neural Networks (PINNs) family.} (Hybrid Nodal)}
 In this approach, we injected physical knowledge by using an \textbf{Implicit-Explicit (IMEX)} solver \footnote{see Appendix \ref{app:C}.}. We assume the linear diffusion term $-\nu \mathbf{L}$ is known, and the network is tasked \textit{only} with approximating the reaction term $\mathbf{F}(\mathbf{u})$.
 
 The update rule enforces the diffusion physics exactly:

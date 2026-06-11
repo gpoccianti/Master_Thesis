@@ -39,13 +39,13 @@
 \contentsline {chapter}{\numberline {4}Chapter 4}{61}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Problem definition}{61}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.a}Reaction-Diffusion Dynamics on Complex Networks}{61}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Methodology}{62}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.a}Problem Formulation}{62}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.2}Methodology}{63}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.a}Problem Formulation}{63}{subsection.4.2.1}%
 \contentsline {subsubsection}{Experimental Design: Hierarchy of Inductive Bias}{63}{subsubsection*.38}%
 \contentsline {subsubsection}{Level 1: Totally Blind (Black-Box)}{63}{subsubsection*.39}%
 \contentsline {subsubsection}{Level 2: Physics-Informed (Hybrid Nodal)}{63}{subsubsection*.40}%
 \contentsline {subsubsection}{Level 3: Topology-Informed (Hybrid Spectral)}{64}{subsubsection*.41}%
-\contentsline {subsection}{\numberline {4.2.b}Training Objective: Composite Loss Strategy}{64}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.b}Training Objective: Composite Loss Strategy}{65}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.c}Ground Truth Reaction Extraction}{65}{subsection.4.2.3}%
 \contentsline {subsubsection}{Loss Components}{65}{subsubsection*.42}%
 \contentsline {subsection}{\numberline {4.2.d}Neural Architectures Implementation}{66}{subsection.4.2.4}%

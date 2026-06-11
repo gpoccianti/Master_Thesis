@@ -100,7 +100,7 @@ Let $D' \subset \mathbb{R}^{d'}$ be a Lipschitz domain. The output Banach space 
 \end{enumerate}
 \end{assumption}
 
-The theoretical architecture of the Neural Operator, denoted as $NO_T(\sigma_1, \sigma_2, \sigma_3; D, D')$, represents the class of neural operators where $T \in \mathbb{N}$ is the number of integral layers (the depth of the network), $\sigma_1, \sigma_2, \sigma_3$ are the non-linear activation functions used respectively for the initial lifting mapping, the iterative kernel layers, and the final projection mapping, while $D$ and $D'$ are the input and output spatial domains. This architecture is specifically constructed so that its continuous layers can seamlessly approximate infinite-dimensional mappings with arbitrary precision. Note that for Fourier Neural Operator (see section \ref{DeepONet section}) $D=D'$.
+The theoretical architecture of the Neural Operator, denoted as $NO_T(\sigma_1, \sigma_2, \sigma_3; D, D')$, represents the class of neural operators where $T \in \mathbb{N}$ is the number of integral layers (the depth of the network), $\sigma_1, \sigma_2, \sigma_3$ are the continous, non polynomial, activation functions used respectively for the initial lifting mapping, the iterative kernel layers, and the final projection mapping, while $D$ and $D'$ are the input and output spatial domains. This architecture is specifically constructed so that its continuous layers can seamlessly approximate infinite-dimensional mappings with arbitrary precision. Note that for Fourier Neural Operator (see section \ref{DeepONet section}) $D=D'$.
 
 \begin{theorem}[Uniform Universal Approximation, Kovachki et al. \cite{kovachki2023neural}]
 Suppose the spaces $\mathcal{A}$ and $\mathcal{U}$ satisfy the aforementioned Assumptions and let $\mathcal{G}^{\dagger} : \mathcal{A} \to \mathcal{U}$ be a continuous operator. Let $\sigma_1, \sigma_2, \sigma_3$ be suitable non-polynomial continuous activation functions. 
@@ -174,7 +174,7 @@ higher resolution, without seeing any higher resolution data.
 
 As demonstrated in the numerical experiments for parametric PDEs in article \cite{li2020fourier}, the relative error of a discretization-invariant model remains consistent across different resolutions. This is formally expressed by the property that as the discretization becomes finer ($n \to \infty$), the discrete approximation converges to the continuous operator:
 \[ 
-\lim_{n \to \infty} \mathcal{G}_{\theta}(a_n) = \mathcal{G}_{\theta}(a) 
+\lim_{n \to \infty} \hat{\mathcal{G}}_{\theta}(D_n, a_n) = \mathcal{G}_{\theta}(a) 
 \]
 This feature is particularly valuable in neuroscience and complex systems modeling, where neural field dynamics or networked ODEs may be simulated at different spatial scales. A Neural Operator trained on a low-resolution brain atlas or a small neural network can, in principle, generalize its learned dynamics to higher-resolution representations or larger networks without requiring new training data.
 
@@ -247,10 +247,10 @@ As shown in Figure \ref{fig:fno_schema}, the architecture follows three main pha
     \item \textbf{Lifting:} The input function $a(x)$ is lifted to a higher-dimensional hidden representation $v_0(x)$ via a local transformation $P$ (typically a shallow fully connected network with activation $\sigma_1$): \\
     $v_0(x) = P(a(x)) = \sigma_1(W_{\text{in}} a(x) + b_{\text{in}}), \quad x \in D.$
     
-    \item \textbf{Iterative Kernel Updates:} For $t = 0, \dots, T-1$, the hidden representation is updated using a pointwise linear operator $W_t$, an integral kernel operator with parameterized kernel $\kappa_t$, and the non-linear activation function $\sigma_2$: \\
+    \item \textbf{Iterative Kernel Updates:} For $t = 0, \dots, T-1$, the hidden representation is updated using a pointwise linear operator $W_t$, an integral kernel operator with parameterized kernel $\kappa_t(x,y)=\kappa_t(x-y)$, and the non-linear activation function $\sigma_2$: \\
     $\displaystyle v_{t+1}(x) = \sigma_2 \left( W_t v_t(x) + \int_{D} \kappa_t(x,y) v_t(y) \, dy + b_t \right).$
     
-    \item \textbf{Projection:} The final hidden representation $v_T$ is projected back to the target space defined on $D'$ using another local transformation $Q$ (with activation $\sigma_3$): \\
+    \item \textbf{Projection:} The final hidden representation $v_T$ is projected back to the target space defined on $D'$ using another local transformation $Q$ \footnote{While represented here as a single-layer affine transformation for notational consistency, deeper configurations are often employed in practice} (with activation $\sigma_3$): \\
     $\mathcal{G}(a)(x) = Q(v_T(x)) = \sigma_3(W_{\text{out}} v_T(x) + b_{\text{out}}), \quad x \in D.$
 \end{enumerate}
 
