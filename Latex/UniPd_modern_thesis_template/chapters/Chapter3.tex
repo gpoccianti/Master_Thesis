@@ -9,7 +9,7 @@ First of all the reaction has been simulated numerically by solving the underlyi
 
 The numerical solutions were then collected to construct the datasets for the operator learning task. Specifically, in the initial studies on the FitzHugh-Nagumo and Hodgkin-Huxley models, the authors generated a total of 2000 trajectories, split into 1600 samples for the training set and 400 for the test set \cite{centofanti2024comconf, centofanti2024cma}. Subsequently, to handle the increased complexity and ensure comprehensive coverage of the dynamical behaviors in higher-dimensional spaces, the dataset size was expanded to a total of 3750 trajectories, comprising 3000 training examples, 375 for validation, and 375 for testing \cite{pellegrini2025mlcse}.
 
-Using these datasets, a FNO was trained to learn the non-linear mapping from the applied input current to the system's state variables (i.e., transmembrane potential, recovery, and gating variables). By leveraging the Fast Fourier Transform (FFT) on the uniform discretization grid, the FNO architecture computes the integral kernel operator directly in the frequency domain. This approach proved highly effective in capturing the global dependencies and multiscale temporal behaviors of the stiff ionic models, maintaining stable training and achieving very low relative $L^2$ errors across all the investigated dimensionalities. In figure \ref{fig:centofanti_dynamics} are reported four instances of the test set. From the authors' results we can see that there is an almost perfect superposition between the blue simulated output and the red dotted FNO prediction.
+Using these datasets, a FNO was trained to learn the non-linear mapping from the applied input current to the system's state variables (i.e., transmembrane potential, recovery, and gating variables). By leveraging the Fast Fourier Transform (FFT) on the uniform discretization grid, the FNO architecture computes the integral kernel operator directly in the frequency domain. This approach proved highly effective in capturing the global dependencies and multiscale temporal behaviors of the stiff ionic models, maintaining stable training and achieving very low relative $L^2$ errors across all the investigated dimensionalities. In figure \ref{fig:centofanti_dynamics} are reported four instances of the test set. From the authors' results we can see that there is an almost perfect superposition between the blue simulated output and the red dashed FNO prediction.
 
 The results across these studies demonstrate that FNOs are highly effective in learning the dynamics of stiff ionic models, consistently achieving low relative $L^2$ errors. Specifically, the optimized FNO architectures attained test errors of approximately 0.8\% for the FitzHugh-Nagumo model \cite{centofanti2024comconf}, 2.0\% for the Hodgkin-Huxley model \cite{centofanti2024cma}, and around 2.0\% even for the highly complex 41-variable O'Hara-Rudy model \cite{pellegrini2025mlcse}. Furthermore, the most recent findings emphasize the remarkable scalability of this approach: despite the substantial increase in system dimensionality, properly tuned FNOs maintain bounded training and test errors, with memory usage and training time scaling only linearly \cite{pellegrini2025mlcse}. %This confirms the capability of FNOs to accurately and efficiently capture complex electrophysiological dynamics, gracefully overcoming the curse of dimensionality that typically affects artificial neural networks in high-dimensional settings.
 
@@ -60,7 +60,7 @@ Furthermore, the training process exhibits stable convergence without signs of o
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{img/FH_model/1to2/HHpeaks.png}
-    \caption{Four instances of the test set. For each column we can see the Input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the red dots indicate some outputs of the NN}
+    \caption{Four instances of the test set. For each column we can see the Input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate some outputs of the NN}
     \label{fig:1to2_peaks}
 \end{figure}
 
@@ -116,10 +116,10 @@ The global error metrics exhibit a behavior analogous to the "no network" scenar
         \label{fig:cycle_instances}
     \end{subfigure}
     
-    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the red dots indicate samples from the trained NN.}
+    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate samples from the trained NN.}
     \label{fig:cycle_peaks}
     
-    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the red dots indicate samples from the trained NN.}
+    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate samples from the trained NN.}
     \label{fig:cycle_peaks}
 \end{figure}
 
@@ -251,7 +251,7 @@ To systematically evaluate the threshold dynamics across all network dimensions,
         \caption{$N=2000$}
     \end{subfigure}
     
-    \caption{Some instances of the test set for different Erd\H{o}s-R\'enyi network sizes ($N$).  For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the red dots indicate the output of the NN.}
+    \caption{Some instances of the test set for different Erd\H{o}s-R\'enyi network sizes ($N$).  For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate the output of the NN.}
     \label{fig:er_peaks_grid}
 \end{figure}
 
@@ -556,7 +556,7 @@ By looking at figures \ref{fig:ba_peaks_grid}, \ref{fig:ba_histo_grid} and \ref{
         \caption{$N=2000$}
     \end{subfigure}
     
-    \caption{Some instances of the test set for different Barab\'asi-Albert network sizes ($N$). For each column we can see the applied input current (bottom) with its corresponding potential response (top): the blue line represents the result of the simulations, whereas the red dots indicate the output of the NN.}
+    \caption{Some instances of the test set for different Barab\'asi-Albert network sizes ($N$). For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate the output of the NN.}
     \label{fig:ba_peaks_grid}
 \end{figure}
 
@@ -795,13 +795,15 @@ As a result, our numerical spectral analysis demonstrates that the physical spec
 
 \begin{figure}[htbp]
     \centering
-    \begin{minipage}{0.49\textwidth}
+    \begin{minipage}[t]{0.49\textwidth}
+        \vspace{0pt}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/BA_Network/Spectral_gap_BA.png}
         \caption{Scaling of the spectral gap $\text{Re}(\lambda_2)$ as a function of $N$ for the Barabási-Albert (BA) topology, showing the $\mathcal{O}(N^{-1})$ decay, both for a standard and a network with preferential attachment of Input/Output to hubs.}
         \label{fig:spectral_gap_ba}
     \end{minipage}\hfill
-    \begin{minipage}{0.49\textwidth}
+    \begin{minipage}[t]{0.49\textwidth}
+        \vspace{0pt}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/ER_Network/Spectral_gap_ER.png}
         \caption{Scaling of the spectral gap $\text{Re}(\lambda_2)$ as a function of $N$ for the Erdős–Rényi (ER) topology, confirming the identical $\mathcal{O}(N^{-1})$ decay limit.}
