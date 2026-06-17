@@ -5,7 +5,7 @@
 
 Studying the brain is a profoundly complex challenge. With approximately $10^{11}$ neurons, each forming around $10^{3}$ synaptic connections---yielding a staggering total of roughly $10^{14}$ connections---a whole-brain analysis at single-neuron resolution remains computationally intractable\footnote{At least with currently available computational power.}. To navigate this complexity, computational neuroscience has emerged as an interdisciplinary field that relies on advanced mathematical models and simulation tools to decode brain dynamics.
 
-For medium-to large-scale analyses, researchers typically employ coarse-grained models. Rather than resolving the microscopic details of individual cells, these models adopt more complex structures---such as entire neural populations---as their fundamental units. The resulting macroscopic or mesoscopic dynamics can then be validated against empirical data from functional imaging, such as fMRI or EEG.
+For medium-to large-scale analyses, researchers typically employ coarse-grained models. Rather than resolving the microscopic details of individual cells, these models adopt more complex structures, such as entire neural populations, as their fundamental units. The resulting macroscopic or mesoscopic dynamics can then be validated against empirical data from functional imaging, such as fMRI or EEG.
 
 Despite the necessity of these large-scale abstractions, single-neuron ionic models remain indispensable. A microscopic understanding of neural dynamics is not only of fundamental scientific interest in its own right, but it also serves as the rigorous foundation from which accurate coarse-grained models can be mathematically derived.
 \newline
@@ -56,7 +56,7 @@ The voltage-dependent transition rates $\alpha_i(V)$ and $\beta_i(V)$ are empiri
     \label{eq:HH_rates}
 \end{equation}
 
-For the numerical simulations, reported for instance in figure \ref{fig:hh_dynamics}, the parameters described in \cite{centofanti2024cma} were adopted: $C_m = 1 \, \mu\text{F/cm}^2$, $V_{Na} = 40 \, \text{mV}$, $V_{K} = -87 \, \text{mV}$, $V_{L} = -64.387 \, \text{mV}$, $g_{Na} = 120 \, \text{mS/cm}^2$, $g_{K} = 36 \, \text{mS/cm}^2$, $g_{L} = 0.3 \, \text{mS/cm}^2$ and the initial conditions: $V_0= -75 \text{mV}$, $n_0=0.317$, $m_0=0.05$, $h_0=0.595$.
+For the numerical simulations, reported for instance in Figure \ref{fig:hh_dynamics}, the parameters described in \cite{centofanti2024cma} were adopted: $C_m = 1 \, \mu\text{F/cm}^2$, $V_{Na} = 40 \, \text{mV}$, $V_{K} = -87 \, \text{mV}$, $V_{L} = -64.387 \, \text{mV}$, $g_{Na} = 120 \, \text{mS/cm}^2$, $g_{K} = 36 \, \text{mS/cm}^2$, $g_{L} = 0.3 \, \text{mS/cm}^2$ and the initial conditions: $V_0= -75 \text{mV}$, $n_0=0.317$, $m_0=0.05$, $h_0=0.595$.
 Since a single neuron is not isolated it is interesting to analyze its response to external currents.
 
 \subsection*{Asymptotic behavior}
@@ -73,12 +73,12 @@ The behavior of the HH model in response to a constant applied current $I_{app}$
     For extremely high currents, the limit cycle disappears and the system stabilizes again at a high-voltage fixed point (stable depolarized state), ceasing to oscillate.
 \end{itemize}
 
-This model is realistic, but somewhat convoluted for our objectives. In fact, our primary aim (as discussed by subsequent chapters) is to simulate a network of neurons and emulate it through Machine Learning (ML). To this end, we need a system that is as simple as possible, while it exhibits, like a physically realistic neuron, oscillations for currents that exceed a critical threshold
+This model is realistic, but somewhat convoluted for our objectives. In fact, our primary aim (as discussed by subsequent chapters) is to simulate a network of neurons and emulate it through Machine Learning (ML). To this end, we need a system that is as simple as possible, while it exhibits, like a physically realistic neuron, oscillations for currents that exceed a critical threshold.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{img/FH_model/HH_dynamics.png}
-    \caption{Simulated dynamics of the Hodgkin-Huxley model. The plots illustrate the temporal evolution of the transmembrane potential $V(t)$ along with the gating variables $m, h$, and $n$ under the influence of an applied external current $I_{app}(t)$.}
+    \caption{Simulated dynamics of the Hodgkin-Huxley model. The plots illustrate the temporal evolution of the transmembrane potential $V$ along with the gating variables $m, h$, and $n$ under the influence of an applied external current $I_{app}(t)$.}
     \label{fig:hh_dynamics}
 \end{figure}
 
@@ -88,7 +88,7 @@ The FitzHugh-Nagumo (FH) model \cite{centofanti2024comconf} is a two-dimensional
 
 \begin{equation}
     \begin{aligned}
-        \frac{dV}{dt} &= bV(V-\beta)(\delta-V) - cw + I_{app} \\
+        \frac{dV}{dt} &= bV(V-\beta)(\delta-V) - cw + I_{app}(t) \\
         \frac{dw}{dt} &= \epsilon(V - \gamma w)
     \end{aligned}
     \label{eq:FHN}
@@ -105,7 +105,7 @@ The dynamics of the FHN system depends on the value of $I_{app}$, which vertical
     The system presents a unique stable fixed point located on the left branch of the cubic nullcline (near the resting state). For small stimuli, the system returns to equilibrium without generating oscillations.
     
     \item \textbf{Oscillatory regime ($0.2 \lesssim I_{app} \lesssim 2.1$):} 
-    When the current exceeds the first critical threshold ($I_{th1} \approx 0.21$), the fixed point enters the unstable region of the nullcline (between the two knees of the cubic). The equilibrium loses stability and a stable limit cycle emerges. The system produces sustained periodic oscillations, as highlighted in figure \ref{fig:fhn_time_series} - \ref{fig:fhn_phase_space}.
+    When the current exceeds the first critical threshold ($I_{th1} \approx 0.21$), the fixed point enters the unstable region of the nullcline (between the two knees of the cubic). The equilibrium loses stability and a stable limit cycle emerges. The system produces sustained periodic oscillations, as highlighted in Figure \ref{fig:fhn_time_series} - \ref{fig:fhn_phase_space}.
     
     \item \textbf{Saturation regime ($I_{app} \gtrsim 2.1$):} 
     Increasing the current beyond the second critical threshold ($I_{th2} \approx 2.1$), the intersection of the nullclines shifts to the stable right branch. The limit cycle vanishes, and the system stabilizes at a high-potential equilibrium (permanent excited state).
@@ -131,7 +131,7 @@ The dynamics of the FHN system depends on the value of $I_{app}$, which vertical
 \end{figure}
 
 
-In fig \ref{fig:fhn_time_series} we can see a response of the system to a square wave perturbation. In particular, we observe an oscillatory dynamics while the external current is on.
+In Fig \ref{fig:fhn_time_series} we can see a response of the system to a square wave perturbation. In particular, we observe an oscillatory dynamics while the external current is on.
 Since our ML analysis (chapter \ref{Chpt3}) is based on mapping  functions (perturbations) to functions (responses), we considered the square wave perturbation class as it provides an easy-to-study function basis
 
 Starting from these premises, we will turn to study the spatial extension of the FH model and analyze its response to a square wave perturbation localized in space (i.e. applied to a single node).
@@ -142,7 +142,7 @@ Starting from these premises, we will turn to study the spatial extension of the
 \label{sec:extended_network}
 The framework discussed thus far has focused on the dynamics of an isolated single node. In order to transition from a microscopic to a mesoscopic description of neural dynamics, we embed the FitzHugh-Nagumo (FHN) model within a network topology. Our primary objective is to investigate whether the resulting high-dimensional system of ordinary differential equations (ODEs) can be effectively approximated by a single neural operator trained via deep learning techniques, which will be detailed in Chapter \ref{Chp:2}.
 
-To this end, we consider a spatially extended system characterized by a specific input-output mapping. An external stimulus, modeled as a square-wave current, is injected into a designated \textcolor{blue}{\textbf{input node}}. The signal then propagates through the network via diffusive coupling, while each node undergoes local reaction dynamics governed by the FHN equations. Finally, the response of the system is recorded by extracting the membrane potential of a designated \textcolor{red}{\textbf{output node}}. This setup is illustrated by two examples in figure \ref{fig:fh_comparison}.
+To this end, we consider a spatially extended system characterized by a specific input-output mapping. An external stimulus, modeled as a square-wave current, is injected into a designated \textcolor{blue}{\textbf{input node}}. The signal then propagates through the network via diffusive coupling, while each node undergoes local reaction dynamics governed by the FHN equations. Finally, the response of the system is recorded by extracting the membrane potential of a designated \textcolor{red}{\textbf{output node}}. This setup is illustrated by two examples in Figure \ref{fig:fh_comparison}.
 
 
 Formally, let $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ be an unweighted graph representing the neural network topology. The diffusive coupling between neurons is modeled using the elements $L_{ij}$ of the graph Laplacian matrix $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. The elements of the Laplacian are explicitly defined as:

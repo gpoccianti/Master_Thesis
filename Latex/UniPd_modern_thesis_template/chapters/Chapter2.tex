@@ -78,7 +78,7 @@ Kovachki et al. \cite{kovachki2023neural} provide a comprehensive approximation 
 
 To formally state the theorems, we first need to define the function spaces for which these results hold.
 
-\subsection{Function Space Assumptions}
+\subsection{Function space assumptions}
 
 The theory relies on the input and output spaces possessing the \textit{Banach Space Approximation Property (AP)}, which allows infinite-dimensional operators to be approximated by finite-rank operators. The authors restrict the analysis to the following widely used spaces.
 
@@ -167,7 +167,7 @@ Such a property is highly desirable as it allows a transfer of solutions between
 In the context of the Fourier Neural Operator (FNO, see section \ref{DeepONet section}) architecture, this discretization invariance stems from two structural choices. First, the learnable integral kernel $R$ is evaluated in the Fourier space where only a truncated, fixed number of low-frequency modes are preserved. When evaluating the model on a denser grid, the higher-frequency modes computed by the discrete Fourier transform are simply bypassed, keeping the size of $R$ constant. Second, the residual weight matrix $W$ operates strictly pointwise on the latent state's scalar components (channels), making it entirely independent of the spatial domain's dimensionality. Together, these properties ensure that the network's weights are perfectly agnostic to the underlying spatial discretization.
 %From the construction of neural operators, when the input and output functions are evaluated on fixed grids, the architecture of neural operators on these fixed grids coincides with the class of neural networks.
 
-\subsection{Zero-Shot Super-Resolution}
+\subsection{Zero-shot super-resolution}
 
 The immediate consequence of discretization invariance is the ability to perform \textit{zero-shot super-resolution}. The neural operator is mesh-invariant, so it can be trained on a lower resolution and evaluated at a
 higher resolution, without seeing any higher resolution data. 
@@ -215,7 +215,7 @@ Among the emerging approaches, two architectures, based on different universal a
 
 %\clearpage
 
-\subsection{Neural Architectures}
+\subsection{Neural architectures}
 \subsubsection{Deep Operator Network (DeepONet)}
 \label{DeepONet section}
 The DeepONet, introduced by Lu et al. \cite{lu2021learning}, was the first architecture explicitly designed as a concrete realization of the universal approximation theorem for operators by Chen and Chen \cite{Chen_Chen_1995}.

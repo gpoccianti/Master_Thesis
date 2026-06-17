@@ -3,7 +3,7 @@
 In this final chapter we will first introduce reaction-diffusion equations in continuous and discrete domains. We will then present a hierarchy of progressively more sophisticated architectures to emulate such systems. We will test these architectures on a simple one dimensional system and on the FH two-dimensional model on a BA network. Finally, we will introduce a method to extract the phase diagram of the reaction potentials of these equations purely from data.
 
 \section{Problem definition}
-\subsection{Reaction-Diffusion Dynamics on Complex Networks}
+\subsection{Reaction-diffusion dynamics on complex networks}
 
 Reaction-Diffusion (RD) systems constitute a cornerstone of mathematical physics, 
 providing a fundamental framework to describe processes where the distribution of substances changes due to two competing mechanisms: 
@@ -46,26 +46,26 @@ Another interesting aspect, that is an original contibution of this thesis, is t
 
 \section{Methodology}
 
-\subsection{Problem Formulation}
+\subsection{Problem formulation}
 We consider a dynamical system defined on a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$, whose state $\mathbf{u}(t) \in \mathbb{R}^N$ evolves
-according to eq \eqref{eq:react_diff_on_net}. 
+according to Eq. \eqref{eq:react_diff_on_net}. 
 Our aim was to predict an approximation of the \textbf{time-stepper operator} $\Psi_{\Delta t}$, which maps the system state from time $t$ to time $t + \Delta t$.
 %on an undirected, connected graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ with $N = |\mathcal{V}|$ nodes. 
 %The state $\mathbf{u}(t) \in \mathbb{R}^N$ evolves according to a semi-linear PDE discretized on the graph:
 
 
-\subsubsection{Experimental Design: Hierarchy of Inductive Bias}
+\subsubsection{Experimental design: hierarchy of inductive bias}
 \label{sec:exp_design}
 To systematically evaluate the impact of physical and topological information on learning performance, we compared three architectures with increasing levels of "inductive bias".
 
-\subsubsection{Level 1: Totally Blind (Black-Box)}
+\subsubsection{Level 1: totally blind (black-box)}
 This baseline represents the purely data-driven approach. The model ignores both the diffusion physics and the graph topology. It attempts to learn the discrete time-stepper operator $\Psi_{\Delta t}$ end-to-end:
 \begin{equation}
     \mathbf{u}^{n+1} \approx \text{Net}_{\theta}(\mathbf{u}^n)
 \end{equation}
 Here, the network must implicitly learn both the diffusion operator $-\nu \mathbf{L}$ and the reaction operator $\mathbf{F}$ simultaneously from data. This implies that the network must statistically reconstruct the graph structure solely from the propagation of signals, a task that typically requires massive amounts of training data. Moreover, we decided, to compare the same families of architectures and further analyze the importance of using topological information for the prediction, to use continuous operator network, which required us to embed the graphs in a continuous spatial domains. This first level is the only approach which does not require topological information.
 
-\subsubsection[Level 2: Physics-Informed (Hybrid Nodal)]{Level 2: Physics-Informed\footnote{We chose this name given the strong connection with the Physics Informed Neural Networks (PINNs) family.} (Hybrid Nodal)}
+\subsubsection[Level 2: physics-informed (hybrid nodal)]{Level 2: Physics-Informed\footnote{We chose this name given the strong connection with the Physics Informed Neural Networks (PINNs) family.} (Hybrid Nodal)}
 In this approach, we injected physical knowledge by using an \textbf{Implicit-Explicit (IMEX)} solver \footnote{see Appendix \ref{app:C}.}. We assume the linear diffusion term $-\nu \mathbf{L}$ is known, and the network is tasked \textit{only} with approximating the reaction term $\mathbf{F}(\mathbf{u})$.
 
 The update rule enforces the diffusion physics exactly:
@@ -82,7 +82,7 @@ The update rule enforces the diffusion physics exactly:
 While the diffusion coefficient $\nu$ can be treated as a known physical prior, it can also be discovered directly from observational data. In our experiments, we cast this as a joint system identification problem: $\nu$ is initialized as a differentiable scalar variable and optimized end-to-end alongside the neural network weights $\theta$ via gradient descent.
 It is worth noting that the neural network $\text{Net}_{\theta}(\mathbf{u})$ remains \textbf{"topologically blind"}. As in Level 1, it relies on embedding the discrete graph into an artificial continuous domain. However, this limitation is less detrimental in this hybrid formulation: since the target reaction term is strictly local (acting node-wise), explicitly capturing the spatial relations between nodes becomes less critical for the network. Nevertheless, this architectural flaw will be fully addressed in Level 3.
 
-\subsubsection{Level 3: Topology-Informed (Hybrid Spectral)}
+\subsubsection{Level 3: topology-informed (hybrid spectral)}
 Here the model leveraged both physical and topological priors.
 The diffusion operator was enforced exactly via the IMEX scheme as in Level 2.
 
@@ -109,12 +109,12 @@ without the need for complex architectures (as we will see in the next section).
 \end{comment}
 
 
-\subsection{Training Objective: Composite Loss Strategy}
+\subsection{Training objective: composite loss strategy}
 For the informed architectures (Levels 2 and 3), the learning task has been reframed: instead of predicting the state evolution directly, the networks approximated the non-linear reaction term $\mathbf{F}(\mathbf{u})$. To ensure both temporal stability and physical consistency, we employed a composite loss function consisting of two terms:
  a \textbf{Trajectory Loss} and a \textbf{Physics (Residual) Loss}.
 
 
-\subsection{Ground Truth Reaction Extraction}
+\subsection{Ground truth reaction extraction}
 Since the dataset contains state snapshots $\mathbf{u}$ but not explicit values for the reaction $\mathbf{F}(\mathbf{u})$, we first extracted the "ground truth" reaction target, denoted as $\mathbf{R}_{GT}$, by inverting the numerical scheme used for data generation.
 Given the IMEX structure, the effective reaction responsible for the transition $\mathbf{u}^n \to \mathbf{u}^{n+1}$ is:
 \begin{equation}
@@ -122,7 +122,7 @@ Given the IMEX structure, the effective reaction responsible for the transition 
 \end{equation}
 For Level 3, the target was the approximation $\mathbf{{R}_{GT}}^{n}_{p} = \mathbf{\Phi}_p^T \mathbf{R}_{GT}^n \mathbf{\Phi}_p$, or the projection onto the spectral domain: ${\hat{\mathbf{R}}_{GT}}^{n}_{p} = \mathbf{\Phi}_p^T \mathbf{R}_{GT}^n$, where the matrix $\mathbf{\Phi}_p \in \mathbb{R}^{N \times p}$ contains only the eigenvectors corresponding to the $p$ smallest eigenvalues $0 \le \lambda_1 \le \dots \le \lambda_p$ (low-frequency modes).
 
-\subsubsection{Loss Components}
+\subsubsection{Loss components}
 The total loss $\mathcal{L}$ was defined as a weighted sum:
 \begin{equation}
     \mathcal{L} = \mathcal{L}_{traj} + \lambda_{phys} \mathcal{L}_{phys}
@@ -131,7 +131,7 @@ where $\lambda_{phys}$ is a balancing hyperparameter \footnote{in our experiment
 \footnote{For the blind architectures we used only the trajectory loss.}.
 
 \begin{enumerate}
-    \item \textbf{Physics (Residual) Loss ($\mathcal{L}_{phys}$):} 
+    \item \textbf{Physics (residual) loss ($\mathcal{L}_{phys}$):} 
     This term provided instantaneous supervision, forcing the neural network $\text{Net}_\theta$ to learn the local physical law governing the reaction.
 \begin{equation}
     \mathcal{L}_{phys} = \frac{1}{N_{res}} \sum_{j=1}^{N_{res}} \| \text{Net}_\theta(\mathbf{x}_j) - \mathbf{R}_{GT}(\mathbf{x}_j) \|_2
@@ -142,7 +142,7 @@ where $\mathbf{x}_j = \mathbf{u}_j^{m\left( j \right)}$ represents a single stat
     \footnote{However, unlike standard PINNs where the entire PDE is enforced via optimization (soft constraint), our hybrid framework enforced the diffusion
      operator exactly via the numerical architecture (hard constraint), leaving the loss function responsible solely for the reaction dynamics.}
 
-\item \textbf{Relative Trajectory Loss ($\mathcal{L}_{traj}$):}
+\item \textbf{Relative trajectory loss ($\mathcal{L}_{traj}$):}
 This term measured the relative error of the integrated next-step state. Normalizing by the ground truth magnitude ensured the loss is scale-invariant and prevented the model from biasing towards high-amplitude regions.
 \begin{equation}
     \mathcal{L}_{traj} = \frac{1}{N_{traj} N_T} \sum_{i=1}^{N_{traj}} \sum_{n=0}^{N_T-1} \frac{\| \Psi_{\Delta t}(\hat{\mathbf{u}}^n_i, \theta) - \mathbf{u}^{n+1}_{true, i} \|_2}{\| \mathbf{u}^{n+1}_{true, i} \|_2 + \epsilon}
@@ -155,12 +155,12 @@ where $\Psi_{\Delta t}$ represents the differentiable IMEX solver layer, $\hat{\
 
 
 
-\subsection{Neural Architectures Implementation}
+\subsection{Neural architectures implementation}
 
 We instantiated the hierarchy of inductive biases defined in Sec. \ref{sec:exp_design} using the following specific architectures. All models were implemented in PyTorch.
 
 \begin{itemize}
-    \item \textbf{Level 1: Black-Box Baselines.} (see Chapter \ref{Chp:2}) %Devo ancora creare la sezione di introduzione su ML e Neural Operators
+    \item \textbf{Level 1: black-box baselines.} (see Chapter \ref{Chp:2}) %Devo ancora creare la sezione di introduzione su ML e Neural Operators
     \begin{itemize}
         \item \textbf{Blind DeepONet:} In this baseline implementation, a \textit{Branch Net} (MLP) encoded the full global state vector, while a \textit{Trunk Net} (MLP) evaluated spatial basis functions at normalized coordinates $y \in [0,1]$. Crucially, these coordinates were assigned based solely on the node's arbitrary position within the 1D input data array (effectively mapping the $i$-th node in the dataset to the spatial coordinate $i/N$). By computing the final prediction through the dot product of these latent features, the architecture forced the discrete complex network onto a continuous 1D Euclidean domain. Consequently, it treated the graph nodes as uniformly spaced points on a line, restricting their spatial proximity to their arbitrary data storage order rather than their true topological connectivity.
         \item \textbf{Blind FNO:} A standard Fourier Neural Operator relying on the Fast Fourier Transform (FFT).
@@ -169,7 +169,7 @@ We instantiated the hierarchy of inductive biases defined in Sec. \ref{sec:exp_d
     \end{itemize}
 
 
-\item \textbf{Level 2: Physics-Informed (Hybrid)}\\
+\item \textbf{Level 2: physics-informed (hybrid)}\\
 This tier decoupled physical laws from topological structure. Both architectures leveraged the \textbf{exact Graph-Spectral IMEX solver} for time-stepping, ensuring perfect diffusion dynamics via the true Graph Laplacian eigenvalues. However, the neural networks approximating the reaction term $\mathcal{N}(u)$ remained \textbf{topologically blind}, treating the graph signal as an Euclidean sequence.
 \begin{itemize}
     \item \textbf{PI-DeepONet:} Utilized the standard Branch/Trunk architecture (same architecture as in level 1) to map the full state vector to the reaction residual.
@@ -177,9 +177,9 @@ This tier decoupled physical laws from topological structure. Both architectures
     \item \textbf{PI-FNO:} Used the FNO backbone (same architecture as in level 1) to predict the reaction vector. 
 \end{itemize}
 
-    \item \textbf{Level 3: Topology-Informed (Spectral).}
+    \item \textbf{Level 3: topology-informed (spectral).}
     \begin{itemize}
-        \item \textbf{Laplacian Eigenfunction Neural Operator (LENO) on Network:} 
+        \item \textbf{Laplacian Eigenfunction Neural Operator (LENO) on network:} 
         This method operated in a \textit{truncated} spectral domain defined by the eigenvectors of the Laplacian.
 Specifically, we selected the matrix $\mathbf{\Phi}_p \in \mathbb{R}^{N \times p}$ containing only the eigenvectors corresponding to the $p$ smallest eigenvalues $0 \le \lambda_1 \le \dots \le \lambda_p$ (low-frequency modes), where $p < N$ is a hyperparameter chosen during training.
 
@@ -196,7 +196,7 @@ Specifically, we selected the matrix $\mathbf{\Phi}_p \in \mathbb{R}^{N \times p
 It is important to note that, since we posed the problem in the right coordinates, usually a simple MLP suffices to learn the coupling between modes, 
 without the need for complex architectures.
 
-    \item \textbf{Graph (Laplacian)-FNO (Ours):} It operated in a similar way to LENO.
+    \item \textbf{Graph (Laplacian)-FNO (ours):} It operated in a similar way to LENO.
     However it built on the standard FNO, so it replaced FFT/IFFT operations with the Graph Fourier Transform (GFT, where the input is projected onto the first $p$ eigenvectors of the Graph Laplacian ($\mathbf{\Phi}_p$)).
     
    The primary distinction between LFNO and LENO lies in the domain where the objective function is evaluated. While LENO minimizes the error directly on the transformed spectral coefficients, LFNO projects the latent representation back into the physical space via the inverse GFT, penalizing the reaction term directly at the nodal level.
@@ -213,7 +213,7 @@ without the need for complex architectures.
 %A key distinction from classical PINNs lies in constraint enforcement. While PINNs minimize the PDE residual as a soft loss term ($\mathcal{L}_{PDE}$), our Level 3 framework enforces the diffusion operator exactly via the numerical architecture (hard constraint) as shown in Eq. (\ref{eq:imex_update}). This strictly reduces the hypothesis space to physically valid diffusion processes on the graph.
 
 %%%%%%%%%%%
-\subsection{Training Details}
+\subsection{Training details}
 All models were implemented in PyTorch and trained on an NVIDIA Quadro RTX 5000 GPU. To ensure reproducibility, fixed random seeds ($42$) were used for all experiments.
 
 The network parameters were optimized using the Adam algorithm with a weight decay of $10^{-4}$ and a gradient clipping threshold of $1.0$ to ensure numerical stability
@@ -231,9 +231,9 @@ To select the optimal configuration, we performed an automated hyperparameter se
 Once the best hyperparameters were identified, the final models were trained for $500$ epochs. The learning rate was scheduled to decrease by a factor of $\gamma = 0.5$ every $300$ epochs. 
 To prevent overfitting, we monitored the error on a validation set and saved the model weights and fitted $\epsilon$, corresponding to the epoch with the lowest validation loss.
 
-\section{Example 1: Allen-Cahn on Graph (Hierarchy of Inductive Bias)}
+\section{Example 1: Allen-Cahn on graph (hierarchy of inductive bias)}
 
-\subsection{Data Generation}
+\subsection{Data generation}
 To evaluate the proposed methods, we simulated the \textbf{Allen-Cahn equation} on a complex network. 
 %The Allen-Cahn equation is a well-known reaction-diffusion model used in phase-transition problems.
 
@@ -244,14 +244,14 @@ The Allen-Cahn equation describes a reaction-diffusion process governed by the g
   Applications range from geometrical image segmentation~\cite{benes2004geometrical} to finding minimal cuts in graph theory and analyzing community structures
    in complex networks~\cite{bertozzi2012diffuse}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Graph Topology}
+\subsection{Graph topology}
 We generated a scale-free network using the \textbf{Barabási-Albert (BA)} model to mimic realistic topological features such as hubs and clusters.
 \begin{itemize}
     \item \textbf{Nodes:} $N = 1000$.
     \item \textbf{Attachment:} $m = 2$ (each new node attaches to 2 existing nodes).
 \end{itemize}
 
-\subsection{Dynamics: Allen-Cahn on Graphs}
+\subsection{Dynamics: Allen-Cahn on graphs}
 The specific form of the reaction term for the Allen-Cahn equation is cubic:
 \begin{equation}
     \mathbf{F}(\mathbf{u}) = \mathbf{u} - \mathbf{u}^3
@@ -259,7 +259,7 @@ The specific form of the reaction term for the Allen-Cahn equation is cubic:
 The system evolved from an initial condition of $50$, randomly selected, active nodes.
 We generated a training dataset of $15000$ trajectories ($10000$ for training, $3000$ for validation and $2000$ for testing) by numerically integrating the system using 
 a spectral IMEX solver \footnote{details in Appendix \ref{app:C}.},
- subsampling the snapshots at time intervals $\Delta=0.05 t$ for 21 time steps to create the input-target pairs. In figure \ref{fig:experimental_design} we can observe the evolution of the node dynamics.
+ subsampling the snapshots at time intervals $\Delta=0.05 t$ for 21 time steps to create the input-target pairs. In Figure \ref{fig:experimental_design} we can observe the evolution of the node dynamics.
 
 \begin{figure}
     \centering
@@ -270,12 +270,12 @@ a spectral IMEX solver \footnote{details in Appendix \ref{app:C}.},
 
 %%%%%%%%%
 
-\subsection{Results and Discussion}
+\subsection{Results and discussion}
 
-\subsubsection{Quantitative Analysis: Error Distribution}
+\subsubsection{Quantitative analysis: error distribution}
 We begin our analysis by examining the distribution of the relative $L_2$ errors on the test set (2000 trajectories). 
 Figure \ref{fig:error_matrix} presents a systematic comparison of the test errors arranged by model family (columns) and inductive bias level (rows).
-On the other hand figure \ref{fig:heatmap_vertical_stack} shows an absolute error comparison between the same models, however it rearranges the two columns representing the families of architectures on the same page.
+On the other hand Figure \ref{fig:heatmap_vertical_stack} shows an absolute error comparison between the same models, however it rearranges the two columns representing the families of architectures on the same page.
 
 This visualization highlights the progressive improvement in generalization performance as we move from "Blind" models to "Topology-Informed" architectures.
 
@@ -465,16 +465,16 @@ The summary of the quantitative results is reported in Table \ref{tab:error_comp
         
         \begin{tabular}{lccc}
             \toprule
-            \textbf{Inductive Bias} & \textbf{Level} & \textbf{DeepONet Family}\tnote{a} & \textbf{FNO Family} \\ % Usa \tnote{a}
+            \textbf{Inductive bias} & \textbf{Level} & \textbf{DeepONet family}\tnote{a} & \textbf{FNO family} \\ % Usa \tnote{a}
             \midrule
             
-            \textbf{Totally Blind} & 1 & $48 \pm 1$ \% & $27 \pm 1$\% \\
+            \textbf{Totally blind} & 1 & $48 \pm 1$ \% & $27 \pm 1$\% \\
             \arrayrulecolor{black!30}\midrule 
             
-            \textbf{Physics-Informed} & 2 & $4.3 \pm 0.2$ \% & $0.070 \pm 0.002$ \% \\
+            \textbf{Physics-informed} & 2 & $4.3 \pm 0.2$ \% & $0.070 \pm 0.002$ \% \\
             \arrayrulecolor{black!30}\midrule
     
-            \textbf{Topology-Informed} & 3 & $2.2 \pm 0.1$ \% \footnotesize{(LENO)} & $\mathbf{0.027 \pm 0.002}$ \textbf{\%} \footnotesize{(LFNO)} \\
+            \textbf{Topology-informed} & 3 & $2.2 \pm 0.1$ \% \footnotesize{(LENO)} & $\mathbf{0.027 \pm 0.002}$ \textbf{\%} \footnotesize{(LFNO)} \\
             
             \arrayrulecolor{black}\bottomrule
         \end{tabular}
@@ -505,7 +505,7 @@ The summary of the quantitative results is reported in Table \ref{tab:error_comp
     \hspace{0.02\textwidth}%
     \begin{minipage}{0.75\textwidth}
         \centering
-        \textbf{\large DeepONet Family}
+        \textbf{\large DeepONet family}
     \end{minipage}
     \par\vspace{0.2cm}
     
@@ -555,7 +555,7 @@ The summary of the quantitative results is reported in Table \ref{tab:error_comp
     \hspace{0.02\textwidth}%
     \begin{minipage}{0.75\textwidth}
         \centering
-        \textbf{\large FNO Family}
+        \textbf{\large FNO family}
     \end{minipage}
     \par\vspace{0.2cm}
 
@@ -608,18 +608,18 @@ The summary of the quantitative results is reported in Table \ref{tab:error_comp
     
     \begin{tabular}{lcc}
         \toprule
-        \multirow{2.5}{*}{\textbf{Inductive Bias}} & \multicolumn{2}{c}{\textbf{Learned} $\boldsymbol{\nu}$} \\
+        \multirow{2.5}{*}{\textbf{Inductive bias}} & \multicolumn{2}{c}{\textbf{Learned} $\boldsymbol{\nu}$} \\
         \cmidrule(lr){2-3} % Linea che copre solo le colonne dei dati
-        & \textbf{DeepONet Family} & \textbf{FNO Family} \\
+        & \textbf{DeepONet family} & \textbf{FNO family} \\
         \textit{(Level)}\\
         \midrule
         
-        \textbf{Physics-Informed} & \multirow{2}{*}{$3.334$} & \multirow{2}{*}{$4.002$} \\
+        \textbf{Physics-informed} & \multirow{2}{*}{$3.334$} & \multirow{2}{*}{$4.002$} \\
         (Level 2) & & \\
         
         \arrayrulecolor{black!30}\midrule 
         
-        \textbf{Topology-Informed} & \multirow{2}{*}{$3.526$} & \multirow{2}{*}{$\mathbf{3.998}$} \\
+        \textbf{Topology-informed} & \multirow{2}{*}{$3.526$} & \multirow{2}{*}{$\mathbf{3.998}$} \\
         (Level 3) & \small{\textit{(LENO)}} & \small{\textit{(LFNO)}} \\
         
         \arrayrulecolor{black}\bottomrule
@@ -659,9 +659,9 @@ After this first implementation we asked ourselves two questions: Can we general
 Is it possible to extract information about $\mathbf{F}(\mathbf{u})$ from the trained NN?
 \newline
 %Scriverò qualcosa a proposito nell'introduzione
-In particular this last problem is part of the \textbf{PDE Discovery}, mentioned in Chapter \ref{Chp:2}.
+In particular this last problem is part of the \textbf{PDE discovery}, mentioned in Chapter \ref{Chp:2}.
 
-In this section we considered again our neural system, described by eq. \eqref{eq:coupled_FHN}.
+In this section we considered again our neural system, described by Eq. \eqref{eq:coupled_FHN}.
 
 However we changed the setup by \textbf{removing the input current} and randomly uniform initial state $\left( V_i\left( 0 \right), w_i\left( 0 \right) \right) \in \left[-1, 1  \right]^2$ for each node $i$.
 
@@ -679,15 +679,15 @@ w_i\left( 0 \right) &= w_i^0
 Where the parameters are $b = 5$, $c = 1$, $\beta = 0.1$, $\delta = 1$, $\epsilon = 0.1$, $\gamma = 0.25$, as in \cite{centofanti2024comconf} and $i \in \{1, \dots, |\mathcal{V}|\}$ represents the node of interest.
 
 
-\subsection{Graph Topology}
+\subsection{Graph topology}
 We generated a scale-free network using the \textbf{Barabási-Albert (BA)} model to mimic realistic topological features such as hubs and clusters.
 \begin{itemize}
     \item \textbf{Nodes:} $N = 1000$.
     \item \textbf{Attachment:} $m = 2$.
 \end{itemize}
 
-\subsection{Dynamics: FitzHugh-Nagumo on Graphs}
-The reaction kinetics for the two-variable FHN model, consisting of an activator $V$ and an inhibitor $w$, are defined by (as in eq. \eqref{eq:coupled_FHN2}):
+\subsection{Dynamics: FitzHugh-Nagumo on graphs}
+The reaction kinetics for the two-variable FHN model, consisting of an activator $V$ and an inhibitor $w$, are defined by (as in Eq. \eqref{eq:coupled_FHN2}):
 \begin{equation}
 \begin{aligned}
     \mathbf{F}_V(V, w) &= b V (V - \beta)(\delta - V) - c w \\
@@ -698,7 +698,7 @@ The reaction kinetics for the two-variable FHN model, consisting of an activator
 Diffusion was applied solely to the activator variable ($D_V = 0.01$), while the inhibitor remained strictly localized ($D_w = 0$).
 
 The system evolved from random initial conditions, with both $V$ and $w$ independently sampled from a uniform distribution $\mathcal{U}(-1, 1)$ across all nodes. We generated a large-scale dataset of $15000$ trajectories ($10000$ for training, $2000$ for validation, $1000$ for hyperparameter tuning, and $2000$ for testing). The system was numerically integrated over $150$ time steps with a temporal resolution of $\Delta t = 0.05$ (yielding a total simulation time of $T=7.5$s) to create the input-target pairs.
-In figure \ref{fig:fhn_dynamics} we can observe the evolution of the system. Note that for both variables $V$ and $w$ the system creates spatial patters of zones at different equilibria.
+In Figure \ref{fig:fhn_dynamics} we can observe the evolution of the system. Note that for both variables $V$ and $w$ the system creates spatial patters of zones at different equilibria.
 
 \begin{figure}[htbp]
     \centering
@@ -708,7 +708,7 @@ In figure \ref{fig:fhn_dynamics} we can observe the evolution of the system. Not
 \end{figure}
 
 \newpage
-\subsection{Training Details}
+\subsection{Training details}
 All models were implemented in PyTorch and trained on a dedicated GPU to accelerate tensor operations and spectral transformations. To ensure strict reproducibility, fixed global random seeds ($42$) were explicitly enforced across all data generation and training experiments.
 
 The network parameters were optimized using the Adam algorithm with a weight decay of $10^{-4}$ and a gradient clipping threshold of $1.0$ to ensure numerical stability.
@@ -731,7 +731,7 @@ To prevent overfitting, we continuously monitored the relative error on the vali
 
 The training dynamics of the two-variable LFNO model demonstrate stable and robust convergence. As depicted in the learning curves (Figure \ref{fig:lfno_loss}), both the training and validation losses decrease monotonically on a logarithmic scale. The validation-based checkpointing successfully prevented overfitting, identifying epoch $96$ as the optimal state of the network with the lowest validation error. Since this value is close to the total number of epochs $100$, it is probable that the model could find an even better optimum with a higher number of iterations.
 
-In addition to accurate trajectory prediction, the proposed Operator Learning framework naturally supports \textit{System Identification}. Because the physical diffusion operator is explicitly embedded within the spectral layers, the diffusion coefficients ($\varepsilon_V$ and $\varepsilon_w$) can be simply treated as learnable parameters rather than fixed constants. As illustrated in figure \ref{fig:lfno_diffusion}, these parameters rapidly converge to their true physical values (accurate to four decimal places) within the very first epochs. The network correctly identifies that the activator $V$ diffuses with $D_V = 0.01$, while accurately recognizing that the inhibitor $w$ is strictly localized ($D_w = 0.00$).
+In addition to accurate trajectory prediction, the proposed Operator Learning framework naturally supports \textit{System Identification}. Because the physical diffusion operator is explicitly embedded within the spectral layers, the diffusion coefficients ($\varepsilon_V$ and $\varepsilon_w$) can be simply treated as learnable parameters rather than fixed constants. As illustrated in Figure \ref{fig:lfno_diffusion}, these parameters rapidly converge to their true physical values (accurate to four decimal places) within the very first epochs. The network correctly identifies that the activator $V$ diffuses with $D_V = 0.01$, while accurately recognizing that the inhibitor $w$ is strictly localized ($D_w = 0.00$).
 
 \begin{figure}[htbp]
     \centering
@@ -763,7 +763,7 @@ To quantitatively assess the generalization capabilities of the trained model, w
     \label{fig:lfno_hist}
 \end{figure}
 
-Finally, qualitative assessments further validate the numerical results. The space-time heatmaps (figure \ref{fig:lfno_heatmaps}) show a near-perfect visual overlap between the ground truth and the LFNO predictions for both the activator and the inhibitor variables across the entire network. The absolute error maps remain orders of magnitude lower than the signal amplitude (Mean Absolute Error of $1.09 \times 10^{-3}$ for $V$ and $4.85 \times 10^{-4}$ for $w$). This high fidelity is also evident when zooming in on the continuous dynamics of individual nodes (figure \ref{fig:lfno_nodes}), where the predicted trajectories (dashed lines) seamlessly track the non-linear physiological behavior of the exact simulated system without any phase shifts or amplitude degradation.
+Finally, qualitative assessments further validate the numerical results. The space-time heatmaps (Figure \ref{fig:lfno_heatmaps}) show a near-perfect visual overlap between the ground truth and the LFNO predictions for both the activator and the inhibitor variables across the entire network. The absolute error maps remain orders of magnitude lower than the signal amplitude (Mean Absolute Error of $1.09 \times 10^{-3}$ for $V$ and $4.85 \times 10^{-4}$ for $w$). This high fidelity is also evident when zooming in on the continuous dynamics of individual nodes (Figure \ref{fig:lfno_nodes}), where the predicted trajectories (dashed lines) seamlessly track the non-linear physiological behavior of the exact simulated system without any phase shifts or amplitude degradation.
 
 \begin{figure}[htbp]
     \centering
@@ -780,16 +780,16 @@ Finally, qualitative assessments further validate the numerical results. The spa
 \end{figure}
 
 \newpage
-\subsection{The Inverse Problem}
+\subsection{The inverse problem}
 \label{sec:Inverse Problem}
 
 Beyond forward trajectory prediction and system identification of scalar parameters, the proposed architecture allows us to inspect the learned continuous operators. This direction, to our knowledge, has not been explored in the literature yet. 
 \newline
 Specifically, we can isolate the non-linear reaction terms learned by the network and evaluate them on a discrete 2D grid of $(V, w)$ phase space, comparing them directly against the exact analytical functions $F_V(V, w)$ and $F_w(V, w)$. 
 
-As shown in figure \ref{fig:lfno_reactions}, the network successfully reconstructs the reaction surfaces. On the naturally explored phase space, the model achieves a relative $L_2$ error of $3.89\%$ for the activator kinetics $F_V(V,w)$ and $1.08\%$ for the inhibitor kinetics $F_w(V,w)$. These low error margins demonstrate that the network is genuinely solving the inverse problem by discovering the underlying governing equations.
+As shown in Figure \ref{fig:lfno_reactions}, the network successfully reconstructs the reaction surfaces. On the naturally explored phase space, the model achieves a relative $L_2$ error of $3.89\%$ for the activator kinetics $F_V(V,w)$ and $1.08\%$ for the inhibitor kinetics $F_w(V,w)$. These low error margins demonstrate that the network is genuinely solving the inverse problem by discovering the underlying governing equations.
 
-However, the metrics reported above are calculated on a grid spanning the specific domain of states predominantly visited during the simulated time horizon, which is not symmetrically distributed. If the learned reaction function $F_V(V,w)$ is evaluated uniformly over the entire $[-1, 1] \times [-1, 1]$ domain, its performance degrades significantly in the negative extreme. In fact if we look at figure \ref{fig:lfno_reactions2} we can note that the error increases to $23.94\%$ for $F_V(V,w)$, while it remains at $3.45\%$ for $F_w(V,w)$.
+However, the metrics reported above are calculated on a grid spanning the specific domain of states predominantly visited during the simulated time horizon, which is not symmetrically distributed. If the learned reaction function $F_V(V,w)$ is evaluated uniformly over the entire $[-1, 1] \times [-1, 1]$ domain, its performance degrades significantly in the negative extreme. In fact if we look at Figure \ref{fig:lfno_reactions2} we can note that the error increases to $23.94\%$ for $F_V(V,w)$, while it remains at $3.45\%$ for $F_w(V,w)$.
 \newline
  This limitation is physically grounded: as previously observed in the spatio-temporal dynamics, the $V=-1$ region represents a highly unstable region of the FitzHugh-Nagumo phase portrait. Consequently, the training trajectories rapidly transition away from these states, leaving the neural network with a severe lack of data support in that specific region \footnote{We suppose this doesn't happen around the $V=1$ region both because of the specific initialization and because the gradient is less steep. Morover, increasing the temporal resolution of the simulation may solve this problem. This theory will be subject of future investigations.}. Without sufficient observations, the model cannot accurately extrapolate the cubic curvature of $F_V$, highlighting a fundamental limitation of data-driven inverse modeling in strictly transient or unstable regimes.
 

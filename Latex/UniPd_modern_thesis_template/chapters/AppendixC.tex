@@ -1,13 +1,13 @@
-\chapter{Numerical Integration 2}
+\chapter{Numerical integration 2}
 \label{app:C}
 
 \section{IMEX scheme}
-Here we describe an IMEX integration scheme, as in appendix \ref{app:A}, to solve a system that is numerically stiff:
+Here we describe an IMEX integration scheme, as in Appendix \ref{app:A}, to solve a system that is numerically stiff:
 
 \begin{equation}
     \frac{d\mathbf{u}}{dt} = -D \mathcal{L} \mathbf{u} + \mathbf{F}(\mathbf{u})
 \end{equation}
-where $\mathbf{u} \in \mathbb{R}^N$ is the state vector, $\mathcal{L}$ is the graph Laplacian, $D=\epsilon^2$ is the diffusion coefficient, and $\mathbf{F}(\mathbf{u}) = \mathbf{u} - \mathbf{u}^3$ is the element-wise cubic reaction term.
+where, in out first example, $\mathbf{u} \in \mathbb{R}^N$ is the state vector, $\mathcal{L}$ is the graph Laplacian, $D=\epsilon^2$ is the diffusion coefficient, and $\mathbf{F}(\mathbf{u}) = \mathbf{u} - \mathbf{u}^3$ is the element-wise cubic reaction term.
 
 
 To balance stability and computational efficiency, we again employ a first-order \textbf{Implicit-Explicit (IMEX) Euler scheme}. We treat the linear diffusive part implicitly and the non-linear reactive part explicitly:

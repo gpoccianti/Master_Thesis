@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  14 JUN 2026 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.1.7)  17 JUN 2026 14:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3112,7 +3112,7 @@ File: img/Allen-Cahn/Histograms/hist_test_set_LFNO_v2.png Graphic file (type png
 Package pdftex.def Info: img/Allen-Cahn/Histograms/hist_test_set_LFNO_v2.png  used on input line 356.
 (pdftex.def)             Requested size: 246.67462pt x 147.15779pt.
 
-Overfull \hbox (44.86063pt too wide) in paragraph at lines 458--488
+Overfull \hbox (42.63779pt too wide) in paragraph at lines 458--488
  [] 
  []
 
@@ -3319,8 +3319,13 @@ No file main.acr.
 [95])
 
 [96] (./docs/acknowledgments.tex
-Overfull \hbox (1.91458pt too wide) in paragraph at lines 5--20
+Overfull \hbox (1.91458pt too wide) in paragraph at lines 5--21
 \T1/zpltlf/m/n/10.95 Ringrazio i miei am-ici di lunga data, tra cui Gi-a-como, Da-vide, Lorenzo, Francesco,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--21
+
  []
 
 
@@ -3342,12 +3347,12 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FA23F2B00875734ACBAFC6A2FB88BC0E;13262.
+(rerunfilecheck)             Checksum: 0D5951A03DF9A96C03DEFF6789489DD7;13262.
  ) 
 Here is how much of TeX's memory you used:
  64999 strings out of 473190
  1381766 string characters out of 5715801
- 1978118 words of memory out of 5000000
+ 1978115 words of memory out of 5000000
  86787 multiletter control sequences out of 15000+600000
  653258 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3428,7 +3433,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/boondox/zxxrl8a.pfb>
-Output written on main.pdf (104 pages, 34343184 bytes).
+Output written on main.pdf (104 pages, 34343081 bytes).
 PDF statistics:
  1705 PDF objects out of 1728 (max. 8388607)
  1245 compressed objects within 13 object streams
