@@ -272,6 +272,15 @@
 \titlespacing*{\chapter}{0pt}{50pt}{70pt}
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}} % subsections with letters
 
+%%%%
+% try to remove repetition in Chapters
+% Converts chapters to UPPERCASE (and removes the automatic prefix)
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+
+% Converts sections/paragraphs to UPPERCASE
+\renewcommand{\sectionmark}[1]{\markright{\MakeUppercase{\thesection\ #1}}}
+%%%
+
 % style for headers and footers
 \newcommand{\setDefaultHF} {
     \fancyhf{}
