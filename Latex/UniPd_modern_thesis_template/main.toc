@@ -26,15 +26,15 @@
 \contentsline {section}{\numberline {3.2}Study of different topologies}{32}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.a}No network}{32}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.b}Toy network}{32}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.c}ER network}{36}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.d}BA network}{41}{subsection.3.2.4}%
-\contentsline {subsubsection}{Performance across different sizes of the hidden network: Conclusion}{45}{subsubsection*.27}%
-\contentsline {section}{\numberline {3.3}Dependence on the diffusion coefficient $\sigma $}{46}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Real data}{48}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.a}The dataset}{48}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.b}Preprocessing}{51}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.c}Training}{51}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.d}Results}{52}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.2.c}ER network}{35}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.d}BA network}{40}{subsection.3.2.4}%
+\contentsline {subsubsection}{Performance across different sizes of the hidden network: Conclusion}{44}{subsubsection*.27}%
+\contentsline {section}{\numberline {3.3}Dependence on the diffusion coefficient $\sigma $}{45}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Real data}{47}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.a}The dataset}{47}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.b}Preprocessing}{50}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.c}Training}{50}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.d}Results}{51}{subsection.3.4.4}%
 \contentsline {part}{II\hspace {1em}Finding the Reaction Term in a Reaction-Diffusion System}{59}{part.2}%
 \contentsline {chapter}{\numberline {4}Chapter 4}{61}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Problem definition}{61}{section.4.1}%

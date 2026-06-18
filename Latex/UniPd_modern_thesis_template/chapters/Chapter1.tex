@@ -9,23 +9,23 @@ For medium-to large-scale analyses, researchers typically employ coarse-grained 
 
 Despite the necessity of these large-scale abstractions, single-neuron ionic models remain indispensable. A microscopic understanding of neural dynamics is not only of fundamental scientific interest in its own right, but it also serves as the rigorous foundation from which accurate coarse-grained models can be mathematically derived.
 \newline
-We will now analyze two famous ionic models and use one of them on a network setup in order to describe larger spatial areas.
+We will now analyze two prominent ionic models and use one of them on a network setup in order to describe larger spatial areas.
 
 %Aggiungere un riferimento bibliografico?
 
 \section{The Hodgkin-Huxley model}
-One of the most notorious ionic models is the Hodgkin-Huxley (HH) model. It was first introduced by Alan Hodgkin and Andrew Huxley in 1952 \cite{hodgkin1952quantitative}, who received the 1963 Nobel Prize in Physiology or Medicine for this work.
+One of the most prominent ionic models is the Hodgkin-Huxley (HH) model. It was first introduced by Alan Hodgkin and Andrew Huxley in 1952 \cite{hodgkin1952quantitative}, who received the 1963 Nobel Prize in Physiology or Medicine for this work.
 \newline
 It leverages a system of nonlinear ordinary differential equations that describes the generation and propagation of action potentials in neurons. The model simulates the dynamics of the membrane potential $V(t)$ as a function of the ionic currents crossing the cell membrane: a sodium current ($Na^+$), a potassium current ($K^+$), and a leakage current ($L$).
 
 The system is governed by the following equation for the potential:
 
 \begin{equation}
-    C_{m}\frac{dV}{dt} = -(g_{Na}m^{3}h(V-V_{Na}) + g_{K}n^{4}(V-V_{K}) + g_{L}(V-V_{L})) + I_{app}(t)
+    C_{m}\frac{dV}{dt} = -(g_{Na}m^{3}h(V-V_{Na}) + g_{K}n^{4}(V-V_{K}) + g_{L}(V-V_{L})) + I_{app}
     \label{eq:HH_voltage}
 \end{equation}
 
-where $C_m$ is the membrane capacitance, $g_i$ are the maximum conductances, and $V_i$ are the reversal potentials for the respective ion channels. $I_{app}(t)$ represents the applied external current.
+where $C_m$ is the membrane capacitance, $g_i$ are the maximum conductances, and $V_i$ are the reversal potentials for the respective ion channels. $I_{app}$ represents the applied external current.
 
 The gating variables $m$, $h$, and $n$ represent the probability for each ionic species to pass through the cellular membrane and they evolve according to the following first-order differential equations:
 
@@ -88,7 +88,7 @@ The FitzHugh-Nagumo (FH) model \cite{centofanti2024comconf} is a two-dimensional
 
 \begin{equation}
     \begin{aligned}
-        \frac{dV}{dt} &= bV(V-\beta)(\delta-V) - cw + I_{app}(t) \\
+        \frac{dV}{dt} &= bV(V-\beta)(\delta-V) - cw + I_{app} \\
         \frac{dw}{dt} &= \epsilon(V - \gamma w)
     \end{aligned}
     \label{eq:FHN}
@@ -134,18 +134,18 @@ The dynamics of the FHN system depends on the value of $I_{app}$, which vertical
 In Fig \ref{fig:fhn_time_series} we can see a response of the system to a square wave perturbation. In particular, we observe an oscillatory dynamics while the external current is on.
 Since our ML analysis (chapter \ref{Chpt3}) is based on mapping  functions (perturbations) to functions (responses), we considered the square wave perturbation class as it provides an easy-to-study function basis
 
-Starting from these premises, we will turn to study the spatial extension of the FH model and analyze its response to a square wave perturbation localized in space (i.e. applied to a single node).
+Starting from these premises, we turned to study the spatial extension of the FH model and analyzed its response to a square wave perturbation localized in space (i.e. applied to a single node).
 
 
 \newpage
 \section{From single neuron to spatially extended systems}
 \label{sec:extended_network}
-The framework discussed thus far has focused on the dynamics of an isolated single node. In order to transition from a microscopic to a mesoscopic description of neural dynamics, we embed the FitzHugh-Nagumo (FHN) model within a network topology. Our primary objective is to investigate whether the resulting high-dimensional system of ordinary differential equations (ODEs) can be effectively approximated by a single neural operator trained via deep learning techniques, which will be detailed in Chapter \ref{Chp:2}.
+The framework discussed thus far has focused on the dynamics of an isolated single node. In order to transition from a microscopic to a mesoscopic description of neural dynamics, we embedded the FitzHugh-Nagumo (FHN) model within a network topology. Our primary objective was to investigate whether the resulting high-dimensional system of ordinary differential equations (ODEs) could be effectively approximated by a single neural operator trained via deep learning techniques, which will be detailed in Chapter \ref{Chp:2}.
 
-To this end, we consider a spatially extended system characterized by a specific input-output mapping. An external stimulus, modeled as a square-wave current, is injected into a designated \textcolor{blue}{\textbf{input node}}. The signal then propagates through the network via diffusive coupling, while each node undergoes local reaction dynamics governed by the FHN equations. Finally, the response of the system is recorded by extracting the membrane potential of a designated \textcolor{red}{\textbf{output node}}. This setup is illustrated by two examples in Figure \ref{fig:fh_comparison}.
+To this end, we considered a spatially extended system characterized by a specific input-output mapping. An external stimulus, modeled as a square-wave current, was injected into a designated \textcolor{blue}{\textbf{input node}}. The signal then propagated through the network via diffusive coupling, while each node underwent local reaction dynamics governed by the FHN equations. Finally, the response of the system was recorded by extracting the membrane potential of a designated \textcolor{red}{\textbf{output node}}. This setup is illustrated by two examples in Figure \ref{fig:fh_comparison}.
 
 
-Formally, let $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ be an unweighted graph representing the neural network topology. The diffusive coupling between neurons is modeled using the elements $L_{ij}$ of the graph Laplacian matrix $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. The elements of the Laplacian are explicitly defined as:
+Formally, let $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ be an unweighted graph representing the neural network topology. The diffusive coupling between neurons are modeled using the elements $L_{ij}$ of the graph Laplacian matrix $\mathbf{L} = \mathbf{D}_{deg} - \mathbf{A}$, where $\mathbf{D}_{deg}$ is the diagonal degree matrix and $\mathbf{A}$ is the adjacency matrix. The elements of the Laplacian are explicitly defined as:
 \begin{equation}
 L_{ij} = 
 \begin{cases} 

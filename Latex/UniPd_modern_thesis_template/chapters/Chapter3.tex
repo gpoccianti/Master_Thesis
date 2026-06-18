@@ -4,10 +4,10 @@ In this chapter we will first present some previous work on the ML emulation of 
 
 \section{Problem definition}
 \label{chpt: Problem definition}
-In this work we expand on the results presented in \cite{centofanti2024comconf}, and developed in \cite{centofanti2024cma} and \cite{pellegrini2025mlcse}. In these articles an operator learning architecture (with a particular focus on Fourier Neural Operator (FNO) \footnote{See chapter \ref{Chp:2}.}) has been used to learn the dynamics of a neuronal system, described by a ionic model (the FitzHugh-Nagumo or Hodgkin-Huxley model \footnote{See chapter \ref{Chp:1}.}). 
+In this work we expand on the results presented in \cite{centofanti2024comconf}, and developed in \cite{centofanti2024cma} and \cite{pellegrini2025mlcse}. In these articles an operator learning architecture (with a particular focus on Fourier Neural Operator (FNO) \footnote{See Chapter \ref{Chp:2}.}) has been used to learn the dynamics of a neuronal system, described by a ionic model (the FitzHugh-Nagumo or Hodgkin-Huxley model \footnote{See Chapter \ref{Chp:1}.}). 
 First of all the reaction has been simulated numerically by solving the underlying stiff systems of ordinary differential equations (ODEs). In the earlier works \cite{centofanti2024comconf, centofanti2024cma}, the MATLAB routine \texttt{ode15s} was utilized to integrate the equations over a fixed timespan (e.g., 100 ms) and the solutions were sampled on a uniform equispaced grid of 500 points. In the most recent development \cite{pellegrini2025mlcse}, which extends the study to higher-dimensional systems like the O'Hara-Rudy model, a Runge-Kutta method was employed. In all cases, the systems were perturbed using time-dependent applied currents, typically in the form of square pulses with varying intensities and durations, to explore the threshold-dependent dynamics and complex oscillatory behaviors of the cells.
 
-The numerical solutions were then collected to construct the datasets for the operator learning task. Specifically, in the initial studies on the FitzHugh-Nagumo and Hodgkin-Huxley models, the authors generated a total of 2000 trajectories, split into 1600 samples for the training set and 400 for the test set \cite{centofanti2024comconf, centofanti2024cma}. Subsequently, to handle the increased complexity and ensure comprehensive coverage of the dynamical behaviors in higher-dimensional spaces, the dataset size was expanded to a total of 3750 trajectories, comprising 3000 training examples, 375 for validation, and 375 for testing \cite{pellegrini2025mlcse}.
+The numerical solutions were then collected to construct the datasets for the Operator Learning task. Specifically, in the initial studies on the FitzHugh-Nagumo and Hodgkin-Huxley models, the authors generated a total of 2000 trajectories, split into 1600 samples for the training set and 400 for the test set \cite{centofanti2024comconf, centofanti2024cma}. Subsequently, to handle the increased complexity and ensure comprehensive coverage of the dynamical behaviors in higher-dimensional spaces, the dataset size was expanded to a total of 3750 trajectories, comprising 3000 training examples, 375 for validation, and 375 for testing \cite{pellegrini2025mlcse}.
 
 Using these datasets, a FNO was trained to learn the non-linear mapping from the applied input current to the system's state variables (i.e., transmembrane potential, recovery, and gating variables). By leveraging the Fast Fourier Transform (FFT) on the uniform discretization grid, the FNO architecture computes the integral kernel operator directly in the frequency domain. This approach proved highly effective in capturing the global dependencies and multiscale temporal behaviors of the stiff ionic models, maintaining stable training and achieving very low relative $L^2$ errors across all the investigated dimensionalities. In Figure \ref{fig:centofanti_dynamics} are reported four instances of the test set. From the authors' results we can see that there is an almost perfect superposition between the blue simulated output and the red dashed FNO prediction.
 
@@ -37,10 +37,10 @@ The results across these studies demonstrate that FNOs are highly effective in l
 
 
 \section{Study of different topologies}
-We spatially extended this setup by reproducing the structure presented in section \ref{sec:extended_network}. In particular, we generated datasets for each different "hidden" \footnote{The FNO architecture didn't receive any information about them} graph structure and trained/ tested the artificial network on this data.
+We spatially extended this setup by reproducing the structure presented in section \ref{sec:extended_network}. In particular, we generated datasets for each different "hidden" \footnote{The FNO architecture didn't receive any information about them.} graph structure and trained/ tested the artificial network on this data.
 
 
-Please note the setup is the following \footnote{Unless otherwise specified}: the \textcolor{blue}{\textbf{input node}} is connected by a direct link to a random node of a network. The hidden network is simple.
+Please note the setup is the following \footnote{Unless otherwise specified.}: the \textcolor{blue}{\textbf{input node}} is connected by a direct link to a random node of a network. The hidden network is simple.
 %Devo spiegare undirected + unweighted ?
 Finally another random node is connected by another direct link to the \textcolor{red}{\textbf{output node}}.
 %Questa sezione l'ho scritta prima dei capitoli introduttivi in cui spiego la stessa cosa. La tengo in quanto un recap può essere utile a chi legge solo questa sezione?
@@ -52,29 +52,29 @@ Finally another random node is connected by another direct link to the \textcolo
 \subsection{No network}
 This is the first step for spatial extension of the setup of section \ref{chpt: Problem definition} (see fig. \ref{fig:fh_output}). 
 
-To evaluate the performance of our Fourier Neural Operator in this extended configuration, we analyzed both the global error metrics (MSE\footnote{even if the authors of \cite{centofanti2024comconf} used relative $L^2$ errors, we preferred to use an absolute metric to avoid exploding gradients when the solution approaches the equilibrium point at $0$}) and (qualitatively) the network's ability to accurately capture the spiking behavior of the potential, typically present when the input current exceeds a certain threshold. Figure \ref{fig:1to2_peaks} illustrates some instances of the test set. We can clearly see that the network was able to correctly predict the action potential peaks for the vast majority of the test samples, which is a crucial requirement for excitable models.
+To evaluate the performance of our Fourier Neural Operator in this extended configuration, we analyzed both the global error metrics (MSE\footnote{Even if the authors of \cite{centofanti2024comconf} used relative $L^2$ errors, we preferred to use an absolute metric to avoid exploding gradients when the solution approaches the equilibrium point at $0$}.) and (qualitatively) the network's ability to accurately capture the spiking behavior of the potential, typically present when the input current exceeds a certain threshold. Figure \ref{fig:1to2_peaks} illustrates some instances of the test set. We can clearly see that the network was able to correctly predict the action potential peaks for the vast majority of the test samples, which is a crucial requirement for excitable models.
 
-Furthermore, the training process exhibits stable convergence without signs of overfitting, as depicted by the training and test loss curves in Figure \ref{fig:1to2_performance}a. Finally, Figure \ref{fig:1to2_performance}b reports the distribution of the MSE error evaluated across the test set. The histogram confirms that the network maintains a highly concentrated and low error profile, proving that the operator learning approach remains robust and reliable even in this first spatial extension step.
+Furthermore, the training process exhibits stable convergence without signs of overfitting, as depicted by the training and test loss curves in Figure \ref{fig:1to2_performance}a. Finally, Figure \ref{fig:1to2_performance}b reports the distribution of the MSE error evaluated across the test set. The histogram confirms that the network maintains a highly concentrated and low error profile, proving that the Operator Learning approach remains robust and reliable even in this first spatial extension step.
 
 % --- Figura singola (Picchi) ---
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{img/FH_model/1to2/HHpeaks.png}
-    \caption{Four instances of the test set. For each column we can see the Input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate some outputs of the NN}
+    \caption{Four instances of the test set. For each column we can see the Input current (bottom) with its corresponding potential response (top): the continuous lines represent the results of the simulations, whereas the red dots indicate some outputs of the NN}
     \label{fig:1to2_peaks}
 \end{figure}
 
 % --- Due figure affiancate (Loss e Istogramma L2) ---
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/1to2/loss_plot_fixed.png}
         \caption{Training and test loss}
         \label{fig:1to2_loss}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/FH_model/1to2/L2histoFNO.png}
         \caption{MSE error distribution. As descriptors, we reported the median, 10th and 90th percentile}
@@ -88,9 +88,9 @@ Furthermore, the training process exhibits stable convergence without signs of o
 \subsection{Toy network}
 Following the same approach, we evaluated the FNO performance on a more complex spatial configuration, introducing a simple cycle topology (see fig. \ref{fig:cycle_setup}). 
 
-Consistent with the findings of the previous section, the network proves to be highly capable of capturing the underlying threshold dynamics. Figure \ref{fig:cycle_peaks} illustrates some instances of the test set for this new configuration. As we can see, the predicted dynamics strictly follows the numerical simulations, successfully reproducing the spiking behavior and the delay introduced by the diffusion over the cycle.
+Consistent with the findings of the previous section, the network proved to be highly capable of capturing the underlying threshold dynamics. Figure \ref{fig:cycle_peaks} illustrates some instances of the test set for this new configuration. As we can see, the predicted dynamics strictly follows the numerical simulations, successfully reproducing the spiking behavior and the delay introduced by the diffusion over the cycle.
 
-The global error metrics exhibit a behavior analogous to the "no network" scenario. As shown in Figure \ref{fig:cycle_performance}a, the training and test loss converge smoothly without any signs of overfitting. Furthermore, the MSE distribution across the test set (Figure \ref{fig:cycle_performance}b) remains tightly concentrated at very low values. This confirms that the operator learning approach is robust and its accuracy does not degrade when dealing with a small ($4$ nodes) network diffusion.
+The global error metrics exhibits a behavior analogous to the "no network" scenario. As shown in Figure \ref{fig:cycle_performance}a, the training and test loss converge smoothly without any signs of overfitting. Furthermore, the MSE distribution across the test set (Figure \ref{fig:cycle_performance}b) remains tightly concentrated at very low values. This confirms that the operator learning approach is robust and its accuracy does not degrade when dealing with a small ($4$ nodes) network diffusion.
 
 % --- Figura singola (Picchi Ciclo) ---
 
@@ -116,10 +116,7 @@ The global error metrics exhibit a behavior analogous to the "no network" scenar
         \label{fig:cycle_instances}
     \end{subfigure}
     
-    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate samples from the trained NN.}
-    \label{fig:cycle_peaks}
-    
-    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate samples from the trained NN.}
+    \caption{\textbf{(a)} Schematic representation of the network setup in the case of a simple (cyclical) hidden network. \textbf{(b)} Four instances of the test set for the simple cycle configuration. For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the results of the simulations, whereas the red dots indicate samples from the trained NN.}
     \label{fig:cycle_peaks}
 \end{figure}
 
@@ -148,19 +145,20 @@ The global error metrics exhibit a behavior analogous to the "no network" scenar
 \subsection{ER network}
 %devo fare un paragrafo in cui spiego cos'è l'ER network?
 We proceeded with the study of larger networks. In particular, we wanted to observe if the performance of FNO degraded with the growing size ($N$) of the hidden network.
-To conduct this experiment we performed our analysis for different size of the ER network $N= 10,100,200,300,400,500,600,700,800,900,1000,2000$ (with connection probability $p = \frac{3}{N}$).
+To conduct this experiment we performed our analysis for different sizes of the ER network $N= 10,100,200,300,400,500,600,700,800,900,1000,2000$ (with connection probability $p = \frac{3}{N}$).
 Since the connection node for the input and output node are randomly chosen we repeated each experiments with three different seeds  
 %$=0,42,100$ 
-to distinguish if some effects are only due to chance of the particular topology/ sample of input/ output.
+to distinguish if some effects were only due to chance of the particular topology/ sample of input/ output.
 
 %Here we reported only figures for the seed $S=42$.
 
-As a representative example of the system's behavior, Figure \ref{fig:er_setup_100} reports the potential dynamics for a network of size $N=100$ generated with seed $100$.
+As a representative example of the system's behavior, Figure \ref{fig:er_setup_100} reports the potential dynamics for a network of size $N=100$. 
+%generated with seed $100$.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{img/FH_model/ER_Network/dynamics_network_ER_N=100_seed=42_v2.png}
-    \caption{Our setup for an Erd\H{o}s-R\'enyi network of size $N=100$)}
+    \caption{Our setup for an Erd\H{o}s-R\'enyi network of size $N=100$.}
     \label{fig:er_setup_100}
 \end{figure}
 
@@ -251,7 +249,7 @@ To systematically evaluate the threshold dynamics across all network dimensions,
         \caption{$N=2000$}
     \end{subfigure}
     
-    \caption{Some instances of the test set for different Erd\H{o}s-R\'enyi network sizes ($N$).  For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate the output of the NN.}
+    \caption{Some instances of the test set for different Erd\H{o}s-R\'enyi network sizes ($N$).  For each figure's column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the results of the simulations, whereas the red dots indicate the output of the NN.}
     \label{fig:er_peaks_grid}
 \end{figure}
 
@@ -450,9 +448,9 @@ Due to the particular structure of this family of networks, we defined the hubs 
 In this way we greatly reduced the variability of the dynamics due to the seed.
 
 Following the same rationale as the previous section, we proceeded to observe if the performance of FNO degraded with the growing size ($N$) of the hidden network. To conduct this experiment we performed our analysis for different sizes of the BA network: $N= 10,100,200,300,400,500,600,700,800,900,1000,2000$. 
-Since the input and output nodes are randomly chosen, we repeated each experiment with different three seeds 
+Since the input and output nodes are randomly chosen, we repeated each experiment with three different seeds 
 %($0, 42, 100$) 
-to distinguish whether specific effects are intrinsic to the topology or merely due to the chance of the particular sampling of input/output nodes.
+to distinguish whether specific effects were intrinsic to the topology or merely due to the chance of the particular sampling of input/output nodes.
 
 %Here we reported only figures for the seed $S=42$.
 
@@ -556,7 +554,7 @@ By looking at Figures \ref{fig:ba_peaks_grid}, \ref{fig:ba_histo_grid} and \ref{
         \caption{$N=2000$}
     \end{subfigure}
     
-    \caption{Some instances of the test set for different Barab\'asi-Albert network sizes ($N$). For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the result of the simulations, whereas the red dots indicate the output of the NN.}
+    \caption{Some instances of the test set for different Barab\'asi-Albert network sizes ($N$). For each column we can see the applied input current (bottom) with its corresponding potential response (top): the continuous lines represent the results of the simulations, whereas the red dots indicate the output of the NN.}
     \label{fig:ba_peaks_grid}
 \end{figure}
 
@@ -754,8 +752,10 @@ As we could see in the previous graphs (at least for the sizes considered) the F
 These results are strengthened and summarized in the violin plots Figure \ref{fig:fno_scaling_error}, for the distribution of $\log(MSE)$, as network size and type vary. To gain statistical relevance we aggregated data for the three different seed employed.
 %($S=0,42,100$).
 \newline
-As the network size $N$ increases, we don't observe a significant error distribution spread toward higher values. This remarkable scalability may also be due to the discretization-invariant nature of the FNO architecture, since, as we saw in chapter \ref{Chp:2}, the learned architecture parameters do not depend on the specific number of nodes of the network.
+As the network size $N$ increases, we don't observe a significant error distribution spread toward higher values. 
+%This remarkable scalability may also be due to the discretization-invariant nature of the FNO architecture, since, as we saw in chapter \ref{Chp:2}, even if the neural network had had access to all the hidden variables, the learned architecture parameters would not have depended on the specific number of nodes in the network.
 % In fact we performed some test where we trained on a dataset with hidden network size $N_1$ and tested on another $N_2$ and we still got good results.
+\newline
 A future extension could be to investigate if this good behavior persists even if noise is introduced into the system.
 
 \begin{figure}[htbp]
@@ -772,12 +772,12 @@ A future extension could be to investigate if this good behavior persists even i
 \clearpage
 \section{Dependence on the diffusion coefficient $\sigma$}
 
-During the experiments presented in the previous sections, it became essential to understand how to appropriately tune the diffusion coefficient $\sigma$ as a function of the hidden network size $N$. In fact, if we maintain $\sigma$ fixed while $N$ increases, the transmitted energy dissipates and the output signal progressively attenuates until it completely dies out. An initial numerical investigation suggested that the correct scaling to preserve the macroscopic dynamical regime is $\sigma = \mathcal{O}(N)$. In Figure \ref{fig:diffusion_transition} we can see that for $\sigma$ of an order of magnitude inferior wrt $N=100$ the signal doesn't seem to be trasmitted through the network.
+During the experiments presented in the previous sections, it became essential to understand how to appropriately tune the diffusion coefficient $\sigma$ as a function of the hidden network size $N$. In fact, if we maintain $\sigma$ fixed while $N$ increases, the transmitted energy dissipates and the output signal progressively attenuates until it completely dies out. An initial numerical investigation suggested that the correct scaling to preserve the macroscopic dynamical regime is $\sigma = \mathcal{O}(N)$. In Figure \ref{fig:diffusion_transition} we can see that for $\sigma$ of orders of magnitude inferior wrt $N=100$ the signal doesn't seem to be trasmitted through the network.
 
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/FH_model/BA_Network/diffusion_coeff_BA_N=100.png}
+    \includegraphics[width=0.8\textwidth]{img/FH_model/BA_Network/diffusion_coeff_BA_N=100_v2.png}
     \caption{Dynamical transition of the neural network as the diffusion coefficient $\sigma$ varies. For low values of $\sigma$, the signal fails to propagate efficiently, whereas a critical threshold allows for coherent signal transmission.}
     \label{fig:diffusion_transition}
 \end{figure}
@@ -811,7 +811,7 @@ As a result, our numerical spectral analysis demonstrates that the physical spec
     \end{minipage}
 \end{figure}
 
-Therefore, to maintain a constant effective macroscopic coupling ($\sigma \text{Re}(\lambda_2) \approx \text{constant}$) and ensure that the operator learns a consistent continuous continuum limit regardless of the spatial discretization size $N$, the physical diffusion coefficient must systematically scale as $\sigma \propto N$.
+Therefore, to maintain a constant effective macroscopic coupling ($\sigma \text{Re}(\lambda_2) \approx \text{constant}$) and ensure that the operator learns a consistent continuous limit regardless of the spatial discretization size $N$, the physical diffusion coefficient must systematically scale as $\sigma \propto N$.
 
 %Let's focus on the case of the ER network. Here, since the connection probability is $p=\frac{3}{N}$ the average degree is fixed: $\lt k\gt = 3$.
 
@@ -971,21 +971,21 @@ For our specific analysis, we selected the \texttt{mc\_maze} dataset \cite{churc
 
 It is important to note how our methodology positions itself relative to the original scope of the NLB challenge. First, our analysis is strictly confined to the subset of data designated as the official "train" split, without utilizing the validation or test splits reserved for the benchmark's competitive leaderboard. Second, while the primary focus of the NLB is often the point-process estimation of discrete spike trains, the benchmark also includes a behavioral decoding phase. In the official challenge, decoding continuous hand kinematics from neural activity is performed using a simple linear baseline, namely Ridge Regression.
 
-In our work, we replace this standard linear decoder with our Operator Learning framework, which naturally operates on continuous function spaces. Specifically, we define the input function $u(t)$ as the smoothed, continuous neural firing rates, and the target output function $v(t)$ as the continuous hand velocity of the macaque. By training the neural network to learn this operator (with FNO) $G: u \to v$, we infer the continuous velocity profile directly from the underlying neural dynamics. Finally, the predicted velocity is numerically integrated over time to reconstruct the full 2D reaching trajectory (position) of the hand. This setup allows us to rigorously test the neural operator's ability to capture the complex, nonlinear mapping between cortical activity and physical behavior, moving beyond the limitations of simple linear regression.
+In our work, we replaced this standard linear decoder with our Operator Learning framework, which naturally operates on continuous function spaces. Specifically, we defined the input function $u(t)$ as the smoothed, continuous neural firing rates, and the target output function $v(t)$ as the continuous hand velocity of the macaque. By training the neural network to learn this operator (with FNO) $G: u \to v$, we inferred the continuous velocity profile directly from the underlying neural dynamics. Finally, the predicted velocitywas numerically integrated over time to reconstruct the full 2D reaching trajectory (position) of the hand. This setup allowed us to rigorously test the neural operator's ability to capture the complex, nonlinear mapping between cortical activity and physical behavior, moving beyond the limitations of simple linear regression.
 
 \begin{figure}[htbp]
     \centering
     % Adjust the width if necessary (e.g., 0.9\textwidth or 1.0\textwidth)
     \includegraphics[width=0.8\textwidth]{img/Real_Data/maze_dataset.png}
-    \caption{Overview of the \texttt{mc\_maze} dataset and the behavioral decoding task. The upper panels illustrate the delayed center-out reaching task, displaying the 2D spatial trajectories of the macaque's hand navigating around varying virtual obstacles to reach specific targets. The lower panels display the corresponding neural population activity (spike raster plots) recorded from the M1 and PMd cortices.}
+    \caption{Overview of the \texttt{mc\_maze} dataset and the behavioral decoding task. The upper panels illustrate the delayed center-out reaching task, displaying the 2D spatial trajectories of the macaque's hand navigating around varying obstacles to reach specific targets. The lower panels display the corresponding neural population activity (spike raster plots) recorded from the M1 and PMd cortices.}
     \label{fig:mc_maze_dataset}
 \end{figure}
 
 \clearpage
 \subsection{Preprocessing}
-In our work, we replace this standard linear decoder with our Operator Learning framework, specifically employing a Fourier Neural Operator (FNO), which naturally operates on continuous function spaces. As part of our preprocessing pipeline, the time series data is rigorously aligned and resampled at a 5 ms resolution to provide a strictly uniform temporal grid. The resulting dataset consists of 2295 individual reaching trajectories.
+In our work, we replaced the standard linear decoder with our Operator Learning framework, specifically employing a Fourier Neural Operator (FNO), which naturally operates on continuous function spaces. As part of our preprocessing pipeline, the time series data was rigorously aligned and resampled at a 5 ms resolution to provide a strictly uniform temporal grid. The resulting dataset consists of 2295 individual reaching trajectories.
 %, each standardized to a fixed temporal window of 500 ms (represented by 100 discrete time bins).
- We define the input function $u(t)$ as the continuous neural firing rates from $182$ neural units, which have been smoothed using a Gaussian kernel ($\sigma = 50$ ms) to reduce point-process noise. The target output function $v(t)$ is defined as the continuous hand velocity of the macaque along the $x$ and $y$ axes. To account for the physiological delay required for signals to travel from the motor cortex to the muscles, we apply an 80 ms lag to the kinematic data relative to the neural activity. By training the FNO to learn this operator $G: u \to v$, we infer the continuous velocity profile directly from the underlying neural dynamics. Finally, the predicted velocity is numerically integrated over time to reconstruct the full 2D reaching trajectory (position) of the hand.
+ We defined the input function $u(t)$ as the continuous neural firing rates from $182$ neural units, which have been smoothed using a Gaussian kernel ($\sigma = 50$ ms) to reduce point-process noise. The target output function $v(t)$ was defined as the continuous hand velocity of the macaque along the $x$ and $y$ axes. To account for the physiological delay required for signals to travel from the motor cortex to the muscles, we applied an $80$ ms lag to the kinematic data relative to the neural activity. By training the FNO to learn this operator $G: u \to v$, we inferred the continuous velocity profile directly from the underlying neural dynamics. Finally, the predicted velocity was numerically integrated over time to reconstruct the full 2D reaching trajectory (position) of the hand.
 
 \subsection{Training}
 We divided our dataset (trajectories) into $80\%$ for training, $10\%$ for validation, and $10\%$ for testing. During the training phase, the continuous neural and kinematic data were processed in mini-batches of $32$ trials. The FNO architecture was configured to retain $16$ Fourier modes with a hidden channel width of $64$. 
@@ -1001,7 +1001,7 @@ For the non-linear recurrent baseline, we implemented a Long Short-Term Memory (
 In Figure \ref{fig:loss_curves} we can see the training and validation curves for both types of architectures with the relative best epoch. We observe that the FNO converges faster than LSTM to an optimal solution. 
 
 As a standard linear baseline, we implemented a Ridge Regression model. %Because traditional linear regressors do not natively process 3D spatiotemporal tensors, the training data was reshaped. The trial and time dimensions were flattened into a 2D matrix, effectively treating each 5 ms time bin as an independent observation. 
-To ensure optimal generalization, the $L_2$ regularization hyperparameter ($\alpha$) was selected via an exhaustive grid search combined with 5-fold cross-validation executed strictly on the training set. The grid search evaluated five logarithmically spaced candidate values ranging from $10^{-4}$ to $10^{0}$, automatically selecting the most robust linear mapping between the neural firing rates and the macaque's hand velocity \footnote{The selected $\alpha=1.0$}.
+To ensure optimal generalization, the $L_2$ regularization hyperparameter ($\alpha$) was selected via an exhaustive grid search combined with 5-fold cross-validation executed strictly on the training set. The grid search evaluated five logarithmically spaced candidate values ranging from $10^{-4}$ to $10^{0}$, automatically selecting the most robust linear mapping between the neural firing rates and the macaque's hand velocity \footnote{The selected $\alpha=1.0$.}.
 
 \subsection{Results}
 

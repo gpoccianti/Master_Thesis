@@ -12,7 +12,7 @@ these systems are governed by parabolic partial differential equations of the fo
 \begin{equation}
     \frac{\partial \mathbf{u}}{\partial t} = \nu \Delta \mathbf{u} + \mathbf{f}(\mathbf{u}),
 \end{equation}
-where $\mathbf{u}(\mathbf{x},t)$ represents the state vector (e.g., chemical concentrations), $\nu$ is the diffusion coefficient, $\Delta = \nabla^2$ is the
+where $\mathbf{u}(\mathbf{x},t)$ represents the state vector (e.g., chemical concentrations), $\nu$ is the diffusion coefficient's (diagonal) matrix, $\Delta = \nabla^2$ is the
 Laplacian operator representing spatial diffusion, and $\mathbf{f}(\mathbf{u})$ describes the non-linear reaction kinetics. 
 These dynamics are renowned for generating complex spatio-temporal patterns, such as Turing patterns, traveling waves, and spirals \cite{turing1952chemical,nakao2010turing}
 
@@ -24,7 +24,7 @@ reaction-diffusion problems.
 However, many real-world complex systems—such as social networks, connectomes, and power grids—are 
 intrinsically discrete and topologically irregular. On these \textit{Complex Networks}, 
 the notion of continuous space is replaced by a graph topology $\mathcal{G} = (\mathcal{V}, \mathcal{E})$, consisting of $N$ nodes. Consequently, 
-the continuous Laplacian operator is replaced by the \textbf{Graph Laplacian matrix} $\mathbf{L} \in \mathbb{R}^{N \times N}$, defined as:
+the continuous Laplacian operator is replaced by the \textbf{graph laplacian matrix} $\mathbf{L} \in \mathbb{R}^{N \times N}$, defined as:
 \begin{equation}
     \mathbf{L} = \mathbf{D} - \mathbf{A},
 \end{equation}
@@ -37,8 +37,9 @@ where $\mathbf{U}(t) \in \mathbb{R}^{N \times d_u}$ is the state of all nodes at
 
 While the spectral properties of $\mathbf{L}$ are well-studied in network science, the application of Operator Learning to predict these dynamics on complex graphs 
 remains underexplored. 
-The shift from the continuous paradigm to the discrete domain has diverse implications. For instance the advantage of Operator architectures becomes less clear, since we don't have anymore a continuous domain on which we can exploit the discretization-invariance property. However, we believe that this feature could be still useful when analyzing networks of varying sizes.
-Specifically, the challenge lies in whether Neural Operators can effectively learn these dynamics "blindly" from nodal time-series, 
+The shift from the continuous paradigm to the discrete domain has diverse implications. For instance the advantage of operator architectures becomes less clear, since we don't have anymore a continuous domain on which we can exploit the discretization-invariance property. However, we believe that this feature could be still useful when analyzing networks of varying sizes.
+\newline
+Specifically, the challenge lies in whether neural operators can effectively learn these dynamics "blindly" from nodal time-series, 
 or if explicitly informing the network with the spectral geometry of $\mathbf{L}$ (via its eigendecomposition) provides a necessary inductive bias for generalization.
 
 % Questo lo lascio alla fine come spunto futuro ?
@@ -66,7 +67,7 @@ This baseline represents the purely data-driven approach. The model ignores both
 Here, the network must implicitly learn both the diffusion operator $-\nu \mathbf{L}$ and the reaction operator $\mathbf{F}$ simultaneously from data. This implies that the network must statistically reconstruct the graph structure solely from the propagation of signals, a task that typically requires massive amounts of training data. Moreover, we decided, to compare the same families of architectures and further analyze the importance of using topological information for the prediction, to use continuous operator network, which required us to embed the graphs in a continuous spatial domains. This first level is the only approach which does not require topological information.
 
 \subsubsection[Level 2: physics-informed (hybrid nodal)]{Level 2: Physics-Informed\footnote{We chose this name given the strong connection with the Physics Informed Neural Networks (PINNs) family.} (Hybrid Nodal)}
-In this approach, we injected physical knowledge by using an \textbf{Implicit-Explicit (IMEX)} solver \footnote{see Appendix \ref{app:C}.}. We assume the linear diffusion term $-\nu \mathbf{L}$ is known, and the network is tasked \textit{only} with approximating the reaction term $\mathbf{F}(\mathbf{u})$.
+In this approach, we inject physical knowledge by using an \textbf{Implicit-Explicit (IMEX)} solver \footnote{see Appendix \ref{app:C}.}. We assume the linear diffusion term $-\nu \mathbf{L}$ is known, and the network is tasked \textit{only} with approximating the reaction term $\mathbf{F}(\mathbf{u})$.
 
 The update rule enforces the diffusion physics exactly:
 \begin{equation}
@@ -79,15 +80,15 @@ The update rule enforces the diffusion physics exactly:
 %
 
 %\newline 
-While the diffusion coefficient $\nu$ can be treated as a known physical prior, it can also be discovered directly from observational data. In our experiments, we cast this as a joint system identification problem: $\nu$ is initialized as a differentiable scalar variable and optimized end-to-end alongside the neural network weights $\theta$ via gradient descent.
+While the diffusion coefficient $\nu$ can be treated as a known physical prior, it can also be discovered directly from observational data. In our experiments, we casted this as a joint system identification problem: $\nu$ was initialized as a differentiable scalar variable and optimized end-to-end alongside the neural network weights $\theta$ via gradient descent.
 It is worth noting that the neural network $\text{Net}_{\theta}(\mathbf{u})$ remains \textbf{"topologically blind"}. As in Level 1, it relies on embedding the discrete graph into an artificial continuous domain. However, this limitation is less detrimental in this hybrid formulation: since the target reaction term is strictly local (acting node-wise), explicitly capturing the spatial relations between nodes becomes less critical for the network. Nevertheless, this architectural flaw will be fully addressed in Level 3.
 
 \subsubsection{Level 3: topology-informed (hybrid spectral)}
-Here the model leveraged both physical and topological priors.
-The diffusion operator was enforced exactly via the IMEX scheme as in Level 2.
+Here the model leverages both physical and topological priors.
+The diffusion operator is enforced exactly via the IMEX scheme as in Level 2.
 
-Although the "Physics-Informed" approach ensures that the linear diffusion process is efficiently resolved by the numerical solver, the neural network $\text{Net}_{\theta}$ responsible for learning the non-linear reaction remains fundamentally \textbf{"topologically blind"}. While the exact mathematical formulation of the reaction term $\mathbf{F}(\mathbf{U})$ is intrinsically local (acting node-wise), learning this operator from observational data poses a severely ill-posed inverse problem. The temporal snapshots $\mathbf{u}^n$ embed global spatial correlations generated by the continuous diffusion process, and numerical approximations of time-derivatives inevitably amplify high-frequency noise. If $\text{Net}_{\theta}$ relies on a standard node-wise Multilayer Perceptron (MLP) or conventional operator architectures (such as standard FFT-based Fourier Neural Operators or Euclidean DeepONets), it processes the state variables using arbitrary or grid-based coordinates. Consequently, it completely ignores the true connectivity, symmetries, and spectral clusters of the complex network, making the learning process susceptible to local noise and spatial overfitting. To robustly decouple the local reaction kinetics from the inherent noise, it is necessary to explicitly embed the topological information of the Graph Laplacian $\mathbf{L}$ directly into the neural architecture. By doing so, for instance by using Laplacian eigenvectors to define the spectral layer in a LFNO, or substituting the trunk network of a DeepONet with Laplacian eigenfunctions as proposed in continuous domains by Wang and Hao \cite{wang2025laplacian}, the learning process is projected onto the graph's intrinsic, low-dimensional spectral manifold. This topological injection acts as a powerful structural prior: it regularizes the optimization landscape, naturally filters out non-physical, topology-violating noise, and enables the model to accurately recover the underlying local kinetics from globally coupled observations.
-%However, the neural network approximated the reaction term in the \textit{graph spectral domain}, utilizing the eigenbasis $\mathbf{\Phi}$ of the Graph Laplacian $\mathbf{L}$.
+Although the "Physics-Informed" approach ensures that the linear diffusion process is efficiently resolved by the numerical solver, the neural network $\text{Net}_{\theta}$ responsible for learning the non-linear reaction remains fundamentally \textbf{"topologically blind"}. While the exact mathematical formulation of the reaction term $\mathbf{F}(\mathbf{U})$ is intrinsically local (acting node-wise), learning this operator from observational data opens a severely ill-posed inverse problem. The temporal snapshots $\mathbf{u}^n$ embed global spatial correlations generated by the continuous diffusion process, and numerical approximations of time-derivatives inevitably amplify high-frequency noise. If $\text{Net}_{\theta}$ relies on a standard node-wise Multilayer Perceptron (MLP) or conventional operator architectures (such as standard FFT-based Fourier Neural Operators or Euclidean DeepONets), it processes the state variables using arbitrary or grid-based coordinates. Consequently, it completely ignores the true connectivity, symmetries, and spectral clusters of the complex network, making the learning process susceptible to local noise and spatial overfitting. To robustly decouple the local reaction kinetics from the inherent noise, it is necessary to explicitly embed the topological information of the graph laplacian $\mathbf{L}$ directly into the neural architecture. By doing so, for instance by using Laplacian eigenvectors to define the spectral layer in a LFNO, or substituting the trunk network of a DeepONet with Laplacian eigenfunctions as proposed in continuous domains by Wang and Hao \cite{wang2025laplacian}, the learning process is projected onto the graph's intrinsic, low-dimensional spectral manifold. This topological injection acts as a powerful structural prior: it regularizes the optimization landscape, naturally filters out non-physical, topology-violating noise, and enables the model to accurately recover the underlying local kinetics from globally coupled observations.
+%However, the neural network approximated the reaction term in the \textit{graph spectral domain}, utilizing the eigenbasis $\mathbf{\Phi}$ of the graph laplacian $\mathbf{L}$.
 
 \begin{comment}
 One of our proposed methods, the \textbf{Laplacian Eigenfunction Neural Operator (LENO) on Network}, incorporates both physical and topological priors.
@@ -110,7 +111,7 @@ without the need for complex architectures (as we will see in the next section).
 
 
 \subsection{Training objective: composite loss strategy}
-For the informed architectures (Levels 2 and 3), the learning task has been reframed: instead of predicting the state evolution directly, the networks approximated the non-linear reaction term $\mathbf{F}(\mathbf{u})$. To ensure both temporal stability and physical consistency, we employed a composite loss function consisting of two terms:
+For the informed architectures (Levels 2 and 3), the learning task has been reframed: instead of predicting the state evolution directly, the networks approximates the non-linear reaction term $\mathbf{F}(\mathbf{u})$. To ensure both temporal stability and physical consistency, we employed a composite loss function consisting of two terms:
  a \textbf{Trajectory Loss} and a \textbf{Physics (Residual) Loss}.
 
 
@@ -127,7 +128,7 @@ The total loss $\mathcal{L}$ was defined as a weighted sum:
 \begin{equation}
     \mathcal{L} = \mathcal{L}_{traj} + \lambda_{phys} \mathcal{L}_{phys}
 \end{equation}
-where $\lambda_{phys}$ is a balancing hyperparameter \footnote{in our experiments, we tuned $\lambda_{phys}$ as an hyperparameter of the model, before training.}
+where $\lambda_{phys}$ is a balancing hyperparameter \footnote{in our experiments, we tuned $\lambda_{phys}$ before training.}
 \footnote{For the blind architectures we used only the trajectory loss.}.
 
 \begin{enumerate}
@@ -143,7 +144,7 @@ where $\mathbf{x}_j = \mathbf{u}_j^{m\left( j \right)}$ represents a single stat
      operator exactly via the numerical architecture (hard constraint), leaving the loss function responsible solely for the reaction dynamics.}
 
 \item \textbf{Relative trajectory loss ($\mathcal{L}_{traj}$):}
-This term measured the relative error of the integrated next-step state. Normalizing by the ground truth magnitude ensured the loss is scale-invariant and prevented the model from biasing towards high-amplitude regions.
+This term measured the relative error of the integrated next-step state. Normalizing by the ground truth magnitude ensured the loss was scale-invariant and prevented the model from biasing towards high-amplitude regions.
 \begin{equation}
     \mathcal{L}_{traj} = \frac{1}{N_{traj} N_T} \sum_{i=1}^{N_{traj}} \sum_{n=0}^{N_T-1} \frac{\| \Psi_{\Delta t}(\hat{\mathbf{u}}^n_i, \theta) - \mathbf{u}^{n+1}_{true, i} \|_2}{\| \mathbf{u}^{n+1}_{true, i} \|_2 + \epsilon}
 \end{equation}
@@ -160,24 +161,24 @@ where $\Psi_{\Delta t}$ represents the differentiable IMEX solver layer, $\hat{\
 We instantiated the hierarchy of inductive biases defined in Sec. \ref{sec:exp_design} using the following specific architectures. All models were implemented in PyTorch.
 
 \begin{itemize}
-    \item \textbf{Level 1: black-box baselines.} (see Chapter \ref{Chp:2}) %Devo ancora creare la sezione di introduzione su ML e Neural Operators
+    \item \textbf{Level 1: black-box baselines} (see Chapter \ref{Chp:2}) %Devo ancora creare la sezione di introduzione su ML e Neural Operators
     \begin{itemize}
-        \item \textbf{Blind DeepONet:} In this baseline implementation, a \textit{Branch Net} (MLP) encoded the full global state vector, while a \textit{Trunk Net} (MLP) evaluated spatial basis functions at normalized coordinates $y \in [0,1]$. Crucially, these coordinates were assigned based solely on the node's arbitrary position within the 1D input data array (effectively mapping the $i$-th node in the dataset to the spatial coordinate $i/N$). By computing the final prediction through the dot product of these latent features, the architecture forced the discrete complex network onto a continuous 1D Euclidean domain. Consequently, it treated the graph nodes as uniformly spaced points on a line, restricting their spatial proximity to their arbitrary data storage order rather than their true topological connectivity.
+        \item \textbf{Blind DeepONet:} In this baseline implementation, a \textit{branch net} (MLP) encoded the full global state vector, while a \textit{trunk net} (MLP) evaluated spatial basis functions at normalized coordinates $y \in [0,1]$. Crucially, these coordinates were assigned based solely on the node's arbitrary position within the 1D input data array (effectively mapping the $i$-th node in the dataset to the spatial coordinate $i/N$). By computing the final prediction through the dot product of these latent features, the architecture forced the discrete complex network onto a continuous 1D euclidean domain. Consequently, it treated the graph nodes as uniformly spaced points on a line, restricting their spatial proximity to their arbitrary data storage order rather than their true topological connectivity.
         \item \textbf{Blind FNO:} A standard Fourier Neural Operator relying on the Fast Fourier Transform (FFT).
-        Since the standard FFT cannot operate directly on non-Euclidean graph domains, the baseline FNO treated the node features as a flattened 1D sequence. This implicitly forced the network onto a uniformly spaced closed loop, where nodes are artificially connected based solely on their arbitrary array indices, completely ignoring the true graph topology.
+        Since the standard FFT cannot operate directly on non-euclidean graph domains, the baseline FNO treated the node features as a flattened 1D sequence. This implicitly forced the network onto a uniformly spaced closed loop, where nodes were artificially connected based solely on their arbitrary array indices, completely ignoring the true graph topology.
          We truncated the frequency modes passed.
     \end{itemize}
 
 
 \item \textbf{Level 2: physics-informed (hybrid)}\\
-This tier decoupled physical laws from topological structure. Both architectures leveraged the \textbf{exact Graph-Spectral IMEX solver} for time-stepping, ensuring perfect diffusion dynamics via the true Graph Laplacian eigenvalues. However, the neural networks approximating the reaction term $\mathcal{N}(u)$ remained \textbf{topologically blind}, treating the graph signal as an Euclidean sequence.
+This tier decoupled physical laws from topological structure. Both architectures leveraged the \textbf{exact graph-spectral IMEX solver} for time-stepping, ensuring perfect diffusion dynamics via the true graph laplacian eigenvalues. However, the neural networks approximating the reaction term $\mathcal{N}(u)$ remained \textbf{topologically blind}, treating the graph signal as an euclidean sequence.
 \begin{itemize}
-    \item \textbf{PI-DeepONet:} Utilized the standard Branch/Trunk architecture (same architecture as in level 1) to map the full state vector to the reaction residual.
+    \item \textbf{PI-DeepONet:} Utilized the standard branch/trunk architecture (same architecture as in level 1) to map the full state vector to the reaction residual.
     % It acted node-wise without explicit neighborhood information.
-    \item \textbf{PI-FNO:} Used the FNO backbone (same architecture as in level 1) to predict the reaction vector. 
+    \item \textbf{PI-FNO:} Used the FNO backbone (same architectures as in level 1) to predict the reaction vector. 
 \end{itemize}
 
-    \item \textbf{Level 3: topology-informed (spectral).}
+    \item \textbf{Level 3: topology-informed (spectral)}
     \begin{itemize}
         \item \textbf{Laplacian Eigenfunction Neural Operator (LENO) on network:} 
         This method operated in a \textit{truncated} spectral domain defined by the eigenvectors of the Laplacian.
@@ -197,7 +198,7 @@ It is important to note that, since we posed the problem in the right coordinate
 without the need for complex architectures.
 
     \item \textbf{Graph (Laplacian)-FNO (ours):} It operated in a similar way to LENO.
-    However it built on the standard FNO, so it replaced FFT/IFFT operations with the Graph Fourier Transform (GFT, where the input is projected onto the first $p$ eigenvectors of the Graph Laplacian ($\mathbf{\Phi}_p$)).
+    However it built on the standard FNO, so it replaced FFT/IFFT operations with the Graph Fourier Transform (GFT, where the input is projected onto the first $p$ eigenvectors of the graph laplacian ($\mathbf{\Phi}_p$)).
     
    The primary distinction between LFNO and LENO lies in the domain where the objective function is evaluated. While LENO minimizes the error directly on the transformed spectral coefficients, LFNO projects the latent representation back into the physical space via the inverse GFT, penalizing the reaction term directly at the nodal level.
     
@@ -277,7 +278,7 @@ We begin our analysis by examining the distribution of the relative $L_2$ errors
 Figure \ref{fig:error_matrix} presents a systematic comparison of the test errors arranged by model family (columns) and inductive bias level (rows).
 On the other hand Figure \ref{fig:heatmap_vertical_stack} shows an absolute error comparison between the same models, however it rearranges the two columns representing the families of architectures on the same page.
 
-This visualization highlights the progressive improvement in generalization performance as we move from "Blind" models to "Topology-Informed" architectures.
+This visualization highlights the progressive improvement in generalization performance as we move from "blind" models to "topology-informed" architectures.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
@@ -355,10 +356,10 @@ This visualization highlights the progressive improvement in generalization perf
         \end{minipage}
     } % Fine makebox
     
-\caption{Matrix of Relative $L_2$ Error distributions on the test set.
-    \textbf{Columns} distinguish between Nodal architectures (DeepONet family)%\protect\footnotemark 
-     and Spectral architectures (FNO family). 
-    \textbf{Rows} represent the hierarchy of inductive bias: Level 1 (Totally Blind), Level 2 (Physics-Informed), and Level 3 (Topology-Informed). 
+\caption{Matrix of relative $L_2$ error distributions on the test set.
+    \textbf{Columns} distinguish between nodal architectures (DeepONet family)%\protect\footnotemark 
+     and spectral architectures (FNO family). 
+    \textbf{Rows} represent the hierarchy of inductive bias: Level 1 (totally blind), Level 2 (physics-informed), and Level 3 (topology-informed). 
     The red dashed line indicates the mean error. Note how the LFNO model (bottom right) achieves the lowest error variance and mean.}
     \label{fig:error_matrix}
 \end{figure}
@@ -457,7 +458,7 @@ The summary of the quantitative results is reported in Table \ref{tab:error_comp
     \begin{threeparttable} % <--- AGGIUNGI QUESTO WRAPPER
         \caption{Comparison of Mean Relative $L_2$ Errors on test set across all architectures. 
         The transition from Level 1 to Level 3 yields a massive error reduction (orders of magnitude). 
-        Spectral methods (FNO family) generally outperform Nodal methods (DeepONet family).}
+        Spectral methods (FNO family) generally outperform nodal methods (DeepONet family).}
         \label{tab:error_comparison}
 
         \renewcommand{\arraystretch}{1.3}
@@ -625,10 +626,10 @@ The summary of the quantitative results is reported in Table \ref{tab:error_comp
         \arrayrulecolor{black}\bottomrule
     \end{tabular}
     
-    \caption{System Identification Results. Comparison of the learned diffusion coefficient $\nu$ (Ground Truth $\nu = 4.000$). 
+    \caption{System identification results. Comparison of the learned diffusion coefficient $\nu$ (ground truth $\nu = 4.000$). 
     Values are rounded to 4 significant figures. 
     Spectral architectures (FNO family) successfully identify the correct physical parameter with high precision, 
-    whereas Nodal architectures (DeepONet family) tend to underestimate it.}
+    whereas nodal architectures (DeepONet family) tend to underestimate it.}
     \label{tab:learned_coeffs}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -647,9 +648,9 @@ On the other hand, adding physical information (Level 2) drastically reduced the
 Evidently, embedding the underlying physics of the system into the learning process is crucial for accurate predictions.
 
 It is worth noting that in Level 2, even if we didn't insert topological information in the neural network,
-we still exploited the Laplacian operator in the integration scheme. So, if we hadn't had access to the topological features we would have needed another integration method, which probably would have lowered the performances.
+we still exploited the laplacian operator in the integration scheme. So, if we hadn't had access to the topological features we would have needed another integration method, which probably would have lowered the performances.
 
-This performance difference can be attributed to how the two architectures manage physical and spectral representations. The FNO family inherently leverages a dual-domain representation: it receives physical nodal features as input, processes them within an internal spectral representation (the hidden layers utilizing the FFT/ GFT), and crucially, projects the output back via the inverse FFT/ GFT to compute the loss directly in the physical domain. In contrast, the evaluated DeepONet architectures are restricted to a single domain during optimization: standard DeepONets (Levels $1$ and $2$) operate exclusively on artificial spatial coordinates, while the baseline LE-NO (Level $3$) computes both its predictions and its loss entirely within the spectral domain, losing direct supervision on the physical nodal states.
+The family's performance difference can be attributed to how the two architectures manage physical and spectral representations. The FNO family inherently leverages a dual-domain representation: it receives physical nodal features as input, processes them within an internal spectral representation (the hidden layers utilizing the FFT/ GFT), and crucially, projects the output back via the inverse FFT/ GFT to compute the loss directly in the physical domain. In contrast, the evaluated DeepONet architectures are restricted to a single domain during optimization: standard DeepONets (Levels $1$ and $2$) operate exclusively on artificial spatial coordinates, while the baseline LE-NO (Level $3$) computes both its predictions and its loss entirely within the spectral domain, losing direct supervision on the physical nodal states.
 
 
 \section{Example 2: the case of FitzHugh-Nagumo}
@@ -663,7 +664,7 @@ In particular this last problem is part of the \textbf{PDE discovery}, mentioned
 
 In this section we considered again our neural system, described by Eq. \eqref{eq:coupled_FHN}.
 
-However we changed the setup by \textbf{removing the input current} and randomly uniform initial state $\left( V_i\left( 0 \right), w_i\left( 0 \right) \right) \in \left[-1, 1  \right]^2$ for each node $i$.
+However we changed the setup by \textbf{removing the input current} and by selecting a randomly uniform initial state $\left( V_i\left( 0 \right), w_i\left( 0 \right) \right) \in \left[-1, 1  \right]^2$ for each node $i$.
 
 Then, given a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$:
 \begin{equation}
@@ -729,9 +730,9 @@ To prevent overfitting, we continuously monitored the relative error on the vali
 
 \subsection{Results}
 
-The training dynamics of the two-variable LFNO model demonstrate stable and robust convergence. As depicted in the learning curves (Figure \ref{fig:lfno_loss}), both the training and validation losses decrease monotonically on a logarithmic scale. The validation-based checkpointing successfully prevented overfitting, identifying epoch $96$ as the optimal state of the network with the lowest validation error. Since this value is close to the total number of epochs $100$, it is probable that the model could find an even better optimum with a higher number of iterations.
+The training dynamics of the two-variable LFNO model demonstrate stable and robust convergence. As depicted in the learning curves (Figure \ref{fig:lfno_loss}), both the training and validation losses decrease on a logarithmic scale. The validation-based checkpointing successfully prevented overfitting, identifying epoch $96$ as the optimal state of the network with the lowest validation error. Since this value is close to the total number of epochs $100$, it is probable that the model could find an even better optimum with a higher number of iterations.
 
-In addition to accurate trajectory prediction, the proposed Operator Learning framework naturally supports \textit{System Identification}. Because the physical diffusion operator is explicitly embedded within the spectral layers, the diffusion coefficients ($\varepsilon_V$ and $\varepsilon_w$) can be simply treated as learnable parameters rather than fixed constants. As illustrated in Figure \ref{fig:lfno_diffusion}, these parameters rapidly converge to their true physical values (accurate to four decimal places) within the very first epochs. The network correctly identifies that the activator $V$ diffuses with $D_V = 0.01$, while accurately recognizing that the inhibitor $w$ is strictly localized ($D_w = 0.00$).
+In addition to accurate trajectory prediction, the proposed Operator Learning framework naturally supports \textit{system identification}. Because the physical diffusion operator is explicitly embedded within the spectral pipeline, the diffusion coefficients ($\varepsilon_V$ and $\varepsilon_w$) can be simply treated as learnable parameters rather than fixed constants. As illustrated in Figure \ref{fig:lfno_diffusion}, these parameters rapidly converge to their true physical values (accurate to four decimal places) within the very first epochs. The network correctly identifies that the activator $V$ diffuses with $D_V = 0.01$, while accurately recognizing that the inhibitor $w$ is strictly localized ($D_w = 0.00$).
 
 \begin{figure}[htbp]
     \centering
