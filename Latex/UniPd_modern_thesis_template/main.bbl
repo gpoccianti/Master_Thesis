@@ -5,6 +5,12 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Turing(1952)]{turing1952chemical}
+Alan~M Turing.
+\newblock The chemical basis of morphogenesis.
+\newblock \emph{Philosophical Transactions of the Royal Society of London.
+  Series B, Biological Sciences}, 237\penalty0 (641):\penalty0 37--72, 1952.
+
 \bibitem[Hodgkin and Huxley(1952)]{hodgkin1952quantitative}
 Alan~L Hodgkin and Andrew~F Huxley.
 \newblock A quantitative description of membrane current and its application to
@@ -19,14 +25,12 @@ Edoardo Centofanti, Massimiliano Ghiotto, and Luca~F. Pavarino.
   techniques.
 \newblock \emph{Computer Methods in Applied Mechanics and Engineering},
   432:\penalty0 117381, 2024.
-\newblock URL \url{https://doi.org/10.1016/j.cma.2024.117381}.
 
 \bibitem[Centofanti and Pavarino(2024)]{centofanti2024comconf}
 Edoardo Centofanti and Luca~F. Pavarino.
 \newblock Operator learning for the fitzhugh-nagumo model.
 \newblock In \emph{2024 International Conference on Computing in Natural
   Sciences, Biomedicine and Engineering (COMCONF)}, 2024.
-\newblock URL \url{https://doi.org/10.1109/COMCONF63340.2024.00015}.
 
 \bibitem[Cybenko(1989)]{cybenko1989approximation}
 George Cybenko.
@@ -39,6 +43,37 @@ George Cybenko.
 Kurt Hornik, Maxwell Stinchcombe, and Halbert White.
 \newblock Multilayer feedforward networks are universal approximators.
 \newblock \emph{Neural networks}, 2\penalty0 (5):\penalty0 359--366, 1989.
+
+\bibitem[Chen and Chen(1995)]{Chen_Chen_1995}
+Tianping Chen and Hong Chen.
+\newblock Universal approximation to nonlinear operators by neural networks
+  with arbitrary activation functions and its application to dynamical systems.
+\newblock \emph{IEEE Transactions on Neural Networks}, 6\penalty0 (4):\penalty0
+  911--917, 1995.
+
+\bibitem[Lu et~al.(2021)Lu, Jin, Pang, Zhang, and Karniadakis]{lu2021learning}
+Lu~Lu, Pengzhan Jin, Guofei Pang, Zhongqiang Zhang, and George~Em Karniadakis.
+\newblock Learning nonlinear operators via {DeepONet} based on the universal
+  approximation theorem of operators.
+\newblock \emph{Nature Machine Intelligence}, 3\penalty0 (3):\penalty0
+  218--229, 2021.
+
+\bibitem[Kovachki et~al.(2023)Kovachki, Li, Liu, Azizzadenesheli, Bhattacharya,
+  Stuart, and Anandkumar]{kovachki2023neural}
+Nikola Kovachki, Zongyi Li, Burigede Liu, Kamyar Azizzadenesheli, Kaushik
+  Bhattacharya, Andrew Stuart, and Anima Anandkumar.
+\newblock Neural operator: Learning maps between function spaces with
+  applications to {PDEs}.
+\newblock \emph{Journal of Machine Learning Research}, 24\penalty0
+  (89):\penalty0 1--97, 2023.
+
+\bibitem[Li et~al.(2020)Li, Kovachki, Azizzadenesheli, Liu, Bhattacharya,
+  Stuart, and Anandkumar]{li2020fourier}
+Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik
+  Bhattacharya, Andrew Stuart, and Anima Anandkumar.
+\newblock Fourier neural operator for parametric partial differential
+  equations.
+\newblock \emph{arXiv preprint arXiv:2010.08895}, 2020.
 
 \bibitem[Boull{\'e} and Townsend(2023)]{boulle2023mathematical}
 Nicolas Boull{\'e} and Alex Townsend.
@@ -54,21 +89,6 @@ Maziar Raissi, Paris Perdikaris, and George~E. Karniadakis.
 \newblock \emph{Journal of Computational Physics}, 378:\penalty0 686--707,
   2019.
 
-\bibitem[Lu et~al.(2021)Lu, Jin, Pang, Zhang, and Karniadakis]{lu2021learning}
-Lu~Lu, Pengzhan Jin, Guofei Pang, Zhongqiang Zhang, and George~Em Karniadakis.
-\newblock Learning nonlinear operators via {DeepONet} based on the universal
-  approximation theorem of operators.
-\newblock \emph{Nature Machine Intelligence}, 3\penalty0 (3):\penalty0
-  218--229, 2021.
-
-\bibitem[Li et~al.(2020)Li, Kovachki, Azizzadenesheli, Liu, Bhattacharya,
-  Stuart, and Anandkumar]{li2020fourier}
-Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik
-  Bhattacharya, Andrew Stuart, and Anima Anandkumar.
-\newblock Fourier neural operator for parametric partial differential
-  equations.
-\newblock \emph{arXiv preprint arXiv:2010.08895}, 2020.
-
 \bibitem[Osorio et~al.(2022)Osorio, Wang, Karniadakis, Cai, Chryssostomidis,
   Panwar, and Hovsapian]{osorio2022forecasting}
 Julian~D. Osorio, Zhicheng Wang, George Karniadakis, Shengze Cai, Chrys
@@ -78,22 +98,6 @@ Julian~D. Osorio, Zhicheng Wang, George Karniadakis, Shengze Cai, Chrys
   operator network architecture.
 \newblock \emph{Energy Conversion and Management}, 252:\penalty0 115063, 2022.
 
-\bibitem[Kovachki et~al.(2023)Kovachki, Li, Liu, Azizzadenesheli, Bhattacharya,
-  Stuart, and Anandkumar]{kovachki2023neural}
-Nikola Kovachki, Zongyi Li, Burigede Liu, Kamyar Azizzadenesheli, Kaushik
-  Bhattacharya, Andrew Stuart, and Anima Anandkumar.
-\newblock Neural operator: Learning maps between function spaces with
-  applications to {PDEs}.
-\newblock \emph{Journal of Machine Learning Research}, 24\penalty0
-  (89):\penalty0 1--97, 2023.
-
-\bibitem[Chen and Chen(1995)]{Chen_Chen_1995}
-Tianping Chen and Hong Chen.
-\newblock Universal approximation to nonlinear operators by neural networks
-  with arbitrary activation functions and its application to dynamical systems.
-\newblock \emph{IEEE Transactions on Neural Networks}, 6\penalty0 (4):\penalty0
-  911--917, 1995.
-
 \bibitem[Pellegrini et~al.(2025)Pellegrini, Ghiotto, Centofanti, and
   Pavarino]{pellegrini2025mlcse}
 Luca Pellegrini, Massimiliano Ghiotto, Edoardo Centofanti, and Luca~F.
@@ -102,7 +106,6 @@ Luca Pellegrini, Massimiliano Ghiotto, Edoardo Centofanti, and Luca~F.
   operators.
 \newblock \emph{Machine Learning for Computational Science and Engineering},
   1:\penalty0 46, 2025.
-\newblock URL \url{https://doi.org/10.1007/s44379-025-00046-8}.
 
 \bibitem[Barrat et~al.(2008)Barrat, Barthelemy, and
   Vespignani]{barrat2008dynamical}
@@ -110,7 +113,6 @@ Alain Barrat, Marc Barthelemy, and Alessandro Vespignani.
 \newblock \emph{Dynamical Processes on Complex Networks}.
 \newblock Cambridge University Press, Cambridge, UK, 2008.
 \newblock \doi{10.1017/CBO9780511791383}.
-\newblock URL \url{https://doi.org/10.1017/CBO9780511791383}.
 
 \bibitem[Benjamini et~al.(2014)Benjamini, Kozma, and
   Wormald]{benjamini2014mixing}
@@ -120,13 +122,15 @@ Itai Benjamini, Gady Kozma, and Nicholas Wormald.
   383--407, 2014.
 \newblock \doi{10.1002/rsa.20521}.
 
-\bibitem[Mihail et~al.(2003)Mihail, Papadimitriou, and
+\bibitem[Mihail et~al.(2006)Mihail, Papadimitriou, and
   Saberi]{mihail2003certain}
 Milena Mihail, Christos Papadimitriou, and Amin Saberi.
-\newblock On certain rigorous mathematical properties of the internet topology.
-\newblock \emph{Journal of Computer and System Sciences}, 67\penalty0
-  (1):\penalty0 213--227, 2003.
-\newblock \doi{10.1016/S0022-0000(03)00043-4}.
+\newblock On certain connectivity properties of the internet topology.
+\newblock \emph{Journal of Computer and System Sciences}, 72\penalty0
+  (2):\penalty0 239--251, 2006.
+\newblock ISSN 0022-0000.
+\newblock \doi{https://doi.org/10.1016/j.jcss.2005.06.009}.
+\newblock JCSS FOCS 2003 Special Issue.
 
 \bibitem[{NLB Team}(2021)]{neurallatents}
 {NLB Team}.
@@ -141,12 +145,6 @@ Mark~M Churchland, John~P Cunningham, Matthew~T Kaufman, Stephen~I Ryu, and
   cog in a dynamical machine?
 \newblock \emph{Neuron}, 68\penalty0 (3):\penalty0 387--400, 2010.
 \newblock \doi{10.1016/j.neuron.2010.09.015}.
-
-\bibitem[Turing(1952)]{turing1952chemical}
-Alan~M Turing.
-\newblock The chemical basis of morphogenesis.
-\newblock \emph{Philosophical Transactions of the Royal Society of London.
-  Series B, Biological Sciences}, 237\penalty0 (641):\penalty0 37--72, 1952.
 
 \bibitem[Nakao and Mikhailov(2010)]{nakao2010turing}
 Hiroya Nakao and Alexander~S Mikhailov.
@@ -191,7 +189,6 @@ Ernst Hairer and Gerhard Wanner.
   Differential-Algebraic Problems}, volume~14.
 \newblock Springer-Verlag Berlin Heidelberg, 2 edition, 1996.
 \newblock \doi{10.1007/978-3-642-05221-7}.
-\newblock URL \url{https://doi.org/10.1007/978-3-642-05221-7}.
 
 \bibitem[Ascher et~al.(1995)Ascher, Ruuth, and Wetton]{ascher1995implicit}
 Uri~M. Ascher, Steven~J. Ruuth, and Brian T.~R. Wetton.
@@ -199,7 +196,6 @@ Uri~M. Ascher, Steven~J. Ruuth, and Brian T.~R. Wetton.
   equations.
 \newblock \emph{SIAM Journal on Numerical Analysis}, 32\penalty0 (3):\penalty0
   797--823, 1995.
-\newblock URL \url{https://doi.org/10.1137/0732037}.
 
 \bibitem[Hundsdorfer and Verwer(2003)]{hundsdorfer2003numerical}
 Willem Hundsdorfer and Jan~G. Verwer.
@@ -207,13 +203,11 @@ Willem Hundsdorfer and Jan~G. Verwer.
   Advection-Diffusion-Reaction Equations}, volume~33 of \emph{Springer Series
   in Computational Mathematics}.
 \newblock Springer Science \& Business Media, Berlin, Heidelberg, 2003.
-\newblock URL \url{https://doi.org/10.1007/978-3-662-09017-6}.
 
 \bibitem[O'Brien et~al.(1950)O'Brien, Hyman, and Kaplan]{obrien1950study}
 George~G O'Brien, Morton~A Hyman, and Sidney Kaplan.
 \newblock A study of the numerical solution of partial differential equations.
 \newblock \emph{Journal of Mathematics and Physics}, 29\penalty0
   (1-4):\penalty0 223--251, 1950.
-\newblock URL \url{https://doi.org/10.1002/sapm1950291223}.
 
 \end{thebibliography}
